@@ -1,4 +1,8 @@
 #!/bin/bash
+
+rm piton/design/chip/tile/ariane/tmp
+mkdir piton/design/chip/tile/ariane/tmp
+
 set -e
 ROOT=$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)
 cd $ROOT/tmp
