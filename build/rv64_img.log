@@ -1,0 +1,1 @@
+truncate diag.o -s +96 
