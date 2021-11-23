@@ -34,9 +34,9 @@ def convert_wave():
 
 def gen_verilator(vsim, X_DIMM, Y_DIMM):
     if vsim:
-        gen_command = "sims -sys=manycore -vlt_build -vlt_build_args=--trace -vlt_build_args=-CFLAGS -vlt_build_args=-DVERILATOR_VCD -x_tiles="+str(X_DIMM)+" -y_tiles="+str(Y_DIMM)+" -ariane -config_rtl=PITON_NO_JTAG -config_rtl=PITON_NO_CHIP_BRIDGE -config_rtl=PITON_CLKS_CHIPSET"
+        gen_command = "sims -sys=manycore -vlt_build -vlt_build_args=--trace -vlt_build_args=-CFLAGS -vlt_build_args=-DVERILATOR_VCD -x_tiles="+str(X_DIMM)+" -y_tiles="+str(Y_DIMM)+" -ariane -config_rtl=PITON_NO_JTAG -config_rtl=PITON_NO_CHIP_BRIDGE -config_rtl=PITON_CLKS_CHIPSET -config_rtl=MINIMAL_MONITORING"
     else:
-        gen_command = "sims -sys=manycore -vlt_build -x_tiles="+str(X_DIMM)+" -y_tiles="+str(Y_DIMM)+" -ariane -config_rtl=PITON_NO_JTAG -config_rtl=PITON_NO_CHIP_BRIDGE -config_rtl=PITON_CLKS_CHIPSET"
+        gen_command = "sims -sys=manycore -vlt_build -x_tiles="+str(X_DIMM)+" -y_tiles="+str(Y_DIMM)+" -ariane -config_rtl=PITON_NO_JTAG -config_rtl=PITON_NO_CHIP_BRIDGE -config_rtl=PITON_CLKS_CHIPSET -config_rtl=MINIMAL_MONITORING"
 
 
     print "\nCommand executed: " + gen_command
