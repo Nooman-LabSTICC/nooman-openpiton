@@ -1,0 +1,634 @@
+[*]
+[*] GTKWave Analyzer v3.3.86 (w)1999-2017 BSI
+[*] Fri Jul  2 09:08:11 2021
+[*]
+[dumpfile] "/home/ruaro/openpiton/build/my_top.vcd"
+[dumpfile_mtime] "Fri Jul  2 08:43:58 2021"
+[dumpfile_size] 316505805
+[optimize_vcd]
+[savefile] "/home/ruaro/openpiton/build/teste.gtkw"
+[timestart] 2657960
+[size] 1853 1145
+[pos] -1 -1
+*-10.371948 2660636 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] TOP.
+[treeopen] TOP.cmp_top.
+[treeopen] TOP.cmp_top.system.
+[treeopen] TOP.cmp_top.system.chip.
+[treeopen] TOP.cmp_top.system.chip.tile0.
+[treeopen] TOP.cmp_top.system.chip.tile0.g_ariane_core.
+[treeopen] TOP.cmp_top.system.chip.tile0.g_ariane_core.core.ariane.
+[treeopen] TOP.cmp_top.system.chip.tile0.g_ariane_core.core.ariane.commit_stage_i.
+[treeopen] TOP.cmp_top.system.chip.tile0.g_ariane_core.core.ariane.commit_stage_i.dirty_fp_state.
+[treeopen] TOP.cmp_top.system.chip.tile0.l15.l15.
+[treeopen] TOP.cmp_top.system.chip.tile0.user_dynamic_network1.dynamic_node_top.
+[treeopen] TOP.cmp_top.system.chipset.chipset_impl.
+[sst_width] 381
+[signals_width] 467
+[sst_expanded] 1
+[sst_vpaned_height] 689
+@28
+TOP.cmp_top.system.chipset.chipset_clk
+@24
+TOP.cmp_top.network_mon.counter[31:0]
+@28
+TOP.cmp_top.network_mon.reset
+@200
+----->>>> Chip Input
+@800200
+-NoC 1 - Input
+@22
+TOP.cmp_top.system.chip.offchip_processor_noc1_valid
+@23
+TOP.cmp_top.system.chip.offchip_processor_noc1_data[63:0]
+@22
+TOP.cmp_top.system.chip.offchip_processor_noc1_yummy
+@1000200
+-NoC 1 - Input
+@800200
+-NoC 2 - Input
+@22
+TOP.cmp_top.system.chip.offchip_processor_noc2_valid
+TOP.cmp_top.system.chip.offchip_processor_noc2_data[63:0]
+TOP.cmp_top.system.chip.offchip_processor_noc2_yummy
+@1000200
+-NoC 2 - Input
+@c00200
+-NoC 3 - Input
+@22
+TOP.cmp_top.system.chip.offchip_processor_noc3_valid
+TOP.cmp_top.system.chip.offchip_processor_noc3_data[63:0]
+TOP.cmp_top.system.chip.offchip_processor_noc3_yummy
+@1401200
+-NoC 3 - Input
+@200
+-<<<<---- Chip Output
+@800200
+-NoC 1 - Output
+@22
+TOP.cmp_top.system.chip.processor_offchip_noc1_valid
+TOP.cmp_top.system.chip.processor_offchip_noc1_data[63:0]
+TOP.cmp_top.system.chip.processor_offchip_noc1_yummy
+@1000200
+-NoC 1 - Output
+@800200
+-NoC 2 - Output
+@22
+TOP.cmp_top.system.chip.processor_offchip_noc2_valid
+TOP.cmp_top.system.chip.processor_offchip_noc2_data[63:0]
+TOP.cmp_top.system.chip.processor_offchip_noc2_yummy
+@1000200
+-NoC 2 - Output
+@800200
+-NoC 3 - Output
+@28
+TOP.cmp_top.system.chip.processor_offchip_noc3_valid
+@22
+TOP.cmp_top.system.chip.processor_offchip_noc3_data[63:0]
+@28
+TOP.cmp_top.system.chip.processor_offchip_noc3_yummy
+@1000200
+-NoC 3 - Output
+@200
+-Tile 0x0
+@c00200
+-PE0x0
+-Local - Input
+-Input - NoC1
+@28
+TOP.cmp_top.system.chip.tile0.router_buffer_data_val_noc1
+@22
+TOP.cmp_top.system.chip.tile0.router_buffer_data_noc1[63:0]
+@28
+TOP.cmp_top.system.chip.tile0.buffer_router_yummy_noc1
+@1401200
+-Input - NoC1
+@c00200
+-Input - NoC2
+@28
+TOP.cmp_top.system.chip.tile0.router_buffer_data_val_noc2
+@22
+TOP.cmp_top.system.chip.tile0.router_buffer_data_noc2[63:0]
+@28
+TOP.cmp_top.system.chip.tile0.buffer_router_yummy_noc2
+@1401200
+-Input - NoC2
+@c00200
+-Input - NoC3
+@28
+TOP.cmp_top.system.chip.tile0.router_buffer_data_val_noc3
+@22
+TOP.cmp_top.system.chip.tile0.router_buffer_data_noc3[63:0]
+@28
+TOP.cmp_top.system.chip.tile0.buffer_router_yummy_noc3
+@1401200
+-Input - NoC3
+-Local - Input
+@c00200
+-Local - Output
+-Output - NoC1
+@28
+TOP.cmp_top.system.chip.tile0.buffer_router_valid_noc1
+@22
+TOP.cmp_top.system.chip.tile0.buffer_router_data_noc1[63:0]
+@28
+TOP.cmp_top.system.chip.tile0.router_buffer_consumed_noc1
+@1401200
+-Output - NoC1
+@c00200
+-Output - NoC2
+@28
+TOP.cmp_top.system.chip.tile0.buffer_router_valid_noc2
+@c00022
+TOP.cmp_top.system.chip.tile0.buffer_router_data_noc2[63:0]
+@28
+(0)TOP.cmp_top.system.chip.tile0.buffer_router_data_noc2[63:0]
+(1)TOP.cmp_top.system.chip.tile0.buffer_router_data_noc2[63:0]
+(2)TOP.cmp_top.system.chip.tile0.buffer_router_data_noc2[63:0]
+(3)TOP.cmp_top.system.chip.tile0.buffer_router_data_noc2[63:0]
+(4)TOP.cmp_top.system.chip.tile0.buffer_router_data_noc2[63:0]
+(5)TOP.cmp_top.system.chip.tile0.buffer_router_data_noc2[63:0]
+(6)TOP.cmp_top.system.chip.tile0.buffer_router_data_noc2[63:0]
+(7)TOP.cmp_top.system.chip.tile0.buffer_router_data_noc2[63:0]
+(8)TOP.cmp_top.system.chip.tile0.buffer_router_data_noc2[63:0]
+(9)TOP.cmp_top.system.chip.tile0.buffer_router_data_noc2[63:0]
+(10)TOP.cmp_top.system.chip.tile0.buffer_router_data_noc2[63:0]
+(11)TOP.cmp_top.system.chip.tile0.buffer_router_data_noc2[63:0]
+(12)TOP.cmp_top.system.chip.tile0.buffer_router_data_noc2[63:0]
+(13)TOP.cmp_top.system.chip.tile0.buffer_router_data_noc2[63:0]
+(14)TOP.cmp_top.system.chip.tile0.buffer_router_data_noc2[63:0]
+(15)TOP.cmp_top.system.chip.tile0.buffer_router_data_noc2[63:0]
+(16)TOP.cmp_top.system.chip.tile0.buffer_router_data_noc2[63:0]
+(17)TOP.cmp_top.system.chip.tile0.buffer_router_data_noc2[63:0]
+(18)TOP.cmp_top.system.chip.tile0.buffer_router_data_noc2[63:0]
+(19)TOP.cmp_top.system.chip.tile0.buffer_router_data_noc2[63:0]
+(20)TOP.cmp_top.system.chip.tile0.buffer_router_data_noc2[63:0]
+(21)TOP.cmp_top.system.chip.tile0.buffer_router_data_noc2[63:0]
+(22)TOP.cmp_top.system.chip.tile0.buffer_router_data_noc2[63:0]
+(23)TOP.cmp_top.system.chip.tile0.buffer_router_data_noc2[63:0]
+(24)TOP.cmp_top.system.chip.tile0.buffer_router_data_noc2[63:0]
+(25)TOP.cmp_top.system.chip.tile0.buffer_router_data_noc2[63:0]
+(26)TOP.cmp_top.system.chip.tile0.buffer_router_data_noc2[63:0]
+(27)TOP.cmp_top.system.chip.tile0.buffer_router_data_noc2[63:0]
+(28)TOP.cmp_top.system.chip.tile0.buffer_router_data_noc2[63:0]
+(29)TOP.cmp_top.system.chip.tile0.buffer_router_data_noc2[63:0]
+(30)TOP.cmp_top.system.chip.tile0.buffer_router_data_noc2[63:0]
+(31)TOP.cmp_top.system.chip.tile0.buffer_router_data_noc2[63:0]
+(32)TOP.cmp_top.system.chip.tile0.buffer_router_data_noc2[63:0]
+(33)TOP.cmp_top.system.chip.tile0.buffer_router_data_noc2[63:0]
+(34)TOP.cmp_top.system.chip.tile0.buffer_router_data_noc2[63:0]
+(35)TOP.cmp_top.system.chip.tile0.buffer_router_data_noc2[63:0]
+(36)TOP.cmp_top.system.chip.tile0.buffer_router_data_noc2[63:0]
+(37)TOP.cmp_top.system.chip.tile0.buffer_router_data_noc2[63:0]
+(38)TOP.cmp_top.system.chip.tile0.buffer_router_data_noc2[63:0]
+(39)TOP.cmp_top.system.chip.tile0.buffer_router_data_noc2[63:0]
+(40)TOP.cmp_top.system.chip.tile0.buffer_router_data_noc2[63:0]
+(41)TOP.cmp_top.system.chip.tile0.buffer_router_data_noc2[63:0]
+(42)TOP.cmp_top.system.chip.tile0.buffer_router_data_noc2[63:0]
+(43)TOP.cmp_top.system.chip.tile0.buffer_router_data_noc2[63:0]
+(44)TOP.cmp_top.system.chip.tile0.buffer_router_data_noc2[63:0]
+(45)TOP.cmp_top.system.chip.tile0.buffer_router_data_noc2[63:0]
+(46)TOP.cmp_top.system.chip.tile0.buffer_router_data_noc2[63:0]
+(47)TOP.cmp_top.system.chip.tile0.buffer_router_data_noc2[63:0]
+(48)TOP.cmp_top.system.chip.tile0.buffer_router_data_noc2[63:0]
+(49)TOP.cmp_top.system.chip.tile0.buffer_router_data_noc2[63:0]
+(50)TOP.cmp_top.system.chip.tile0.buffer_router_data_noc2[63:0]
+(51)TOP.cmp_top.system.chip.tile0.buffer_router_data_noc2[63:0]
+(52)TOP.cmp_top.system.chip.tile0.buffer_router_data_noc2[63:0]
+(53)TOP.cmp_top.system.chip.tile0.buffer_router_data_noc2[63:0]
+(54)TOP.cmp_top.system.chip.tile0.buffer_router_data_noc2[63:0]
+(55)TOP.cmp_top.system.chip.tile0.buffer_router_data_noc2[63:0]
+(56)TOP.cmp_top.system.chip.tile0.buffer_router_data_noc2[63:0]
+(57)TOP.cmp_top.system.chip.tile0.buffer_router_data_noc2[63:0]
+(58)TOP.cmp_top.system.chip.tile0.buffer_router_data_noc2[63:0]
+(59)TOP.cmp_top.system.chip.tile0.buffer_router_data_noc2[63:0]
+(60)TOP.cmp_top.system.chip.tile0.buffer_router_data_noc2[63:0]
+(61)TOP.cmp_top.system.chip.tile0.buffer_router_data_noc2[63:0]
+(62)TOP.cmp_top.system.chip.tile0.buffer_router_data_noc2[63:0]
+(63)TOP.cmp_top.system.chip.tile0.buffer_router_data_noc2[63:0]
+@1401200
+-group_end
+@28
+TOP.cmp_top.system.chip.tile0.router_buffer_consumed_noc2
+@1401200
+-Output - NoC2
+@c00200
+-Output - NoC3
+@28
+TOP.cmp_top.system.chip.tile0.buffer_router_valid_noc3
+@22
+TOP.cmp_top.system.chip.tile0.buffer_router_data_noc3[63:0]
+@28
+TOP.cmp_top.system.chip.tile0.router_buffer_consumed_noc3
+@1401200
+-Output - NoC3
+-Local - Output
+@200
+-Routers
+@c00200
+-Routers
+-Input - EAST
+-NoC1
+@28
+TOP.cmp_top.system.chip.tile0.dyn0_validIn_E
+@22
+TOP.cmp_top.system.chip.tile0.dyn0_dataIn_E[63:0]
+@28
+TOP.cmp_top.system.chip.tile0.dyn0_yummyOut_E
+@1401200
+-NoC1
+@c00200
+-NoC2
+@28
+TOP.cmp_top.system.chip.tile0.dyn1_validIn_E
+@22
+TOP.cmp_top.system.chip.tile0.dyn1_dataIn_E[63:0]
+@28
+TOP.cmp_top.system.chip.tile0.dyn1_yummyOut_E
+@1401200
+-NoC2
+@c00200
+-NoC 3
+@28
+TOP.cmp_top.system.chip.tile0.dyn2_validIn_E
+@22
+TOP.cmp_top.system.chip.tile0.dyn2_dataIn_E[63:0]
+@28
+TOP.cmp_top.system.chip.tile0.dyn2_yummyOut_E
+@1401200
+-NoC3
+-Input - EAST
+@800200
+-Input - WEST
+-NoC1
+@28
+TOP.cmp_top.system.chip.tile0.dyn0_validIn_W
+@22
+TOP.cmp_top.system.chip.tile0.dyn0_dataIn_W[63:0]
+@28
+TOP.cmp_top.system.chip.tile0.dyn0_yummyOut_W
+@1000200
+-NoC1
+@800200
+-NoC2
+@28
+TOP.cmp_top.system.chip.tile0.dyn1_validIn_W
+@22
+TOP.cmp_top.system.chip.tile0.dyn1_dataIn_W[63:0]
+@28
+TOP.cmp_top.system.chip.tile0.dyn1_yummyOut_W
+@1000200
+-NoC2
+@800200
+-NoC3
+@28
+TOP.cmp_top.system.chip.tile0.dyn2_validIn_W
+@22
+TOP.cmp_top.system.chip.tile0.dyn2_dataIn_W[63:0]
+@28
+TOP.cmp_top.system.chip.tile0.dyn2_yummyOut_W
+@1000200
+-NoC3
+-Input - WEST
+@c00200
+-Output - EAST
+-NoC1
+@28
+TOP.cmp_top.system.chip.tile0.dyn0_dEo_valid
+@22
+TOP.cmp_top.system.chip.tile0.dyn0_dEo[63:0]
+@28
+TOP.cmp_top.system.chip.tile0.dyn0_dEo_yummy
+@1401200
+-NoC1
+@c00200
+-NoC2
+@28
+TOP.cmp_top.system.chip.tile0.dyn1_dEo_valid
+@22
+TOP.cmp_top.system.chip.tile0.dyn1_dEo[63:0]
+@28
+TOP.cmp_top.system.chip.tile0.dyn1_dEo_yummy
+@1401200
+-NoC2
+@c00200
+-NoC3
+@28
+TOP.cmp_top.system.chip.tile0.dyn2_dEo_valid
+@22
+TOP.cmp_top.system.chip.tile0.dyn2_dEo[63:0]
+@28
+TOP.cmp_top.system.chip.tile0.dyn2_dEo_yummy
+@1401200
+-NoC3
+-Output - EAST
+@c00200
+-Output - WEST
+-NoC1
+@28
+TOP.cmp_top.system.chip.tile0.dyn0_dWo_valid
+@22
+TOP.cmp_top.system.chip.tile0.dyn0_dWo[63:0]
+@28
+TOP.cmp_top.system.chip.tile0.dyn0_dWo_yummy
+@1401200
+-NoC1
+@800200
+-NoC2
+@28
+TOP.cmp_top.system.chip.tile0.dyn1_dWo_valid
+@22
+TOP.cmp_top.system.chip.tile0.dyn1_dWo[63:0]
+@28
+TOP.cmp_top.system.chip.tile0.dyn1_dWo_yummy
+@1000200
+-NoC2
+@c00200
+-NoC3
+@28
+TOP.cmp_top.system.chip.tile0.dyn2_dWo_valid
+@22
+TOP.cmp_top.system.chip.tile0.dyn2_dWo[63:0]
+@28
+TOP.cmp_top.system.chip.tile0.dyn2_dWo_yummy
+@1401200
+-NoC3
+-Output - WEST
+-Routers
+-PE0x0
+@200
+-Tile 1x0
+@c00200
+-PE1x0
+-Local - Input
+@800200
+-Input - NoC1
+@28
+TOP.cmp_top.system.chip.tile1.router_buffer_data_val_noc1
+@22
+TOP.cmp_top.system.chip.tile1.router_buffer_data_noc1[63:0]
+@28
+TOP.cmp_top.system.chip.tile1.buffer_router_yummy_noc1
+@1000200
+-Input - NoC1
+@800200
+-Input - NoC2
+@28
+TOP.cmp_top.system.chip.tile1.router_buffer_data_val_noc2
+@22
+TOP.cmp_top.system.chip.tile1.router_buffer_data_noc2[63:0]
+@28
+TOP.cmp_top.system.chip.tile1.buffer_router_yummy_noc2
+@1000200
+-Input - NoC2
+@800200
+-Input - NoC3
+@28
+TOP.cmp_top.system.chip.tile1.router_buffer_data_val_noc3
+@22
+TOP.cmp_top.system.chip.tile1.router_buffer_data_noc3[63:0]
+@28
+TOP.cmp_top.system.chip.tile1.buffer_router_yummy_noc3
+@1000200
+-Input - NoC3
+@1401200
+-Local - Input
+@800200
+-Local - Output
+-Output - NoC1
+@28
+TOP.cmp_top.system.chip.tile1.buffer_router_valid_noc1
+@c00022
+TOP.cmp_top.system.chip.tile1.buffer_router_data_noc1[63:0]
+@28
+(0)TOP.cmp_top.system.chip.tile1.buffer_router_data_noc1[63:0]
+(1)TOP.cmp_top.system.chip.tile1.buffer_router_data_noc1[63:0]
+(2)TOP.cmp_top.system.chip.tile1.buffer_router_data_noc1[63:0]
+(3)TOP.cmp_top.system.chip.tile1.buffer_router_data_noc1[63:0]
+(4)TOP.cmp_top.system.chip.tile1.buffer_router_data_noc1[63:0]
+(5)TOP.cmp_top.system.chip.tile1.buffer_router_data_noc1[63:0]
+(6)TOP.cmp_top.system.chip.tile1.buffer_router_data_noc1[63:0]
+(7)TOP.cmp_top.system.chip.tile1.buffer_router_data_noc1[63:0]
+(8)TOP.cmp_top.system.chip.tile1.buffer_router_data_noc1[63:0]
+(9)TOP.cmp_top.system.chip.tile1.buffer_router_data_noc1[63:0]
+(10)TOP.cmp_top.system.chip.tile1.buffer_router_data_noc1[63:0]
+(11)TOP.cmp_top.system.chip.tile1.buffer_router_data_noc1[63:0]
+(12)TOP.cmp_top.system.chip.tile1.buffer_router_data_noc1[63:0]
+(13)TOP.cmp_top.system.chip.tile1.buffer_router_data_noc1[63:0]
+(14)TOP.cmp_top.system.chip.tile1.buffer_router_data_noc1[63:0]
+(15)TOP.cmp_top.system.chip.tile1.buffer_router_data_noc1[63:0]
+(16)TOP.cmp_top.system.chip.tile1.buffer_router_data_noc1[63:0]
+(17)TOP.cmp_top.system.chip.tile1.buffer_router_data_noc1[63:0]
+(18)TOP.cmp_top.system.chip.tile1.buffer_router_data_noc1[63:0]
+(19)TOP.cmp_top.system.chip.tile1.buffer_router_data_noc1[63:0]
+(20)TOP.cmp_top.system.chip.tile1.buffer_router_data_noc1[63:0]
+(21)TOP.cmp_top.system.chip.tile1.buffer_router_data_noc1[63:0]
+(22)TOP.cmp_top.system.chip.tile1.buffer_router_data_noc1[63:0]
+(23)TOP.cmp_top.system.chip.tile1.buffer_router_data_noc1[63:0]
+(24)TOP.cmp_top.system.chip.tile1.buffer_router_data_noc1[63:0]
+(25)TOP.cmp_top.system.chip.tile1.buffer_router_data_noc1[63:0]
+(26)TOP.cmp_top.system.chip.tile1.buffer_router_data_noc1[63:0]
+(27)TOP.cmp_top.system.chip.tile1.buffer_router_data_noc1[63:0]
+(28)TOP.cmp_top.system.chip.tile1.buffer_router_data_noc1[63:0]
+(29)TOP.cmp_top.system.chip.tile1.buffer_router_data_noc1[63:0]
+(30)TOP.cmp_top.system.chip.tile1.buffer_router_data_noc1[63:0]
+(31)TOP.cmp_top.system.chip.tile1.buffer_router_data_noc1[63:0]
+(32)TOP.cmp_top.system.chip.tile1.buffer_router_data_noc1[63:0]
+(33)TOP.cmp_top.system.chip.tile1.buffer_router_data_noc1[63:0]
+(34)TOP.cmp_top.system.chip.tile1.buffer_router_data_noc1[63:0]
+(35)TOP.cmp_top.system.chip.tile1.buffer_router_data_noc1[63:0]
+(36)TOP.cmp_top.system.chip.tile1.buffer_router_data_noc1[63:0]
+(37)TOP.cmp_top.system.chip.tile1.buffer_router_data_noc1[63:0]
+(38)TOP.cmp_top.system.chip.tile1.buffer_router_data_noc1[63:0]
+(39)TOP.cmp_top.system.chip.tile1.buffer_router_data_noc1[63:0]
+(40)TOP.cmp_top.system.chip.tile1.buffer_router_data_noc1[63:0]
+(41)TOP.cmp_top.system.chip.tile1.buffer_router_data_noc1[63:0]
+(42)TOP.cmp_top.system.chip.tile1.buffer_router_data_noc1[63:0]
+(43)TOP.cmp_top.system.chip.tile1.buffer_router_data_noc1[63:0]
+(44)TOP.cmp_top.system.chip.tile1.buffer_router_data_noc1[63:0]
+(45)TOP.cmp_top.system.chip.tile1.buffer_router_data_noc1[63:0]
+(46)TOP.cmp_top.system.chip.tile1.buffer_router_data_noc1[63:0]
+(47)TOP.cmp_top.system.chip.tile1.buffer_router_data_noc1[63:0]
+(48)TOP.cmp_top.system.chip.tile1.buffer_router_data_noc1[63:0]
+(49)TOP.cmp_top.system.chip.tile1.buffer_router_data_noc1[63:0]
+(50)TOP.cmp_top.system.chip.tile1.buffer_router_data_noc1[63:0]
+(51)TOP.cmp_top.system.chip.tile1.buffer_router_data_noc1[63:0]
+(52)TOP.cmp_top.system.chip.tile1.buffer_router_data_noc1[63:0]
+(53)TOP.cmp_top.system.chip.tile1.buffer_router_data_noc1[63:0]
+(54)TOP.cmp_top.system.chip.tile1.buffer_router_data_noc1[63:0]
+(55)TOP.cmp_top.system.chip.tile1.buffer_router_data_noc1[63:0]
+(56)TOP.cmp_top.system.chip.tile1.buffer_router_data_noc1[63:0]
+(57)TOP.cmp_top.system.chip.tile1.buffer_router_data_noc1[63:0]
+(58)TOP.cmp_top.system.chip.tile1.buffer_router_data_noc1[63:0]
+(59)TOP.cmp_top.system.chip.tile1.buffer_router_data_noc1[63:0]
+(60)TOP.cmp_top.system.chip.tile1.buffer_router_data_noc1[63:0]
+(61)TOP.cmp_top.system.chip.tile1.buffer_router_data_noc1[63:0]
+(62)TOP.cmp_top.system.chip.tile1.buffer_router_data_noc1[63:0]
+(63)TOP.cmp_top.system.chip.tile1.buffer_router_data_noc1[63:0]
+@1401200
+-group_end
+@28
+TOP.cmp_top.system.chip.tile1.router_buffer_consumed_noc1
+@1000200
+-Output - NoC1
+@c00200
+-Output - NoC2
+@28
+TOP.cmp_top.system.chip.tile1.buffer_router_valid_noc2
+@22
+TOP.cmp_top.system.chip.tile1.buffer_router_data_noc2[63:0]
+@28
+TOP.cmp_top.system.chip.tile1.router_buffer_consumed_noc2
+@1401200
+-Output - NoC2
+@c00200
+-Output - NoC3
+@28
+TOP.cmp_top.system.chip.tile1.buffer_router_valid_noc3
+@22
+TOP.cmp_top.system.chip.tile1.buffer_router_data_noc3[63:0]
+@28
+TOP.cmp_top.system.chip.tile1.router_buffer_consumed_noc3
+@1401200
+-Output - NoC3
+@1000200
+-Local - Output
+@200
+-Routers
+@800200
+-Router
+-Input - EAST
+@c00200
+-NoC1
+@28
+TOP.cmp_top.system.chip.tile1.dyn0_validIn_E
+@22
+TOP.cmp_top.system.chip.tile1.dyn0_dataIn_E[63:0]
+@28
+TOP.cmp_top.system.chip.tile1.dyn0_yummyOut_E
+@1401200
+-NoC1
+@c00200
+-NoC2
+@28
+TOP.cmp_top.system.chip.tile1.dyn1_validIn_E
+@22
+TOP.cmp_top.system.chip.tile1.dyn1_dataIn_E[63:0]
+@28
+TOP.cmp_top.system.chip.tile1.dyn1_yummyOut_E
+@1401200
+-NoC2
+@c00200
+-NoC 3
+@28
+TOP.cmp_top.system.chip.tile1.dyn2_validIn_E
+@22
+TOP.cmp_top.system.chip.tile1.dyn2_dataIn_E[63:0]
+@28
+TOP.cmp_top.system.chip.tile1.dyn2_yummyOut_E
+@1401200
+-NoC3
+@1000200
+-Input - EAST
+@800200
+-Input - WEST
+-NoC1
+@28
+TOP.cmp_top.system.chip.tile1.dyn0_validIn_W
+@22
+TOP.cmp_top.system.chip.tile1.dyn0_dataIn_W[63:0]
+@28
+TOP.cmp_top.system.chip.tile1.dyn0_yummyOut_W
+@1000200
+-NoC1
+@800200
+-NoC2
+@28
+TOP.cmp_top.system.chip.tile1.dyn1_validIn_W
+@22
+TOP.cmp_top.system.chip.tile1.dyn1_dataIn_W[63:0]
+@28
+TOP.cmp_top.system.chip.tile1.dyn1_yummyOut_W
+@1000200
+-NoC2
+@800200
+-NoC3
+@28
+TOP.cmp_top.system.chip.tile1.dyn2_validIn_W
+@22
+TOP.cmp_top.system.chip.tile1.dyn2_dataIn_W[63:0]
+@28
+TOP.cmp_top.system.chip.tile1.dyn2_yummyOut_W
+@1000200
+-NoC3
+-Input - WEST
+@c00200
+-Output - EAST
+-NoC1
+@28
+TOP.cmp_top.system.chip.tile1.dyn0_dEo_valid
+@22
+TOP.cmp_top.system.chip.tile1.dyn0_dEo[63:0]
+@28
+TOP.cmp_top.system.chip.tile1.dyn0_dEo_yummy
+@1401200
+-NoC1
+@c00200
+-NoC2
+@28
+TOP.cmp_top.system.chip.tile1.dyn1_dEo_valid
+@22
+TOP.cmp_top.system.chip.tile1.dyn1_dEo[63:0]
+@28
+TOP.cmp_top.system.chip.tile1.dyn1_dEo_yummy
+@1401200
+-NoC2
+@c00200
+-NoC3
+@28
+TOP.cmp_top.system.chip.tile1.dyn2_dEo_valid
+@22
+TOP.cmp_top.system.chip.tile1.dyn2_dEo[63:0]
+@28
+TOP.cmp_top.system.chip.tile1.dyn2_dEo_yummy
+@1401200
+-NoC3
+-Output - EAST
+@c00200
+-Output - WEST
+-NoC1
+@28
+TOP.cmp_top.system.chip.tile1.dyn0_dWo_valid
+@22
+TOP.cmp_top.system.chip.tile1.dyn0_dWo[63:0]
+@28
+TOP.cmp_top.system.chip.tile1.dyn0_dWo_yummy
+@1401200
+-NoC1
+@c00200
+-NoC2
+@28
+TOP.cmp_top.system.chip.tile1.dyn1_dWo_valid
+@22
+TOP.cmp_top.system.chip.tile1.dyn1_dWo[63:0]
+@28
+TOP.cmp_top.system.chip.tile1.dyn1_dWo_yummy
+@1401200
+-NoC2
+@c00200
+-NoC3
+@28
+TOP.cmp_top.system.chip.tile1.dyn2_dWo_valid
+@22
+TOP.cmp_top.system.chip.tile1.dyn2_dWo[63:0]
+@28
+TOP.cmp_top.system.chip.tile1.dyn2_dWo_yummy
+@1401200
+-NoC3
+-Output - WEST
+@1000200
+-Router
+@1401200
+-PE1x0
+[pattern_trace] 1
+[pattern_trace] 0
