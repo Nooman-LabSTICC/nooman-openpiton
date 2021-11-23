@@ -32,7 +32,7 @@ void consume_item(int index){
 //#define	 L2_MISS_COUNTER	0xAB
 
 void producer(){
-    float b, a = 2.5f;
+    //float b, a = 2.5f;
     for(int index=0;index<LOOP_SIZE;index++){
         down(&empty);
         down(&mutex);
@@ -42,8 +42,8 @@ void producer(){
 
         barrier_wait(&iter_barrier);
 
-        b = a / 0.5f;
-        printf("T: %d\n", (int)b);
+        //b = a / 0.5f;
+        //printf("T: %d\n", (int)b);
     }
 
     printf("Producer end\n");
