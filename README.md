@@ -7,7 +7,7 @@
     ```
 
 * Prepare your terminal
-  * Edit your terminal to Run a custom command instead of my shell:
+  * Edit your terminal to "Run a custom command instead of my shell" (search this entire sentence in google):
   * Add this custom command in the text field:
     ```c
     bash --login
