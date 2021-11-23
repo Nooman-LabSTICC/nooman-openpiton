@@ -29,7 +29,7 @@
 // `define FPGA_SYN_16x160
 `endif
 
-// /home/ruaro/openpiton/piton/verif/env/manycore/devices_ariane.xml
+// /home/ruaro/nooman-openpiton/piton/verif/env/manycore/devices_ariane.xml
 
 
 

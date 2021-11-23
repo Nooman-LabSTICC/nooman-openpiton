@@ -44,7 +44,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 // trin timing fix 12/16: move read s3 to s2
 // timing 12/17: move write to s2 to s3
 
-// /home/ruaro/openpiton/piton/verif/env/manycore/devices_ariane.xml
+// /home/ruaro/nooman-openpiton/piton/verif/env/manycore/devices_ariane.xml
 
 module rf_l15_wmt(
    input wire clk,

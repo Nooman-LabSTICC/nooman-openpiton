@@ -37,7 +37,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //Note:
 //
 `include "network_define.v"
-// /home/ruaro/openpiton/piton/verif/env/manycore/devices_ariane.xml
+// /home/ruaro/nooman-openpiton/piton/verif/env/manycore/devices_ariane.xml
 
 module dynamic_output_control_para(thanks_0, thanks_1, thanks_2, thanks_3, 
                               valid_out, current_route, ec_wants_to_send_but_cannot, clk, reset, 

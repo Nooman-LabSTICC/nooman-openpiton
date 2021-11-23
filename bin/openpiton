@@ -307,17 +307,17 @@ if debug:
 
 if with_wave:
 
-    wave_questa(X_DIMM, Y_DIMM)
-    #wave_verilator(X_DIMM, Y_DIMM)
+    #wave_questa(X_DIMM, Y_DIMM)
+    wave_verilator(X_DIMM, Y_DIMM)
 
 if generate_openpiton:
 
-    gen_questa(X_DIMM, Y_DIMM)
-    #gen_verilator(modelsim, X_DIMM, Y_DIMM)
+    #gen_questa(X_DIMM, Y_DIMM)
+    gen_verilator(modelsim, X_DIMM, Y_DIMM)
 
 if run_openpiton:
 
-    run_questa(with_wave, modelsim, X_DIMM, Y_DIMM, testcase, build_dir)
-    #run_verilator(modelsim, X_DIMM, Y_DIMM, testcase)
+    #run_questa(with_wave, modelsim, X_DIMM, Y_DIMM, testcase, build_dir)
+    run_verilator(modelsim, X_DIMM, Y_DIMM, testcase)
 
 

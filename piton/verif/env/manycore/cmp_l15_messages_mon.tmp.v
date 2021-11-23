@@ -45,7 +45,7 @@ reg  pcx_interrupt_threadid;
 reg [5:0] pcx_interrupt_vector;
 
 
-// /home/ruaro/openpiton/piton/verif/env/manycore/devices_ariane.xml
+// /home/ruaro/nooman-openpiton/piton/verif/env/manycore/devices_ariane.xml
 
 
 task decode_predecode_reqtype;

@@ -34,7 +34,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //Note:
 //
 `include "network_define.v"
-// /home/ruaro/openpiton/piton/verif/env/manycore/devices_ariane.xml
+// /home/ruaro/nooman-openpiton/piton/verif/env/manycore/devices_ariane.xml
 
 module dynamic_input_top_4_para(route_req_0_out, route_req_1_out, route_req_2_out, route_req_3_out, 
                            default_ready_0_out, default_ready_1_out, default_ready_2_out, default_ready_3_out, 

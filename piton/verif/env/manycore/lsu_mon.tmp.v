@@ -31,7 +31,7 @@
 `include "sys.h"
 `include "iop.h"
 
-// /home/ruaro/openpiton/piton/verif/env/manycore/devices_ariane.xml
+// /home/ruaro/nooman-openpiton/piton/verif/env/manycore/devices_ariane.xml
 
 
 module lsu_mon ( clk, rst_l);

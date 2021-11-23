@@ -23,7 +23,7 @@
 `include "define.tmp.h"
 `include "ifu.tmp.h"
 
-// /home/ruaro/openpiton/piton/verif/env/manycore/devices_ariane.xml
+// /home/ruaro/nooman-openpiton/piton/verif/env/manycore/devices_ariane.xml
 `define GOOD_TRAP_COUNTER 32
 
 

@@ -23,7 +23,7 @@
 `include "dmbr_define.v"
 `include "l15.tmp.h"
 `include "jtag.vh"
-// /home/ruaro/openpiton/piton/verif/env/manycore/devices_ariane.xml
+// /home/ruaro/nooman-openpiton/piton/verif/env/manycore/devices_ariane.xml
 
 
 module tile #(

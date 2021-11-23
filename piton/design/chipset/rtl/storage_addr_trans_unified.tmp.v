@@ -28,7 +28,7 @@
 // It is provided for test: unknown
 //-----------------------------------------
 
-// /home/ruaro/openpiton/piton/verif/env/manycore/devices_ariane.xml
+// /home/ruaro/nooman-openpiton/piton/verif/env/manycore/devices_ariane.xml
 
 
 

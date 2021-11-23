@@ -62,7 +62,7 @@
 //                                      purposes
 //  NEXYS4DDR_BOARD NEXYSVIDEO_BOARD    Used to indicate which board this code is
 //                                      being synthesized for. There are more than just these
-// /home/ruaro/openpiton/piton/verif/env/manycore/devices_ariane.xml
+// /home/ruaro/nooman-openpiton/piton/verif/env/manycore/devices_ariane.xml
 
 
 module chipset_impl(

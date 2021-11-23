@@ -33,7 +33,7 @@
 // Icache Values in IFU::ICD/ICV/ICT/FDP/IFQDP
 //--------------------------------------------
 
-// /home/ruaro/openpiton/piton/verif/env/manycore/devices_ariane.xml
+// /home/ruaro/nooman-openpiton/piton/verif/env/manycore/devices_ariane.xml
 `define IC_SZ 16384
 `define IC_SET_IDX_HI 6
 `define IC_NUM_WAY 4

@@ -22,7 +22,7 @@
 * ========== Copyright Header End ============================================
 */
 
-// /home/ruaro/openpiton/piton/verif/env/manycore/devices_ariane.xml
+// /home/ruaro/nooman-openpiton/piton/verif/env/manycore/devices_ariane.xml
 `define L1D_ENTRY_COUNT 512
 `define L1D_SET_IDX_HI 6
 `define L1D_WAY_COUNT 4

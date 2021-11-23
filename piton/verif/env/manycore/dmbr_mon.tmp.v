@@ -40,7 +40,7 @@ module dmbr_mon (
 
 localparam TOTAL_CREDIT_WIDTH = `CREDIT_WIDTH + 4;	// 10 bins > 2^4 increasing in width
 
-// /home/ruaro/openpiton/piton/verif/env/manycore/devices_ariane.xml
+// /home/ruaro/nooman-openpiton/piton/verif/env/manycore/devices_ariane.xml
 
 
     wire [TOTAL_CREDIT_WIDTH - 1 : 0]	total_credit_num0;

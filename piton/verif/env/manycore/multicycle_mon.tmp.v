@@ -49,7 +49,7 @@
 
 `define NO_OF_SIGNALS 1
 
-// /home/ruaro/openpiton/piton/verif/env/manycore/devices_ariane.xml
+// /home/ruaro/nooman-openpiton/piton/verif/env/manycore/devices_ariane.xml
 
 
 module multicycle_mon(/*AUTOARG*/

@@ -34,7 +34,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //Note:
 //
 `include "network_define.v"
-// /home/ruaro/openpiton/piton/verif/env/manycore/devices_ariane.xml
+// /home/ruaro/nooman-openpiton/piton/verif/env/manycore/devices_ariane.xml
 
 module io_xbar_input_top_16(route_req_0_out, route_req_1_out, route_req_2_out, route_req_3_out, route_req_4_out, route_req_5_out, route_req_6_out, route_req_7_out, default_ready_0_out, default_ready_1_out, default_ready_2_out, default_ready_3_out, default_ready_4_out, default_ready_5_out, default_ready_6_out, default_ready_7_out, tail_out, yummy_out, data_out, valid_out, clk, reset, my_loc_x_in, my_loc_y_in, my_chip_id_in, valid_in, data_in,thanks_0, thanks_1, thanks_2, thanks_3, thanks_4, thanks_5, thanks_6, thanks_7);
 

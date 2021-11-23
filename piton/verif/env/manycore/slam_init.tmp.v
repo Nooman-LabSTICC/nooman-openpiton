@@ -25,7 +25,7 @@
 
 `ifndef VERILATOR
 
-// /home/ruaro/openpiton/piton/verif/env/manycore/devices_ariane.xml
+// /home/ruaro/nooman-openpiton/piton/verif/env/manycore/devices_ariane.xml
 `define MAX_TILE 64
 
 

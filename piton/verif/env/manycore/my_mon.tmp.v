@@ -25,7 +25,7 @@
 `include "iop.h"
 `include "cross_module.tmp.h"
 
-// /home/ruaro/openpiton/piton/verif/env/manycore/devices_ariane.xml
+// /home/ruaro/nooman-openpiton/piton/verif/env/manycore/devices_ariane.xml
 `define NUM_TILES 9
 
 

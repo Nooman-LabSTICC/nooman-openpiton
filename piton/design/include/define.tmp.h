@@ -50,7 +50,7 @@
 
 // Tile config
 
-// /home/ruaro/openpiton/piton/verif/env/manycore/devices_ariane.xml
+// /home/ruaro/nooman-openpiton/piton/verif/env/manycore/devices_ariane.xml
 `define NUM_TILES 9
 `define X_TILES 3
 `define Y_TILES 3

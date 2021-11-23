@@ -25,7 +25,7 @@
 //define and will move all the define to cross.h later
 `define PLI_QUIT  1    /* None */
 
-// /home/ruaro/openpiton/piton/verif/env/manycore/devices_ariane.xml
+// /home/ruaro/nooman-openpiton/piton/verif/env/manycore/devices_ariane.xml
 
 
 module monitor(/*AUTOARG*/

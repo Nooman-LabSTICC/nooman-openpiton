@@ -54,7 +54,7 @@ module packet_filter (
     // asserted if we get a packet with an invalid address
     output wire                         invalid_access_o
 );
-// /home/ruaro/openpiton/piton/verif/env/manycore/devices_ariane.xml
+// /home/ruaro/nooman-openpiton/piton/verif/env/manycore/devices_ariane.xml
 
     localparam IDLE = 3'b000;
     localparam ONLYHEADERFLIT = 3'b001;

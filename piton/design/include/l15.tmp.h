@@ -50,7 +50,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 `define L15_PADDR_MASK 39:0
 
 
-// /home/ruaro/openpiton/piton/verif/env/manycore/devices_ariane.xml
+// /home/ruaro/nooman-openpiton/piton/verif/env/manycore/devices_ariane.xml
 // this is used in the ariane SV packages to derive the parameterization
 `define CONFIG_L1D_CACHELINE_WIDTH 128
 `define CONFIG_L1I_CACHELINE_WIDTH 256
