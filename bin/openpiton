@@ -269,6 +269,11 @@ if run_openpiton or generate_openpiton:
     os.system("mkdir "+debug_folder)
     os.system("mkdir "+log_folder)
 
+    #Create mem_cpu log file
+    mem_cpu_file = debug_folder+"/mem_cpu_log.txt"
+    file = open(mem_cpu_file, "w+")
+    file.close()
+
     platform_cfg = "mpsoc_x "+str(X_DIMM)+"\n"
     platform_cfg = platform_cfg + "mpsoc_y "+str(Y_DIMM)
     platform_cfg = platform_cfg + """

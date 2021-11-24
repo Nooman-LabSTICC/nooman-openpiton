@@ -74,7 +74,7 @@ integer fd;
 
 integer i;
 initial begin
-    fd = $fopen("mem_cpu_log.txt", "w");  
+    fd = $fopen("debug/mem_cpu_log.txt", "w");  
     $fclose(fd); 
 end
 
@@ -127,14 +127,14 @@ begin
             print "\n   //Core "+str(x)+"x"+str(y)+" Index: "+tile_index
 
             print "    if(`ARIANE_CORE"+tile_index+".icache_miss_cache_perf) begin"
-            print "        fd = $fopen(\"mem_cpu_log.txt\", \"a\");"  
+            print "        fd = $fopen(\"debug/mem_cpu_log.txt\", \"a\");"  
             print "        $fdisplay(fd,\"L1-Imiss:%0d:"+tile_str+"\",counter);"
             print "        $fclose(fd);"  
             print "    end"
     
     
             print "    if(`ARIANE_CORE"+tile_index+".dcache_miss_cache_perf) begin"
-            print "        fd = $fopen(\"mem_cpu_log.txt\", \"a\");"  
+            print "        fd = $fopen(\"debug/mem_cpu_log.txt\", \"a\");"  
             print "        $fdisplay(fd,\"L1-Dmiss:%0d:"+tile_str+"\",counter);"
             print "        $fclose(fd);"  
             print "    end"
@@ -144,45 +144,45 @@ begin
             for iface in range (1,3): #3 interface between Ariane and L1 cache, Starts in 1 because 1 is the controller and we don't want account the controller
                 iface_str = str(iface)
                 print "    if(`ARIANE_CORE"+tile_index+".i_cache_subsystem.dcache_req_ports_o["+iface_str+"].data_gnt) begin"
-                print "        fd = $fopen(\"mem_cpu_log.txt\", \"a\");"  
+                print "        fd = $fopen(\"debug/mem_cpu_log.txt\", \"a\");"  
                 print "        $fdisplay(fd,\"L1-Daccess:%0d:"+tile_str+"\",counter);"
                 print "        $fclose(fd);"  
                 print "    end"
 
             print "    //Includes AMO access"
             print "    if(`ARIANE_CORE"+tile_index+".i_cache_subsystem.dcache_amo_resp_o.ack) begin"
-            print "        fd = $fopen(\"mem_cpu_log.txt\", \"a\");"  
+            print "        fd = $fopen(\"debug/mem_cpu_log.txt\", \"a\");"  
             print "        $fdisplay(fd,\"L1-Damo access:%0d:"+tile_str+"\",counter);"
             print "        $fclose(fd);"  
             print "    end"
 
             print "    if(`ARIANE_CORE"+tile_index+".i_frontend.icache_valid_q) begin"
-            print "        fd = $fopen(\"mem_cpu_log.txt\", \"a\");"  
+            print "        fd = $fopen(\"debug/mem_cpu_log.txt\", \"a\");"  
             print "        $fdisplay(fd,\"L1-Iaccess:%0d:"+tile_str+"\",counter);"
             print "        $fclose(fd);"  
             print "    end" 
 
             print "    if(`L2_TOP"+tile_index+".l2_miss_valid) begin"
-            print "        fd = $fopen(\"mem_cpu_log.txt\", \"a\");"  
+            print "        fd = $fopen(\"debug/mem_cpu_log.txt\", \"a\");"  
             print "        $fdisplay(fd,\"L2miss:%0d:"+tile_str+"\",counter);"
             print "        $fclose(fd);"  
             print "    end" 
 
             print "    if(`L2_TOP"+tile_index+".l2_access_valid) begin"
-            print "        fd = $fopen(\"mem_cpu_log.txt\", \"a\");"  
+            print "        fd = $fopen(\"debug/mem_cpu_log.txt\", \"a\");"  
             print "        $fdisplay(fd,\"L2access:%0d:"+tile_str+"\",counter);"
             print "        $fclose(fd);"  
             print "    end" 
 
             #Uncomment this line to monitor to track each LOAD_MEM packet sent by L2. This includes boot msg too
             print "    if(`L2_TOP"+tile_index+".pipe1.msg_send_valid && `L2_TOP"+tile_index+".pipe1.msg_send_ready && (`L2_TOP"+tile_index+".pipe1.msg_send_mode == 3'h4)) begin"
-            print "        fd = $fopen(\"mem_cpu_log.txt\", \"a\");"  
+            print "        fd = $fopen(\"debug/mem_cpu_log.txt\", \"a\");"  
             print "        $fdisplay(fd,\"L2LOAD_MEM:%0d:"+tile_str+"\",counter);"
             print "        $fclose(fd);"  
             print "    end" 
     %>
     if (`TOP_MOD_INST.chipset.chipset_impl.fake_mem_ctrl.mem_valid_in && `TOP_MOD_INST.chipset.chipset_impl.fake_mem_ctrl.mem_ready_in) begin
-        fd = $fopen("mem_cpu_log.txt", "a");
+        fd = $fopen("debug/mem_cpu_log.txt", "a");
         $fdisplay(fd,"DRAMaccess:%0d-all", counter);
         $fclose(fd);
     end
