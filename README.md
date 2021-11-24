@@ -1,3 +1,11 @@
+# Credits
+This many-core project is based on OpenPiton. A open-source many-core platform Developed by Princeton University. We use OpenPiton as starting point to do our modifications. Please don't forget to cite OpenPiton properly if you use the many-core herein provided.
+
+
+[Link to OpenPiton's original project](https://github.com/PrincetonUniversity/openpiton)
+
+
+
 # Tutorial Instalation OpenPiton - Lab-STICC on Ubuntu 20.04
 
 ## Prerequisites
@@ -35,9 +43,9 @@
 * Close and open your terminal again.
   
 ## RISC-V Toolchain
-* Go to $ROOT_PITON:
+* Go to $PITON_ROOT:
     ```c
-    cd $ROOT_PITON
+    cd $PITON_ROOT
     ```
 * Install risc-v toolchain:
     ```c
@@ -49,18 +57,11 @@
       ```c
       riscv64-unknown-elf-
       ```
-* Define Environment variables. Edit your .bashrc, add this code at end:
-  * RISC-V:
-    ```c
-    #RISC-V 64  
-    export PATH=**path_of_riscv_toolchain**/bin:${PATH}
-    ```
-
 
 ## Verilator
-* Go to $ROOT_PITON:
+* Go to $PITON_ROOT:
     ```c
-    cd $ROOT_PITON
+    cd $PITON_ROOT
     ```
 * Install Verilator:
     ```c
