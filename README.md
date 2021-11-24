@@ -13,9 +13,6 @@ This many-core project is based on OpenPiton, an open-source many-core platform 
   ```c
   sudo apt-get install git python gcc-7 g++-7 gperf autoconf automake autotools-dev libmpc-dev libmpfr-dev libgmp-dev gawk build-essential bison flex texinfo python-pexpect libusb-1.0-0-dev default-jdk zlib1g-dev valgrind csh device-tree-compiler 
     ```
-  ```c
-  sudo apt-get install python-matplotlib
-  ```
 * Prepare your terminal
   * Edit your terminal to "Run a custom command instead of my shell" (search this entire sentence in google):
   * Check the marker "Run a custom command instead of my shell"
