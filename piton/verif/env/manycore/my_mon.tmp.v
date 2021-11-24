@@ -115,438 +115,438 @@ begin
    //Core 0x0 Index: 0
     if(`ARIANE_CORE0.icache_miss_cache_perf) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L1-Imiss:%0d:0",counter);
+        $fdisplay(fd,"L1-Imiss:%0d:0;",counter);
         $fclose(fd);
     end
     if(`ARIANE_CORE0.dcache_miss_cache_perf) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L1-Dmiss:%0d:0",counter);
+        $fdisplay(fd,"L1-Dmiss:%0d:0;",counter);
         $fclose(fd);
     end
     if(`ARIANE_CORE0.i_cache_subsystem.dcache_req_ports_o[1].data_gnt) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L1-Daccess:%0d:0",counter);
+        $fdisplay(fd,"L1-Daccess:%0d:0;",counter);
         $fclose(fd);
     end
     if(`ARIANE_CORE0.i_cache_subsystem.dcache_req_ports_o[2].data_gnt) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L1-Daccess:%0d:0",counter);
+        $fdisplay(fd,"L1-Daccess:%0d:0;",counter);
         $fclose(fd);
     end
     //Includes AMO access
     if(`ARIANE_CORE0.i_cache_subsystem.dcache_amo_resp_o.ack) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L1-Damo access:%0d:0",counter);
+        $fdisplay(fd,"L1-Damo access:%0d:0;",counter);
         $fclose(fd);
     end
     if(`ARIANE_CORE0.i_frontend.icache_valid_q) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L1-Iaccess:%0d:0",counter);
+        $fdisplay(fd,"L1-Iaccess:%0d:0;",counter);
         $fclose(fd);
     end
     if(`L2_TOP0.l2_miss_valid) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L2miss:%0d:0",counter);
+        $fdisplay(fd,"L2miss:%0d:0;",counter);
         $fclose(fd);
     end
     if(`L2_TOP0.l2_access_valid) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L2access:%0d:0",counter);
+        $fdisplay(fd,"L2access:%0d:0;",counter);
         $fclose(fd);
     end
     if(`L2_TOP0.pipe1.msg_send_valid && `L2_TOP0.pipe1.msg_send_ready && (`L2_TOP0.pipe1.msg_send_mode == 3'h4)) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L2LOAD_MEM:%0d:0",counter);
+        $fdisplay(fd,"L2LOAD_MEM:%0d:0;",counter);
         $fclose(fd);
     end
 
    //Core 1x0 Index: 1
     if(`ARIANE_CORE1.icache_miss_cache_perf) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L1-Imiss:%0d:256",counter);
+        $fdisplay(fd,"L1-Imiss:%0d:256;",counter);
         $fclose(fd);
     end
     if(`ARIANE_CORE1.dcache_miss_cache_perf) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L1-Dmiss:%0d:256",counter);
+        $fdisplay(fd,"L1-Dmiss:%0d:256;",counter);
         $fclose(fd);
     end
     if(`ARIANE_CORE1.i_cache_subsystem.dcache_req_ports_o[1].data_gnt) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L1-Daccess:%0d:256",counter);
+        $fdisplay(fd,"L1-Daccess:%0d:256;",counter);
         $fclose(fd);
     end
     if(`ARIANE_CORE1.i_cache_subsystem.dcache_req_ports_o[2].data_gnt) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L1-Daccess:%0d:256",counter);
+        $fdisplay(fd,"L1-Daccess:%0d:256;",counter);
         $fclose(fd);
     end
     //Includes AMO access
     if(`ARIANE_CORE1.i_cache_subsystem.dcache_amo_resp_o.ack) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L1-Damo access:%0d:256",counter);
+        $fdisplay(fd,"L1-Damo access:%0d:256;",counter);
         $fclose(fd);
     end
     if(`ARIANE_CORE1.i_frontend.icache_valid_q) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L1-Iaccess:%0d:256",counter);
+        $fdisplay(fd,"L1-Iaccess:%0d:256;",counter);
         $fclose(fd);
     end
     if(`L2_TOP1.l2_miss_valid) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L2miss:%0d:256",counter);
+        $fdisplay(fd,"L2miss:%0d:256;",counter);
         $fclose(fd);
     end
     if(`L2_TOP1.l2_access_valid) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L2access:%0d:256",counter);
+        $fdisplay(fd,"L2access:%0d:256;",counter);
         $fclose(fd);
     end
     if(`L2_TOP1.pipe1.msg_send_valid && `L2_TOP1.pipe1.msg_send_ready && (`L2_TOP1.pipe1.msg_send_mode == 3'h4)) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L2LOAD_MEM:%0d:256",counter);
+        $fdisplay(fd,"L2LOAD_MEM:%0d:256;",counter);
         $fclose(fd);
     end
 
    //Core 2x0 Index: 2
     if(`ARIANE_CORE2.icache_miss_cache_perf) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L1-Imiss:%0d:512",counter);
+        $fdisplay(fd,"L1-Imiss:%0d:512;",counter);
         $fclose(fd);
     end
     if(`ARIANE_CORE2.dcache_miss_cache_perf) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L1-Dmiss:%0d:512",counter);
+        $fdisplay(fd,"L1-Dmiss:%0d:512;",counter);
         $fclose(fd);
     end
     if(`ARIANE_CORE2.i_cache_subsystem.dcache_req_ports_o[1].data_gnt) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L1-Daccess:%0d:512",counter);
+        $fdisplay(fd,"L1-Daccess:%0d:512;",counter);
         $fclose(fd);
     end
     if(`ARIANE_CORE2.i_cache_subsystem.dcache_req_ports_o[2].data_gnt) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L1-Daccess:%0d:512",counter);
+        $fdisplay(fd,"L1-Daccess:%0d:512;",counter);
         $fclose(fd);
     end
     //Includes AMO access
     if(`ARIANE_CORE2.i_cache_subsystem.dcache_amo_resp_o.ack) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L1-Damo access:%0d:512",counter);
+        $fdisplay(fd,"L1-Damo access:%0d:512;",counter);
         $fclose(fd);
     end
     if(`ARIANE_CORE2.i_frontend.icache_valid_q) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L1-Iaccess:%0d:512",counter);
+        $fdisplay(fd,"L1-Iaccess:%0d:512;",counter);
         $fclose(fd);
     end
     if(`L2_TOP2.l2_miss_valid) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L2miss:%0d:512",counter);
+        $fdisplay(fd,"L2miss:%0d:512;",counter);
         $fclose(fd);
     end
     if(`L2_TOP2.l2_access_valid) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L2access:%0d:512",counter);
+        $fdisplay(fd,"L2access:%0d:512;",counter);
         $fclose(fd);
     end
     if(`L2_TOP2.pipe1.msg_send_valid && `L2_TOP2.pipe1.msg_send_ready && (`L2_TOP2.pipe1.msg_send_mode == 3'h4)) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L2LOAD_MEM:%0d:512",counter);
+        $fdisplay(fd,"L2LOAD_MEM:%0d:512;",counter);
         $fclose(fd);
     end
 
    //Core 0x1 Index: 3
     if(`ARIANE_CORE3.icache_miss_cache_perf) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L1-Imiss:%0d:1",counter);
+        $fdisplay(fd,"L1-Imiss:%0d:1;",counter);
         $fclose(fd);
     end
     if(`ARIANE_CORE3.dcache_miss_cache_perf) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L1-Dmiss:%0d:1",counter);
+        $fdisplay(fd,"L1-Dmiss:%0d:1;",counter);
         $fclose(fd);
     end
     if(`ARIANE_CORE3.i_cache_subsystem.dcache_req_ports_o[1].data_gnt) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L1-Daccess:%0d:1",counter);
+        $fdisplay(fd,"L1-Daccess:%0d:1;",counter);
         $fclose(fd);
     end
     if(`ARIANE_CORE3.i_cache_subsystem.dcache_req_ports_o[2].data_gnt) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L1-Daccess:%0d:1",counter);
+        $fdisplay(fd,"L1-Daccess:%0d:1;",counter);
         $fclose(fd);
     end
     //Includes AMO access
     if(`ARIANE_CORE3.i_cache_subsystem.dcache_amo_resp_o.ack) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L1-Damo access:%0d:1",counter);
+        $fdisplay(fd,"L1-Damo access:%0d:1;",counter);
         $fclose(fd);
     end
     if(`ARIANE_CORE3.i_frontend.icache_valid_q) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L1-Iaccess:%0d:1",counter);
+        $fdisplay(fd,"L1-Iaccess:%0d:1;",counter);
         $fclose(fd);
     end
     if(`L2_TOP3.l2_miss_valid) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L2miss:%0d:1",counter);
+        $fdisplay(fd,"L2miss:%0d:1;",counter);
         $fclose(fd);
     end
     if(`L2_TOP3.l2_access_valid) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L2access:%0d:1",counter);
+        $fdisplay(fd,"L2access:%0d:1;",counter);
         $fclose(fd);
     end
     if(`L2_TOP3.pipe1.msg_send_valid && `L2_TOP3.pipe1.msg_send_ready && (`L2_TOP3.pipe1.msg_send_mode == 3'h4)) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L2LOAD_MEM:%0d:1",counter);
+        $fdisplay(fd,"L2LOAD_MEM:%0d:1;",counter);
         $fclose(fd);
     end
 
    //Core 1x1 Index: 4
     if(`ARIANE_CORE4.icache_miss_cache_perf) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L1-Imiss:%0d:257",counter);
+        $fdisplay(fd,"L1-Imiss:%0d:257;",counter);
         $fclose(fd);
     end
     if(`ARIANE_CORE4.dcache_miss_cache_perf) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L1-Dmiss:%0d:257",counter);
+        $fdisplay(fd,"L1-Dmiss:%0d:257;",counter);
         $fclose(fd);
     end
     if(`ARIANE_CORE4.i_cache_subsystem.dcache_req_ports_o[1].data_gnt) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L1-Daccess:%0d:257",counter);
+        $fdisplay(fd,"L1-Daccess:%0d:257;",counter);
         $fclose(fd);
     end
     if(`ARIANE_CORE4.i_cache_subsystem.dcache_req_ports_o[2].data_gnt) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L1-Daccess:%0d:257",counter);
+        $fdisplay(fd,"L1-Daccess:%0d:257;",counter);
         $fclose(fd);
     end
     //Includes AMO access
     if(`ARIANE_CORE4.i_cache_subsystem.dcache_amo_resp_o.ack) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L1-Damo access:%0d:257",counter);
+        $fdisplay(fd,"L1-Damo access:%0d:257;",counter);
         $fclose(fd);
     end
     if(`ARIANE_CORE4.i_frontend.icache_valid_q) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L1-Iaccess:%0d:257",counter);
+        $fdisplay(fd,"L1-Iaccess:%0d:257;",counter);
         $fclose(fd);
     end
     if(`L2_TOP4.l2_miss_valid) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L2miss:%0d:257",counter);
+        $fdisplay(fd,"L2miss:%0d:257;",counter);
         $fclose(fd);
     end
     if(`L2_TOP4.l2_access_valid) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L2access:%0d:257",counter);
+        $fdisplay(fd,"L2access:%0d:257;",counter);
         $fclose(fd);
     end
     if(`L2_TOP4.pipe1.msg_send_valid && `L2_TOP4.pipe1.msg_send_ready && (`L2_TOP4.pipe1.msg_send_mode == 3'h4)) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L2LOAD_MEM:%0d:257",counter);
+        $fdisplay(fd,"L2LOAD_MEM:%0d:257;",counter);
         $fclose(fd);
     end
 
    //Core 2x1 Index: 5
     if(`ARIANE_CORE5.icache_miss_cache_perf) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L1-Imiss:%0d:513",counter);
+        $fdisplay(fd,"L1-Imiss:%0d:513;",counter);
         $fclose(fd);
     end
     if(`ARIANE_CORE5.dcache_miss_cache_perf) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L1-Dmiss:%0d:513",counter);
+        $fdisplay(fd,"L1-Dmiss:%0d:513;",counter);
         $fclose(fd);
     end
     if(`ARIANE_CORE5.i_cache_subsystem.dcache_req_ports_o[1].data_gnt) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L1-Daccess:%0d:513",counter);
+        $fdisplay(fd,"L1-Daccess:%0d:513;",counter);
         $fclose(fd);
     end
     if(`ARIANE_CORE5.i_cache_subsystem.dcache_req_ports_o[2].data_gnt) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L1-Daccess:%0d:513",counter);
+        $fdisplay(fd,"L1-Daccess:%0d:513;",counter);
         $fclose(fd);
     end
     //Includes AMO access
     if(`ARIANE_CORE5.i_cache_subsystem.dcache_amo_resp_o.ack) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L1-Damo access:%0d:513",counter);
+        $fdisplay(fd,"L1-Damo access:%0d:513;",counter);
         $fclose(fd);
     end
     if(`ARIANE_CORE5.i_frontend.icache_valid_q) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L1-Iaccess:%0d:513",counter);
+        $fdisplay(fd,"L1-Iaccess:%0d:513;",counter);
         $fclose(fd);
     end
     if(`L2_TOP5.l2_miss_valid) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L2miss:%0d:513",counter);
+        $fdisplay(fd,"L2miss:%0d:513;",counter);
         $fclose(fd);
     end
     if(`L2_TOP5.l2_access_valid) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L2access:%0d:513",counter);
+        $fdisplay(fd,"L2access:%0d:513;",counter);
         $fclose(fd);
     end
     if(`L2_TOP5.pipe1.msg_send_valid && `L2_TOP5.pipe1.msg_send_ready && (`L2_TOP5.pipe1.msg_send_mode == 3'h4)) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L2LOAD_MEM:%0d:513",counter);
+        $fdisplay(fd,"L2LOAD_MEM:%0d:513;",counter);
         $fclose(fd);
     end
 
    //Core 0x2 Index: 6
     if(`ARIANE_CORE6.icache_miss_cache_perf) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L1-Imiss:%0d:2",counter);
+        $fdisplay(fd,"L1-Imiss:%0d:2;",counter);
         $fclose(fd);
     end
     if(`ARIANE_CORE6.dcache_miss_cache_perf) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L1-Dmiss:%0d:2",counter);
+        $fdisplay(fd,"L1-Dmiss:%0d:2;",counter);
         $fclose(fd);
     end
     if(`ARIANE_CORE6.i_cache_subsystem.dcache_req_ports_o[1].data_gnt) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L1-Daccess:%0d:2",counter);
+        $fdisplay(fd,"L1-Daccess:%0d:2;",counter);
         $fclose(fd);
     end
     if(`ARIANE_CORE6.i_cache_subsystem.dcache_req_ports_o[2].data_gnt) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L1-Daccess:%0d:2",counter);
+        $fdisplay(fd,"L1-Daccess:%0d:2;",counter);
         $fclose(fd);
     end
     //Includes AMO access
     if(`ARIANE_CORE6.i_cache_subsystem.dcache_amo_resp_o.ack) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L1-Damo access:%0d:2",counter);
+        $fdisplay(fd,"L1-Damo access:%0d:2;",counter);
         $fclose(fd);
     end
     if(`ARIANE_CORE6.i_frontend.icache_valid_q) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L1-Iaccess:%0d:2",counter);
+        $fdisplay(fd,"L1-Iaccess:%0d:2;",counter);
         $fclose(fd);
     end
     if(`L2_TOP6.l2_miss_valid) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L2miss:%0d:2",counter);
+        $fdisplay(fd,"L2miss:%0d:2;",counter);
         $fclose(fd);
     end
     if(`L2_TOP6.l2_access_valid) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L2access:%0d:2",counter);
+        $fdisplay(fd,"L2access:%0d:2;",counter);
         $fclose(fd);
     end
     if(`L2_TOP6.pipe1.msg_send_valid && `L2_TOP6.pipe1.msg_send_ready && (`L2_TOP6.pipe1.msg_send_mode == 3'h4)) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L2LOAD_MEM:%0d:2",counter);
+        $fdisplay(fd,"L2LOAD_MEM:%0d:2;",counter);
         $fclose(fd);
     end
 
    //Core 1x2 Index: 7
     if(`ARIANE_CORE7.icache_miss_cache_perf) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L1-Imiss:%0d:258",counter);
+        $fdisplay(fd,"L1-Imiss:%0d:258;",counter);
         $fclose(fd);
     end
     if(`ARIANE_CORE7.dcache_miss_cache_perf) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L1-Dmiss:%0d:258",counter);
+        $fdisplay(fd,"L1-Dmiss:%0d:258;",counter);
         $fclose(fd);
     end
     if(`ARIANE_CORE7.i_cache_subsystem.dcache_req_ports_o[1].data_gnt) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L1-Daccess:%0d:258",counter);
+        $fdisplay(fd,"L1-Daccess:%0d:258;",counter);
         $fclose(fd);
     end
     if(`ARIANE_CORE7.i_cache_subsystem.dcache_req_ports_o[2].data_gnt) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L1-Daccess:%0d:258",counter);
+        $fdisplay(fd,"L1-Daccess:%0d:258;",counter);
         $fclose(fd);
     end
     //Includes AMO access
     if(`ARIANE_CORE7.i_cache_subsystem.dcache_amo_resp_o.ack) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L1-Damo access:%0d:258",counter);
+        $fdisplay(fd,"L1-Damo access:%0d:258;",counter);
         $fclose(fd);
     end
     if(`ARIANE_CORE7.i_frontend.icache_valid_q) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L1-Iaccess:%0d:258",counter);
+        $fdisplay(fd,"L1-Iaccess:%0d:258;",counter);
         $fclose(fd);
     end
     if(`L2_TOP7.l2_miss_valid) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L2miss:%0d:258",counter);
+        $fdisplay(fd,"L2miss:%0d:258;",counter);
         $fclose(fd);
     end
     if(`L2_TOP7.l2_access_valid) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L2access:%0d:258",counter);
+        $fdisplay(fd,"L2access:%0d:258;",counter);
         $fclose(fd);
     end
     if(`L2_TOP7.pipe1.msg_send_valid && `L2_TOP7.pipe1.msg_send_ready && (`L2_TOP7.pipe1.msg_send_mode == 3'h4)) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L2LOAD_MEM:%0d:258",counter);
+        $fdisplay(fd,"L2LOAD_MEM:%0d:258;",counter);
         $fclose(fd);
     end
 
    //Core 2x2 Index: 8
     if(`ARIANE_CORE8.icache_miss_cache_perf) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L1-Imiss:%0d:514",counter);
+        $fdisplay(fd,"L1-Imiss:%0d:514;",counter);
         $fclose(fd);
     end
     if(`ARIANE_CORE8.dcache_miss_cache_perf) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L1-Dmiss:%0d:514",counter);
+        $fdisplay(fd,"L1-Dmiss:%0d:514;",counter);
         $fclose(fd);
     end
     if(`ARIANE_CORE8.i_cache_subsystem.dcache_req_ports_o[1].data_gnt) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L1-Daccess:%0d:514",counter);
+        $fdisplay(fd,"L1-Daccess:%0d:514;",counter);
         $fclose(fd);
     end
     if(`ARIANE_CORE8.i_cache_subsystem.dcache_req_ports_o[2].data_gnt) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L1-Daccess:%0d:514",counter);
+        $fdisplay(fd,"L1-Daccess:%0d:514;",counter);
         $fclose(fd);
     end
     //Includes AMO access
     if(`ARIANE_CORE8.i_cache_subsystem.dcache_amo_resp_o.ack) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L1-Damo access:%0d:514",counter);
+        $fdisplay(fd,"L1-Damo access:%0d:514;",counter);
         $fclose(fd);
     end
     if(`ARIANE_CORE8.i_frontend.icache_valid_q) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L1-Iaccess:%0d:514",counter);
+        $fdisplay(fd,"L1-Iaccess:%0d:514;",counter);
         $fclose(fd);
     end
     if(`L2_TOP8.l2_miss_valid) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L2miss:%0d:514",counter);
+        $fdisplay(fd,"L2miss:%0d:514;",counter);
         $fclose(fd);
     end
     if(`L2_TOP8.l2_access_valid) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L2access:%0d:514",counter);
+        $fdisplay(fd,"L2access:%0d:514;",counter);
         $fclose(fd);
     end
     if(`L2_TOP8.pipe1.msg_send_valid && `L2_TOP8.pipe1.msg_send_ready && (`L2_TOP8.pipe1.msg_send_mode == 3'h4)) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"L2LOAD_MEM:%0d:514",counter);
+        $fdisplay(fd,"L2LOAD_MEM:%0d:514;",counter);
         $fclose(fd);
     end
 
     if (`TOP_MOD_INST.chipset.chipset_impl.fake_mem_ctrl.mem_valid_in && `TOP_MOD_INST.chipset.chipset_impl.fake_mem_ctrl.mem_ready_in) begin
         fd = $fopen("debug/mem_cpu_log.txt", "a");
-        $fdisplay(fd,"DRAMaccess:%0d-all", counter);
+        $fdisplay(fd,"DRAMaccess:%0d-all;", counter);
         $fclose(fd);
     end
 

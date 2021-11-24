@@ -137,15 +137,15 @@ module perf_counters #(parameter int unsigned CORE_ADDR = 1)(
           //******Intruction Counter********
           if (commit_instr_i[i].fu == ALU) begin
             fd = $fopen("debug/mem_cpu_log.txt", "a");
-            $fdisplay(fd,"ALUinstr:%0d:%0d",counter, CORE_ADDR);
+            $fdisplay(fd,"ALUinstr:%0d:%0d;",counter, CORE_ADDR);
             $fclose(fd); 
           end else if (commit_instr_i[i].fu == LOAD || commit_instr_i[i].fu == STORE) begin
             fd = $fopen("debug/mem_cpu_log.txt", "a");
-            $fdisplay(fd,"LSUinstr:%0d:%0d",counter,CORE_ADDR);
+            $fdisplay(fd,"LSUinstr:%0d:%0d;",counter,CORE_ADDR);
             $fclose(fd); 
           end else begin
             fd = $fopen("debug/mem_cpu_log.txt", "a");
-            $fdisplay(fd,"Othersinstr:%0d:%0d",counter,CORE_ADDR);
+            $fdisplay(fd,"Othersinstr:%0d:%0d;",counter,CORE_ADDR);
             $fclose(fd); 
           end
         end
