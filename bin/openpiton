@@ -177,17 +177,21 @@ DESCRIPTION
     
     Semi-Optional arguments (-run or -gen or -all is mandatory):
 
-        -gen        (Optional), Generates the manycore model
+        -V          Use Verilator
 
-        -wave    (Optional), Generates manycore model with waveform generation enabled
+        -Q          Use QuestaSim
 
-        -run        (Optional), Runs the manycore model in the specif testcase after run command, e.g.: -run prod_cons
+        -gen        Generates the manycore model
 
-        -all        (Optional), Generates and runs the manycore model in the specif testcase after all command, e.g.: -all prod_cons
+        -wave       Generates manycore model with waveform generation enabled
 
-        -vsim       (Optional), Opens ModelSim 
+        -run        Runs the manycore model in the specif testcase after run command, e.g.: -run prod_cons
 
-        -debug      (Optional), Opens GUI Debugger 
+        -all        Generates and runs the manycore model in the specif testcase after all command, e.g.: -all prod_cons
+
+        -vsim       Opens ModelSim 
+
+        -debug      Opens GUI Debugger 
 
 '''
 
@@ -211,6 +215,7 @@ modelsim = False
 modelsim_gen = False
 debug = False
 testcase = ""
+compilator = "Q"
 
 args_ok = False
 
@@ -223,6 +228,8 @@ for index in range(3,len(sys.argv)):
     elif arg == "-wave":
         with_wave = True
 
+    elif arg == "-V":
+        compilator = "V"
     elif arg == "-run":
         run_openpiton = True
         try:
@@ -307,17 +314,23 @@ if debug:
 
 if with_wave:
 
-    #wave_questa(X_DIMM, Y_DIMM)
-    wave_verilator(X_DIMM, Y_DIMM)
+    if compilator == "Q":
+        wave_questa(X_DIMM, Y_DIMM)
+    elif compilator == "V":
+        wave_verilator(X_DIMM, Y_DIMM)
 
 if generate_openpiton:
 
-    #gen_questa(X_DIMM, Y_DIMM)
-    gen_verilator(modelsim, X_DIMM, Y_DIMM)
+    if compilator == "Q":
+        gen_questa(X_DIMM, Y_DIMM)
+    elif compilator == "V":
+        gen_verilator(modelsim, X_DIMM, Y_DIMM)
 
 if run_openpiton:
 
-    #run_questa(with_wave, modelsim, X_DIMM, Y_DIMM, testcase, build_dir)
-    run_verilator(modelsim, X_DIMM, Y_DIMM, testcase)
+    if compilator == "Q":
+        run_questa(with_wave, modelsim, X_DIMM, Y_DIMM, testcase, build_dir)
+    elif compilator == "V":
+        run_verilator(modelsim, X_DIMM, Y_DIMM, testcase)
 
 
