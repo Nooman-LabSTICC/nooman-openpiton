@@ -83,7 +83,7 @@ def run_verilator(vsim, X_DIMM, Y_DIMM, testcase):
 def wave_verilator(X_DIMM, Y_DIMM):
     #Call wavegen
     print "Generating the wave for Questa in a Verilator simulation "
-    os.system("openpiton-verilator_wavegen "+str(X_DIMM)+" "+str(Y_DIMM))
+    os.system("python ../utils/openpiton-verilator_wavegen.py "+str(X_DIMM)+" "+str(Y_DIMM))
     
 
 ################################################################################
@@ -98,7 +98,7 @@ def wave_verilator(X_DIMM, Y_DIMM):
 def wave_questa(X_DIMM, Y_DIMM):
         #Call wavegen
         print "Generating the wave for Questa in a Questa simulation"
-        os.system("openpiton-questa_wavegen "+str(X_DIMM)+" "+str(Y_DIMM))
+        os.system("python ../utils/openpiton-questa_wavegen.py "+str(X_DIMM)+" "+str(Y_DIMM))
 
 
 def gen_questa(X_DIMM, Y_DIMM):
@@ -315,7 +315,7 @@ END_app_name_relation"""
 if debug:
     platform_path = build_dir+"/debug/platform.cfg"
     print "Opening Graphical Debugger\n"
-    os.system("java -jar "+piton_root+"/bin/OpenPiton_Debugger.jar "+platform_path+" &")
+    os.system("java -jar "+piton_root+"/utils/OpenPiton_Debugger.jar "+platform_path+" &")
 
 if with_wave:
 
