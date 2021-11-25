@@ -6,7 +6,7 @@ This many-core project is based on OpenPiton, an open-source many-core platform 
 
 
 
-# Tutorial Instalation OpenPiton - Lab-STICC on Ubuntu 20.04
+# Tutorial Installation OpenPiton - Lab-STICC on Ubuntu 20.04
 
 ## Prerequisites
 * Install packages:
@@ -74,26 +74,25 @@ This many-core project is based on OpenPiton, an open-source many-core platform 
 
 <br/><br/>
 
-Tutorial of **openpiton** command (used to run testcases)
+Tutorial of *openpiton* command (used to run testcases)
 ============
 Edited: 11.Oct.2021, by Marcelo Ruaro
 
-The **openpiton** command abstract significantly the OpenPiton generation, execution, and debugging process. Making more easy the sims command and focusing on what is really important.
+The **openpiton** command abstracts significantly the OpenPiton generation, execution, and debugging process.
 
 
 Mandatory arguments
 ---------------
-* *X_DIMMENSION*: 1st argument is an integer positive number representing the X dimmension
-* *Y_DIMMENSION*:  2nd argument is an integer positive number representing the Y dimmension
+* *X_DIMMENSION*: 1st argument is an integer positive number representing the number of cores at X dimension
+* *Y_DIMMENSION*:  2nd argument is an integer positive number representing the number of cores at Y dimension
   
 
-  
 
 Optional arguments (-run or -gen or -all is mandatory):
 
 
 
-* **-gen**: Generates the manycore model according to the XY dimmension
+* **-gen**: Generates the manycore model according to the XY dimension
   * Ex: ``` openpiton 2 1 -gen ```
 * **-run**: Runs the manycore model in the specified testcase. Requires a testcase name
   * Ex: ```openpiton 2 1 -run prod_cons```
