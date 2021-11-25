@@ -11,7 +11,7 @@ This many-core project is based on OpenPiton, an open-source many-core platform 
 ## Prerequisites
 * Install packages:
   ```c
-  sudo apt-get install git python gcc-7 g++-7 gperf autoconf automake autotools-dev libmpc-dev libmpfr-dev libgmp-dev gawk build-essential bison flex texinfo python-pexpect libusb-1.0-0-dev default-jdk zlib1g-dev valgrind csh device-tree-compiler 
+  sudo apt-get install git python gcc-7 g++-7 gperf autoconf automake autotools-dev libmpc-dev libmpfr-dev libgmp-dev gawk build-essential bison flex texinfo python-pexpect libusb-1.0-0-dev default-jdk zlib1g-dev valgrind csh device-tree-compiler libcanberra-gtk-module libcanberra-gtk3-module
     ```
 * Prepare your terminal
   * Edit your terminal to "Run a custom command instead of my shell" (search this entire sentence in google):
@@ -74,7 +74,7 @@ This many-core project is based on OpenPiton, an open-source many-core platform 
 
 <br/><br/>
 
-Tutorial of *openpiton* command (used to run testcases)
+Command *openpiton* (used to run testcases)
 ============
 Edited: 11.Oct.2021, by Marcelo Ruaro
 
@@ -110,10 +110,14 @@ Optional arguments (-run or -gen or -all is mandatory):
 ---------------
 
 ## Running an example
-
-```c
-openpiton 3 3 -V -all syn_parallel_9cores -debug
-```
+* Go to $PITON_ROOT/build:
+    ```c
+    cd $PITON_ROOT/build
+    ```
+* Run the following command:
+    ```c
+    openpiton 3 3 -V -all syn_parallel_9cores -debug
+    ```
 
     
    
