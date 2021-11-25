@@ -8,7 +8,7 @@ This many-core project is based on OpenPiton, an open-source many-core platform 
 
 # Tutorial Installation OpenPiton - Lab-STICC on Ubuntu 20.04
 
-### Video tutorial: 
+### Video: Step-by-step Installation from a Fresh Installation of Ubuntu 20: 
 [![IMAGE ALT TEXT HERE](https://i9.ytimg.com/vi/mmB-RKY-_Js/mq3.jpg?sqp=CJy2_YwG&rs=AOn4CLBQDLoL6dFyyWvC9DdSwPELtuczbA&retry=4)](https://youtu.be/mmB-RKY-_Js)
 
 ## Prerequisites
