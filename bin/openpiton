@@ -295,8 +295,8 @@ END_app_name_relation"""
     file = open(debug_folder+"/platform.cfg", 'w')
     file.write(platform_cfg)
     file.close() 
-
-    os.system("cp "+piton_root+"/piton/verif/debug_env/services.cfg "+debug_folder+"/")
+    
+    os.system("cp "+piton_root+"/utils/debug_model/services.cfg "+debug_folder+"/")
 
     os.system("touch "+debug_folder+"/traffic_router.txt")
 
