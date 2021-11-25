@@ -99,7 +99,7 @@ Optional arguments (-run or -gen or -all is mandatory):
   * Ex: ``` openpiton 2 1 -gen ```
 * **-run**: Runs the manycore model in the specified testcase. Requires a testcase name
   * Ex: ```openpiton 2 1 -run prod_cons```
-* * **-all**: Generates and runs the manycore model in the specif testcase. Requires a testcase name
+* **-all**: Generates and runs the manycore model in the specif testcase. Requires a testcase name
   * Ex: ```openpiton 2 1 -all prod_cons```
 * **-vsim**: Opens the questasim. Must be used with *-run* or *-all* commands.
   * Ex: ```openpiton 2 1 -run prod_cons -vsim```
