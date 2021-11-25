@@ -14,12 +14,15 @@ piton/design/chip/tile/ariane/openpiton/bootrom/linux/ariane.dtb
 
 #EDITIONS ON 23/JUIN
 #Ignore build files -- See these files to better understad
-piton/design/chip/tile/ariane/openpiton/bootrom/linux/*
 piton/design/chip/tile/ariane/openpiton/bootrom/ariane.dts
 piton/design/chip/tile/ariane/openpiton/bootrom/info.h
-piton/design/chip/tile/ariane/openpiton/bootrom/linux/bootrom_linux.h
-piton/design/chip/tile/ariane/openpiton/bootrom/linux/bootrom_linux.sv
 piton/design/chip/tile/ariane/openpiton/bootrom/linux/bootrom_linux.bin
+piton/design/chip/tile/ariane/openpiton/bootrom/linux/bootrom_linux.elf
+piton/design/chip/tile/ariane/openpiton/bootrom/linux/bootrom_linux.h
+piton/design/chip/tile/ariane/openpiton/bootrom/linux/bootrom_linux.img
+piton/design/chip/tile/ariane/openpiton/bootrom/linux/bootrom_linux.sv
+piton/design/chip/tile/ariane/openpiton/bootrom/linux/src/*
+
 
 #Other files
 diag.c
