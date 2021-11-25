@@ -122,5 +122,8 @@ Optional arguments (-run or -gen or -all is mandatory):
     openpiton 3 3 -V -all syn_parallel_9cores -debug
     ```
 
-    
-   
+--------------
+This project was develoved in Lab-STICC - UBS, Lorient, France.
+Contact:
+ 
+> kevin.martin@univ-ubs.fr (Kevin Martin)
