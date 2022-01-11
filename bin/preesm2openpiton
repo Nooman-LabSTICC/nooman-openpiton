@@ -191,7 +191,11 @@ def main():
                 elif copy_global_vars_enabled == False:
                     if "// Core Global Definitions" in line:
                         copy_global_vars_enabled = True
-
+                    else:
+                        begin_new_function = not stripped_line.startswith("//") and any(line.startswith(ele) for ele in test_list) and any(ele in line for ele in test_list2) and any(ele not in line for ele in test_list3)
+                        if begin_new_function and "computationThread_"+core_name in line:
+                            copy_function_enabled = True
+                            cores_functions = cores_functions + line
                 else:
                     begin_new_function = not stripped_line.startswith("//") and any(line.startswith(ele) for ele in test_list) and any(ele in line for ele in test_list2) and any(ele not in line for ele in test_list3)
                     if begin_new_function and "computationThread_"+core_name in line:
@@ -232,7 +236,8 @@ def main():
 
 
                         main_lines = main_lines + "        case "+str(core_id)+":\n"
-                        main_lines = main_lines + "            "+core_function_name+"();\n"
+                        main_lines = main_lines + "            "+core_function_name+"(NULL);\n"
+                        main_lines = main_lines + "            printf(\"Core "+str(core_id)+" terminated\\n\");\n"
                         main_lines = main_lines + "            break;\n"
                         
                         
@@ -262,6 +267,16 @@ def main():
     file = open(new_main_path, 'w')
     file.write(final_lines)
     file.close()  
+
+    #Deleting undesired lines
+    #Delete this nbExec
+    #string_to_delete = "nbExec"
+    #os.system("sed -i '/"+string_to_delete+"/d' "+new_main_path)
+    string_to_delete = "dumpTime("
+    os.system("sed -i '/"+string_to_delete+"/d' "+new_main_path)
+    string_to_delete = "return NULL;"
+    os.system("sed -i '/"+string_to_delete+"/d' "+new_main_path)
+
     
     print 
     print "New files build at: "+OPEN_PITON_PATH+":"
