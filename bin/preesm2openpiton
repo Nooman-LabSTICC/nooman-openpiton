@@ -84,7 +84,7 @@ def main():
     
 
     #Test patters to detects a function declaration in C
-    test_list = ['int', 'void', 'string', 'double', 'float', 'char']
+    test_list = ['int', 'void', 'string', 'double', 'float', 'char', 'unsigned int', 'unsigned char']
     test_list2 = ['(']
     test_list3 = [';', '=']
 
@@ -236,6 +236,7 @@ def main():
 
 
                         main_lines = main_lines + "        case "+str(core_id)+":\n"
+                        main_lines = main_lines + "            printf(\"Core "+str(core_id)+" starting\\n\");\n"
                         main_lines = main_lines + "            "+core_function_name+"(NULL);\n"
                         main_lines = main_lines + "            printf(\"Core "+str(core_id)+" terminated\\n\");\n"
                         main_lines = main_lines + "            break;\n"
