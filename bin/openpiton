@@ -65,7 +65,7 @@ def run_verilator(vsim, X_DIMM, Y_DIMM, testcase):
     log_file = "openpithon-run.log"
 
     #RUN MODELSIM ORIGINAL = sims -sys=manycore -gui -msm_run -x_tiles=2 -y_tiles=1 -ariane print_test.c -rtl_timeout=100000000 -max_cycle=50000
-    run_command = "sims -sys=manycore -vlt_run -x_tiles="+str(X_DIMM)+" -y_tiles="+str(Y_DIMM)+" -ariane "+testcase+".c -rtl_timeout=100000000 -max_cycle=50000"
+    run_command = "sims -sys=manycore -vlt_run -x_tiles="+str(X_DIMM)+" -y_tiles="+str(Y_DIMM)+" -ariane "+testcase+".c -rtl_timeout=100000000 -max_cycle=500000000"
 #max)cycles is the simulatio time
     exit_status = os.system(run_command)
 
@@ -137,12 +137,12 @@ def run_questa(wave, vsim, X_DIMM, Y_DIMM, testcase, build_dir):
             #file.write(sim_do)
             #file.close()
 
-            run_command = "sims -sys=manycore -msm_run -gui -log_all -x_tiles="+str(X_DIMM)+" -y_tiles="+str(Y_DIMM)+" -ariane "+testcase+".c -rtl_timeout=100000000 -max_cycle=50000"
+            run_command = "sims -sys=manycore -msm_run -gui -log_all -x_tiles="+str(X_DIMM)+" -y_tiles="+str(Y_DIMM)+" -ariane "+testcase+".c -rtl_timeout=100000000 -max_cycle=500000000"
 
             #Run sim.do command
             #run_command = "vsim -do sim.do"
         else:
-            run_command = "sims -sys=manycore -msm_run -x_tiles="+str(X_DIMM)+" -y_tiles="+str(Y_DIMM)+" -ariane "+testcase+".c -rtl_timeout=100000000 -max_cycle=50000"
+            run_command = "sims -sys=manycore -msm_run -x_tiles="+str(X_DIMM)+" -y_tiles="+str(Y_DIMM)+" -ariane "+testcase+".c -rtl_timeout=100000000 -max_cycle=500000000"
 
         exit_status = os.system(run_command)
 
