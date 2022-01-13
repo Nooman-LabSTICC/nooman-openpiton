@@ -1,3 +1,4 @@
+**Author**: Marcelo Ruaro
 # Credits
 This many-core project is based on OpenPiton, an open-source many-core platform developed by Princeton University. We use OpenPiton as starting point to do our modifications. Please don't forget to cite OpenPiton properly if you use the many-core herein provided.
 
@@ -73,11 +74,11 @@ This many-core project is based on OpenPiton, an open-source many-core platform 
 ## QuestaSim
 * Install QuestaSim following the own tool instructions
 * Make sure that the command **vsim** is running/working from your terminal
-  * After installation, just type **vsim** and this QuestaSim must open.
+  * After installation, just type **vsim** and QuestaSim must open.
 
 <br/><br/>
 
-Command *openpiton* (used to run testcases)
+Command *openpiton* (used to run and debug testcases)
 ============
 Edited: 11.Oct.2021, by Marcelo Ruaro
 
@@ -110,7 +111,9 @@ Optional arguments (-run or -gen or -all is mandatory):
   *  Ex.1: ```openpiton 2 1 -run prod_cons -debug```
 *  **-V**: Uses Verilator to compile and simulate the many-core
 *  **-Q**: Uses QuestaSim (by default) to compile and simulate the many-core
+*  **openpiton-debugger**: you can use the command **openpiton-debugger** *<plath_of_file_plaform.cfg>* to open just the ManyGUI tool in a previous simulated testcase. As argument, this command requires the path to the platform.cfg file. This file can be found at *build/debug/plataform.cfg*. Usually after simulating a testcase we will copy the *build/debug/* directory to a safe place in order to store the simulation data usefull to debugging. This command is usefully to debug this standalone testcase using the ManyGUI.
 ---------------
+
 
 ## Running an example
 * Go to $PITON_ROOT/build:
@@ -123,7 +126,6 @@ Optional arguments (-run or -gen or -all is mandatory):
     ```
 
 --------------
-This project was develoved in Lab-STICC - UBS, Lorient, France.
+This project was developed in Lab-STICC - UBS, Lorient, France.
 Contact:
- 
 > kevin.martin@univ-ubs.fr (Kevin Martin)
