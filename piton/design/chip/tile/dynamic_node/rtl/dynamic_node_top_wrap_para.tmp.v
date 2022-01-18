@@ -49,17 +49,14 @@ module dynamic_node_top_wrap_para
     input [`DATA_WIDTH-1:0] dataIn_0,
     input [`DATA_WIDTH-1:0] dataIn_1,
     input [`DATA_WIDTH-1:0] dataIn_2,
-    input [`DATA_WIDTH-1:0] dataIn_3,
 
     input validIn_0,
     input validIn_1,
     input validIn_2,
-    input validIn_3,
 
     input yummyIn_0,
     input yummyIn_1,
     input yummyIn_2,
-    input yummyIn_3,
 
     /*
     //original
@@ -88,17 +85,14 @@ module dynamic_node_top_wrap_para
     output [`DATA_WIDTH-1:0] dataOut_0,
     output [`DATA_WIDTH-1:0] dataOut_1,
     output [`DATA_WIDTH-1:0] dataOut_2,
-    output [`DATA_WIDTH-1:0] dataOut_3,
 
     output validOut_0,
     output validOut_1,
     output validOut_2,
-    output validOut_3,
 
     output yummyOut_0,
     output yummyOut_1,
     output yummyOut_2,
-    output yummyOut_3,
 
 
     /*
@@ -122,7 +116,7 @@ module dynamic_node_top_wrap_para
     output yummyOut_P,      // yummy signal to processor's output buffer
     */
     
-    output thanksIn_3      // thanksIn to processor's space_avail
+    output thanksIn_2      // thanksIn to processor's space_avail
 );
 
     dynamic_node_top_para dynamic_node_top
@@ -133,37 +127,31 @@ module dynamic_node_top_wrap_para
         .dataIn_0(dataIn_0),
         .dataIn_1(dataIn_1),
         .dataIn_2(dataIn_2),
-        .dataIn_3(dataIn_3),
         .validIn_0(validIn_0),
         .validIn_1(validIn_1),
         .validIn_2(validIn_2),
-        .validIn_3(validIn_3),
         .yummyIn_0(yummyIn_0),
         .yummyIn_1(yummyIn_1),
         .yummyIn_2(yummyIn_2),
-        .yummyIn_3(yummyIn_3),
 
         .myLocX(myLocX),
         .myLocY(myLocY),
         .myChipID(myChipID),
-        .ec_cfg(12'b0),
+        .ec_cfg(9'b0),
         .store_meter_partner_address_X(5'b0),
         .store_meter_partner_address_Y(5'b0),
         
         .dataOut_0(dataOut_0),
         .dataOut_1(dataOut_1),
         .dataOut_2(dataOut_2),
-        .dataOut_3(dataOut_3),
         .validOut_0(validOut_0),
         .validOut_1(validOut_1),
         .validOut_2(validOut_2),
-        .validOut_3(validOut_3),
         .yummyOut_0(yummyOut_0),
         .yummyOut_1(yummyOut_1),
         .yummyOut_2(yummyOut_2),
-        .yummyOut_3(yummyOut_3),
 
-        .thanksIn_3(thanksIn_3),
+        .thanksIn_2(thanksIn_2),
         .external_interrupt(),
         .store_meter_ack_partner(),
         .store_meter_ack_non_partner(),

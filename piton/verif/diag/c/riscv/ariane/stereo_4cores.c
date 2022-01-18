@@ -2417,7 +2417,9 @@ void computationThread_Core0(void *arg){
 	// Begin the execution loop
 	int index;
 	for(index=0;index<LOOP_SIZE;index++){
+        printf("Chegou barrier\n");
 		barrier_wait(&iter_barrier);
+        printf("Passou barrier\n");
 		readPPM(0/*id*/,10/*height*/,12/*width*/,rgb__in__0); // Read_PPM0_0
 		readPPM(0/*id*/,10/*height*/,12/*width*/,rgb__in__1); // Read_PPM0_1
 		sendStart(0, 3); // Core0 > Core3: Read_PPM0_1__Broadcast0_1__0
@@ -2445,6 +2447,7 @@ void computationThread_Core0(void *arg){
 		sendStart(0, 2); // Core0 > Core2: Broadcast0_0__BR_Cost_Parall__0
 		sendEnd(); // Core0 > Core2: Broadcast0_0__BR_Cost_Parall__0
 		rgb2Gray(120/*size*/,out1_2__rgb__0,gray__in__2); // RGB2Gray_L_0
+        printf("rgb2Gray\n");
 		receiveStart(); // Core2 > Core0: Cost_Parallel_Work_init_in_d__0
 		receiveEnd(2, 0); // Core2 > Core0: Cost_Parallel_Work_init_in_d__0
 		receiveStart(); // Core2 > Core0: Cost_Parallel_Work_init_in_d__1
@@ -2502,7 +2505,8 @@ void computationThread_Core0(void *arg){
 		receiveStart(); // Core2 > Core0: Cost_Parallel_Work_0_Broadca__45
 		receiveEnd(2, 0); // Core2 > Core0: Cost_Parallel_Work_0_Broadca__45
 		computeWeights(10/*height*/,12/*width*/,0/*horOrVert*/,out2_3_26__offset__0,out1_1__rgbL__3,weights__in_3__1); // Cost_Parallel_Work_0_ComputeHorWeights_3
-		sendStart(0, 2); // Core0 > Core2: Cost_Parallel_Work_0_Compute__9
+		printf("computeWeights\n");
+        sendStart(0, 2); // Core0 > Core2: Cost_Parallel_Work_0_Compute__9
 		sendEnd(); // Core0 > Core2: Cost_Parallel_Work_0_Compute__9
 		computeWeights(10/*height*/,12/*width*/,1/*horOrVert*/,out1_2_22__offset__0,out0_0__rgbL__2,weights__in_2__4); // Cost_Parallel_Work_0_ComputeVertWeights_2
 		sendStart(0, 3); // Core0 > Core3: Cost_Parallel_Work_0_Compute__1
@@ -2515,7 +2519,8 @@ void computationThread_Core0(void *arg){
 		sendStart(0, 2); // Core0 > Core2: broadcast1_0__BR_Cost_Parall__0
 		sendEnd(); // Core0 > Core2: broadcast1_0__BR_Cost_Parall__0
 		census(10/*height*/,12/*width*/,out0_0__gray__2,cen__cenL__0); // Census_L_0
-		// Broadcast BR_Cost_Parallel_Work_0__cenL
+		printf("census\n");
+        // Broadcast BR_Cost_Parallel_Work_0__cenL
 		{
 			// memcpy #0
 			// memcpy #0
@@ -2580,7 +2585,8 @@ void computationThread_Core0(void *arg){
 		receiveStart(); // Core1 > Core0: BR_Cost_Parallel_Work_0__cen__20
 		receiveEnd(1, 0); // Core1 > Core0: BR_Cost_Parallel_Work_0__cen__20
 		costConstruction(10/*height*/,12/*width*/,12/*truncValue*/,out0_0_18__disparity__0,grayL_0_18__grayL__0,grayR_0_18__grayR__2,cenL_0_18__cenL__0,cenR_0_18__cenR__0,disparityError__disparityErr__31,back_0__back__0); // Cost_Parallel_Work_0_CostConstruction_0
-		receiveStart(); // Core3 > Core0: Cost_Parallel_Work_1_Broadca__76
+		printf("costConstruction\n");
+        receiveStart(); // Core3 > Core0: Cost_Parallel_Work_1_Broadca__76
 		receiveEnd(3, 0); // Core3 > Core0: Cost_Parallel_Work_1_Broadca__76
 		receiveStart(); // Core3 > Core0: Cost_Parallel_Work_1_Broadca__77
 		receiveEnd(3, 0); // Core3 > Core0: Cost_Parallel_Work_1_Broadca__77
@@ -2662,7 +2668,8 @@ void computationThread_Core0(void *arg){
 		receiveEnd(2, 0); // Core2 > Core0: Cost_Parallel_Work_0_Broadca__19
 		aggregateCost(10/*height*/,12/*width*/,5/*nbIterations*/,disparityError__disparityErr__31,out0_0_18__offsets__0,out_0_18__hWeights__2,out_0_18__vWeights__2,aggregatedDisparity__aggrega__56); // Cost_Parallel_Work_0_AggregateCost_0
 		disparitySelect(10/*height*/,12/*width*/,19/*nbDisparities*/,4/*scale*/,0/*minDisparity*/,out1_0_36__disparity__0,aggregatedDisparity__aggrega__56,bestCostFeed__bestCostFeed__0,currentResult__currentResult__0,result__in__15,backBestCost__bestCostFeed__1); // Cost_Parallel_Work_0_disparitySelect_0
-		// Broadcast Cost_Parallel_Work_0_Broadcast5_0
+        printf("disparitySelect\n");
+        // Broadcast Cost_Parallel_Work_0_Broadcast5_0
 		{
 			// memcpy #0
 			// memcpy #0
@@ -2832,7 +2839,8 @@ void computationThread_Core0(void *arg){
 		receiveStart(); // Core2 > Core0: Cost_Parallel_Work_0_Aggrega__9
 		receiveEnd(2, 0); // Core2 > Core0: Cost_Parallel_Work_0_Aggrega__9
 		disparitySelect(10/*height*/,12/*width*/,19/*nbDisparities*/,4/*scale*/,0/*minDisparity*/,out1_10_36__disparity__0,aggregatedDisparity__aggrega__9,backBestCost__bestCostFeed__10,out1_1__currentResult__9,result__in__25,backBestCost__bestCostFeed__11); // Cost_Parallel_Work_0_disparitySelect_10
-		// Broadcast Cost_Parallel_Work_0_Broadcast5_10
+		printf("disparitySelect 2\n");
+        // Broadcast Cost_Parallel_Work_0_Broadcast5_10
 		{
 			// memcpy #0
 			// memcpy #0
@@ -2986,7 +2994,8 @@ void computationThread_Core0(void *arg){
 		receiveStart(); // Core2 > Core0: Cost_Parallel_Work_1_Aggrega__1
 		receiveEnd(2, 0); // Core2 > Core0: Cost_Parallel_Work_1_Aggrega__1
 		disparitySelect(10/*height*/,12/*width*/,19/*nbDisparities*/,4/*scale*/,0/*minDisparity*/,out1_1_36__disparity__1,aggregatedDisparity__aggrega__19,backBestCost__bestCostFeed__20,out1_1__currentResult__11,result__in__28,backBestCost__bestCostFeed__21); // Cost_Parallel_Work_1_disparitySelect_1
-		// Broadcast Cost_Parallel_Work_1_Broadcast5_1
+		printf("disparitySelect 3\n");
+        // Broadcast Cost_Parallel_Work_1_Broadcast5_1
 		{
 			// memcpy #0
 			// memcpy #0
@@ -3071,7 +3080,8 @@ void computationThread_Core0(void *arg){
 		receiveStart(); // Core1 > Core0: Cost_Parallel_Work_1_Aggrega__6
 		receiveEnd(1, 0); // Core1 > Core0: Cost_Parallel_Work_1_Aggrega__6
 		disparitySelect(10/*height*/,12/*width*/,19/*nbDisparities*/,4/*scale*/,0/*minDisparity*/,out1_6_36__disparity__1,aggregatedDisparity__aggrega__24,backBestCost__bestCostFeed__25,out1_1__currentResult__16,result__in__33,backBestCost__bestCostFeed__26); // Cost_Parallel_Work_1_disparitySelect_6
-		// Broadcast Cost_Parallel_Work_1_Broadcast5_6
+		printf("disparitySelect 4\n");
+        // Broadcast Cost_Parallel_Work_1_Broadcast5_6
 		{
 			// memcpy #0
 			// memcpy #0
@@ -3171,7 +3181,8 @@ void computationThread_Core0(void *arg){
 		receiveStart(); // Core1 > Core0: Cost_Parallel_Work_1_Aggrega__12
 		receiveEnd(1, 0); // Core1 > Core0: Cost_Parallel_Work_1_Aggrega__12
 		disparitySelect(10/*height*/,12/*width*/,19/*nbDisparities*/,4/*scale*/,0/*minDisparity*/,out1_12_36__disparity__1,aggregatedDisparity__aggrega__30,backBestCost__bestCostFeed__30,out1_1__currentResult__47,result__in__8,backBestCost__bestCostFeed__31); // Cost_Parallel_Work_1_disparitySelect_12
-		// Broadcast Cost_Parallel_Work_1_Broadcast5_12
+        printf("disparitySelect 5\n");
+        // Broadcast Cost_Parallel_Work_1_Broadcast5_12
 		{
 			// memcpy #0
 			memcpy(out1_1__currentResult__48+0, result__in__8+0, 120*sizeof(uchar));
@@ -3291,7 +3302,8 @@ void computationThread_Core0(void *arg){
 		receiveStart(); // Core1 > Core0: Cost_Parallel_Work_2_Aggrega__1
 		receiveEnd(1, 0); // Core1 > Core0: Cost_Parallel_Work_2_Aggrega__1
 		disparitySelect(10/*height*/,12/*width*/,19/*nbDisparities*/,4/*scale*/,0/*minDisparity*/,out1_1_36__disparity__2,aggregatedDisparity__aggrega__38,backBestCost__bestCostFeed__38,out1_1__currentResult__22,result__in__40,backBestCost__bestCostFeed__39); // Cost_Parallel_Work_2_disparitySelect_1
-		// Broadcast Cost_Parallel_Work_2_Broadcast5_1
+		printf("disparitySelect 6\n");
+        // Broadcast Cost_Parallel_Work_2_Broadcast5_1
 		{
 			// memcpy #0
 			// memcpy #0
@@ -3413,7 +3425,8 @@ void computationThread_Core0(void *arg){
 		receiveStart(); // Core1 > Core0: Cost_Parallel_Work_2_Aggrega__9
 		receiveEnd(1, 0); // Core1 > Core0: Cost_Parallel_Work_2_Aggrega__9
 		disparitySelect(10/*height*/,12/*width*/,19/*nbDisparities*/,4/*scale*/,0/*minDisparity*/,out1_9_36__disparity__2,aggregatedDisparity__aggrega__46,backBestCost__bestCostFeed__46,out1_1__currentResult__30,result__in__48,backBestCost__bestCostFeed__47); // Cost_Parallel_Work_2_disparitySelect_9
-		// Broadcast Cost_Parallel_Work_2_Broadcast5_9
+		printf("disparitySelect 7\n");
+        // Broadcast Cost_Parallel_Work_2_Broadcast5_9
 		{
 			// memcpy #0
 			// memcpy #0
@@ -3548,7 +3561,8 @@ void computationThread_Core0(void *arg){
 		receiveStart(); // Core2 > Core0: Cost_Parallel_Work_2_Aggrega__18
 		receiveEnd(2, 0); // Core2 > Core0: Cost_Parallel_Work_2_Aggrega__18
 		disparitySelect(10/*height*/,12/*width*/,19/*nbDisparities*/,4/*scale*/,0/*minDisparity*/,out1_18_36__disparity__2,aggregatedDisparity__aggrega__55,backBestCost__bestCostFeed__55,out1_1__currentResult__39,result__in__14,backBestCost__backBestCost__0); // Cost_Parallel_Work_2_disparitySelect_18
-		sendStart(0, 2); // Core0 > Core2: Cost_Parallel_Work_2_dispari__18
+		printf("disparitySelect 8\n");
+        sendStart(0, 2); // Core0 > Core2: Cost_Parallel_Work_2_dispari__18
 		sendEnd(); // Core0 > Core2: Cost_Parallel_Work_2_dispari__18
 		// Broadcast Cost_Parallel_Work_2_Broadcast5_18
 		{
@@ -3610,7 +3624,8 @@ void computationThread_Core0(void *arg){
 			memcpy(output__rawDisparity__3+24, output_0__rawDisparity_1__0+0, 12*sizeof(uchar));
 		}
 		medianFilter(3/*height*/,12/*width*/,1/*topDownBorderSize*/,output__rawDisparity__3,filteredDisparity__in_6__3); // Median_Filter_26
-		receiveStart(); // Core3 > Core0: Median_Filter_20__implode_lu__0
+		printf("medianFilter\n");
+        receiveStart(); // Core3 > Core0: Median_Filter_20__implode_lu__0
 		receiveEnd(3, 0); // Core3 > Core0: Median_Filter_20__implode_lu__0
 		receiveStart(); // Core3 > Core0: Median_Filter_21__implode_lu__0
 		receiveEnd(3, 0); // Core3 > Core0: Median_Filter_21__implode_lu__0
@@ -3645,7 +3660,9 @@ void computationThread_Core0(void *arg){
 		}
 		sendStart(0, 3); // Core0 > Core3: lum2RGB_2__Display_RGB1_2__0
 		sendEnd(); // Core0 > Core3: lum2RGB_2__Display_RGB1_2__0
+        printf("writePPM\n");
 		writePPM(10/*height*/,12/*width*/,out1_1__gray__1); // Write_PPM_2
+        
 	}
 }
 
@@ -3661,7 +3678,9 @@ void computationThread_Core1(void *arg){
 #else // Default case of an infinite loop
 	while(1){
 #endif
+        printf("Chegou barrier\n");
 		barrier_wait(&iter_barrier);
+        printf("Passou barrier\n");
 		receiveStart(); // Core0 > Core1: Read_PPM1_0__RGB2Gray_R_0__0
 		receiveEnd(0, 1); // Core0 > Core1: Read_PPM1_0__RGB2Gray_R_0__0
 		rgb2Gray(120/*size*/,rgb__rgb__2,gray__in__5); // RGB2Gray_R_0
@@ -4380,7 +4399,9 @@ void computationThread_Core2(void *arg){
 	// Begin the execution loop
 	int index;
 	for(index=0;index<LOOP_SIZE;index++){
+        printf("Chegou barrier\n");
 		barrier_wait(&iter_barrier);
+        printf("Passou barrier\n");
 		disparityGen(0/*minDisparity*/,19/*maxDisparity*/,disparities__in__0); // Cost_Parallel_Work_0_DisparityGen_0
 		offsetGen(5/*nbIterations*/,offsets__in__0); // Cost_Parallel_Work_0_OffsetGen_0
 		fifoPop(back__back__0, FIFO_Head_Cost_Parallel_Work__2, 8*sizeof(char), NULL, 0);
@@ -5413,7 +5434,9 @@ void computationThread_Core3(void *arg){
 	// Begin the execution loop
 	int index;
 	for(index=0;index<LOOP_SIZE;index++){
+        printf("Chegou barrier\n");
 		barrier_wait(&iter_barrier);
+        printf("Passou barrier\n");
 		disparityGen(0/*minDisparity*/,19/*maxDisparity*/,disparities__in__1); // Cost_Parallel_Work_1_DisparityGen_0
 		offsetGen(5/*nbIterations*/,offsets__in__1); // Cost_Parallel_Work_1_OffsetGen_0
 		disparityGen(0/*minDisparity*/,19/*maxDisparity*/,disparities__in__2); // Cost_Parallel_Work_2_DisparityGen_0
@@ -7069,8 +7092,6 @@ void computationThread_Core3(void *arg){
 		displayLum(1/*id*/,out0_0__lum__1); // Display_RGB1_2
 	}
 }
-
-
 
 int main(int argc, char** argv) {
 

@@ -36,22 +36,20 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 `include "network_define.v"
 // /home/ruaro/nooman-openpiton/piton/verif/env/manycore/devices_ariane.xml
 
-module dynamic_input_top_4_para(route_req_0_out, route_req_1_out, route_req_2_out, route_req_3_out, 
-                           default_ready_0_out, default_ready_1_out, default_ready_2_out, default_ready_3_out, 
+module dynamic_input_top_4_para(route_req_0_out, route_req_1_out, route_req_2_out, 
+                           default_ready_0_out, default_ready_1_out, default_ready_2_out, 
                            tail_out, yummy_out, data_out, valid_out, clk, reset,
                            my_loc_x_in, my_loc_y_in, my_chip_id_in,  valid_in, data_in,
-                           thanks_0, thanks_1, thanks_2, thanks_3);
+                           thanks_0, thanks_1, thanks_2);
 
 // begin port declarations
 
 output route_req_0_out;
 output route_req_1_out;
 output route_req_2_out;
-output route_req_3_out;
 output default_ready_0_out;
 output default_ready_1_out;
 output default_ready_2_out;
-output default_ready_3_out;
 
 output tail_out;
 output yummy_out;
@@ -69,7 +67,6 @@ input [`DATA_WIDTH-1:0] data_in;
 input thanks_0;
 input thanks_1;
 input thanks_2;
-input thanks_3;
 
 
 // end port declarations
@@ -100,8 +97,8 @@ network_input_blk_multi_out #(.LOG2_NUMBER_FIFO_ELEMENTS(2)) NIB(.clk(clk),
                                       .data_avail(valid_out_internal));
 
 dynamic_input_control_para control(.thanks_all_temp_out(thanks_all_temp),
-                              .route_req_0_out(route_req_0_out), .route_req_1_out(route_req_1_out), .route_req_2_out(route_req_2_out), .route_req_3_out(route_req_3_out), 
-                              .default_ready_0(default_ready_0_out), .default_ready_1(default_ready_1_out), .default_ready_2(default_ready_2_out), .default_ready_3(default_ready_3_out), 
+                              .route_req_0_out(route_req_0_out), .route_req_1_out(route_req_1_out), .route_req_2_out(route_req_2_out), 
+                              .default_ready_0(default_ready_0_out), .default_ready_1(default_ready_1_out), .default_ready_2(default_ready_2_out), 
                               .tail_out(tail_out),
                               .clk(clk), .reset(reset),
                               .my_loc_x_in(my_loc_x_in), 
@@ -112,7 +109,7 @@ dynamic_input_control_para control(.thanks_all_temp_out(thanks_all_temp),
                               .abs_chip_id(data_internal[`DATA_WIDTH-1:`DATA_WIDTH-`CHIP_ID_WIDTH]),
                               .final_bits(data_internal[`DATA_WIDTH-`CHIP_ID_WIDTH-2*`XY_WIDTH-2:`DATA_WIDTH-`CHIP_ID_WIDTH-2*`XY_WIDTH-4]),
                               .valid_in(valid_out_internal),
-                              .thanks_0(thanks_0), .thanks_1(thanks_1), .thanks_2(thanks_2), .thanks_3(thanks_3), 
+                              .thanks_0(thanks_0), .thanks_1(thanks_1), .thanks_2(thanks_2), 
                               .length(data_internal[`DATA_WIDTH-`CHIP_ID_WIDTH-2*`XY_WIDTH-5:`DATA_WIDTH-`CHIP_ID_WIDTH-2*`XY_WIDTH-4-`PAYLOAD_LEN]));
 
 endmodule

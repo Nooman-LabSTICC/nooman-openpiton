@@ -59,26 +59,6 @@ localparam TOTAL_CREDIT_WIDTH = `CREDIT_WIDTH + 4;	// 10 bins > 2^4 increasing i
 	   reg	[TOTAL_CREDIT_WIDTH - 1 : 0]	used_credits3;
     reg 	[`REPLENISH_WIDTH - 1 : 0]		rep_cnt3;
 	   wire									rst_credits3;
-    wire [TOTAL_CREDIT_WIDTH - 1 : 0]	total_credit_num4;
-	   reg	[TOTAL_CREDIT_WIDTH - 1 : 0]	used_credits4;
-    reg 	[`REPLENISH_WIDTH - 1 : 0]		rep_cnt4;
-	   wire									rst_credits4;
-    wire [TOTAL_CREDIT_WIDTH - 1 : 0]	total_credit_num5;
-	   reg	[TOTAL_CREDIT_WIDTH - 1 : 0]	used_credits5;
-    reg 	[`REPLENISH_WIDTH - 1 : 0]		rep_cnt5;
-	   wire									rst_credits5;
-    wire [TOTAL_CREDIT_WIDTH - 1 : 0]	total_credit_num6;
-	   reg	[TOTAL_CREDIT_WIDTH - 1 : 0]	used_credits6;
-    reg 	[`REPLENISH_WIDTH - 1 : 0]		rep_cnt6;
-	   wire									rst_credits6;
-    wire [TOTAL_CREDIT_WIDTH - 1 : 0]	total_credit_num7;
-	   reg	[TOTAL_CREDIT_WIDTH - 1 : 0]	used_credits7;
-    reg 	[`REPLENISH_WIDTH - 1 : 0]		rep_cnt7;
-	   wire									rst_credits7;
-    wire [TOTAL_CREDIT_WIDTH - 1 : 0]	total_credit_num8;
-	   reg	[TOTAL_CREDIT_WIDTH - 1 : 0]	used_credits8;
-    reg 	[`REPLENISH_WIDTH - 1 : 0]		rep_cnt8;
-	   wire									rst_credits8;
     assign total_credit_num0 =  `DMBR0.creditIn_0  +  `DMBR0.creditIn_1  +  `DMBR0.creditIn_2  +  `DMBR0.creditIn_3  +  `DMBR0.creditIn_4  +  `DMBR0.creditIn_5  +  `DMBR0.creditIn_6  +  `DMBR0.creditIn_7  +  `DMBR0.creditIn_8  +  `DMBR0.creditIn_9 ;
 assign rst_credits0 = rep_cnt0 == `DMBR0.replenishCyclesIn;
     assign total_credit_num1 =  `DMBR1.creditIn_0  +  `DMBR1.creditIn_1  +  `DMBR1.creditIn_2  +  `DMBR1.creditIn_3  +  `DMBR1.creditIn_4  +  `DMBR1.creditIn_5  +  `DMBR1.creditIn_6  +  `DMBR1.creditIn_7  +  `DMBR1.creditIn_8  +  `DMBR1.creditIn_9 ;
@@ -87,16 +67,6 @@ assign rst_credits1 = rep_cnt1 == `DMBR1.replenishCyclesIn;
 assign rst_credits2 = rep_cnt2 == `DMBR2.replenishCyclesIn;
     assign total_credit_num3 =  `DMBR3.creditIn_0  +  `DMBR3.creditIn_1  +  `DMBR3.creditIn_2  +  `DMBR3.creditIn_3  +  `DMBR3.creditIn_4  +  `DMBR3.creditIn_5  +  `DMBR3.creditIn_6  +  `DMBR3.creditIn_7  +  `DMBR3.creditIn_8  +  `DMBR3.creditIn_9 ;
 assign rst_credits3 = rep_cnt3 == `DMBR3.replenishCyclesIn;
-    assign total_credit_num4 =  `DMBR4.creditIn_0  +  `DMBR4.creditIn_1  +  `DMBR4.creditIn_2  +  `DMBR4.creditIn_3  +  `DMBR4.creditIn_4  +  `DMBR4.creditIn_5  +  `DMBR4.creditIn_6  +  `DMBR4.creditIn_7  +  `DMBR4.creditIn_8  +  `DMBR4.creditIn_9 ;
-assign rst_credits4 = rep_cnt4 == `DMBR4.replenishCyclesIn;
-    assign total_credit_num5 =  `DMBR5.creditIn_0  +  `DMBR5.creditIn_1  +  `DMBR5.creditIn_2  +  `DMBR5.creditIn_3  +  `DMBR5.creditIn_4  +  `DMBR5.creditIn_5  +  `DMBR5.creditIn_6  +  `DMBR5.creditIn_7  +  `DMBR5.creditIn_8  +  `DMBR5.creditIn_9 ;
-assign rst_credits5 = rep_cnt5 == `DMBR5.replenishCyclesIn;
-    assign total_credit_num6 =  `DMBR6.creditIn_0  +  `DMBR6.creditIn_1  +  `DMBR6.creditIn_2  +  `DMBR6.creditIn_3  +  `DMBR6.creditIn_4  +  `DMBR6.creditIn_5  +  `DMBR6.creditIn_6  +  `DMBR6.creditIn_7  +  `DMBR6.creditIn_8  +  `DMBR6.creditIn_9 ;
-assign rst_credits6 = rep_cnt6 == `DMBR6.replenishCyclesIn;
-    assign total_credit_num7 =  `DMBR7.creditIn_0  +  `DMBR7.creditIn_1  +  `DMBR7.creditIn_2  +  `DMBR7.creditIn_3  +  `DMBR7.creditIn_4  +  `DMBR7.creditIn_5  +  `DMBR7.creditIn_6  +  `DMBR7.creditIn_7  +  `DMBR7.creditIn_8  +  `DMBR7.creditIn_9 ;
-assign rst_credits7 = rep_cnt7 == `DMBR7.replenishCyclesIn;
-    assign total_credit_num8 =  `DMBR8.creditIn_0  +  `DMBR8.creditIn_1  +  `DMBR8.creditIn_2  +  `DMBR8.creditIn_3  +  `DMBR8.creditIn_4  +  `DMBR8.creditIn_5  +  `DMBR8.creditIn_6  +  `DMBR8.creditIn_7  +  `DMBR8.creditIn_8  +  `DMBR8.creditIn_9 ;
-assign rst_credits8 = rep_cnt8 == `DMBR8.replenishCyclesIn;
 
 
 
@@ -165,86 +135,6 @@ if(`DMBR3.rst)
 		rep_cnt3 <= rst_credits3	? {`REPLENISH_WIDTH{1'b0}} : rep_cnt3 + 1'b1;
 end
 
-	always @(posedge `DMBR4.clk)
-	begin
-	if (`DMBR4.rst)
-		used_credits4 <= {TOTAL_CREDIT_WIDTH{1'b0}};
-	else
-		used_credits4 <= `DMBR4.l1missIn													? used_credits4 + 1 :
-						  `DMBR4.l2responseIn & ~`DMBR4.l2missIn & (used_credits4 > 0)	? used_credits4 - 1 :
-						  rst_credits4														? {TOTAL_CREDIT_WIDTH{1'b0}} :
-						  																	  used_credits4 	;
-
-if(`DMBR4.rst)
-	    rep_cnt4 <= {`REPLENISH_WIDTH{1'b0}};
-	else
-		rep_cnt4 <= rst_credits4	? {`REPLENISH_WIDTH{1'b0}} : rep_cnt4 + 1'b1;
-end
-
-	always @(posedge `DMBR5.clk)
-	begin
-	if (`DMBR5.rst)
-		used_credits5 <= {TOTAL_CREDIT_WIDTH{1'b0}};
-	else
-		used_credits5 <= `DMBR5.l1missIn													? used_credits5 + 1 :
-						  `DMBR5.l2responseIn & ~`DMBR5.l2missIn & (used_credits5 > 0)	? used_credits5 - 1 :
-						  rst_credits5														? {TOTAL_CREDIT_WIDTH{1'b0}} :
-						  																	  used_credits5 	;
-
-if(`DMBR5.rst)
-	    rep_cnt5 <= {`REPLENISH_WIDTH{1'b0}};
-	else
-		rep_cnt5 <= rst_credits5	? {`REPLENISH_WIDTH{1'b0}} : rep_cnt5 + 1'b1;
-end
-
-	always @(posedge `DMBR6.clk)
-	begin
-	if (`DMBR6.rst)
-		used_credits6 <= {TOTAL_CREDIT_WIDTH{1'b0}};
-	else
-		used_credits6 <= `DMBR6.l1missIn													? used_credits6 + 1 :
-						  `DMBR6.l2responseIn & ~`DMBR6.l2missIn & (used_credits6 > 0)	? used_credits6 - 1 :
-						  rst_credits6														? {TOTAL_CREDIT_WIDTH{1'b0}} :
-						  																	  used_credits6 	;
-
-if(`DMBR6.rst)
-	    rep_cnt6 <= {`REPLENISH_WIDTH{1'b0}};
-	else
-		rep_cnt6 <= rst_credits6	? {`REPLENISH_WIDTH{1'b0}} : rep_cnt6 + 1'b1;
-end
-
-	always @(posedge `DMBR7.clk)
-	begin
-	if (`DMBR7.rst)
-		used_credits7 <= {TOTAL_CREDIT_WIDTH{1'b0}};
-	else
-		used_credits7 <= `DMBR7.l1missIn													? used_credits7 + 1 :
-						  `DMBR7.l2responseIn & ~`DMBR7.l2missIn & (used_credits7 > 0)	? used_credits7 - 1 :
-						  rst_credits7														? {TOTAL_CREDIT_WIDTH{1'b0}} :
-						  																	  used_credits7 	;
-
-if(`DMBR7.rst)
-	    rep_cnt7 <= {`REPLENISH_WIDTH{1'b0}};
-	else
-		rep_cnt7 <= rst_credits7	? {`REPLENISH_WIDTH{1'b0}} : rep_cnt7 + 1'b1;
-end
-
-	always @(posedge `DMBR8.clk)
-	begin
-	if (`DMBR8.rst)
-		used_credits8 <= {TOTAL_CREDIT_WIDTH{1'b0}};
-	else
-		used_credits8 <= `DMBR8.l1missIn													? used_credits8 + 1 :
-						  `DMBR8.l2responseIn & ~`DMBR8.l2missIn & (used_credits8 > 0)	? used_credits8 - 1 :
-						  rst_credits8														? {TOTAL_CREDIT_WIDTH{1'b0}} :
-						  																	  used_credits8 	;
-
-if(`DMBR8.rst)
-	    rep_cnt8 <= {`REPLENISH_WIDTH{1'b0}};
-	else
-		rep_cnt8 <= rst_credits8	? {`REPLENISH_WIDTH{1'b0}} : rep_cnt8 + 1'b1;
-end
-
 
 
 // Checker #1: check that the total number of credits in all
@@ -294,66 +184,6 @@ end
 		begin
 			$display("\n***********************************************************");
 			$display("DMBR3: checker error! Must present a stall signal!");
-			$display("***********************************************************\n");
-			$stop;
-		end
-	end
-
-	always @*
-	begin
-		if ((used_credits4 > (total_credit_num4 + 1) ) & `DMBR4.l1missIn)
-		//if (used_credits4 > total_credit_num4)
-		begin
-			$display("\n***********************************************************");
-			$display("DMBR4: checker error! Must present a stall signal!");
-			$display("***********************************************************\n");
-			$stop;
-		end
-	end
-
-	always @*
-	begin
-		if ((used_credits5 > (total_credit_num5 + 1) ) & `DMBR5.l1missIn)
-		//if (used_credits5 > total_credit_num5)
-		begin
-			$display("\n***********************************************************");
-			$display("DMBR5: checker error! Must present a stall signal!");
-			$display("***********************************************************\n");
-			$stop;
-		end
-	end
-
-	always @*
-	begin
-		if ((used_credits6 > (total_credit_num6 + 1) ) & `DMBR6.l1missIn)
-		//if (used_credits6 > total_credit_num6)
-		begin
-			$display("\n***********************************************************");
-			$display("DMBR6: checker error! Must present a stall signal!");
-			$display("***********************************************************\n");
-			$stop;
-		end
-	end
-
-	always @*
-	begin
-		if ((used_credits7 > (total_credit_num7 + 1) ) & `DMBR7.l1missIn)
-		//if (used_credits7 > total_credit_num7)
-		begin
-			$display("\n***********************************************************");
-			$display("DMBR7: checker error! Must present a stall signal!");
-			$display("***********************************************************\n");
-			$stop;
-		end
-	end
-
-	always @*
-	begin
-		if ((used_credits8 > (total_credit_num8 + 1) ) & `DMBR8.l1missIn)
-		//if (used_credits8 > total_credit_num8)
-		begin
-			$display("\n***********************************************************");
-			$display("DMBR8: checker error! Must present a stall signal!");
 			$display("***********************************************************\n");
 			$stop;
 		end

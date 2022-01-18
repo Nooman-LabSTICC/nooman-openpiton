@@ -38,12 +38,12 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 // /home/ruaro/nooman-openpiton/piton/verif/env/manycore/devices_ariane.xml
 
 module dynamic_output_top_para(data_out, 
-                          thanks_0_out, thanks_1_out, thanks_2_out, thanks_3_out, 
+                          thanks_0_out, thanks_1_out, thanks_2_out, 
                           valid_out, popped_interrupt_mesg_out, popped_memory_ack_mesg_out, popped_memory_ack_mesg_out_sender, ec_wants_to_send_but_cannot, clk, reset, 
-                          route_req_0_in, route_req_1_in, route_req_2_in, route_req_3_in, 
-                          tail_0_in, tail_1_in, tail_2_in, tail_3_in, 
-                          data_0_in, data_1_in, data_2_in, data_3_in, 
-                          valid_0_in, valid_1_in, valid_2_in, valid_3_in, 
+                          route_req_0_in, route_req_1_in, route_req_2_in, 
+                          tail_0_in, tail_1_in, tail_2_in, 
+                          data_0_in, data_1_in, data_2_in, 
+                          valid_0_in, valid_1_in, valid_2_in, 
                           default_ready_in, yummy_in);
 
 parameter KILL_HEADERS = 1'b0;
@@ -54,7 +54,6 @@ output [`DATA_WIDTH-1:0] data_out;
 output thanks_0_out;
 output thanks_1_out;
 output thanks_2_out;
-output thanks_3_out;
 
 output valid_out;
 
@@ -70,21 +69,17 @@ input reset;
 input route_req_0_in;
 input route_req_1_in;
 input route_req_2_in;
-input route_req_3_in;
 
 input tail_0_in;
 input tail_1_in;
 input tail_2_in;
-input tail_3_in;
 
 input [`DATA_WIDTH-1:0] data_0_in;
 input [`DATA_WIDTH-1:0] data_1_in;
 input [`DATA_WIDTH-1:0] data_2_in;
-input [`DATA_WIDTH-1:0] data_3_in;
 input valid_0_in;
 input valid_1_in;
 input valid_2_in;
-input valid_3_in;
 
 input default_ready_in;
 input yummy_in;
@@ -93,7 +88,6 @@ input yummy_in;
 `define ROUTE_0 2'b00
 `define ROUTE_1 2'b01
 `define ROUTE_2 2'b10
-`define ROUTE_3 2'b11
 
 //This is the state
 //NOTHING HERE BUT US CHICKENS
@@ -131,25 +125,24 @@ assign valid_out = valid_out_internal;
 //instantiations
 space_avail_top space(.valid(valid_out_internal), .clk(clk), .reset(reset), .yummy(yummy_in),.spc_avail(space_avail_connection));
 
-dynamic_output_datapath_para datapath(.data_out(data_out_internal), .valid_out_temp(valid_out_temp_connection), .data_0_in(data_0_in), .data_1_in(data_1_in), .data_2_in(data_2_in), .data_3_in(data_3_in), .valid_0_in(valid_0_in), .valid_1_in(valid_1_in), .valid_2_in(valid_2_in), .valid_3_in(valid_3_in), .current_route_in(current_route_connection));
+dynamic_output_datapath_para datapath(.data_out(data_out_internal), .valid_out_temp(valid_out_temp_connection), .data_0_in(data_0_in), .data_1_in(data_1_in), .data_2_in(data_2_in), .valid_0_in(valid_0_in), .valid_1_in(valid_1_in), .valid_2_in(valid_2_in), .current_route_in(current_route_connection));
 
 
-dynamic_output_control_para control(.thanks_0(thanks_0_out), .thanks_1(thanks_1_out), .thanks_2(thanks_2_out), .thanks_3(thanks_3_out), 
+dynamic_output_control_para control(.thanks_0(thanks_0_out), .thanks_1(thanks_1_out), .thanks_2(thanks_2_out), 
                                .valid_out(valid_out_pre), .current_route(current_route_connection), .ec_wants_to_send_but_cannot(ec_wants_to_send_but_cannot), .clk(clk), .reset(reset), 
-                               .route_req_0_in(route_req_0_in), .route_req_1_in(route_req_1_in), .route_req_2_in(route_req_2_in), .route_req_3_in(route_req_3_in), 
-                               .tail_0_in(tail_0_in), .tail_1_in(tail_1_in), .tail_2_in(tail_2_in), .tail_3_in(tail_3_in), 
+                               .route_req_0_in(route_req_0_in), .route_req_1_in(route_req_1_in), .route_req_2_in(route_req_2_in), 
+                               .tail_0_in(tail_0_in), .tail_1_in(tail_1_in), .tail_2_in(tail_2_in), 
                                .valid_out_temp(valid_out_temp_connection), .default_ready(default_ready_in), .space_avail(space_avail_connection));
 //NOTE TO READER.  I like the way that these instantiations look so if it
 //really bothers you go open this in emacs and re-tabify everything
 //and don't complain to me
-always @ (current_route_connection or route_req_0_in or route_req_1_in or route_req_2_in or route_req_3_in)
+always @ (current_route_connection or route_req_0_in or route_req_1_in or route_req_2_in)
 begin
 	case(current_route_connection)
     
 	`ROUTE_0:    current_route_req <= route_req_0_in;
 	`ROUTE_1:    current_route_req <= route_req_1_in;
 	`ROUTE_2:    current_route_req <= route_req_2_in;
-	`ROUTE_3:    current_route_req <= route_req_3_in;
 
     /*
     //original

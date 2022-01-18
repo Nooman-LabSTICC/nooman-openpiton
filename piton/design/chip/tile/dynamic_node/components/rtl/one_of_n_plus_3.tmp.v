@@ -34,7 +34,6 @@ module one_of_n_plus_3(
   in3,
   in4,
   in5,
-  in6,
 
   sel,
   out);
@@ -42,7 +41,7 @@ module one_of_n_plus_3(
     parameter BHC = 10;
     input [2:0] sel;
     
-    input [WIDTH-1:0] in0,in1,in2,in3,in4,in5,in6;
+    input [WIDTH-1:0] in0,in1,in2,in3,in4,in5;
     output reg [WIDTH-1:0] out;
     always@(*)
     begin
@@ -55,7 +54,6 @@ module one_of_n_plus_3(
             3'd3:out=in3;
             3'd4:out=in4;
             3'd5:out=in5;
-            3'd6:out=in6;
 
             default:; // indicates null
         endcase

@@ -27,7 +27,7 @@
 
 
 // /home/ruaro/nooman-openpiton/piton/verif/env/manycore/devices_ariane.xml
-`define NUM_TILES 9
+`define NUM_TILES 4
 
 
 `ifndef USE_TEST_TOP // useless for older TOPs
@@ -300,306 +300,6 @@ integer tile3_noc2_inW_packet_state = 0;
 integer tile3_noc2_inW_bdw_allocation = 0;
 integer tile3_noc2_inW_payload_counter = 0;
 reg [`NOC_DATA_WIDTH-1:0] tile3_noc2_inW_header = 0;
-integer tile4_noc0_inL_packet_state = 0;
-integer tile4_noc0_inL_bdw_allocation = 0;
-integer tile4_noc0_inL_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile4_noc0_inL_header = 0;
-integer tile4_noc0_inN_packet_state = 0;
-integer tile4_noc0_inN_bdw_allocation = 0;
-integer tile4_noc0_inN_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile4_noc0_inN_header = 0;
-integer tile4_noc0_inS_packet_state = 0;
-integer tile4_noc0_inS_bdw_allocation = 0;
-integer tile4_noc0_inS_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile4_noc0_inS_header = 0;
-integer tile4_noc0_inE_packet_state = 0;
-integer tile4_noc0_inE_bdw_allocation = 0;
-integer tile4_noc0_inE_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile4_noc0_inE_header = 0;
-integer tile4_noc0_inW_packet_state = 0;
-integer tile4_noc0_inW_bdw_allocation = 0;
-integer tile4_noc0_inW_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile4_noc0_inW_header = 0;
-integer tile4_noc1_inL_packet_state = 0;
-integer tile4_noc1_inL_bdw_allocation = 0;
-integer tile4_noc1_inL_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile4_noc1_inL_header = 0;
-integer tile4_noc1_inN_packet_state = 0;
-integer tile4_noc1_inN_bdw_allocation = 0;
-integer tile4_noc1_inN_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile4_noc1_inN_header = 0;
-integer tile4_noc1_inS_packet_state = 0;
-integer tile4_noc1_inS_bdw_allocation = 0;
-integer tile4_noc1_inS_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile4_noc1_inS_header = 0;
-integer tile4_noc1_inE_packet_state = 0;
-integer tile4_noc1_inE_bdw_allocation = 0;
-integer tile4_noc1_inE_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile4_noc1_inE_header = 0;
-integer tile4_noc1_inW_packet_state = 0;
-integer tile4_noc1_inW_bdw_allocation = 0;
-integer tile4_noc1_inW_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile4_noc1_inW_header = 0;
-integer tile4_noc2_inL_packet_state = 0;
-integer tile4_noc2_inL_bdw_allocation = 0;
-integer tile4_noc2_inL_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile4_noc2_inL_header = 0;
-integer tile4_noc2_inN_packet_state = 0;
-integer tile4_noc2_inN_bdw_allocation = 0;
-integer tile4_noc2_inN_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile4_noc2_inN_header = 0;
-integer tile4_noc2_inS_packet_state = 0;
-integer tile4_noc2_inS_bdw_allocation = 0;
-integer tile4_noc2_inS_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile4_noc2_inS_header = 0;
-integer tile4_noc2_inE_packet_state = 0;
-integer tile4_noc2_inE_bdw_allocation = 0;
-integer tile4_noc2_inE_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile4_noc2_inE_header = 0;
-integer tile4_noc2_inW_packet_state = 0;
-integer tile4_noc2_inW_bdw_allocation = 0;
-integer tile4_noc2_inW_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile4_noc2_inW_header = 0;
-integer tile5_noc0_inL_packet_state = 0;
-integer tile5_noc0_inL_bdw_allocation = 0;
-integer tile5_noc0_inL_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile5_noc0_inL_header = 0;
-integer tile5_noc0_inN_packet_state = 0;
-integer tile5_noc0_inN_bdw_allocation = 0;
-integer tile5_noc0_inN_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile5_noc0_inN_header = 0;
-integer tile5_noc0_inS_packet_state = 0;
-integer tile5_noc0_inS_bdw_allocation = 0;
-integer tile5_noc0_inS_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile5_noc0_inS_header = 0;
-integer tile5_noc0_inE_packet_state = 0;
-integer tile5_noc0_inE_bdw_allocation = 0;
-integer tile5_noc0_inE_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile5_noc0_inE_header = 0;
-integer tile5_noc0_inW_packet_state = 0;
-integer tile5_noc0_inW_bdw_allocation = 0;
-integer tile5_noc0_inW_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile5_noc0_inW_header = 0;
-integer tile5_noc1_inL_packet_state = 0;
-integer tile5_noc1_inL_bdw_allocation = 0;
-integer tile5_noc1_inL_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile5_noc1_inL_header = 0;
-integer tile5_noc1_inN_packet_state = 0;
-integer tile5_noc1_inN_bdw_allocation = 0;
-integer tile5_noc1_inN_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile5_noc1_inN_header = 0;
-integer tile5_noc1_inS_packet_state = 0;
-integer tile5_noc1_inS_bdw_allocation = 0;
-integer tile5_noc1_inS_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile5_noc1_inS_header = 0;
-integer tile5_noc1_inE_packet_state = 0;
-integer tile5_noc1_inE_bdw_allocation = 0;
-integer tile5_noc1_inE_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile5_noc1_inE_header = 0;
-integer tile5_noc1_inW_packet_state = 0;
-integer tile5_noc1_inW_bdw_allocation = 0;
-integer tile5_noc1_inW_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile5_noc1_inW_header = 0;
-integer tile5_noc2_inL_packet_state = 0;
-integer tile5_noc2_inL_bdw_allocation = 0;
-integer tile5_noc2_inL_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile5_noc2_inL_header = 0;
-integer tile5_noc2_inN_packet_state = 0;
-integer tile5_noc2_inN_bdw_allocation = 0;
-integer tile5_noc2_inN_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile5_noc2_inN_header = 0;
-integer tile5_noc2_inS_packet_state = 0;
-integer tile5_noc2_inS_bdw_allocation = 0;
-integer tile5_noc2_inS_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile5_noc2_inS_header = 0;
-integer tile5_noc2_inE_packet_state = 0;
-integer tile5_noc2_inE_bdw_allocation = 0;
-integer tile5_noc2_inE_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile5_noc2_inE_header = 0;
-integer tile5_noc2_inW_packet_state = 0;
-integer tile5_noc2_inW_bdw_allocation = 0;
-integer tile5_noc2_inW_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile5_noc2_inW_header = 0;
-integer tile6_noc0_inL_packet_state = 0;
-integer tile6_noc0_inL_bdw_allocation = 0;
-integer tile6_noc0_inL_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile6_noc0_inL_header = 0;
-integer tile6_noc0_inN_packet_state = 0;
-integer tile6_noc0_inN_bdw_allocation = 0;
-integer tile6_noc0_inN_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile6_noc0_inN_header = 0;
-integer tile6_noc0_inS_packet_state = 0;
-integer tile6_noc0_inS_bdw_allocation = 0;
-integer tile6_noc0_inS_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile6_noc0_inS_header = 0;
-integer tile6_noc0_inE_packet_state = 0;
-integer tile6_noc0_inE_bdw_allocation = 0;
-integer tile6_noc0_inE_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile6_noc0_inE_header = 0;
-integer tile6_noc0_inW_packet_state = 0;
-integer tile6_noc0_inW_bdw_allocation = 0;
-integer tile6_noc0_inW_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile6_noc0_inW_header = 0;
-integer tile6_noc1_inL_packet_state = 0;
-integer tile6_noc1_inL_bdw_allocation = 0;
-integer tile6_noc1_inL_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile6_noc1_inL_header = 0;
-integer tile6_noc1_inN_packet_state = 0;
-integer tile6_noc1_inN_bdw_allocation = 0;
-integer tile6_noc1_inN_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile6_noc1_inN_header = 0;
-integer tile6_noc1_inS_packet_state = 0;
-integer tile6_noc1_inS_bdw_allocation = 0;
-integer tile6_noc1_inS_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile6_noc1_inS_header = 0;
-integer tile6_noc1_inE_packet_state = 0;
-integer tile6_noc1_inE_bdw_allocation = 0;
-integer tile6_noc1_inE_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile6_noc1_inE_header = 0;
-integer tile6_noc1_inW_packet_state = 0;
-integer tile6_noc1_inW_bdw_allocation = 0;
-integer tile6_noc1_inW_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile6_noc1_inW_header = 0;
-integer tile6_noc2_inL_packet_state = 0;
-integer tile6_noc2_inL_bdw_allocation = 0;
-integer tile6_noc2_inL_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile6_noc2_inL_header = 0;
-integer tile6_noc2_inN_packet_state = 0;
-integer tile6_noc2_inN_bdw_allocation = 0;
-integer tile6_noc2_inN_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile6_noc2_inN_header = 0;
-integer tile6_noc2_inS_packet_state = 0;
-integer tile6_noc2_inS_bdw_allocation = 0;
-integer tile6_noc2_inS_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile6_noc2_inS_header = 0;
-integer tile6_noc2_inE_packet_state = 0;
-integer tile6_noc2_inE_bdw_allocation = 0;
-integer tile6_noc2_inE_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile6_noc2_inE_header = 0;
-integer tile6_noc2_inW_packet_state = 0;
-integer tile6_noc2_inW_bdw_allocation = 0;
-integer tile6_noc2_inW_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile6_noc2_inW_header = 0;
-integer tile7_noc0_inL_packet_state = 0;
-integer tile7_noc0_inL_bdw_allocation = 0;
-integer tile7_noc0_inL_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile7_noc0_inL_header = 0;
-integer tile7_noc0_inN_packet_state = 0;
-integer tile7_noc0_inN_bdw_allocation = 0;
-integer tile7_noc0_inN_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile7_noc0_inN_header = 0;
-integer tile7_noc0_inS_packet_state = 0;
-integer tile7_noc0_inS_bdw_allocation = 0;
-integer tile7_noc0_inS_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile7_noc0_inS_header = 0;
-integer tile7_noc0_inE_packet_state = 0;
-integer tile7_noc0_inE_bdw_allocation = 0;
-integer tile7_noc0_inE_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile7_noc0_inE_header = 0;
-integer tile7_noc0_inW_packet_state = 0;
-integer tile7_noc0_inW_bdw_allocation = 0;
-integer tile7_noc0_inW_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile7_noc0_inW_header = 0;
-integer tile7_noc1_inL_packet_state = 0;
-integer tile7_noc1_inL_bdw_allocation = 0;
-integer tile7_noc1_inL_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile7_noc1_inL_header = 0;
-integer tile7_noc1_inN_packet_state = 0;
-integer tile7_noc1_inN_bdw_allocation = 0;
-integer tile7_noc1_inN_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile7_noc1_inN_header = 0;
-integer tile7_noc1_inS_packet_state = 0;
-integer tile7_noc1_inS_bdw_allocation = 0;
-integer tile7_noc1_inS_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile7_noc1_inS_header = 0;
-integer tile7_noc1_inE_packet_state = 0;
-integer tile7_noc1_inE_bdw_allocation = 0;
-integer tile7_noc1_inE_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile7_noc1_inE_header = 0;
-integer tile7_noc1_inW_packet_state = 0;
-integer tile7_noc1_inW_bdw_allocation = 0;
-integer tile7_noc1_inW_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile7_noc1_inW_header = 0;
-integer tile7_noc2_inL_packet_state = 0;
-integer tile7_noc2_inL_bdw_allocation = 0;
-integer tile7_noc2_inL_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile7_noc2_inL_header = 0;
-integer tile7_noc2_inN_packet_state = 0;
-integer tile7_noc2_inN_bdw_allocation = 0;
-integer tile7_noc2_inN_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile7_noc2_inN_header = 0;
-integer tile7_noc2_inS_packet_state = 0;
-integer tile7_noc2_inS_bdw_allocation = 0;
-integer tile7_noc2_inS_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile7_noc2_inS_header = 0;
-integer tile7_noc2_inE_packet_state = 0;
-integer tile7_noc2_inE_bdw_allocation = 0;
-integer tile7_noc2_inE_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile7_noc2_inE_header = 0;
-integer tile7_noc2_inW_packet_state = 0;
-integer tile7_noc2_inW_bdw_allocation = 0;
-integer tile7_noc2_inW_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile7_noc2_inW_header = 0;
-integer tile8_noc0_inL_packet_state = 0;
-integer tile8_noc0_inL_bdw_allocation = 0;
-integer tile8_noc0_inL_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile8_noc0_inL_header = 0;
-integer tile8_noc0_inN_packet_state = 0;
-integer tile8_noc0_inN_bdw_allocation = 0;
-integer tile8_noc0_inN_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile8_noc0_inN_header = 0;
-integer tile8_noc0_inS_packet_state = 0;
-integer tile8_noc0_inS_bdw_allocation = 0;
-integer tile8_noc0_inS_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile8_noc0_inS_header = 0;
-integer tile8_noc0_inE_packet_state = 0;
-integer tile8_noc0_inE_bdw_allocation = 0;
-integer tile8_noc0_inE_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile8_noc0_inE_header = 0;
-integer tile8_noc0_inW_packet_state = 0;
-integer tile8_noc0_inW_bdw_allocation = 0;
-integer tile8_noc0_inW_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile8_noc0_inW_header = 0;
-integer tile8_noc1_inL_packet_state = 0;
-integer tile8_noc1_inL_bdw_allocation = 0;
-integer tile8_noc1_inL_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile8_noc1_inL_header = 0;
-integer tile8_noc1_inN_packet_state = 0;
-integer tile8_noc1_inN_bdw_allocation = 0;
-integer tile8_noc1_inN_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile8_noc1_inN_header = 0;
-integer tile8_noc1_inS_packet_state = 0;
-integer tile8_noc1_inS_bdw_allocation = 0;
-integer tile8_noc1_inS_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile8_noc1_inS_header = 0;
-integer tile8_noc1_inE_packet_state = 0;
-integer tile8_noc1_inE_bdw_allocation = 0;
-integer tile8_noc1_inE_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile8_noc1_inE_header = 0;
-integer tile8_noc1_inW_packet_state = 0;
-integer tile8_noc1_inW_bdw_allocation = 0;
-integer tile8_noc1_inW_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile8_noc1_inW_header = 0;
-integer tile8_noc2_inL_packet_state = 0;
-integer tile8_noc2_inL_bdw_allocation = 0;
-integer tile8_noc2_inL_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile8_noc2_inL_header = 0;
-integer tile8_noc2_inN_packet_state = 0;
-integer tile8_noc2_inN_bdw_allocation = 0;
-integer tile8_noc2_inN_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile8_noc2_inN_header = 0;
-integer tile8_noc2_inS_packet_state = 0;
-integer tile8_noc2_inS_bdw_allocation = 0;
-integer tile8_noc2_inS_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile8_noc2_inS_header = 0;
-integer tile8_noc2_inE_packet_state = 0;
-integer tile8_noc2_inE_bdw_allocation = 0;
-integer tile8_noc2_inE_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile8_noc2_inE_header = 0;
-integer tile8_noc2_inW_packet_state = 0;
-integer tile8_noc2_inW_bdw_allocation = 0;
-integer tile8_noc2_inW_payload_counter = 0;
-reg [`NOC_DATA_WIDTH-1:0] tile8_noc2_inW_header = 0;
 
 parameter HEADER = 0, PAYLOAD = 1;
 
@@ -1567,7 +1267,7 @@ begin
                      target = (target << 8) | tile2_noc0_inL_header[41:34];
                  end
                  fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile2_noc0_inL_bdw_allocation, 512, tile2_noc0_inL_header[21:14], tile2_noc0_inL_header[29:22], (counter - tile2_noc0_inL_bdw_allocation), 1, "L", target);
+                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile2_noc0_inL_bdw_allocation, 1, tile2_noc0_inL_header[21:14], tile2_noc0_inL_header[29:22], (counter - tile2_noc0_inL_bdw_allocation), 1, "L", target);
                  $fclose(fd);
                  tile2_noc0_inL_packet_state = HEADER;
              end
@@ -1598,7 +1298,7 @@ begin
                      target = (target << 8) | tile2_noc0_inN_header[41:34];
                  end
                  fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile2_noc0_inN_bdw_allocation, 512, tile2_noc0_inN_header[21:14], tile2_noc0_inN_header[29:22], (counter - tile2_noc0_inN_bdw_allocation), 1, "N", target);
+                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile2_noc0_inN_bdw_allocation, 1, tile2_noc0_inN_header[21:14], tile2_noc0_inN_header[29:22], (counter - tile2_noc0_inN_bdw_allocation), 1, "N", target);
                  $fclose(fd);
                  tile2_noc0_inN_packet_state = HEADER;
              end
@@ -1629,7 +1329,7 @@ begin
                      target = (target << 8) | tile2_noc0_inS_header[41:34];
                  end
                  fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile2_noc0_inS_bdw_allocation, 512, tile2_noc0_inS_header[21:14], tile2_noc0_inS_header[29:22], (counter - tile2_noc0_inS_bdw_allocation), 1, "S", target);
+                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile2_noc0_inS_bdw_allocation, 1, tile2_noc0_inS_header[21:14], tile2_noc0_inS_header[29:22], (counter - tile2_noc0_inS_bdw_allocation), 1, "S", target);
                  $fclose(fd);
                  tile2_noc0_inS_packet_state = HEADER;
              end
@@ -1660,7 +1360,7 @@ begin
                      target = (target << 8) | tile2_noc0_inE_header[41:34];
                  end
                  fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile2_noc0_inE_bdw_allocation, 512, tile2_noc0_inE_header[21:14], tile2_noc0_inE_header[29:22], (counter - tile2_noc0_inE_bdw_allocation), 1, "E", target);
+                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile2_noc0_inE_bdw_allocation, 1, tile2_noc0_inE_header[21:14], tile2_noc0_inE_header[29:22], (counter - tile2_noc0_inE_bdw_allocation), 1, "E", target);
                  $fclose(fd);
                  tile2_noc0_inE_packet_state = HEADER;
              end
@@ -1691,7 +1391,7 @@ begin
                      target = (target << 8) | tile2_noc0_inW_header[41:34];
                  end
                  fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile2_noc0_inW_bdw_allocation, 512, tile2_noc0_inW_header[21:14], tile2_noc0_inW_header[29:22], (counter - tile2_noc0_inW_bdw_allocation), 1, "W", target);
+                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile2_noc0_inW_bdw_allocation, 1, tile2_noc0_inW_header[21:14], tile2_noc0_inW_header[29:22], (counter - tile2_noc0_inW_bdw_allocation), 1, "W", target);
                  $fclose(fd);
                  tile2_noc0_inW_packet_state = HEADER;
              end
@@ -1722,7 +1422,7 @@ begin
                      target = (target << 8) | tile2_noc1_inL_header[41:34];
                  end
                  fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile2_noc1_inL_bdw_allocation, 512, tile2_noc1_inL_header[21:14], tile2_noc1_inL_header[29:22], (counter - tile2_noc1_inL_bdw_allocation), 2, "L", target);
+                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile2_noc1_inL_bdw_allocation, 1, tile2_noc1_inL_header[21:14], tile2_noc1_inL_header[29:22], (counter - tile2_noc1_inL_bdw_allocation), 2, "L", target);
                  $fclose(fd);
                  tile2_noc1_inL_packet_state = HEADER;
              end
@@ -1753,7 +1453,7 @@ begin
                      target = (target << 8) | tile2_noc1_inN_header[41:34];
                  end
                  fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile2_noc1_inN_bdw_allocation, 512, tile2_noc1_inN_header[21:14], tile2_noc1_inN_header[29:22], (counter - tile2_noc1_inN_bdw_allocation), 2, "N", target);
+                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile2_noc1_inN_bdw_allocation, 1, tile2_noc1_inN_header[21:14], tile2_noc1_inN_header[29:22], (counter - tile2_noc1_inN_bdw_allocation), 2, "N", target);
                  $fclose(fd);
                  tile2_noc1_inN_packet_state = HEADER;
              end
@@ -1784,7 +1484,7 @@ begin
                      target = (target << 8) | tile2_noc1_inS_header[41:34];
                  end
                  fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile2_noc1_inS_bdw_allocation, 512, tile2_noc1_inS_header[21:14], tile2_noc1_inS_header[29:22], (counter - tile2_noc1_inS_bdw_allocation), 2, "S", target);
+                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile2_noc1_inS_bdw_allocation, 1, tile2_noc1_inS_header[21:14], tile2_noc1_inS_header[29:22], (counter - tile2_noc1_inS_bdw_allocation), 2, "S", target);
                  $fclose(fd);
                  tile2_noc1_inS_packet_state = HEADER;
              end
@@ -1815,7 +1515,7 @@ begin
                      target = (target << 8) | tile2_noc1_inE_header[41:34];
                  end
                  fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile2_noc1_inE_bdw_allocation, 512, tile2_noc1_inE_header[21:14], tile2_noc1_inE_header[29:22], (counter - tile2_noc1_inE_bdw_allocation), 2, "E", target);
+                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile2_noc1_inE_bdw_allocation, 1, tile2_noc1_inE_header[21:14], tile2_noc1_inE_header[29:22], (counter - tile2_noc1_inE_bdw_allocation), 2, "E", target);
                  $fclose(fd);
                  tile2_noc1_inE_packet_state = HEADER;
              end
@@ -1846,7 +1546,7 @@ begin
                      target = (target << 8) | tile2_noc1_inW_header[41:34];
                  end
                  fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile2_noc1_inW_bdw_allocation, 512, tile2_noc1_inW_header[21:14], tile2_noc1_inW_header[29:22], (counter - tile2_noc1_inW_bdw_allocation), 2, "W", target);
+                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile2_noc1_inW_bdw_allocation, 1, tile2_noc1_inW_header[21:14], tile2_noc1_inW_header[29:22], (counter - tile2_noc1_inW_bdw_allocation), 2, "W", target);
                  $fclose(fd);
                  tile2_noc1_inW_packet_state = HEADER;
              end
@@ -1877,7 +1577,7 @@ begin
                      target = (target << 8) | tile2_noc2_inL_header[41:34];
                  end
                  fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile2_noc2_inL_bdw_allocation, 512, tile2_noc2_inL_header[21:14], tile2_noc2_inL_header[29:22], (counter - tile2_noc2_inL_bdw_allocation), 3, "L", target);
+                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile2_noc2_inL_bdw_allocation, 1, tile2_noc2_inL_header[21:14], tile2_noc2_inL_header[29:22], (counter - tile2_noc2_inL_bdw_allocation), 3, "L", target);
                  $fclose(fd);
                  tile2_noc2_inL_packet_state = HEADER;
              end
@@ -1908,7 +1608,7 @@ begin
                      target = (target << 8) | tile2_noc2_inN_header[41:34];
                  end
                  fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile2_noc2_inN_bdw_allocation, 512, tile2_noc2_inN_header[21:14], tile2_noc2_inN_header[29:22], (counter - tile2_noc2_inN_bdw_allocation), 3, "N", target);
+                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile2_noc2_inN_bdw_allocation, 1, tile2_noc2_inN_header[21:14], tile2_noc2_inN_header[29:22], (counter - tile2_noc2_inN_bdw_allocation), 3, "N", target);
                  $fclose(fd);
                  tile2_noc2_inN_packet_state = HEADER;
              end
@@ -1939,7 +1639,7 @@ begin
                      target = (target << 8) | tile2_noc2_inS_header[41:34];
                  end
                  fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile2_noc2_inS_bdw_allocation, 512, tile2_noc2_inS_header[21:14], tile2_noc2_inS_header[29:22], (counter - tile2_noc2_inS_bdw_allocation), 3, "S", target);
+                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile2_noc2_inS_bdw_allocation, 1, tile2_noc2_inS_header[21:14], tile2_noc2_inS_header[29:22], (counter - tile2_noc2_inS_bdw_allocation), 3, "S", target);
                  $fclose(fd);
                  tile2_noc2_inS_packet_state = HEADER;
              end
@@ -1970,7 +1670,7 @@ begin
                      target = (target << 8) | tile2_noc2_inE_header[41:34];
                  end
                  fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile2_noc2_inE_bdw_allocation, 512, tile2_noc2_inE_header[21:14], tile2_noc2_inE_header[29:22], (counter - tile2_noc2_inE_bdw_allocation), 3, "E", target);
+                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile2_noc2_inE_bdw_allocation, 1, tile2_noc2_inE_header[21:14], tile2_noc2_inE_header[29:22], (counter - tile2_noc2_inE_bdw_allocation), 3, "E", target);
                  $fclose(fd);
                  tile2_noc2_inE_packet_state = HEADER;
              end
@@ -2001,7 +1701,7 @@ begin
                      target = (target << 8) | tile2_noc2_inW_header[41:34];
                  end
                  fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile2_noc2_inW_bdw_allocation, 512, tile2_noc2_inW_header[21:14], tile2_noc2_inW_header[29:22], (counter - tile2_noc2_inW_bdw_allocation), 3, "W", target);
+                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile2_noc2_inW_bdw_allocation, 1, tile2_noc2_inW_header[21:14], tile2_noc2_inW_header[29:22], (counter - tile2_noc2_inW_bdw_allocation), 3, "W", target);
                  $fclose(fd);
                  tile2_noc2_inW_packet_state = HEADER;
              end
@@ -2032,7 +1732,7 @@ begin
                      target = (target << 8) | tile3_noc0_inL_header[41:34];
                  end
                  fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile3_noc0_inL_bdw_allocation, 1, tile3_noc0_inL_header[21:14], tile3_noc0_inL_header[29:22], (counter - tile3_noc0_inL_bdw_allocation), 1, "L", target);
+                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile3_noc0_inL_bdw_allocation, 257, tile3_noc0_inL_header[21:14], tile3_noc0_inL_header[29:22], (counter - tile3_noc0_inL_bdw_allocation), 1, "L", target);
                  $fclose(fd);
                  tile3_noc0_inL_packet_state = HEADER;
              end
@@ -2063,7 +1763,7 @@ begin
                      target = (target << 8) | tile3_noc0_inN_header[41:34];
                  end
                  fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile3_noc0_inN_bdw_allocation, 1, tile3_noc0_inN_header[21:14], tile3_noc0_inN_header[29:22], (counter - tile3_noc0_inN_bdw_allocation), 1, "N", target);
+                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile3_noc0_inN_bdw_allocation, 257, tile3_noc0_inN_header[21:14], tile3_noc0_inN_header[29:22], (counter - tile3_noc0_inN_bdw_allocation), 1, "N", target);
                  $fclose(fd);
                  tile3_noc0_inN_packet_state = HEADER;
              end
@@ -2094,7 +1794,7 @@ begin
                      target = (target << 8) | tile3_noc0_inS_header[41:34];
                  end
                  fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile3_noc0_inS_bdw_allocation, 1, tile3_noc0_inS_header[21:14], tile3_noc0_inS_header[29:22], (counter - tile3_noc0_inS_bdw_allocation), 1, "S", target);
+                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile3_noc0_inS_bdw_allocation, 257, tile3_noc0_inS_header[21:14], tile3_noc0_inS_header[29:22], (counter - tile3_noc0_inS_bdw_allocation), 1, "S", target);
                  $fclose(fd);
                  tile3_noc0_inS_packet_state = HEADER;
              end
@@ -2125,7 +1825,7 @@ begin
                      target = (target << 8) | tile3_noc0_inE_header[41:34];
                  end
                  fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile3_noc0_inE_bdw_allocation, 1, tile3_noc0_inE_header[21:14], tile3_noc0_inE_header[29:22], (counter - tile3_noc0_inE_bdw_allocation), 1, "E", target);
+                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile3_noc0_inE_bdw_allocation, 257, tile3_noc0_inE_header[21:14], tile3_noc0_inE_header[29:22], (counter - tile3_noc0_inE_bdw_allocation), 1, "E", target);
                  $fclose(fd);
                  tile3_noc0_inE_packet_state = HEADER;
              end
@@ -2156,7 +1856,7 @@ begin
                      target = (target << 8) | tile3_noc0_inW_header[41:34];
                  end
                  fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile3_noc0_inW_bdw_allocation, 1, tile3_noc0_inW_header[21:14], tile3_noc0_inW_header[29:22], (counter - tile3_noc0_inW_bdw_allocation), 1, "W", target);
+                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile3_noc0_inW_bdw_allocation, 257, tile3_noc0_inW_header[21:14], tile3_noc0_inW_header[29:22], (counter - tile3_noc0_inW_bdw_allocation), 1, "W", target);
                  $fclose(fd);
                  tile3_noc0_inW_packet_state = HEADER;
              end
@@ -2187,7 +1887,7 @@ begin
                      target = (target << 8) | tile3_noc1_inL_header[41:34];
                  end
                  fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile3_noc1_inL_bdw_allocation, 1, tile3_noc1_inL_header[21:14], tile3_noc1_inL_header[29:22], (counter - tile3_noc1_inL_bdw_allocation), 2, "L", target);
+                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile3_noc1_inL_bdw_allocation, 257, tile3_noc1_inL_header[21:14], tile3_noc1_inL_header[29:22], (counter - tile3_noc1_inL_bdw_allocation), 2, "L", target);
                  $fclose(fd);
                  tile3_noc1_inL_packet_state = HEADER;
              end
@@ -2218,7 +1918,7 @@ begin
                      target = (target << 8) | tile3_noc1_inN_header[41:34];
                  end
                  fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile3_noc1_inN_bdw_allocation, 1, tile3_noc1_inN_header[21:14], tile3_noc1_inN_header[29:22], (counter - tile3_noc1_inN_bdw_allocation), 2, "N", target);
+                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile3_noc1_inN_bdw_allocation, 257, tile3_noc1_inN_header[21:14], tile3_noc1_inN_header[29:22], (counter - tile3_noc1_inN_bdw_allocation), 2, "N", target);
                  $fclose(fd);
                  tile3_noc1_inN_packet_state = HEADER;
              end
@@ -2249,7 +1949,7 @@ begin
                      target = (target << 8) | tile3_noc1_inS_header[41:34];
                  end
                  fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile3_noc1_inS_bdw_allocation, 1, tile3_noc1_inS_header[21:14], tile3_noc1_inS_header[29:22], (counter - tile3_noc1_inS_bdw_allocation), 2, "S", target);
+                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile3_noc1_inS_bdw_allocation, 257, tile3_noc1_inS_header[21:14], tile3_noc1_inS_header[29:22], (counter - tile3_noc1_inS_bdw_allocation), 2, "S", target);
                  $fclose(fd);
                  tile3_noc1_inS_packet_state = HEADER;
              end
@@ -2280,7 +1980,7 @@ begin
                      target = (target << 8) | tile3_noc1_inE_header[41:34];
                  end
                  fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile3_noc1_inE_bdw_allocation, 1, tile3_noc1_inE_header[21:14], tile3_noc1_inE_header[29:22], (counter - tile3_noc1_inE_bdw_allocation), 2, "E", target);
+                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile3_noc1_inE_bdw_allocation, 257, tile3_noc1_inE_header[21:14], tile3_noc1_inE_header[29:22], (counter - tile3_noc1_inE_bdw_allocation), 2, "E", target);
                  $fclose(fd);
                  tile3_noc1_inE_packet_state = HEADER;
              end
@@ -2311,7 +2011,7 @@ begin
                      target = (target << 8) | tile3_noc1_inW_header[41:34];
                  end
                  fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile3_noc1_inW_bdw_allocation, 1, tile3_noc1_inW_header[21:14], tile3_noc1_inW_header[29:22], (counter - tile3_noc1_inW_bdw_allocation), 2, "W", target);
+                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile3_noc1_inW_bdw_allocation, 257, tile3_noc1_inW_header[21:14], tile3_noc1_inW_header[29:22], (counter - tile3_noc1_inW_bdw_allocation), 2, "W", target);
                  $fclose(fd);
                  tile3_noc1_inW_packet_state = HEADER;
              end
@@ -2342,7 +2042,7 @@ begin
                      target = (target << 8) | tile3_noc2_inL_header[41:34];
                  end
                  fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile3_noc2_inL_bdw_allocation, 1, tile3_noc2_inL_header[21:14], tile3_noc2_inL_header[29:22], (counter - tile3_noc2_inL_bdw_allocation), 3, "L", target);
+                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile3_noc2_inL_bdw_allocation, 257, tile3_noc2_inL_header[21:14], tile3_noc2_inL_header[29:22], (counter - tile3_noc2_inL_bdw_allocation), 3, "L", target);
                  $fclose(fd);
                  tile3_noc2_inL_packet_state = HEADER;
              end
@@ -2373,7 +2073,7 @@ begin
                      target = (target << 8) | tile3_noc2_inN_header[41:34];
                  end
                  fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile3_noc2_inN_bdw_allocation, 1, tile3_noc2_inN_header[21:14], tile3_noc2_inN_header[29:22], (counter - tile3_noc2_inN_bdw_allocation), 3, "N", target);
+                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile3_noc2_inN_bdw_allocation, 257, tile3_noc2_inN_header[21:14], tile3_noc2_inN_header[29:22], (counter - tile3_noc2_inN_bdw_allocation), 3, "N", target);
                  $fclose(fd);
                  tile3_noc2_inN_packet_state = HEADER;
              end
@@ -2404,7 +2104,7 @@ begin
                      target = (target << 8) | tile3_noc2_inS_header[41:34];
                  end
                  fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile3_noc2_inS_bdw_allocation, 1, tile3_noc2_inS_header[21:14], tile3_noc2_inS_header[29:22], (counter - tile3_noc2_inS_bdw_allocation), 3, "S", target);
+                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile3_noc2_inS_bdw_allocation, 257, tile3_noc2_inS_header[21:14], tile3_noc2_inS_header[29:22], (counter - tile3_noc2_inS_bdw_allocation), 3, "S", target);
                  $fclose(fd);
                  tile3_noc2_inS_packet_state = HEADER;
              end
@@ -2435,7 +2135,7 @@ begin
                      target = (target << 8) | tile3_noc2_inE_header[41:34];
                  end
                  fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile3_noc2_inE_bdw_allocation, 1, tile3_noc2_inE_header[21:14], tile3_noc2_inE_header[29:22], (counter - tile3_noc2_inE_bdw_allocation), 3, "E", target);
+                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile3_noc2_inE_bdw_allocation, 257, tile3_noc2_inE_header[21:14], tile3_noc2_inE_header[29:22], (counter - tile3_noc2_inE_bdw_allocation), 3, "E", target);
                  $fclose(fd);
                  tile3_noc2_inE_packet_state = HEADER;
              end
@@ -2466,2334 +2166,9 @@ begin
                      target = (target << 8) | tile3_noc2_inW_header[41:34];
                  end
                  fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile3_noc2_inW_bdw_allocation, 1, tile3_noc2_inW_header[21:14], tile3_noc2_inW_header[29:22], (counter - tile3_noc2_inW_bdw_allocation), 3, "W", target);
+                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile3_noc2_inW_bdw_allocation, 257, tile3_noc2_inW_header[21:14], tile3_noc2_inW_header[29:22], (counter - tile3_noc2_inW_bdw_allocation), 3, "W", target);
                  $fclose(fd);
                  tile3_noc2_inW_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE4.buffer_router_valid_noc1)
-    begin
-         case (tile4_noc0_inL_packet_state)
-         HEADER:
-         begin
-             tile4_noc0_inL_bdw_allocation = counter;
-             tile4_noc0_inL_payload_counter = `TILE4.buffer_router_data_noc1[29:22];
-             tile4_noc0_inL_header = `TILE4.buffer_router_data_noc1;
-             tile4_noc0_inL_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile4_noc0_inL_payload_counter = tile4_noc0_inL_payload_counter - 1;
-             if (tile4_noc0_inL_payload_counter == 0)
-             begin
-                 chipID = tile4_noc0_inL_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile4_noc0_inL_header[49:42];
-                     target = (target << 8) | tile4_noc0_inL_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile4_noc0_inL_bdw_allocation, 257, tile4_noc0_inL_header[21:14], tile4_noc0_inL_header[29:22], (counter - tile4_noc0_inL_bdw_allocation), 1, "L", target);
-                 $fclose(fd);
-                 tile4_noc0_inL_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE4.dyn0_validIn_N)
-    begin
-         case (tile4_noc0_inN_packet_state)
-         HEADER:
-         begin
-             tile4_noc0_inN_bdw_allocation = counter;
-             tile4_noc0_inN_payload_counter = `TILE4.dyn0_dataIn_N[29:22];
-             tile4_noc0_inN_header = `TILE4.dyn0_dataIn_N;
-             tile4_noc0_inN_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile4_noc0_inN_payload_counter = tile4_noc0_inN_payload_counter - 1;
-             if (tile4_noc0_inN_payload_counter == 0)
-             begin
-                 chipID = tile4_noc0_inN_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile4_noc0_inN_header[49:42];
-                     target = (target << 8) | tile4_noc0_inN_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile4_noc0_inN_bdw_allocation, 257, tile4_noc0_inN_header[21:14], tile4_noc0_inN_header[29:22], (counter - tile4_noc0_inN_bdw_allocation), 1, "N", target);
-                 $fclose(fd);
-                 tile4_noc0_inN_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE4.dyn0_validIn_S)
-    begin
-         case (tile4_noc0_inS_packet_state)
-         HEADER:
-         begin
-             tile4_noc0_inS_bdw_allocation = counter;
-             tile4_noc0_inS_payload_counter = `TILE4.dyn0_dataIn_S[29:22];
-             tile4_noc0_inS_header = `TILE4.dyn0_dataIn_S;
-             tile4_noc0_inS_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile4_noc0_inS_payload_counter = tile4_noc0_inS_payload_counter - 1;
-             if (tile4_noc0_inS_payload_counter == 0)
-             begin
-                 chipID = tile4_noc0_inS_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile4_noc0_inS_header[49:42];
-                     target = (target << 8) | tile4_noc0_inS_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile4_noc0_inS_bdw_allocation, 257, tile4_noc0_inS_header[21:14], tile4_noc0_inS_header[29:22], (counter - tile4_noc0_inS_bdw_allocation), 1, "S", target);
-                 $fclose(fd);
-                 tile4_noc0_inS_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE4.dyn0_validIn_E)
-    begin
-         case (tile4_noc0_inE_packet_state)
-         HEADER:
-         begin
-             tile4_noc0_inE_bdw_allocation = counter;
-             tile4_noc0_inE_payload_counter = `TILE4.dyn0_dataIn_E[29:22];
-             tile4_noc0_inE_header = `TILE4.dyn0_dataIn_E;
-             tile4_noc0_inE_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile4_noc0_inE_payload_counter = tile4_noc0_inE_payload_counter - 1;
-             if (tile4_noc0_inE_payload_counter == 0)
-             begin
-                 chipID = tile4_noc0_inE_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile4_noc0_inE_header[49:42];
-                     target = (target << 8) | tile4_noc0_inE_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile4_noc0_inE_bdw_allocation, 257, tile4_noc0_inE_header[21:14], tile4_noc0_inE_header[29:22], (counter - tile4_noc0_inE_bdw_allocation), 1, "E", target);
-                 $fclose(fd);
-                 tile4_noc0_inE_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE4.dyn0_validIn_W)
-    begin
-         case (tile4_noc0_inW_packet_state)
-         HEADER:
-         begin
-             tile4_noc0_inW_bdw_allocation = counter;
-             tile4_noc0_inW_payload_counter = `TILE4.dyn0_dataIn_W[29:22];
-             tile4_noc0_inW_header = `TILE4.dyn0_dataIn_W;
-             tile4_noc0_inW_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile4_noc0_inW_payload_counter = tile4_noc0_inW_payload_counter - 1;
-             if (tile4_noc0_inW_payload_counter == 0)
-             begin
-                 chipID = tile4_noc0_inW_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile4_noc0_inW_header[49:42];
-                     target = (target << 8) | tile4_noc0_inW_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile4_noc0_inW_bdw_allocation, 257, tile4_noc0_inW_header[21:14], tile4_noc0_inW_header[29:22], (counter - tile4_noc0_inW_bdw_allocation), 1, "W", target);
-                 $fclose(fd);
-                 tile4_noc0_inW_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE4.buffer_router_valid_noc2)
-    begin
-         case (tile4_noc1_inL_packet_state)
-         HEADER:
-         begin
-             tile4_noc1_inL_bdw_allocation = counter;
-             tile4_noc1_inL_payload_counter = `TILE4.buffer_router_data_noc2[29:22];
-             tile4_noc1_inL_header = `TILE4.buffer_router_data_noc2;
-             tile4_noc1_inL_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile4_noc1_inL_payload_counter = tile4_noc1_inL_payload_counter - 1;
-             if (tile4_noc1_inL_payload_counter == 0)
-             begin
-                 chipID = tile4_noc1_inL_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile4_noc1_inL_header[49:42];
-                     target = (target << 8) | tile4_noc1_inL_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile4_noc1_inL_bdw_allocation, 257, tile4_noc1_inL_header[21:14], tile4_noc1_inL_header[29:22], (counter - tile4_noc1_inL_bdw_allocation), 2, "L", target);
-                 $fclose(fd);
-                 tile4_noc1_inL_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE4.dyn1_validIn_N)
-    begin
-         case (tile4_noc1_inN_packet_state)
-         HEADER:
-         begin
-             tile4_noc1_inN_bdw_allocation = counter;
-             tile4_noc1_inN_payload_counter = `TILE4.dyn1_dataIn_N[29:22];
-             tile4_noc1_inN_header = `TILE4.dyn1_dataIn_N;
-             tile4_noc1_inN_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile4_noc1_inN_payload_counter = tile4_noc1_inN_payload_counter - 1;
-             if (tile4_noc1_inN_payload_counter == 0)
-             begin
-                 chipID = tile4_noc1_inN_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile4_noc1_inN_header[49:42];
-                     target = (target << 8) | tile4_noc1_inN_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile4_noc1_inN_bdw_allocation, 257, tile4_noc1_inN_header[21:14], tile4_noc1_inN_header[29:22], (counter - tile4_noc1_inN_bdw_allocation), 2, "N", target);
-                 $fclose(fd);
-                 tile4_noc1_inN_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE4.dyn1_validIn_S)
-    begin
-         case (tile4_noc1_inS_packet_state)
-         HEADER:
-         begin
-             tile4_noc1_inS_bdw_allocation = counter;
-             tile4_noc1_inS_payload_counter = `TILE4.dyn1_dataIn_S[29:22];
-             tile4_noc1_inS_header = `TILE4.dyn1_dataIn_S;
-             tile4_noc1_inS_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile4_noc1_inS_payload_counter = tile4_noc1_inS_payload_counter - 1;
-             if (tile4_noc1_inS_payload_counter == 0)
-             begin
-                 chipID = tile4_noc1_inS_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile4_noc1_inS_header[49:42];
-                     target = (target << 8) | tile4_noc1_inS_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile4_noc1_inS_bdw_allocation, 257, tile4_noc1_inS_header[21:14], tile4_noc1_inS_header[29:22], (counter - tile4_noc1_inS_bdw_allocation), 2, "S", target);
-                 $fclose(fd);
-                 tile4_noc1_inS_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE4.dyn1_validIn_E)
-    begin
-         case (tile4_noc1_inE_packet_state)
-         HEADER:
-         begin
-             tile4_noc1_inE_bdw_allocation = counter;
-             tile4_noc1_inE_payload_counter = `TILE4.dyn1_dataIn_E[29:22];
-             tile4_noc1_inE_header = `TILE4.dyn1_dataIn_E;
-             tile4_noc1_inE_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile4_noc1_inE_payload_counter = tile4_noc1_inE_payload_counter - 1;
-             if (tile4_noc1_inE_payload_counter == 0)
-             begin
-                 chipID = tile4_noc1_inE_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile4_noc1_inE_header[49:42];
-                     target = (target << 8) | tile4_noc1_inE_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile4_noc1_inE_bdw_allocation, 257, tile4_noc1_inE_header[21:14], tile4_noc1_inE_header[29:22], (counter - tile4_noc1_inE_bdw_allocation), 2, "E", target);
-                 $fclose(fd);
-                 tile4_noc1_inE_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE4.dyn1_validIn_W)
-    begin
-         case (tile4_noc1_inW_packet_state)
-         HEADER:
-         begin
-             tile4_noc1_inW_bdw_allocation = counter;
-             tile4_noc1_inW_payload_counter = `TILE4.dyn1_dataIn_W[29:22];
-             tile4_noc1_inW_header = `TILE4.dyn1_dataIn_W;
-             tile4_noc1_inW_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile4_noc1_inW_payload_counter = tile4_noc1_inW_payload_counter - 1;
-             if (tile4_noc1_inW_payload_counter == 0)
-             begin
-                 chipID = tile4_noc1_inW_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile4_noc1_inW_header[49:42];
-                     target = (target << 8) | tile4_noc1_inW_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile4_noc1_inW_bdw_allocation, 257, tile4_noc1_inW_header[21:14], tile4_noc1_inW_header[29:22], (counter - tile4_noc1_inW_bdw_allocation), 2, "W", target);
-                 $fclose(fd);
-                 tile4_noc1_inW_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE4.buffer_router_valid_noc3)
-    begin
-         case (tile4_noc2_inL_packet_state)
-         HEADER:
-         begin
-             tile4_noc2_inL_bdw_allocation = counter;
-             tile4_noc2_inL_payload_counter = `TILE4.buffer_router_data_noc3[29:22];
-             tile4_noc2_inL_header = `TILE4.buffer_router_data_noc3;
-             tile4_noc2_inL_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile4_noc2_inL_payload_counter = tile4_noc2_inL_payload_counter - 1;
-             if (tile4_noc2_inL_payload_counter == 0)
-             begin
-                 chipID = tile4_noc2_inL_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile4_noc2_inL_header[49:42];
-                     target = (target << 8) | tile4_noc2_inL_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile4_noc2_inL_bdw_allocation, 257, tile4_noc2_inL_header[21:14], tile4_noc2_inL_header[29:22], (counter - tile4_noc2_inL_bdw_allocation), 3, "L", target);
-                 $fclose(fd);
-                 tile4_noc2_inL_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE4.dyn2_validIn_N)
-    begin
-         case (tile4_noc2_inN_packet_state)
-         HEADER:
-         begin
-             tile4_noc2_inN_bdw_allocation = counter;
-             tile4_noc2_inN_payload_counter = `TILE4.dyn2_dataIn_N[29:22];
-             tile4_noc2_inN_header = `TILE4.dyn2_dataIn_N;
-             tile4_noc2_inN_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile4_noc2_inN_payload_counter = tile4_noc2_inN_payload_counter - 1;
-             if (tile4_noc2_inN_payload_counter == 0)
-             begin
-                 chipID = tile4_noc2_inN_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile4_noc2_inN_header[49:42];
-                     target = (target << 8) | tile4_noc2_inN_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile4_noc2_inN_bdw_allocation, 257, tile4_noc2_inN_header[21:14], tile4_noc2_inN_header[29:22], (counter - tile4_noc2_inN_bdw_allocation), 3, "N", target);
-                 $fclose(fd);
-                 tile4_noc2_inN_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE4.dyn2_validIn_S)
-    begin
-         case (tile4_noc2_inS_packet_state)
-         HEADER:
-         begin
-             tile4_noc2_inS_bdw_allocation = counter;
-             tile4_noc2_inS_payload_counter = `TILE4.dyn2_dataIn_S[29:22];
-             tile4_noc2_inS_header = `TILE4.dyn2_dataIn_S;
-             tile4_noc2_inS_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile4_noc2_inS_payload_counter = tile4_noc2_inS_payload_counter - 1;
-             if (tile4_noc2_inS_payload_counter == 0)
-             begin
-                 chipID = tile4_noc2_inS_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile4_noc2_inS_header[49:42];
-                     target = (target << 8) | tile4_noc2_inS_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile4_noc2_inS_bdw_allocation, 257, tile4_noc2_inS_header[21:14], tile4_noc2_inS_header[29:22], (counter - tile4_noc2_inS_bdw_allocation), 3, "S", target);
-                 $fclose(fd);
-                 tile4_noc2_inS_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE4.dyn2_validIn_E)
-    begin
-         case (tile4_noc2_inE_packet_state)
-         HEADER:
-         begin
-             tile4_noc2_inE_bdw_allocation = counter;
-             tile4_noc2_inE_payload_counter = `TILE4.dyn2_dataIn_E[29:22];
-             tile4_noc2_inE_header = `TILE4.dyn2_dataIn_E;
-             tile4_noc2_inE_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile4_noc2_inE_payload_counter = tile4_noc2_inE_payload_counter - 1;
-             if (tile4_noc2_inE_payload_counter == 0)
-             begin
-                 chipID = tile4_noc2_inE_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile4_noc2_inE_header[49:42];
-                     target = (target << 8) | tile4_noc2_inE_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile4_noc2_inE_bdw_allocation, 257, tile4_noc2_inE_header[21:14], tile4_noc2_inE_header[29:22], (counter - tile4_noc2_inE_bdw_allocation), 3, "E", target);
-                 $fclose(fd);
-                 tile4_noc2_inE_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE4.dyn2_validIn_W)
-    begin
-         case (tile4_noc2_inW_packet_state)
-         HEADER:
-         begin
-             tile4_noc2_inW_bdw_allocation = counter;
-             tile4_noc2_inW_payload_counter = `TILE4.dyn2_dataIn_W[29:22];
-             tile4_noc2_inW_header = `TILE4.dyn2_dataIn_W;
-             tile4_noc2_inW_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile4_noc2_inW_payload_counter = tile4_noc2_inW_payload_counter - 1;
-             if (tile4_noc2_inW_payload_counter == 0)
-             begin
-                 chipID = tile4_noc2_inW_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile4_noc2_inW_header[49:42];
-                     target = (target << 8) | tile4_noc2_inW_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile4_noc2_inW_bdw_allocation, 257, tile4_noc2_inW_header[21:14], tile4_noc2_inW_header[29:22], (counter - tile4_noc2_inW_bdw_allocation), 3, "W", target);
-                 $fclose(fd);
-                 tile4_noc2_inW_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE5.buffer_router_valid_noc1)
-    begin
-         case (tile5_noc0_inL_packet_state)
-         HEADER:
-         begin
-             tile5_noc0_inL_bdw_allocation = counter;
-             tile5_noc0_inL_payload_counter = `TILE5.buffer_router_data_noc1[29:22];
-             tile5_noc0_inL_header = `TILE5.buffer_router_data_noc1;
-             tile5_noc0_inL_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile5_noc0_inL_payload_counter = tile5_noc0_inL_payload_counter - 1;
-             if (tile5_noc0_inL_payload_counter == 0)
-             begin
-                 chipID = tile5_noc0_inL_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile5_noc0_inL_header[49:42];
-                     target = (target << 8) | tile5_noc0_inL_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile5_noc0_inL_bdw_allocation, 513, tile5_noc0_inL_header[21:14], tile5_noc0_inL_header[29:22], (counter - tile5_noc0_inL_bdw_allocation), 1, "L", target);
-                 $fclose(fd);
-                 tile5_noc0_inL_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE5.dyn0_validIn_N)
-    begin
-         case (tile5_noc0_inN_packet_state)
-         HEADER:
-         begin
-             tile5_noc0_inN_bdw_allocation = counter;
-             tile5_noc0_inN_payload_counter = `TILE5.dyn0_dataIn_N[29:22];
-             tile5_noc0_inN_header = `TILE5.dyn0_dataIn_N;
-             tile5_noc0_inN_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile5_noc0_inN_payload_counter = tile5_noc0_inN_payload_counter - 1;
-             if (tile5_noc0_inN_payload_counter == 0)
-             begin
-                 chipID = tile5_noc0_inN_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile5_noc0_inN_header[49:42];
-                     target = (target << 8) | tile5_noc0_inN_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile5_noc0_inN_bdw_allocation, 513, tile5_noc0_inN_header[21:14], tile5_noc0_inN_header[29:22], (counter - tile5_noc0_inN_bdw_allocation), 1, "N", target);
-                 $fclose(fd);
-                 tile5_noc0_inN_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE5.dyn0_validIn_S)
-    begin
-         case (tile5_noc0_inS_packet_state)
-         HEADER:
-         begin
-             tile5_noc0_inS_bdw_allocation = counter;
-             tile5_noc0_inS_payload_counter = `TILE5.dyn0_dataIn_S[29:22];
-             tile5_noc0_inS_header = `TILE5.dyn0_dataIn_S;
-             tile5_noc0_inS_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile5_noc0_inS_payload_counter = tile5_noc0_inS_payload_counter - 1;
-             if (tile5_noc0_inS_payload_counter == 0)
-             begin
-                 chipID = tile5_noc0_inS_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile5_noc0_inS_header[49:42];
-                     target = (target << 8) | tile5_noc0_inS_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile5_noc0_inS_bdw_allocation, 513, tile5_noc0_inS_header[21:14], tile5_noc0_inS_header[29:22], (counter - tile5_noc0_inS_bdw_allocation), 1, "S", target);
-                 $fclose(fd);
-                 tile5_noc0_inS_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE5.dyn0_validIn_E)
-    begin
-         case (tile5_noc0_inE_packet_state)
-         HEADER:
-         begin
-             tile5_noc0_inE_bdw_allocation = counter;
-             tile5_noc0_inE_payload_counter = `TILE5.dyn0_dataIn_E[29:22];
-             tile5_noc0_inE_header = `TILE5.dyn0_dataIn_E;
-             tile5_noc0_inE_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile5_noc0_inE_payload_counter = tile5_noc0_inE_payload_counter - 1;
-             if (tile5_noc0_inE_payload_counter == 0)
-             begin
-                 chipID = tile5_noc0_inE_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile5_noc0_inE_header[49:42];
-                     target = (target << 8) | tile5_noc0_inE_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile5_noc0_inE_bdw_allocation, 513, tile5_noc0_inE_header[21:14], tile5_noc0_inE_header[29:22], (counter - tile5_noc0_inE_bdw_allocation), 1, "E", target);
-                 $fclose(fd);
-                 tile5_noc0_inE_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE5.dyn0_validIn_W)
-    begin
-         case (tile5_noc0_inW_packet_state)
-         HEADER:
-         begin
-             tile5_noc0_inW_bdw_allocation = counter;
-             tile5_noc0_inW_payload_counter = `TILE5.dyn0_dataIn_W[29:22];
-             tile5_noc0_inW_header = `TILE5.dyn0_dataIn_W;
-             tile5_noc0_inW_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile5_noc0_inW_payload_counter = tile5_noc0_inW_payload_counter - 1;
-             if (tile5_noc0_inW_payload_counter == 0)
-             begin
-                 chipID = tile5_noc0_inW_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile5_noc0_inW_header[49:42];
-                     target = (target << 8) | tile5_noc0_inW_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile5_noc0_inW_bdw_allocation, 513, tile5_noc0_inW_header[21:14], tile5_noc0_inW_header[29:22], (counter - tile5_noc0_inW_bdw_allocation), 1, "W", target);
-                 $fclose(fd);
-                 tile5_noc0_inW_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE5.buffer_router_valid_noc2)
-    begin
-         case (tile5_noc1_inL_packet_state)
-         HEADER:
-         begin
-             tile5_noc1_inL_bdw_allocation = counter;
-             tile5_noc1_inL_payload_counter = `TILE5.buffer_router_data_noc2[29:22];
-             tile5_noc1_inL_header = `TILE5.buffer_router_data_noc2;
-             tile5_noc1_inL_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile5_noc1_inL_payload_counter = tile5_noc1_inL_payload_counter - 1;
-             if (tile5_noc1_inL_payload_counter == 0)
-             begin
-                 chipID = tile5_noc1_inL_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile5_noc1_inL_header[49:42];
-                     target = (target << 8) | tile5_noc1_inL_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile5_noc1_inL_bdw_allocation, 513, tile5_noc1_inL_header[21:14], tile5_noc1_inL_header[29:22], (counter - tile5_noc1_inL_bdw_allocation), 2, "L", target);
-                 $fclose(fd);
-                 tile5_noc1_inL_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE5.dyn1_validIn_N)
-    begin
-         case (tile5_noc1_inN_packet_state)
-         HEADER:
-         begin
-             tile5_noc1_inN_bdw_allocation = counter;
-             tile5_noc1_inN_payload_counter = `TILE5.dyn1_dataIn_N[29:22];
-             tile5_noc1_inN_header = `TILE5.dyn1_dataIn_N;
-             tile5_noc1_inN_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile5_noc1_inN_payload_counter = tile5_noc1_inN_payload_counter - 1;
-             if (tile5_noc1_inN_payload_counter == 0)
-             begin
-                 chipID = tile5_noc1_inN_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile5_noc1_inN_header[49:42];
-                     target = (target << 8) | tile5_noc1_inN_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile5_noc1_inN_bdw_allocation, 513, tile5_noc1_inN_header[21:14], tile5_noc1_inN_header[29:22], (counter - tile5_noc1_inN_bdw_allocation), 2, "N", target);
-                 $fclose(fd);
-                 tile5_noc1_inN_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE5.dyn1_validIn_S)
-    begin
-         case (tile5_noc1_inS_packet_state)
-         HEADER:
-         begin
-             tile5_noc1_inS_bdw_allocation = counter;
-             tile5_noc1_inS_payload_counter = `TILE5.dyn1_dataIn_S[29:22];
-             tile5_noc1_inS_header = `TILE5.dyn1_dataIn_S;
-             tile5_noc1_inS_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile5_noc1_inS_payload_counter = tile5_noc1_inS_payload_counter - 1;
-             if (tile5_noc1_inS_payload_counter == 0)
-             begin
-                 chipID = tile5_noc1_inS_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile5_noc1_inS_header[49:42];
-                     target = (target << 8) | tile5_noc1_inS_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile5_noc1_inS_bdw_allocation, 513, tile5_noc1_inS_header[21:14], tile5_noc1_inS_header[29:22], (counter - tile5_noc1_inS_bdw_allocation), 2, "S", target);
-                 $fclose(fd);
-                 tile5_noc1_inS_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE5.dyn1_validIn_E)
-    begin
-         case (tile5_noc1_inE_packet_state)
-         HEADER:
-         begin
-             tile5_noc1_inE_bdw_allocation = counter;
-             tile5_noc1_inE_payload_counter = `TILE5.dyn1_dataIn_E[29:22];
-             tile5_noc1_inE_header = `TILE5.dyn1_dataIn_E;
-             tile5_noc1_inE_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile5_noc1_inE_payload_counter = tile5_noc1_inE_payload_counter - 1;
-             if (tile5_noc1_inE_payload_counter == 0)
-             begin
-                 chipID = tile5_noc1_inE_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile5_noc1_inE_header[49:42];
-                     target = (target << 8) | tile5_noc1_inE_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile5_noc1_inE_bdw_allocation, 513, tile5_noc1_inE_header[21:14], tile5_noc1_inE_header[29:22], (counter - tile5_noc1_inE_bdw_allocation), 2, "E", target);
-                 $fclose(fd);
-                 tile5_noc1_inE_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE5.dyn1_validIn_W)
-    begin
-         case (tile5_noc1_inW_packet_state)
-         HEADER:
-         begin
-             tile5_noc1_inW_bdw_allocation = counter;
-             tile5_noc1_inW_payload_counter = `TILE5.dyn1_dataIn_W[29:22];
-             tile5_noc1_inW_header = `TILE5.dyn1_dataIn_W;
-             tile5_noc1_inW_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile5_noc1_inW_payload_counter = tile5_noc1_inW_payload_counter - 1;
-             if (tile5_noc1_inW_payload_counter == 0)
-             begin
-                 chipID = tile5_noc1_inW_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile5_noc1_inW_header[49:42];
-                     target = (target << 8) | tile5_noc1_inW_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile5_noc1_inW_bdw_allocation, 513, tile5_noc1_inW_header[21:14], tile5_noc1_inW_header[29:22], (counter - tile5_noc1_inW_bdw_allocation), 2, "W", target);
-                 $fclose(fd);
-                 tile5_noc1_inW_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE5.buffer_router_valid_noc3)
-    begin
-         case (tile5_noc2_inL_packet_state)
-         HEADER:
-         begin
-             tile5_noc2_inL_bdw_allocation = counter;
-             tile5_noc2_inL_payload_counter = `TILE5.buffer_router_data_noc3[29:22];
-             tile5_noc2_inL_header = `TILE5.buffer_router_data_noc3;
-             tile5_noc2_inL_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile5_noc2_inL_payload_counter = tile5_noc2_inL_payload_counter - 1;
-             if (tile5_noc2_inL_payload_counter == 0)
-             begin
-                 chipID = tile5_noc2_inL_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile5_noc2_inL_header[49:42];
-                     target = (target << 8) | tile5_noc2_inL_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile5_noc2_inL_bdw_allocation, 513, tile5_noc2_inL_header[21:14], tile5_noc2_inL_header[29:22], (counter - tile5_noc2_inL_bdw_allocation), 3, "L", target);
-                 $fclose(fd);
-                 tile5_noc2_inL_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE5.dyn2_validIn_N)
-    begin
-         case (tile5_noc2_inN_packet_state)
-         HEADER:
-         begin
-             tile5_noc2_inN_bdw_allocation = counter;
-             tile5_noc2_inN_payload_counter = `TILE5.dyn2_dataIn_N[29:22];
-             tile5_noc2_inN_header = `TILE5.dyn2_dataIn_N;
-             tile5_noc2_inN_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile5_noc2_inN_payload_counter = tile5_noc2_inN_payload_counter - 1;
-             if (tile5_noc2_inN_payload_counter == 0)
-             begin
-                 chipID = tile5_noc2_inN_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile5_noc2_inN_header[49:42];
-                     target = (target << 8) | tile5_noc2_inN_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile5_noc2_inN_bdw_allocation, 513, tile5_noc2_inN_header[21:14], tile5_noc2_inN_header[29:22], (counter - tile5_noc2_inN_bdw_allocation), 3, "N", target);
-                 $fclose(fd);
-                 tile5_noc2_inN_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE5.dyn2_validIn_S)
-    begin
-         case (tile5_noc2_inS_packet_state)
-         HEADER:
-         begin
-             tile5_noc2_inS_bdw_allocation = counter;
-             tile5_noc2_inS_payload_counter = `TILE5.dyn2_dataIn_S[29:22];
-             tile5_noc2_inS_header = `TILE5.dyn2_dataIn_S;
-             tile5_noc2_inS_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile5_noc2_inS_payload_counter = tile5_noc2_inS_payload_counter - 1;
-             if (tile5_noc2_inS_payload_counter == 0)
-             begin
-                 chipID = tile5_noc2_inS_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile5_noc2_inS_header[49:42];
-                     target = (target << 8) | tile5_noc2_inS_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile5_noc2_inS_bdw_allocation, 513, tile5_noc2_inS_header[21:14], tile5_noc2_inS_header[29:22], (counter - tile5_noc2_inS_bdw_allocation), 3, "S", target);
-                 $fclose(fd);
-                 tile5_noc2_inS_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE5.dyn2_validIn_E)
-    begin
-         case (tile5_noc2_inE_packet_state)
-         HEADER:
-         begin
-             tile5_noc2_inE_bdw_allocation = counter;
-             tile5_noc2_inE_payload_counter = `TILE5.dyn2_dataIn_E[29:22];
-             tile5_noc2_inE_header = `TILE5.dyn2_dataIn_E;
-             tile5_noc2_inE_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile5_noc2_inE_payload_counter = tile5_noc2_inE_payload_counter - 1;
-             if (tile5_noc2_inE_payload_counter == 0)
-             begin
-                 chipID = tile5_noc2_inE_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile5_noc2_inE_header[49:42];
-                     target = (target << 8) | tile5_noc2_inE_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile5_noc2_inE_bdw_allocation, 513, tile5_noc2_inE_header[21:14], tile5_noc2_inE_header[29:22], (counter - tile5_noc2_inE_bdw_allocation), 3, "E", target);
-                 $fclose(fd);
-                 tile5_noc2_inE_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE5.dyn2_validIn_W)
-    begin
-         case (tile5_noc2_inW_packet_state)
-         HEADER:
-         begin
-             tile5_noc2_inW_bdw_allocation = counter;
-             tile5_noc2_inW_payload_counter = `TILE5.dyn2_dataIn_W[29:22];
-             tile5_noc2_inW_header = `TILE5.dyn2_dataIn_W;
-             tile5_noc2_inW_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile5_noc2_inW_payload_counter = tile5_noc2_inW_payload_counter - 1;
-             if (tile5_noc2_inW_payload_counter == 0)
-             begin
-                 chipID = tile5_noc2_inW_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile5_noc2_inW_header[49:42];
-                     target = (target << 8) | tile5_noc2_inW_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile5_noc2_inW_bdw_allocation, 513, tile5_noc2_inW_header[21:14], tile5_noc2_inW_header[29:22], (counter - tile5_noc2_inW_bdw_allocation), 3, "W", target);
-                 $fclose(fd);
-                 tile5_noc2_inW_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE6.buffer_router_valid_noc1)
-    begin
-         case (tile6_noc0_inL_packet_state)
-         HEADER:
-         begin
-             tile6_noc0_inL_bdw_allocation = counter;
-             tile6_noc0_inL_payload_counter = `TILE6.buffer_router_data_noc1[29:22];
-             tile6_noc0_inL_header = `TILE6.buffer_router_data_noc1;
-             tile6_noc0_inL_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile6_noc0_inL_payload_counter = tile6_noc0_inL_payload_counter - 1;
-             if (tile6_noc0_inL_payload_counter == 0)
-             begin
-                 chipID = tile6_noc0_inL_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile6_noc0_inL_header[49:42];
-                     target = (target << 8) | tile6_noc0_inL_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile6_noc0_inL_bdw_allocation, 2, tile6_noc0_inL_header[21:14], tile6_noc0_inL_header[29:22], (counter - tile6_noc0_inL_bdw_allocation), 1, "L", target);
-                 $fclose(fd);
-                 tile6_noc0_inL_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE6.dyn0_validIn_N)
-    begin
-         case (tile6_noc0_inN_packet_state)
-         HEADER:
-         begin
-             tile6_noc0_inN_bdw_allocation = counter;
-             tile6_noc0_inN_payload_counter = `TILE6.dyn0_dataIn_N[29:22];
-             tile6_noc0_inN_header = `TILE6.dyn0_dataIn_N;
-             tile6_noc0_inN_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile6_noc0_inN_payload_counter = tile6_noc0_inN_payload_counter - 1;
-             if (tile6_noc0_inN_payload_counter == 0)
-             begin
-                 chipID = tile6_noc0_inN_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile6_noc0_inN_header[49:42];
-                     target = (target << 8) | tile6_noc0_inN_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile6_noc0_inN_bdw_allocation, 2, tile6_noc0_inN_header[21:14], tile6_noc0_inN_header[29:22], (counter - tile6_noc0_inN_bdw_allocation), 1, "N", target);
-                 $fclose(fd);
-                 tile6_noc0_inN_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE6.dyn0_validIn_S)
-    begin
-         case (tile6_noc0_inS_packet_state)
-         HEADER:
-         begin
-             tile6_noc0_inS_bdw_allocation = counter;
-             tile6_noc0_inS_payload_counter = `TILE6.dyn0_dataIn_S[29:22];
-             tile6_noc0_inS_header = `TILE6.dyn0_dataIn_S;
-             tile6_noc0_inS_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile6_noc0_inS_payload_counter = tile6_noc0_inS_payload_counter - 1;
-             if (tile6_noc0_inS_payload_counter == 0)
-             begin
-                 chipID = tile6_noc0_inS_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile6_noc0_inS_header[49:42];
-                     target = (target << 8) | tile6_noc0_inS_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile6_noc0_inS_bdw_allocation, 2, tile6_noc0_inS_header[21:14], tile6_noc0_inS_header[29:22], (counter - tile6_noc0_inS_bdw_allocation), 1, "S", target);
-                 $fclose(fd);
-                 tile6_noc0_inS_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE6.dyn0_validIn_E)
-    begin
-         case (tile6_noc0_inE_packet_state)
-         HEADER:
-         begin
-             tile6_noc0_inE_bdw_allocation = counter;
-             tile6_noc0_inE_payload_counter = `TILE6.dyn0_dataIn_E[29:22];
-             tile6_noc0_inE_header = `TILE6.dyn0_dataIn_E;
-             tile6_noc0_inE_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile6_noc0_inE_payload_counter = tile6_noc0_inE_payload_counter - 1;
-             if (tile6_noc0_inE_payload_counter == 0)
-             begin
-                 chipID = tile6_noc0_inE_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile6_noc0_inE_header[49:42];
-                     target = (target << 8) | tile6_noc0_inE_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile6_noc0_inE_bdw_allocation, 2, tile6_noc0_inE_header[21:14], tile6_noc0_inE_header[29:22], (counter - tile6_noc0_inE_bdw_allocation), 1, "E", target);
-                 $fclose(fd);
-                 tile6_noc0_inE_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE6.dyn0_validIn_W)
-    begin
-         case (tile6_noc0_inW_packet_state)
-         HEADER:
-         begin
-             tile6_noc0_inW_bdw_allocation = counter;
-             tile6_noc0_inW_payload_counter = `TILE6.dyn0_dataIn_W[29:22];
-             tile6_noc0_inW_header = `TILE6.dyn0_dataIn_W;
-             tile6_noc0_inW_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile6_noc0_inW_payload_counter = tile6_noc0_inW_payload_counter - 1;
-             if (tile6_noc0_inW_payload_counter == 0)
-             begin
-                 chipID = tile6_noc0_inW_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile6_noc0_inW_header[49:42];
-                     target = (target << 8) | tile6_noc0_inW_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile6_noc0_inW_bdw_allocation, 2, tile6_noc0_inW_header[21:14], tile6_noc0_inW_header[29:22], (counter - tile6_noc0_inW_bdw_allocation), 1, "W", target);
-                 $fclose(fd);
-                 tile6_noc0_inW_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE6.buffer_router_valid_noc2)
-    begin
-         case (tile6_noc1_inL_packet_state)
-         HEADER:
-         begin
-             tile6_noc1_inL_bdw_allocation = counter;
-             tile6_noc1_inL_payload_counter = `TILE6.buffer_router_data_noc2[29:22];
-             tile6_noc1_inL_header = `TILE6.buffer_router_data_noc2;
-             tile6_noc1_inL_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile6_noc1_inL_payload_counter = tile6_noc1_inL_payload_counter - 1;
-             if (tile6_noc1_inL_payload_counter == 0)
-             begin
-                 chipID = tile6_noc1_inL_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile6_noc1_inL_header[49:42];
-                     target = (target << 8) | tile6_noc1_inL_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile6_noc1_inL_bdw_allocation, 2, tile6_noc1_inL_header[21:14], tile6_noc1_inL_header[29:22], (counter - tile6_noc1_inL_bdw_allocation), 2, "L", target);
-                 $fclose(fd);
-                 tile6_noc1_inL_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE6.dyn1_validIn_N)
-    begin
-         case (tile6_noc1_inN_packet_state)
-         HEADER:
-         begin
-             tile6_noc1_inN_bdw_allocation = counter;
-             tile6_noc1_inN_payload_counter = `TILE6.dyn1_dataIn_N[29:22];
-             tile6_noc1_inN_header = `TILE6.dyn1_dataIn_N;
-             tile6_noc1_inN_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile6_noc1_inN_payload_counter = tile6_noc1_inN_payload_counter - 1;
-             if (tile6_noc1_inN_payload_counter == 0)
-             begin
-                 chipID = tile6_noc1_inN_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile6_noc1_inN_header[49:42];
-                     target = (target << 8) | tile6_noc1_inN_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile6_noc1_inN_bdw_allocation, 2, tile6_noc1_inN_header[21:14], tile6_noc1_inN_header[29:22], (counter - tile6_noc1_inN_bdw_allocation), 2, "N", target);
-                 $fclose(fd);
-                 tile6_noc1_inN_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE6.dyn1_validIn_S)
-    begin
-         case (tile6_noc1_inS_packet_state)
-         HEADER:
-         begin
-             tile6_noc1_inS_bdw_allocation = counter;
-             tile6_noc1_inS_payload_counter = `TILE6.dyn1_dataIn_S[29:22];
-             tile6_noc1_inS_header = `TILE6.dyn1_dataIn_S;
-             tile6_noc1_inS_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile6_noc1_inS_payload_counter = tile6_noc1_inS_payload_counter - 1;
-             if (tile6_noc1_inS_payload_counter == 0)
-             begin
-                 chipID = tile6_noc1_inS_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile6_noc1_inS_header[49:42];
-                     target = (target << 8) | tile6_noc1_inS_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile6_noc1_inS_bdw_allocation, 2, tile6_noc1_inS_header[21:14], tile6_noc1_inS_header[29:22], (counter - tile6_noc1_inS_bdw_allocation), 2, "S", target);
-                 $fclose(fd);
-                 tile6_noc1_inS_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE6.dyn1_validIn_E)
-    begin
-         case (tile6_noc1_inE_packet_state)
-         HEADER:
-         begin
-             tile6_noc1_inE_bdw_allocation = counter;
-             tile6_noc1_inE_payload_counter = `TILE6.dyn1_dataIn_E[29:22];
-             tile6_noc1_inE_header = `TILE6.dyn1_dataIn_E;
-             tile6_noc1_inE_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile6_noc1_inE_payload_counter = tile6_noc1_inE_payload_counter - 1;
-             if (tile6_noc1_inE_payload_counter == 0)
-             begin
-                 chipID = tile6_noc1_inE_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile6_noc1_inE_header[49:42];
-                     target = (target << 8) | tile6_noc1_inE_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile6_noc1_inE_bdw_allocation, 2, tile6_noc1_inE_header[21:14], tile6_noc1_inE_header[29:22], (counter - tile6_noc1_inE_bdw_allocation), 2, "E", target);
-                 $fclose(fd);
-                 tile6_noc1_inE_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE6.dyn1_validIn_W)
-    begin
-         case (tile6_noc1_inW_packet_state)
-         HEADER:
-         begin
-             tile6_noc1_inW_bdw_allocation = counter;
-             tile6_noc1_inW_payload_counter = `TILE6.dyn1_dataIn_W[29:22];
-             tile6_noc1_inW_header = `TILE6.dyn1_dataIn_W;
-             tile6_noc1_inW_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile6_noc1_inW_payload_counter = tile6_noc1_inW_payload_counter - 1;
-             if (tile6_noc1_inW_payload_counter == 0)
-             begin
-                 chipID = tile6_noc1_inW_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile6_noc1_inW_header[49:42];
-                     target = (target << 8) | tile6_noc1_inW_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile6_noc1_inW_bdw_allocation, 2, tile6_noc1_inW_header[21:14], tile6_noc1_inW_header[29:22], (counter - tile6_noc1_inW_bdw_allocation), 2, "W", target);
-                 $fclose(fd);
-                 tile6_noc1_inW_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE6.buffer_router_valid_noc3)
-    begin
-         case (tile6_noc2_inL_packet_state)
-         HEADER:
-         begin
-             tile6_noc2_inL_bdw_allocation = counter;
-             tile6_noc2_inL_payload_counter = `TILE6.buffer_router_data_noc3[29:22];
-             tile6_noc2_inL_header = `TILE6.buffer_router_data_noc3;
-             tile6_noc2_inL_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile6_noc2_inL_payload_counter = tile6_noc2_inL_payload_counter - 1;
-             if (tile6_noc2_inL_payload_counter == 0)
-             begin
-                 chipID = tile6_noc2_inL_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile6_noc2_inL_header[49:42];
-                     target = (target << 8) | tile6_noc2_inL_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile6_noc2_inL_bdw_allocation, 2, tile6_noc2_inL_header[21:14], tile6_noc2_inL_header[29:22], (counter - tile6_noc2_inL_bdw_allocation), 3, "L", target);
-                 $fclose(fd);
-                 tile6_noc2_inL_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE6.dyn2_validIn_N)
-    begin
-         case (tile6_noc2_inN_packet_state)
-         HEADER:
-         begin
-             tile6_noc2_inN_bdw_allocation = counter;
-             tile6_noc2_inN_payload_counter = `TILE6.dyn2_dataIn_N[29:22];
-             tile6_noc2_inN_header = `TILE6.dyn2_dataIn_N;
-             tile6_noc2_inN_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile6_noc2_inN_payload_counter = tile6_noc2_inN_payload_counter - 1;
-             if (tile6_noc2_inN_payload_counter == 0)
-             begin
-                 chipID = tile6_noc2_inN_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile6_noc2_inN_header[49:42];
-                     target = (target << 8) | tile6_noc2_inN_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile6_noc2_inN_bdw_allocation, 2, tile6_noc2_inN_header[21:14], tile6_noc2_inN_header[29:22], (counter - tile6_noc2_inN_bdw_allocation), 3, "N", target);
-                 $fclose(fd);
-                 tile6_noc2_inN_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE6.dyn2_validIn_S)
-    begin
-         case (tile6_noc2_inS_packet_state)
-         HEADER:
-         begin
-             tile6_noc2_inS_bdw_allocation = counter;
-             tile6_noc2_inS_payload_counter = `TILE6.dyn2_dataIn_S[29:22];
-             tile6_noc2_inS_header = `TILE6.dyn2_dataIn_S;
-             tile6_noc2_inS_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile6_noc2_inS_payload_counter = tile6_noc2_inS_payload_counter - 1;
-             if (tile6_noc2_inS_payload_counter == 0)
-             begin
-                 chipID = tile6_noc2_inS_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile6_noc2_inS_header[49:42];
-                     target = (target << 8) | tile6_noc2_inS_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile6_noc2_inS_bdw_allocation, 2, tile6_noc2_inS_header[21:14], tile6_noc2_inS_header[29:22], (counter - tile6_noc2_inS_bdw_allocation), 3, "S", target);
-                 $fclose(fd);
-                 tile6_noc2_inS_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE6.dyn2_validIn_E)
-    begin
-         case (tile6_noc2_inE_packet_state)
-         HEADER:
-         begin
-             tile6_noc2_inE_bdw_allocation = counter;
-             tile6_noc2_inE_payload_counter = `TILE6.dyn2_dataIn_E[29:22];
-             tile6_noc2_inE_header = `TILE6.dyn2_dataIn_E;
-             tile6_noc2_inE_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile6_noc2_inE_payload_counter = tile6_noc2_inE_payload_counter - 1;
-             if (tile6_noc2_inE_payload_counter == 0)
-             begin
-                 chipID = tile6_noc2_inE_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile6_noc2_inE_header[49:42];
-                     target = (target << 8) | tile6_noc2_inE_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile6_noc2_inE_bdw_allocation, 2, tile6_noc2_inE_header[21:14], tile6_noc2_inE_header[29:22], (counter - tile6_noc2_inE_bdw_allocation), 3, "E", target);
-                 $fclose(fd);
-                 tile6_noc2_inE_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE6.dyn2_validIn_W)
-    begin
-         case (tile6_noc2_inW_packet_state)
-         HEADER:
-         begin
-             tile6_noc2_inW_bdw_allocation = counter;
-             tile6_noc2_inW_payload_counter = `TILE6.dyn2_dataIn_W[29:22];
-             tile6_noc2_inW_header = `TILE6.dyn2_dataIn_W;
-             tile6_noc2_inW_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile6_noc2_inW_payload_counter = tile6_noc2_inW_payload_counter - 1;
-             if (tile6_noc2_inW_payload_counter == 0)
-             begin
-                 chipID = tile6_noc2_inW_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile6_noc2_inW_header[49:42];
-                     target = (target << 8) | tile6_noc2_inW_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile6_noc2_inW_bdw_allocation, 2, tile6_noc2_inW_header[21:14], tile6_noc2_inW_header[29:22], (counter - tile6_noc2_inW_bdw_allocation), 3, "W", target);
-                 $fclose(fd);
-                 tile6_noc2_inW_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE7.buffer_router_valid_noc1)
-    begin
-         case (tile7_noc0_inL_packet_state)
-         HEADER:
-         begin
-             tile7_noc0_inL_bdw_allocation = counter;
-             tile7_noc0_inL_payload_counter = `TILE7.buffer_router_data_noc1[29:22];
-             tile7_noc0_inL_header = `TILE7.buffer_router_data_noc1;
-             tile7_noc0_inL_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile7_noc0_inL_payload_counter = tile7_noc0_inL_payload_counter - 1;
-             if (tile7_noc0_inL_payload_counter == 0)
-             begin
-                 chipID = tile7_noc0_inL_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile7_noc0_inL_header[49:42];
-                     target = (target << 8) | tile7_noc0_inL_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile7_noc0_inL_bdw_allocation, 258, tile7_noc0_inL_header[21:14], tile7_noc0_inL_header[29:22], (counter - tile7_noc0_inL_bdw_allocation), 1, "L", target);
-                 $fclose(fd);
-                 tile7_noc0_inL_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE7.dyn0_validIn_N)
-    begin
-         case (tile7_noc0_inN_packet_state)
-         HEADER:
-         begin
-             tile7_noc0_inN_bdw_allocation = counter;
-             tile7_noc0_inN_payload_counter = `TILE7.dyn0_dataIn_N[29:22];
-             tile7_noc0_inN_header = `TILE7.dyn0_dataIn_N;
-             tile7_noc0_inN_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile7_noc0_inN_payload_counter = tile7_noc0_inN_payload_counter - 1;
-             if (tile7_noc0_inN_payload_counter == 0)
-             begin
-                 chipID = tile7_noc0_inN_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile7_noc0_inN_header[49:42];
-                     target = (target << 8) | tile7_noc0_inN_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile7_noc0_inN_bdw_allocation, 258, tile7_noc0_inN_header[21:14], tile7_noc0_inN_header[29:22], (counter - tile7_noc0_inN_bdw_allocation), 1, "N", target);
-                 $fclose(fd);
-                 tile7_noc0_inN_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE7.dyn0_validIn_S)
-    begin
-         case (tile7_noc0_inS_packet_state)
-         HEADER:
-         begin
-             tile7_noc0_inS_bdw_allocation = counter;
-             tile7_noc0_inS_payload_counter = `TILE7.dyn0_dataIn_S[29:22];
-             tile7_noc0_inS_header = `TILE7.dyn0_dataIn_S;
-             tile7_noc0_inS_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile7_noc0_inS_payload_counter = tile7_noc0_inS_payload_counter - 1;
-             if (tile7_noc0_inS_payload_counter == 0)
-             begin
-                 chipID = tile7_noc0_inS_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile7_noc0_inS_header[49:42];
-                     target = (target << 8) | tile7_noc0_inS_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile7_noc0_inS_bdw_allocation, 258, tile7_noc0_inS_header[21:14], tile7_noc0_inS_header[29:22], (counter - tile7_noc0_inS_bdw_allocation), 1, "S", target);
-                 $fclose(fd);
-                 tile7_noc0_inS_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE7.dyn0_validIn_E)
-    begin
-         case (tile7_noc0_inE_packet_state)
-         HEADER:
-         begin
-             tile7_noc0_inE_bdw_allocation = counter;
-             tile7_noc0_inE_payload_counter = `TILE7.dyn0_dataIn_E[29:22];
-             tile7_noc0_inE_header = `TILE7.dyn0_dataIn_E;
-             tile7_noc0_inE_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile7_noc0_inE_payload_counter = tile7_noc0_inE_payload_counter - 1;
-             if (tile7_noc0_inE_payload_counter == 0)
-             begin
-                 chipID = tile7_noc0_inE_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile7_noc0_inE_header[49:42];
-                     target = (target << 8) | tile7_noc0_inE_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile7_noc0_inE_bdw_allocation, 258, tile7_noc0_inE_header[21:14], tile7_noc0_inE_header[29:22], (counter - tile7_noc0_inE_bdw_allocation), 1, "E", target);
-                 $fclose(fd);
-                 tile7_noc0_inE_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE7.dyn0_validIn_W)
-    begin
-         case (tile7_noc0_inW_packet_state)
-         HEADER:
-         begin
-             tile7_noc0_inW_bdw_allocation = counter;
-             tile7_noc0_inW_payload_counter = `TILE7.dyn0_dataIn_W[29:22];
-             tile7_noc0_inW_header = `TILE7.dyn0_dataIn_W;
-             tile7_noc0_inW_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile7_noc0_inW_payload_counter = tile7_noc0_inW_payload_counter - 1;
-             if (tile7_noc0_inW_payload_counter == 0)
-             begin
-                 chipID = tile7_noc0_inW_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile7_noc0_inW_header[49:42];
-                     target = (target << 8) | tile7_noc0_inW_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile7_noc0_inW_bdw_allocation, 258, tile7_noc0_inW_header[21:14], tile7_noc0_inW_header[29:22], (counter - tile7_noc0_inW_bdw_allocation), 1, "W", target);
-                 $fclose(fd);
-                 tile7_noc0_inW_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE7.buffer_router_valid_noc2)
-    begin
-         case (tile7_noc1_inL_packet_state)
-         HEADER:
-         begin
-             tile7_noc1_inL_bdw_allocation = counter;
-             tile7_noc1_inL_payload_counter = `TILE7.buffer_router_data_noc2[29:22];
-             tile7_noc1_inL_header = `TILE7.buffer_router_data_noc2;
-             tile7_noc1_inL_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile7_noc1_inL_payload_counter = tile7_noc1_inL_payload_counter - 1;
-             if (tile7_noc1_inL_payload_counter == 0)
-             begin
-                 chipID = tile7_noc1_inL_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile7_noc1_inL_header[49:42];
-                     target = (target << 8) | tile7_noc1_inL_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile7_noc1_inL_bdw_allocation, 258, tile7_noc1_inL_header[21:14], tile7_noc1_inL_header[29:22], (counter - tile7_noc1_inL_bdw_allocation), 2, "L", target);
-                 $fclose(fd);
-                 tile7_noc1_inL_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE7.dyn1_validIn_N)
-    begin
-         case (tile7_noc1_inN_packet_state)
-         HEADER:
-         begin
-             tile7_noc1_inN_bdw_allocation = counter;
-             tile7_noc1_inN_payload_counter = `TILE7.dyn1_dataIn_N[29:22];
-             tile7_noc1_inN_header = `TILE7.dyn1_dataIn_N;
-             tile7_noc1_inN_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile7_noc1_inN_payload_counter = tile7_noc1_inN_payload_counter - 1;
-             if (tile7_noc1_inN_payload_counter == 0)
-             begin
-                 chipID = tile7_noc1_inN_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile7_noc1_inN_header[49:42];
-                     target = (target << 8) | tile7_noc1_inN_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile7_noc1_inN_bdw_allocation, 258, tile7_noc1_inN_header[21:14], tile7_noc1_inN_header[29:22], (counter - tile7_noc1_inN_bdw_allocation), 2, "N", target);
-                 $fclose(fd);
-                 tile7_noc1_inN_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE7.dyn1_validIn_S)
-    begin
-         case (tile7_noc1_inS_packet_state)
-         HEADER:
-         begin
-             tile7_noc1_inS_bdw_allocation = counter;
-             tile7_noc1_inS_payload_counter = `TILE7.dyn1_dataIn_S[29:22];
-             tile7_noc1_inS_header = `TILE7.dyn1_dataIn_S;
-             tile7_noc1_inS_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile7_noc1_inS_payload_counter = tile7_noc1_inS_payload_counter - 1;
-             if (tile7_noc1_inS_payload_counter == 0)
-             begin
-                 chipID = tile7_noc1_inS_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile7_noc1_inS_header[49:42];
-                     target = (target << 8) | tile7_noc1_inS_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile7_noc1_inS_bdw_allocation, 258, tile7_noc1_inS_header[21:14], tile7_noc1_inS_header[29:22], (counter - tile7_noc1_inS_bdw_allocation), 2, "S", target);
-                 $fclose(fd);
-                 tile7_noc1_inS_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE7.dyn1_validIn_E)
-    begin
-         case (tile7_noc1_inE_packet_state)
-         HEADER:
-         begin
-             tile7_noc1_inE_bdw_allocation = counter;
-             tile7_noc1_inE_payload_counter = `TILE7.dyn1_dataIn_E[29:22];
-             tile7_noc1_inE_header = `TILE7.dyn1_dataIn_E;
-             tile7_noc1_inE_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile7_noc1_inE_payload_counter = tile7_noc1_inE_payload_counter - 1;
-             if (tile7_noc1_inE_payload_counter == 0)
-             begin
-                 chipID = tile7_noc1_inE_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile7_noc1_inE_header[49:42];
-                     target = (target << 8) | tile7_noc1_inE_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile7_noc1_inE_bdw_allocation, 258, tile7_noc1_inE_header[21:14], tile7_noc1_inE_header[29:22], (counter - tile7_noc1_inE_bdw_allocation), 2, "E", target);
-                 $fclose(fd);
-                 tile7_noc1_inE_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE7.dyn1_validIn_W)
-    begin
-         case (tile7_noc1_inW_packet_state)
-         HEADER:
-         begin
-             tile7_noc1_inW_bdw_allocation = counter;
-             tile7_noc1_inW_payload_counter = `TILE7.dyn1_dataIn_W[29:22];
-             tile7_noc1_inW_header = `TILE7.dyn1_dataIn_W;
-             tile7_noc1_inW_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile7_noc1_inW_payload_counter = tile7_noc1_inW_payload_counter - 1;
-             if (tile7_noc1_inW_payload_counter == 0)
-             begin
-                 chipID = tile7_noc1_inW_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile7_noc1_inW_header[49:42];
-                     target = (target << 8) | tile7_noc1_inW_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile7_noc1_inW_bdw_allocation, 258, tile7_noc1_inW_header[21:14], tile7_noc1_inW_header[29:22], (counter - tile7_noc1_inW_bdw_allocation), 2, "W", target);
-                 $fclose(fd);
-                 tile7_noc1_inW_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE7.buffer_router_valid_noc3)
-    begin
-         case (tile7_noc2_inL_packet_state)
-         HEADER:
-         begin
-             tile7_noc2_inL_bdw_allocation = counter;
-             tile7_noc2_inL_payload_counter = `TILE7.buffer_router_data_noc3[29:22];
-             tile7_noc2_inL_header = `TILE7.buffer_router_data_noc3;
-             tile7_noc2_inL_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile7_noc2_inL_payload_counter = tile7_noc2_inL_payload_counter - 1;
-             if (tile7_noc2_inL_payload_counter == 0)
-             begin
-                 chipID = tile7_noc2_inL_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile7_noc2_inL_header[49:42];
-                     target = (target << 8) | tile7_noc2_inL_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile7_noc2_inL_bdw_allocation, 258, tile7_noc2_inL_header[21:14], tile7_noc2_inL_header[29:22], (counter - tile7_noc2_inL_bdw_allocation), 3, "L", target);
-                 $fclose(fd);
-                 tile7_noc2_inL_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE7.dyn2_validIn_N)
-    begin
-         case (tile7_noc2_inN_packet_state)
-         HEADER:
-         begin
-             tile7_noc2_inN_bdw_allocation = counter;
-             tile7_noc2_inN_payload_counter = `TILE7.dyn2_dataIn_N[29:22];
-             tile7_noc2_inN_header = `TILE7.dyn2_dataIn_N;
-             tile7_noc2_inN_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile7_noc2_inN_payload_counter = tile7_noc2_inN_payload_counter - 1;
-             if (tile7_noc2_inN_payload_counter == 0)
-             begin
-                 chipID = tile7_noc2_inN_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile7_noc2_inN_header[49:42];
-                     target = (target << 8) | tile7_noc2_inN_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile7_noc2_inN_bdw_allocation, 258, tile7_noc2_inN_header[21:14], tile7_noc2_inN_header[29:22], (counter - tile7_noc2_inN_bdw_allocation), 3, "N", target);
-                 $fclose(fd);
-                 tile7_noc2_inN_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE7.dyn2_validIn_S)
-    begin
-         case (tile7_noc2_inS_packet_state)
-         HEADER:
-         begin
-             tile7_noc2_inS_bdw_allocation = counter;
-             tile7_noc2_inS_payload_counter = `TILE7.dyn2_dataIn_S[29:22];
-             tile7_noc2_inS_header = `TILE7.dyn2_dataIn_S;
-             tile7_noc2_inS_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile7_noc2_inS_payload_counter = tile7_noc2_inS_payload_counter - 1;
-             if (tile7_noc2_inS_payload_counter == 0)
-             begin
-                 chipID = tile7_noc2_inS_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile7_noc2_inS_header[49:42];
-                     target = (target << 8) | tile7_noc2_inS_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile7_noc2_inS_bdw_allocation, 258, tile7_noc2_inS_header[21:14], tile7_noc2_inS_header[29:22], (counter - tile7_noc2_inS_bdw_allocation), 3, "S", target);
-                 $fclose(fd);
-                 tile7_noc2_inS_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE7.dyn2_validIn_E)
-    begin
-         case (tile7_noc2_inE_packet_state)
-         HEADER:
-         begin
-             tile7_noc2_inE_bdw_allocation = counter;
-             tile7_noc2_inE_payload_counter = `TILE7.dyn2_dataIn_E[29:22];
-             tile7_noc2_inE_header = `TILE7.dyn2_dataIn_E;
-             tile7_noc2_inE_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile7_noc2_inE_payload_counter = tile7_noc2_inE_payload_counter - 1;
-             if (tile7_noc2_inE_payload_counter == 0)
-             begin
-                 chipID = tile7_noc2_inE_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile7_noc2_inE_header[49:42];
-                     target = (target << 8) | tile7_noc2_inE_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile7_noc2_inE_bdw_allocation, 258, tile7_noc2_inE_header[21:14], tile7_noc2_inE_header[29:22], (counter - tile7_noc2_inE_bdw_allocation), 3, "E", target);
-                 $fclose(fd);
-                 tile7_noc2_inE_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE7.dyn2_validIn_W)
-    begin
-         case (tile7_noc2_inW_packet_state)
-         HEADER:
-         begin
-             tile7_noc2_inW_bdw_allocation = counter;
-             tile7_noc2_inW_payload_counter = `TILE7.dyn2_dataIn_W[29:22];
-             tile7_noc2_inW_header = `TILE7.dyn2_dataIn_W;
-             tile7_noc2_inW_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile7_noc2_inW_payload_counter = tile7_noc2_inW_payload_counter - 1;
-             if (tile7_noc2_inW_payload_counter == 0)
-             begin
-                 chipID = tile7_noc2_inW_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile7_noc2_inW_header[49:42];
-                     target = (target << 8) | tile7_noc2_inW_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile7_noc2_inW_bdw_allocation, 258, tile7_noc2_inW_header[21:14], tile7_noc2_inW_header[29:22], (counter - tile7_noc2_inW_bdw_allocation), 3, "W", target);
-                 $fclose(fd);
-                 tile7_noc2_inW_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE8.buffer_router_valid_noc1)
-    begin
-         case (tile8_noc0_inL_packet_state)
-         HEADER:
-         begin
-             tile8_noc0_inL_bdw_allocation = counter;
-             tile8_noc0_inL_payload_counter = `TILE8.buffer_router_data_noc1[29:22];
-             tile8_noc0_inL_header = `TILE8.buffer_router_data_noc1;
-             tile8_noc0_inL_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile8_noc0_inL_payload_counter = tile8_noc0_inL_payload_counter - 1;
-             if (tile8_noc0_inL_payload_counter == 0)
-             begin
-                 chipID = tile8_noc0_inL_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile8_noc0_inL_header[49:42];
-                     target = (target << 8) | tile8_noc0_inL_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile8_noc0_inL_bdw_allocation, 514, tile8_noc0_inL_header[21:14], tile8_noc0_inL_header[29:22], (counter - tile8_noc0_inL_bdw_allocation), 1, "L", target);
-                 $fclose(fd);
-                 tile8_noc0_inL_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE8.dyn0_validIn_N)
-    begin
-         case (tile8_noc0_inN_packet_state)
-         HEADER:
-         begin
-             tile8_noc0_inN_bdw_allocation = counter;
-             tile8_noc0_inN_payload_counter = `TILE8.dyn0_dataIn_N[29:22];
-             tile8_noc0_inN_header = `TILE8.dyn0_dataIn_N;
-             tile8_noc0_inN_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile8_noc0_inN_payload_counter = tile8_noc0_inN_payload_counter - 1;
-             if (tile8_noc0_inN_payload_counter == 0)
-             begin
-                 chipID = tile8_noc0_inN_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile8_noc0_inN_header[49:42];
-                     target = (target << 8) | tile8_noc0_inN_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile8_noc0_inN_bdw_allocation, 514, tile8_noc0_inN_header[21:14], tile8_noc0_inN_header[29:22], (counter - tile8_noc0_inN_bdw_allocation), 1, "N", target);
-                 $fclose(fd);
-                 tile8_noc0_inN_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE8.dyn0_validIn_S)
-    begin
-         case (tile8_noc0_inS_packet_state)
-         HEADER:
-         begin
-             tile8_noc0_inS_bdw_allocation = counter;
-             tile8_noc0_inS_payload_counter = `TILE8.dyn0_dataIn_S[29:22];
-             tile8_noc0_inS_header = `TILE8.dyn0_dataIn_S;
-             tile8_noc0_inS_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile8_noc0_inS_payload_counter = tile8_noc0_inS_payload_counter - 1;
-             if (tile8_noc0_inS_payload_counter == 0)
-             begin
-                 chipID = tile8_noc0_inS_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile8_noc0_inS_header[49:42];
-                     target = (target << 8) | tile8_noc0_inS_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile8_noc0_inS_bdw_allocation, 514, tile8_noc0_inS_header[21:14], tile8_noc0_inS_header[29:22], (counter - tile8_noc0_inS_bdw_allocation), 1, "S", target);
-                 $fclose(fd);
-                 tile8_noc0_inS_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE8.dyn0_validIn_E)
-    begin
-         case (tile8_noc0_inE_packet_state)
-         HEADER:
-         begin
-             tile8_noc0_inE_bdw_allocation = counter;
-             tile8_noc0_inE_payload_counter = `TILE8.dyn0_dataIn_E[29:22];
-             tile8_noc0_inE_header = `TILE8.dyn0_dataIn_E;
-             tile8_noc0_inE_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile8_noc0_inE_payload_counter = tile8_noc0_inE_payload_counter - 1;
-             if (tile8_noc0_inE_payload_counter == 0)
-             begin
-                 chipID = tile8_noc0_inE_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile8_noc0_inE_header[49:42];
-                     target = (target << 8) | tile8_noc0_inE_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile8_noc0_inE_bdw_allocation, 514, tile8_noc0_inE_header[21:14], tile8_noc0_inE_header[29:22], (counter - tile8_noc0_inE_bdw_allocation), 1, "E", target);
-                 $fclose(fd);
-                 tile8_noc0_inE_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE8.dyn0_validIn_W)
-    begin
-         case (tile8_noc0_inW_packet_state)
-         HEADER:
-         begin
-             tile8_noc0_inW_bdw_allocation = counter;
-             tile8_noc0_inW_payload_counter = `TILE8.dyn0_dataIn_W[29:22];
-             tile8_noc0_inW_header = `TILE8.dyn0_dataIn_W;
-             tile8_noc0_inW_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile8_noc0_inW_payload_counter = tile8_noc0_inW_payload_counter - 1;
-             if (tile8_noc0_inW_payload_counter == 0)
-             begin
-                 chipID = tile8_noc0_inW_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile8_noc0_inW_header[49:42];
-                     target = (target << 8) | tile8_noc0_inW_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile8_noc0_inW_bdw_allocation, 514, tile8_noc0_inW_header[21:14], tile8_noc0_inW_header[29:22], (counter - tile8_noc0_inW_bdw_allocation), 1, "W", target);
-                 $fclose(fd);
-                 tile8_noc0_inW_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE8.buffer_router_valid_noc2)
-    begin
-         case (tile8_noc1_inL_packet_state)
-         HEADER:
-         begin
-             tile8_noc1_inL_bdw_allocation = counter;
-             tile8_noc1_inL_payload_counter = `TILE8.buffer_router_data_noc2[29:22];
-             tile8_noc1_inL_header = `TILE8.buffer_router_data_noc2;
-             tile8_noc1_inL_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile8_noc1_inL_payload_counter = tile8_noc1_inL_payload_counter - 1;
-             if (tile8_noc1_inL_payload_counter == 0)
-             begin
-                 chipID = tile8_noc1_inL_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile8_noc1_inL_header[49:42];
-                     target = (target << 8) | tile8_noc1_inL_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile8_noc1_inL_bdw_allocation, 514, tile8_noc1_inL_header[21:14], tile8_noc1_inL_header[29:22], (counter - tile8_noc1_inL_bdw_allocation), 2, "L", target);
-                 $fclose(fd);
-                 tile8_noc1_inL_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE8.dyn1_validIn_N)
-    begin
-         case (tile8_noc1_inN_packet_state)
-         HEADER:
-         begin
-             tile8_noc1_inN_bdw_allocation = counter;
-             tile8_noc1_inN_payload_counter = `TILE8.dyn1_dataIn_N[29:22];
-             tile8_noc1_inN_header = `TILE8.dyn1_dataIn_N;
-             tile8_noc1_inN_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile8_noc1_inN_payload_counter = tile8_noc1_inN_payload_counter - 1;
-             if (tile8_noc1_inN_payload_counter == 0)
-             begin
-                 chipID = tile8_noc1_inN_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile8_noc1_inN_header[49:42];
-                     target = (target << 8) | tile8_noc1_inN_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile8_noc1_inN_bdw_allocation, 514, tile8_noc1_inN_header[21:14], tile8_noc1_inN_header[29:22], (counter - tile8_noc1_inN_bdw_allocation), 2, "N", target);
-                 $fclose(fd);
-                 tile8_noc1_inN_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE8.dyn1_validIn_S)
-    begin
-         case (tile8_noc1_inS_packet_state)
-         HEADER:
-         begin
-             tile8_noc1_inS_bdw_allocation = counter;
-             tile8_noc1_inS_payload_counter = `TILE8.dyn1_dataIn_S[29:22];
-             tile8_noc1_inS_header = `TILE8.dyn1_dataIn_S;
-             tile8_noc1_inS_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile8_noc1_inS_payload_counter = tile8_noc1_inS_payload_counter - 1;
-             if (tile8_noc1_inS_payload_counter == 0)
-             begin
-                 chipID = tile8_noc1_inS_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile8_noc1_inS_header[49:42];
-                     target = (target << 8) | tile8_noc1_inS_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile8_noc1_inS_bdw_allocation, 514, tile8_noc1_inS_header[21:14], tile8_noc1_inS_header[29:22], (counter - tile8_noc1_inS_bdw_allocation), 2, "S", target);
-                 $fclose(fd);
-                 tile8_noc1_inS_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE8.dyn1_validIn_E)
-    begin
-         case (tile8_noc1_inE_packet_state)
-         HEADER:
-         begin
-             tile8_noc1_inE_bdw_allocation = counter;
-             tile8_noc1_inE_payload_counter = `TILE8.dyn1_dataIn_E[29:22];
-             tile8_noc1_inE_header = `TILE8.dyn1_dataIn_E;
-             tile8_noc1_inE_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile8_noc1_inE_payload_counter = tile8_noc1_inE_payload_counter - 1;
-             if (tile8_noc1_inE_payload_counter == 0)
-             begin
-                 chipID = tile8_noc1_inE_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile8_noc1_inE_header[49:42];
-                     target = (target << 8) | tile8_noc1_inE_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile8_noc1_inE_bdw_allocation, 514, tile8_noc1_inE_header[21:14], tile8_noc1_inE_header[29:22], (counter - tile8_noc1_inE_bdw_allocation), 2, "E", target);
-                 $fclose(fd);
-                 tile8_noc1_inE_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE8.dyn1_validIn_W)
-    begin
-         case (tile8_noc1_inW_packet_state)
-         HEADER:
-         begin
-             tile8_noc1_inW_bdw_allocation = counter;
-             tile8_noc1_inW_payload_counter = `TILE8.dyn1_dataIn_W[29:22];
-             tile8_noc1_inW_header = `TILE8.dyn1_dataIn_W;
-             tile8_noc1_inW_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile8_noc1_inW_payload_counter = tile8_noc1_inW_payload_counter - 1;
-             if (tile8_noc1_inW_payload_counter == 0)
-             begin
-                 chipID = tile8_noc1_inW_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile8_noc1_inW_header[49:42];
-                     target = (target << 8) | tile8_noc1_inW_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile8_noc1_inW_bdw_allocation, 514, tile8_noc1_inW_header[21:14], tile8_noc1_inW_header[29:22], (counter - tile8_noc1_inW_bdw_allocation), 2, "W", target);
-                 $fclose(fd);
-                 tile8_noc1_inW_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE8.buffer_router_valid_noc3)
-    begin
-         case (tile8_noc2_inL_packet_state)
-         HEADER:
-         begin
-             tile8_noc2_inL_bdw_allocation = counter;
-             tile8_noc2_inL_payload_counter = `TILE8.buffer_router_data_noc3[29:22];
-             tile8_noc2_inL_header = `TILE8.buffer_router_data_noc3;
-             tile8_noc2_inL_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile8_noc2_inL_payload_counter = tile8_noc2_inL_payload_counter - 1;
-             if (tile8_noc2_inL_payload_counter == 0)
-             begin
-                 chipID = tile8_noc2_inL_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile8_noc2_inL_header[49:42];
-                     target = (target << 8) | tile8_noc2_inL_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile8_noc2_inL_bdw_allocation, 514, tile8_noc2_inL_header[21:14], tile8_noc2_inL_header[29:22], (counter - tile8_noc2_inL_bdw_allocation), 3, "L", target);
-                 $fclose(fd);
-                 tile8_noc2_inL_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE8.dyn2_validIn_N)
-    begin
-         case (tile8_noc2_inN_packet_state)
-         HEADER:
-         begin
-             tile8_noc2_inN_bdw_allocation = counter;
-             tile8_noc2_inN_payload_counter = `TILE8.dyn2_dataIn_N[29:22];
-             tile8_noc2_inN_header = `TILE8.dyn2_dataIn_N;
-             tile8_noc2_inN_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile8_noc2_inN_payload_counter = tile8_noc2_inN_payload_counter - 1;
-             if (tile8_noc2_inN_payload_counter == 0)
-             begin
-                 chipID = tile8_noc2_inN_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile8_noc2_inN_header[49:42];
-                     target = (target << 8) | tile8_noc2_inN_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile8_noc2_inN_bdw_allocation, 514, tile8_noc2_inN_header[21:14], tile8_noc2_inN_header[29:22], (counter - tile8_noc2_inN_bdw_allocation), 3, "N", target);
-                 $fclose(fd);
-                 tile8_noc2_inN_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE8.dyn2_validIn_S)
-    begin
-         case (tile8_noc2_inS_packet_state)
-         HEADER:
-         begin
-             tile8_noc2_inS_bdw_allocation = counter;
-             tile8_noc2_inS_payload_counter = `TILE8.dyn2_dataIn_S[29:22];
-             tile8_noc2_inS_header = `TILE8.dyn2_dataIn_S;
-             tile8_noc2_inS_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile8_noc2_inS_payload_counter = tile8_noc2_inS_payload_counter - 1;
-             if (tile8_noc2_inS_payload_counter == 0)
-             begin
-                 chipID = tile8_noc2_inS_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile8_noc2_inS_header[49:42];
-                     target = (target << 8) | tile8_noc2_inS_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile8_noc2_inS_bdw_allocation, 514, tile8_noc2_inS_header[21:14], tile8_noc2_inS_header[29:22], (counter - tile8_noc2_inS_bdw_allocation), 3, "S", target);
-                 $fclose(fd);
-                 tile8_noc2_inS_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE8.dyn2_validIn_E)
-    begin
-         case (tile8_noc2_inE_packet_state)
-         HEADER:
-         begin
-             tile8_noc2_inE_bdw_allocation = counter;
-             tile8_noc2_inE_payload_counter = `TILE8.dyn2_dataIn_E[29:22];
-             tile8_noc2_inE_header = `TILE8.dyn2_dataIn_E;
-             tile8_noc2_inE_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile8_noc2_inE_payload_counter = tile8_noc2_inE_payload_counter - 1;
-             if (tile8_noc2_inE_payload_counter == 0)
-             begin
-                 chipID = tile8_noc2_inE_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile8_noc2_inE_header[49:42];
-                     target = (target << 8) | tile8_noc2_inE_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile8_noc2_inE_bdw_allocation, 514, tile8_noc2_inE_header[21:14], tile8_noc2_inE_header[29:22], (counter - tile8_noc2_inE_bdw_allocation), 3, "E", target);
-                 $fclose(fd);
-                 tile8_noc2_inE_packet_state = HEADER;
-             end
-         end
-         endcase
-    end
-    if (`TILE8.dyn2_validIn_W)
-    begin
-         case (tile8_noc2_inW_packet_state)
-         HEADER:
-         begin
-             tile8_noc2_inW_bdw_allocation = counter;
-             tile8_noc2_inW_payload_counter = `TILE8.dyn2_dataIn_W[29:22];
-             tile8_noc2_inW_header = `TILE8.dyn2_dataIn_W;
-             tile8_noc2_inW_packet_state = PAYLOAD;
-         end
-         PAYLOAD:
-         begin
-              tile8_noc2_inW_payload_counter = tile8_noc2_inW_payload_counter - 1;
-             if (tile8_noc2_inW_payload_counter == 0)
-             begin
-                 chipID = tile8_noc2_inW_header[63:50];
-                 if (chipID != 0)
-                 begin
-                     target = chipID;
-                 end else begin 
-                     target = tile8_noc2_inW_header[49:42];
-                     target = (target << 8) | tile8_noc2_inW_header[41:34];
-                 end
-                 fd = $fopen("debug/traffic_router.txt", "a");
-                 $fwrite(fd,"%0d\t%0d\t%0d\t%0d\t%0d\t%0d\t%s\t%0d\n",  tile8_noc2_inW_bdw_allocation, 514, tile8_noc2_inW_header[21:14], tile8_noc2_inW_header[29:22], (counter - tile8_noc2_inW_bdw_allocation), 3, "W", target);
-                 $fclose(fd);
-                 tile8_noc2_inW_packet_state = HEADER;
              end
          end
          endcase
@@ -4906,353 +2281,103 @@ begin
     end
 `endif
 `ifdef RTL_SPARC2
-    if (`CHIP.tile_0_2_out_N_noc1_valid)
-    begin
-        $display("%d: TILE2 noc1 router out N data: 0x%x ", $time,`CHIP.tile_0_2_out_N_noc1_data);
-    end
-    if (`CHIP.tile_0_2_out_S_noc1_valid)
-    begin
-        $display("%d: TILE2 noc1 router out S data: 0x%x ", $time,`CHIP.tile_0_2_out_S_noc1_data);
-    end
-    if (`CHIP.tile_0_2_out_E_noc1_valid)
-    begin
-        $display("%d: TILE2 noc1 router out E data: 0x%x ", $time,`CHIP.tile_0_2_out_E_noc1_data);
-    end
-    if (`CHIP.tile_0_2_out_W_noc1_valid)
-    begin
-        $display("%d: TILE2 noc1 router out W data: 0x%x ", $time,`CHIP.tile_0_2_out_W_noc1_data);
-    end
-    if (`CHIP.tile_0_2_out_N_noc2_valid)
-    begin
-        $display("%d: TILE2 noc2 router out N data: 0x%x ", $time,`CHIP.tile_0_2_out_N_noc2_data);
-    end
-    if (`CHIP.tile_0_2_out_S_noc2_valid)
-    begin
-        $display("%d: TILE2 noc2 router out S data: 0x%x ", $time,`CHIP.tile_0_2_out_S_noc2_data);
-    end
-    if (`CHIP.tile_0_2_out_E_noc2_valid)
-    begin
-        $display("%d: TILE2 noc2 router out E data: 0x%x ", $time,`CHIP.tile_0_2_out_E_noc2_data);
-    end
-    if (`CHIP.tile_0_2_out_W_noc2_valid)
-    begin
-        $display("%d: TILE2 noc2 router out W data: 0x%x ", $time,`CHIP.tile_0_2_out_W_noc2_data);
-    end
-    if (`CHIP.tile_0_2_out_N_noc3_valid)
-    begin
-        $display("%d: TILE2 noc3 router out N data: 0x%x ", $time,`CHIP.tile_0_2_out_N_noc3_data);
-    end
-    if (`CHIP.tile_0_2_out_S_noc3_valid)
-    begin
-        $display("%d: TILE2 noc3 router out S data: 0x%x ", $time,`CHIP.tile_0_2_out_S_noc3_data);
-    end
-    if (`CHIP.tile_0_2_out_E_noc3_valid)
-    begin
-        $display("%d: TILE2 noc3 router out E data: 0x%x ", $time,`CHIP.tile_0_2_out_E_noc3_data);
-    end
-    if (`CHIP.tile_0_2_out_W_noc3_valid)
-    begin
-        $display("%d: TILE2 noc3 router out W data: 0x%x ", $time,`CHIP.tile_0_2_out_W_noc3_data);
-    end
-`endif
-`ifdef RTL_SPARC3
     if (`CHIP.tile_1_0_out_N_noc1_valid)
     begin
-        $display("%d: TILE3 noc1 router out N data: 0x%x ", $time,`CHIP.tile_1_0_out_N_noc1_data);
+        $display("%d: TILE2 noc1 router out N data: 0x%x ", $time,`CHIP.tile_1_0_out_N_noc1_data);
     end
     if (`CHIP.tile_1_0_out_S_noc1_valid)
     begin
-        $display("%d: TILE3 noc1 router out S data: 0x%x ", $time,`CHIP.tile_1_0_out_S_noc1_data);
+        $display("%d: TILE2 noc1 router out S data: 0x%x ", $time,`CHIP.tile_1_0_out_S_noc1_data);
     end
     if (`CHIP.tile_1_0_out_E_noc1_valid)
     begin
-        $display("%d: TILE3 noc1 router out E data: 0x%x ", $time,`CHIP.tile_1_0_out_E_noc1_data);
+        $display("%d: TILE2 noc1 router out E data: 0x%x ", $time,`CHIP.tile_1_0_out_E_noc1_data);
     end
     if (`CHIP.tile_1_0_out_W_noc1_valid)
     begin
-        $display("%d: TILE3 noc1 router out W data: 0x%x ", $time,`CHIP.tile_1_0_out_W_noc1_data);
+        $display("%d: TILE2 noc1 router out W data: 0x%x ", $time,`CHIP.tile_1_0_out_W_noc1_data);
     end
     if (`CHIP.tile_1_0_out_N_noc2_valid)
     begin
-        $display("%d: TILE3 noc2 router out N data: 0x%x ", $time,`CHIP.tile_1_0_out_N_noc2_data);
+        $display("%d: TILE2 noc2 router out N data: 0x%x ", $time,`CHIP.tile_1_0_out_N_noc2_data);
     end
     if (`CHIP.tile_1_0_out_S_noc2_valid)
     begin
-        $display("%d: TILE3 noc2 router out S data: 0x%x ", $time,`CHIP.tile_1_0_out_S_noc2_data);
+        $display("%d: TILE2 noc2 router out S data: 0x%x ", $time,`CHIP.tile_1_0_out_S_noc2_data);
     end
     if (`CHIP.tile_1_0_out_E_noc2_valid)
     begin
-        $display("%d: TILE3 noc2 router out E data: 0x%x ", $time,`CHIP.tile_1_0_out_E_noc2_data);
+        $display("%d: TILE2 noc2 router out E data: 0x%x ", $time,`CHIP.tile_1_0_out_E_noc2_data);
     end
     if (`CHIP.tile_1_0_out_W_noc2_valid)
     begin
-        $display("%d: TILE3 noc2 router out W data: 0x%x ", $time,`CHIP.tile_1_0_out_W_noc2_data);
+        $display("%d: TILE2 noc2 router out W data: 0x%x ", $time,`CHIP.tile_1_0_out_W_noc2_data);
     end
     if (`CHIP.tile_1_0_out_N_noc3_valid)
     begin
-        $display("%d: TILE3 noc3 router out N data: 0x%x ", $time,`CHIP.tile_1_0_out_N_noc3_data);
+        $display("%d: TILE2 noc3 router out N data: 0x%x ", $time,`CHIP.tile_1_0_out_N_noc3_data);
     end
     if (`CHIP.tile_1_0_out_S_noc3_valid)
     begin
-        $display("%d: TILE3 noc3 router out S data: 0x%x ", $time,`CHIP.tile_1_0_out_S_noc3_data);
+        $display("%d: TILE2 noc3 router out S data: 0x%x ", $time,`CHIP.tile_1_0_out_S_noc3_data);
     end
     if (`CHIP.tile_1_0_out_E_noc3_valid)
     begin
-        $display("%d: TILE3 noc3 router out E data: 0x%x ", $time,`CHIP.tile_1_0_out_E_noc3_data);
+        $display("%d: TILE2 noc3 router out E data: 0x%x ", $time,`CHIP.tile_1_0_out_E_noc3_data);
     end
     if (`CHIP.tile_1_0_out_W_noc3_valid)
     begin
-        $display("%d: TILE3 noc3 router out W data: 0x%x ", $time,`CHIP.tile_1_0_out_W_noc3_data);
+        $display("%d: TILE2 noc3 router out W data: 0x%x ", $time,`CHIP.tile_1_0_out_W_noc3_data);
     end
 `endif
-`ifdef RTL_SPARC4
+`ifdef RTL_SPARC3
     if (`CHIP.tile_1_1_out_N_noc1_valid)
     begin
-        $display("%d: TILE4 noc1 router out N data: 0x%x ", $time,`CHIP.tile_1_1_out_N_noc1_data);
+        $display("%d: TILE3 noc1 router out N data: 0x%x ", $time,`CHIP.tile_1_1_out_N_noc1_data);
     end
     if (`CHIP.tile_1_1_out_S_noc1_valid)
     begin
-        $display("%d: TILE4 noc1 router out S data: 0x%x ", $time,`CHIP.tile_1_1_out_S_noc1_data);
+        $display("%d: TILE3 noc1 router out S data: 0x%x ", $time,`CHIP.tile_1_1_out_S_noc1_data);
     end
     if (`CHIP.tile_1_1_out_E_noc1_valid)
     begin
-        $display("%d: TILE4 noc1 router out E data: 0x%x ", $time,`CHIP.tile_1_1_out_E_noc1_data);
+        $display("%d: TILE3 noc1 router out E data: 0x%x ", $time,`CHIP.tile_1_1_out_E_noc1_data);
     end
     if (`CHIP.tile_1_1_out_W_noc1_valid)
     begin
-        $display("%d: TILE4 noc1 router out W data: 0x%x ", $time,`CHIP.tile_1_1_out_W_noc1_data);
+        $display("%d: TILE3 noc1 router out W data: 0x%x ", $time,`CHIP.tile_1_1_out_W_noc1_data);
     end
     if (`CHIP.tile_1_1_out_N_noc2_valid)
     begin
-        $display("%d: TILE4 noc2 router out N data: 0x%x ", $time,`CHIP.tile_1_1_out_N_noc2_data);
+        $display("%d: TILE3 noc2 router out N data: 0x%x ", $time,`CHIP.tile_1_1_out_N_noc2_data);
     end
     if (`CHIP.tile_1_1_out_S_noc2_valid)
     begin
-        $display("%d: TILE4 noc2 router out S data: 0x%x ", $time,`CHIP.tile_1_1_out_S_noc2_data);
+        $display("%d: TILE3 noc2 router out S data: 0x%x ", $time,`CHIP.tile_1_1_out_S_noc2_data);
     end
     if (`CHIP.tile_1_1_out_E_noc2_valid)
     begin
-        $display("%d: TILE4 noc2 router out E data: 0x%x ", $time,`CHIP.tile_1_1_out_E_noc2_data);
+        $display("%d: TILE3 noc2 router out E data: 0x%x ", $time,`CHIP.tile_1_1_out_E_noc2_data);
     end
     if (`CHIP.tile_1_1_out_W_noc2_valid)
     begin
-        $display("%d: TILE4 noc2 router out W data: 0x%x ", $time,`CHIP.tile_1_1_out_W_noc2_data);
+        $display("%d: TILE3 noc2 router out W data: 0x%x ", $time,`CHIP.tile_1_1_out_W_noc2_data);
     end
     if (`CHIP.tile_1_1_out_N_noc3_valid)
     begin
-        $display("%d: TILE4 noc3 router out N data: 0x%x ", $time,`CHIP.tile_1_1_out_N_noc3_data);
+        $display("%d: TILE3 noc3 router out N data: 0x%x ", $time,`CHIP.tile_1_1_out_N_noc3_data);
     end
     if (`CHIP.tile_1_1_out_S_noc3_valid)
     begin
-        $display("%d: TILE4 noc3 router out S data: 0x%x ", $time,`CHIP.tile_1_1_out_S_noc3_data);
+        $display("%d: TILE3 noc3 router out S data: 0x%x ", $time,`CHIP.tile_1_1_out_S_noc3_data);
     end
     if (`CHIP.tile_1_1_out_E_noc3_valid)
     begin
-        $display("%d: TILE4 noc3 router out E data: 0x%x ", $time,`CHIP.tile_1_1_out_E_noc3_data);
+        $display("%d: TILE3 noc3 router out E data: 0x%x ", $time,`CHIP.tile_1_1_out_E_noc3_data);
     end
     if (`CHIP.tile_1_1_out_W_noc3_valid)
     begin
-        $display("%d: TILE4 noc3 router out W data: 0x%x ", $time,`CHIP.tile_1_1_out_W_noc3_data);
-    end
-`endif
-`ifdef RTL_SPARC5
-    if (`CHIP.tile_1_2_out_N_noc1_valid)
-    begin
-        $display("%d: TILE5 noc1 router out N data: 0x%x ", $time,`CHIP.tile_1_2_out_N_noc1_data);
-    end
-    if (`CHIP.tile_1_2_out_S_noc1_valid)
-    begin
-        $display("%d: TILE5 noc1 router out S data: 0x%x ", $time,`CHIP.tile_1_2_out_S_noc1_data);
-    end
-    if (`CHIP.tile_1_2_out_E_noc1_valid)
-    begin
-        $display("%d: TILE5 noc1 router out E data: 0x%x ", $time,`CHIP.tile_1_2_out_E_noc1_data);
-    end
-    if (`CHIP.tile_1_2_out_W_noc1_valid)
-    begin
-        $display("%d: TILE5 noc1 router out W data: 0x%x ", $time,`CHIP.tile_1_2_out_W_noc1_data);
-    end
-    if (`CHIP.tile_1_2_out_N_noc2_valid)
-    begin
-        $display("%d: TILE5 noc2 router out N data: 0x%x ", $time,`CHIP.tile_1_2_out_N_noc2_data);
-    end
-    if (`CHIP.tile_1_2_out_S_noc2_valid)
-    begin
-        $display("%d: TILE5 noc2 router out S data: 0x%x ", $time,`CHIP.tile_1_2_out_S_noc2_data);
-    end
-    if (`CHIP.tile_1_2_out_E_noc2_valid)
-    begin
-        $display("%d: TILE5 noc2 router out E data: 0x%x ", $time,`CHIP.tile_1_2_out_E_noc2_data);
-    end
-    if (`CHIP.tile_1_2_out_W_noc2_valid)
-    begin
-        $display("%d: TILE5 noc2 router out W data: 0x%x ", $time,`CHIP.tile_1_2_out_W_noc2_data);
-    end
-    if (`CHIP.tile_1_2_out_N_noc3_valid)
-    begin
-        $display("%d: TILE5 noc3 router out N data: 0x%x ", $time,`CHIP.tile_1_2_out_N_noc3_data);
-    end
-    if (`CHIP.tile_1_2_out_S_noc3_valid)
-    begin
-        $display("%d: TILE5 noc3 router out S data: 0x%x ", $time,`CHIP.tile_1_2_out_S_noc3_data);
-    end
-    if (`CHIP.tile_1_2_out_E_noc3_valid)
-    begin
-        $display("%d: TILE5 noc3 router out E data: 0x%x ", $time,`CHIP.tile_1_2_out_E_noc3_data);
-    end
-    if (`CHIP.tile_1_2_out_W_noc3_valid)
-    begin
-        $display("%d: TILE5 noc3 router out W data: 0x%x ", $time,`CHIP.tile_1_2_out_W_noc3_data);
-    end
-`endif
-`ifdef RTL_SPARC6
-    if (`CHIP.tile_2_0_out_N_noc1_valid)
-    begin
-        $display("%d: TILE6 noc1 router out N data: 0x%x ", $time,`CHIP.tile_2_0_out_N_noc1_data);
-    end
-    if (`CHIP.tile_2_0_out_S_noc1_valid)
-    begin
-        $display("%d: TILE6 noc1 router out S data: 0x%x ", $time,`CHIP.tile_2_0_out_S_noc1_data);
-    end
-    if (`CHIP.tile_2_0_out_E_noc1_valid)
-    begin
-        $display("%d: TILE6 noc1 router out E data: 0x%x ", $time,`CHIP.tile_2_0_out_E_noc1_data);
-    end
-    if (`CHIP.tile_2_0_out_W_noc1_valid)
-    begin
-        $display("%d: TILE6 noc1 router out W data: 0x%x ", $time,`CHIP.tile_2_0_out_W_noc1_data);
-    end
-    if (`CHIP.tile_2_0_out_N_noc2_valid)
-    begin
-        $display("%d: TILE6 noc2 router out N data: 0x%x ", $time,`CHIP.tile_2_0_out_N_noc2_data);
-    end
-    if (`CHIP.tile_2_0_out_S_noc2_valid)
-    begin
-        $display("%d: TILE6 noc2 router out S data: 0x%x ", $time,`CHIP.tile_2_0_out_S_noc2_data);
-    end
-    if (`CHIP.tile_2_0_out_E_noc2_valid)
-    begin
-        $display("%d: TILE6 noc2 router out E data: 0x%x ", $time,`CHIP.tile_2_0_out_E_noc2_data);
-    end
-    if (`CHIP.tile_2_0_out_W_noc2_valid)
-    begin
-        $display("%d: TILE6 noc2 router out W data: 0x%x ", $time,`CHIP.tile_2_0_out_W_noc2_data);
-    end
-    if (`CHIP.tile_2_0_out_N_noc3_valid)
-    begin
-        $display("%d: TILE6 noc3 router out N data: 0x%x ", $time,`CHIP.tile_2_0_out_N_noc3_data);
-    end
-    if (`CHIP.tile_2_0_out_S_noc3_valid)
-    begin
-        $display("%d: TILE6 noc3 router out S data: 0x%x ", $time,`CHIP.tile_2_0_out_S_noc3_data);
-    end
-    if (`CHIP.tile_2_0_out_E_noc3_valid)
-    begin
-        $display("%d: TILE6 noc3 router out E data: 0x%x ", $time,`CHIP.tile_2_0_out_E_noc3_data);
-    end
-    if (`CHIP.tile_2_0_out_W_noc3_valid)
-    begin
-        $display("%d: TILE6 noc3 router out W data: 0x%x ", $time,`CHIP.tile_2_0_out_W_noc3_data);
-    end
-`endif
-`ifdef RTL_SPARC7
-    if (`CHIP.tile_2_1_out_N_noc1_valid)
-    begin
-        $display("%d: TILE7 noc1 router out N data: 0x%x ", $time,`CHIP.tile_2_1_out_N_noc1_data);
-    end
-    if (`CHIP.tile_2_1_out_S_noc1_valid)
-    begin
-        $display("%d: TILE7 noc1 router out S data: 0x%x ", $time,`CHIP.tile_2_1_out_S_noc1_data);
-    end
-    if (`CHIP.tile_2_1_out_E_noc1_valid)
-    begin
-        $display("%d: TILE7 noc1 router out E data: 0x%x ", $time,`CHIP.tile_2_1_out_E_noc1_data);
-    end
-    if (`CHIP.tile_2_1_out_W_noc1_valid)
-    begin
-        $display("%d: TILE7 noc1 router out W data: 0x%x ", $time,`CHIP.tile_2_1_out_W_noc1_data);
-    end
-    if (`CHIP.tile_2_1_out_N_noc2_valid)
-    begin
-        $display("%d: TILE7 noc2 router out N data: 0x%x ", $time,`CHIP.tile_2_1_out_N_noc2_data);
-    end
-    if (`CHIP.tile_2_1_out_S_noc2_valid)
-    begin
-        $display("%d: TILE7 noc2 router out S data: 0x%x ", $time,`CHIP.tile_2_1_out_S_noc2_data);
-    end
-    if (`CHIP.tile_2_1_out_E_noc2_valid)
-    begin
-        $display("%d: TILE7 noc2 router out E data: 0x%x ", $time,`CHIP.tile_2_1_out_E_noc2_data);
-    end
-    if (`CHIP.tile_2_1_out_W_noc2_valid)
-    begin
-        $display("%d: TILE7 noc2 router out W data: 0x%x ", $time,`CHIP.tile_2_1_out_W_noc2_data);
-    end
-    if (`CHIP.tile_2_1_out_N_noc3_valid)
-    begin
-        $display("%d: TILE7 noc3 router out N data: 0x%x ", $time,`CHIP.tile_2_1_out_N_noc3_data);
-    end
-    if (`CHIP.tile_2_1_out_S_noc3_valid)
-    begin
-        $display("%d: TILE7 noc3 router out S data: 0x%x ", $time,`CHIP.tile_2_1_out_S_noc3_data);
-    end
-    if (`CHIP.tile_2_1_out_E_noc3_valid)
-    begin
-        $display("%d: TILE7 noc3 router out E data: 0x%x ", $time,`CHIP.tile_2_1_out_E_noc3_data);
-    end
-    if (`CHIP.tile_2_1_out_W_noc3_valid)
-    begin
-        $display("%d: TILE7 noc3 router out W data: 0x%x ", $time,`CHIP.tile_2_1_out_W_noc3_data);
-    end
-`endif
-`ifdef RTL_SPARC8
-    if (`CHIP.tile_2_2_out_N_noc1_valid)
-    begin
-        $display("%d: TILE8 noc1 router out N data: 0x%x ", $time,`CHIP.tile_2_2_out_N_noc1_data);
-    end
-    if (`CHIP.tile_2_2_out_S_noc1_valid)
-    begin
-        $display("%d: TILE8 noc1 router out S data: 0x%x ", $time,`CHIP.tile_2_2_out_S_noc1_data);
-    end
-    if (`CHIP.tile_2_2_out_E_noc1_valid)
-    begin
-        $display("%d: TILE8 noc1 router out E data: 0x%x ", $time,`CHIP.tile_2_2_out_E_noc1_data);
-    end
-    if (`CHIP.tile_2_2_out_W_noc1_valid)
-    begin
-        $display("%d: TILE8 noc1 router out W data: 0x%x ", $time,`CHIP.tile_2_2_out_W_noc1_data);
-    end
-    if (`CHIP.tile_2_2_out_N_noc2_valid)
-    begin
-        $display("%d: TILE8 noc2 router out N data: 0x%x ", $time,`CHIP.tile_2_2_out_N_noc2_data);
-    end
-    if (`CHIP.tile_2_2_out_S_noc2_valid)
-    begin
-        $display("%d: TILE8 noc2 router out S data: 0x%x ", $time,`CHIP.tile_2_2_out_S_noc2_data);
-    end
-    if (`CHIP.tile_2_2_out_E_noc2_valid)
-    begin
-        $display("%d: TILE8 noc2 router out E data: 0x%x ", $time,`CHIP.tile_2_2_out_E_noc2_data);
-    end
-    if (`CHIP.tile_2_2_out_W_noc2_valid)
-    begin
-        $display("%d: TILE8 noc2 router out W data: 0x%x ", $time,`CHIP.tile_2_2_out_W_noc2_data);
-    end
-    if (`CHIP.tile_2_2_out_N_noc3_valid)
-    begin
-        $display("%d: TILE8 noc3 router out N data: 0x%x ", $time,`CHIP.tile_2_2_out_N_noc3_data);
-    end
-    if (`CHIP.tile_2_2_out_S_noc3_valid)
-    begin
-        $display("%d: TILE8 noc3 router out S data: 0x%x ", $time,`CHIP.tile_2_2_out_S_noc3_data);
-    end
-    if (`CHIP.tile_2_2_out_E_noc3_valid)
-    begin
-        $display("%d: TILE8 noc3 router out E data: 0x%x ", $time,`CHIP.tile_2_2_out_E_noc3_data);
-    end
-    if (`CHIP.tile_2_2_out_W_noc3_valid)
-    begin
-        $display("%d: TILE8 noc3 router out W data: 0x%x ", $time,`CHIP.tile_2_2_out_W_noc3_data);
+        $display("%d: TILE3 noc3 router out W data: 0x%x ", $time,`CHIP.tile_1_1_out_W_noc3_data);
     end
 `endif
 
@@ -5281,7 +2406,7 @@ error_noc = 1;
 error_x = 0;
 error_y = 0;
 end
-`ifndef RTL_SPARC3
+`ifndef RTL_SPARC2
 boundary_err = boundary_err | `CHIP.tile_0_0_out_S_noc1_valid;
 if (boundary_err == 1)
 begin
@@ -5309,7 +2434,7 @@ error_noc = 2;
 error_x = 0;
 error_y = 0;
 end
-`ifndef RTL_SPARC3
+`ifndef RTL_SPARC2
 boundary_err = boundary_err | `CHIP.tile_0_0_out_S_noc2_valid;
 if (boundary_err == 1)
 begin
@@ -5337,7 +2462,7 @@ error_noc = 3;
 error_x = 0;
 error_y = 0;
 end
-`ifndef RTL_SPARC3
+`ifndef RTL_SPARC2
 boundary_err = boundary_err | `CHIP.tile_0_0_out_S_noc3_valid;
 if (boundary_err == 1)
 begin
@@ -5370,7 +2495,7 @@ end
             
 boundary_err = 0;
 `ifndef RTL_SPARC0
-`ifdef RTL_SPARC3
+`ifdef RTL_SPARC2
 boundary_err = boundary_err | `CHIP.tile_0_0_out_S_noc1_valid;
 if (boundary_err == 1)
 begin
@@ -5390,7 +2515,7 @@ error_x = 0;
 error_y = 0;
 end
 `endif
-`ifdef RTL_SPARC3
+`ifdef RTL_SPARC2
 boundary_err = boundary_err | `CHIP.tile_0_0_out_S_noc2_valid;
 if (boundary_err == 1)
 begin
@@ -5410,7 +2535,7 @@ error_x = 0;
 error_y = 0;
 end
 `endif
-`ifdef RTL_SPARC3
+`ifdef RTL_SPARC2
 boundary_err = boundary_err | `CHIP.tile_0_0_out_S_noc3_valid;
 if (boundary_err == 1)
 begin
@@ -5450,7 +2575,15 @@ error_noc = 1;
 error_x = 1;
 error_y = 0;
 end
-`ifndef RTL_SPARC4
+boundary_err = boundary_err | `CHIP.tile_0_1_out_E_noc1_valid;
+if (boundary_err == 1)
+begin
+error_dir = "E";
+error_noc = 1;
+error_x = 1;
+error_y = 0;
+end
+`ifndef RTL_SPARC3
 boundary_err = boundary_err | `CHIP.tile_0_1_out_S_noc1_valid;
 if (boundary_err == 1)
 begin
@@ -5465,16 +2598,6 @@ boundary_err = boundary_err | `CHIP.tile_0_1_out_W_noc1_valid;
 if (boundary_err == 1)
 begin
 error_dir = "W";
-error_noc = 1;
-error_x = 1;
-error_y = 0;
-end
-`endif
-`ifndef RTL_SPARC2
-boundary_err = boundary_err | `CHIP.tile_0_1_out_E_noc1_valid;
-if (boundary_err == 1)
-begin
-error_dir = "E";
 error_noc = 1;
 error_x = 1;
 error_y = 0;
@@ -5488,7 +2611,15 @@ error_noc = 2;
 error_x = 1;
 error_y = 0;
 end
-`ifndef RTL_SPARC4
+boundary_err = boundary_err | `CHIP.tile_0_1_out_E_noc2_valid;
+if (boundary_err == 1)
+begin
+error_dir = "E";
+error_noc = 2;
+error_x = 1;
+error_y = 0;
+end
+`ifndef RTL_SPARC3
 boundary_err = boundary_err | `CHIP.tile_0_1_out_S_noc2_valid;
 if (boundary_err == 1)
 begin
@@ -5508,16 +2639,6 @@ error_x = 1;
 error_y = 0;
 end
 `endif
-`ifndef RTL_SPARC2
-boundary_err = boundary_err | `CHIP.tile_0_1_out_E_noc2_valid;
-if (boundary_err == 1)
-begin
-error_dir = "E";
-error_noc = 2;
-error_x = 1;
-error_y = 0;
-end
-`endif
 boundary_err = boundary_err | `CHIP.tile_0_1_out_N_noc3_valid;
 if (boundary_err == 1)
 begin
@@ -5526,7 +2647,15 @@ error_noc = 3;
 error_x = 1;
 error_y = 0;
 end
-`ifndef RTL_SPARC4
+boundary_err = boundary_err | `CHIP.tile_0_1_out_E_noc3_valid;
+if (boundary_err == 1)
+begin
+error_dir = "E";
+error_noc = 3;
+error_x = 1;
+error_y = 0;
+end
+`ifndef RTL_SPARC3
 boundary_err = boundary_err | `CHIP.tile_0_1_out_S_noc3_valid;
 if (boundary_err == 1)
 begin
@@ -5546,16 +2675,6 @@ error_x = 1;
 error_y = 0;
 end
 `endif
-`ifndef RTL_SPARC2
-boundary_err = boundary_err | `CHIP.tile_0_1_out_E_noc3_valid;
-if (boundary_err == 1)
-begin
-error_dir = "E";
-error_noc = 3;
-error_x = 1;
-error_y = 0;
-end
-`endif
 `endif
 
             if (boundary_err == 1)
@@ -5569,7 +2688,7 @@ end
             
 boundary_err = 0;
 `ifndef RTL_SPARC1
-`ifdef RTL_SPARC4
+`ifdef RTL_SPARC3
 boundary_err = boundary_err | `CHIP.tile_0_1_out_S_noc1_valid;
 if (boundary_err == 1)
 begin
@@ -5589,17 +2708,7 @@ error_x = 1;
 error_y = 0;
 end
 `endif
-`ifdef RTL_SPARC2
-boundary_err = boundary_err | `CHIP.tile_0_1_out_E_noc1_valid;
-if (boundary_err == 1)
-begin
-error_dir = "E";
-error_noc = 1;
-error_x = 1;
-error_y = 0;
-end
-`endif
-`ifdef RTL_SPARC4
+`ifdef RTL_SPARC3
 boundary_err = boundary_err | `CHIP.tile_0_1_out_S_noc2_valid;
 if (boundary_err == 1)
 begin
@@ -5619,17 +2728,7 @@ error_x = 1;
 error_y = 0;
 end
 `endif
-`ifdef RTL_SPARC2
-boundary_err = boundary_err | `CHIP.tile_0_1_out_E_noc2_valid;
-if (boundary_err == 1)
-begin
-error_dir = "E";
-error_noc = 2;
-error_x = 1;
-error_y = 0;
-end
-`endif
-`ifdef RTL_SPARC4
+`ifdef RTL_SPARC3
 boundary_err = boundary_err | `CHIP.tile_0_1_out_S_noc3_valid;
 if (boundary_err == 1)
 begin
@@ -5649,16 +2748,6 @@ error_x = 1;
 error_y = 0;
 end
 `endif
-`ifdef RTL_SPARC2
-boundary_err = boundary_err | `CHIP.tile_0_1_out_E_noc3_valid;
-if (boundary_err == 1)
-begin
-error_dir = "E";
-error_noc = 3;
-error_x = 1;
-error_y = 0;
-end
-`endif
 
             if (boundary_err == 1)
             begin
@@ -5671,199 +2760,14 @@ end
             
 `endif
 `ifdef RTL_SPARC2
-boundary_err = boundary_err | `CHIP.tile_0_2_out_N_noc1_valid;
-if (boundary_err == 1)
-begin
-error_dir = "N";
-error_noc = 1;
-error_x = 2;
-error_y = 0;
-end
-boundary_err = boundary_err | `CHIP.tile_0_2_out_E_noc1_valid;
-if (boundary_err == 1)
-begin
-error_dir = "E";
-error_noc = 1;
-error_x = 2;
-error_y = 0;
-end
-`ifndef RTL_SPARC5
-boundary_err = boundary_err | `CHIP.tile_0_2_out_S_noc1_valid;
+boundary_err = boundary_err | `CHIP.tile_1_0_out_S_noc1_valid;
 if (boundary_err == 1)
 begin
 error_dir = "S";
 error_noc = 1;
-error_x = 2;
-error_y = 0;
+error_x = 0;
+error_y = 1;
 end
-`endif
-`ifndef RTL_SPARC1
-boundary_err = boundary_err | `CHIP.tile_0_2_out_W_noc1_valid;
-if (boundary_err == 1)
-begin
-error_dir = "W";
-error_noc = 1;
-error_x = 2;
-error_y = 0;
-end
-`endif
-boundary_err = boundary_err | `CHIP.tile_0_2_out_N_noc2_valid;
-if (boundary_err == 1)
-begin
-error_dir = "N";
-error_noc = 2;
-error_x = 2;
-error_y = 0;
-end
-boundary_err = boundary_err | `CHIP.tile_0_2_out_E_noc2_valid;
-if (boundary_err == 1)
-begin
-error_dir = "E";
-error_noc = 2;
-error_x = 2;
-error_y = 0;
-end
-`ifndef RTL_SPARC5
-boundary_err = boundary_err | `CHIP.tile_0_2_out_S_noc2_valid;
-if (boundary_err == 1)
-begin
-error_dir = "S";
-error_noc = 2;
-error_x = 2;
-error_y = 0;
-end
-`endif
-`ifndef RTL_SPARC1
-boundary_err = boundary_err | `CHIP.tile_0_2_out_W_noc2_valid;
-if (boundary_err == 1)
-begin
-error_dir = "W";
-error_noc = 2;
-error_x = 2;
-error_y = 0;
-end
-`endif
-boundary_err = boundary_err | `CHIP.tile_0_2_out_N_noc3_valid;
-if (boundary_err == 1)
-begin
-error_dir = "N";
-error_noc = 3;
-error_x = 2;
-error_y = 0;
-end
-boundary_err = boundary_err | `CHIP.tile_0_2_out_E_noc3_valid;
-if (boundary_err == 1)
-begin
-error_dir = "E";
-error_noc = 3;
-error_x = 2;
-error_y = 0;
-end
-`ifndef RTL_SPARC5
-boundary_err = boundary_err | `CHIP.tile_0_2_out_S_noc3_valid;
-if (boundary_err == 1)
-begin
-error_dir = "S";
-error_noc = 3;
-error_x = 2;
-error_y = 0;
-end
-`endif
-`ifndef RTL_SPARC1
-boundary_err = boundary_err | `CHIP.tile_0_2_out_W_noc3_valid;
-if (boundary_err == 1)
-begin
-error_dir = "W";
-error_noc = 3;
-error_x = 2;
-error_y = 0;
-end
-`endif
-`endif
-
-            if (boundary_err == 1)
-            begin
-                $display("%d : Simulation -> FAIL. network_mon: packet out of valid bound from tile_%0d_%0d_out_%0s_noc%0d", $time, error_y, error_x, error_dir, error_noc);
-                `ifndef VERILATOR
-                repeat(5)@(posedge clk);
-                `endif
-                `MONITOR_PATH.fail("network_mon: network_mon: packet going out of valid bound");
-            end
-            
-boundary_err = 0;
-`ifndef RTL_SPARC2
-`ifdef RTL_SPARC5
-boundary_err = boundary_err | `CHIP.tile_0_2_out_S_noc1_valid;
-if (boundary_err == 1)
-begin
-error_dir = "S";
-error_noc = 1;
-error_x = 2;
-error_y = 0;
-end
-`endif
-`ifdef RTL_SPARC1
-boundary_err = boundary_err | `CHIP.tile_0_2_out_W_noc1_valid;
-if (boundary_err == 1)
-begin
-error_dir = "W";
-error_noc = 1;
-error_x = 2;
-error_y = 0;
-end
-`endif
-`ifdef RTL_SPARC5
-boundary_err = boundary_err | `CHIP.tile_0_2_out_S_noc2_valid;
-if (boundary_err == 1)
-begin
-error_dir = "S";
-error_noc = 2;
-error_x = 2;
-error_y = 0;
-end
-`endif
-`ifdef RTL_SPARC1
-boundary_err = boundary_err | `CHIP.tile_0_2_out_W_noc2_valid;
-if (boundary_err == 1)
-begin
-error_dir = "W";
-error_noc = 2;
-error_x = 2;
-error_y = 0;
-end
-`endif
-`ifdef RTL_SPARC5
-boundary_err = boundary_err | `CHIP.tile_0_2_out_S_noc3_valid;
-if (boundary_err == 1)
-begin
-error_dir = "S";
-error_noc = 3;
-error_x = 2;
-error_y = 0;
-end
-`endif
-`ifdef RTL_SPARC1
-boundary_err = boundary_err | `CHIP.tile_0_2_out_W_noc3_valid;
-if (boundary_err == 1)
-begin
-error_dir = "W";
-error_noc = 3;
-error_x = 2;
-error_y = 0;
-end
-`endif
-
-            if (boundary_err == 1)
-            begin
-                $display("%d : Simulation -> FAIL. network_mon: packet from invalid tile_%0d_%0d_out_%0s_noc%0d", $time, error_y, error_x, error_dir, error_noc);
-                `ifndef VERILATOR
-                repeat(5)@(posedge clk);
-                `endif
-                `MONITOR_PATH.fail("network_mon: network_mon: packet from invalid tile");
-            end
-            
-`endif
-`ifdef RTL_SPARC3
 boundary_err = boundary_err | `CHIP.tile_1_0_out_W_noc1_valid;
 if (boundary_err == 1)
 begin
@@ -5882,17 +2786,7 @@ error_x = 0;
 error_y = 1;
 end
 `endif
-`ifndef RTL_SPARC6
-boundary_err = boundary_err | `CHIP.tile_1_0_out_S_noc1_valid;
-if (boundary_err == 1)
-begin
-error_dir = "S";
-error_noc = 1;
-error_x = 0;
-error_y = 1;
-end
-`endif
-`ifndef RTL_SPARC4
+`ifndef RTL_SPARC3
 boundary_err = boundary_err | `CHIP.tile_1_0_out_E_noc1_valid;
 if (boundary_err == 1)
 begin
@@ -5902,6 +2796,14 @@ error_x = 0;
 error_y = 1;
 end
 `endif
+boundary_err = boundary_err | `CHIP.tile_1_0_out_S_noc2_valid;
+if (boundary_err == 1)
+begin
+error_dir = "S";
+error_noc = 2;
+error_x = 0;
+error_y = 1;
+end
 boundary_err = boundary_err | `CHIP.tile_1_0_out_W_noc2_valid;
 if (boundary_err == 1)
 begin
@@ -5920,17 +2822,7 @@ error_x = 0;
 error_y = 1;
 end
 `endif
-`ifndef RTL_SPARC6
-boundary_err = boundary_err | `CHIP.tile_1_0_out_S_noc2_valid;
-if (boundary_err == 1)
-begin
-error_dir = "S";
-error_noc = 2;
-error_x = 0;
-error_y = 1;
-end
-`endif
-`ifndef RTL_SPARC4
+`ifndef RTL_SPARC3
 boundary_err = boundary_err | `CHIP.tile_1_0_out_E_noc2_valid;
 if (boundary_err == 1)
 begin
@@ -5940,6 +2832,14 @@ error_x = 0;
 error_y = 1;
 end
 `endif
+boundary_err = boundary_err | `CHIP.tile_1_0_out_S_noc3_valid;
+if (boundary_err == 1)
+begin
+error_dir = "S";
+error_noc = 3;
+error_x = 0;
+error_y = 1;
+end
 boundary_err = boundary_err | `CHIP.tile_1_0_out_W_noc3_valid;
 if (boundary_err == 1)
 begin
@@ -5958,17 +2858,7 @@ error_x = 0;
 error_y = 1;
 end
 `endif
-`ifndef RTL_SPARC6
-boundary_err = boundary_err | `CHIP.tile_1_0_out_S_noc3_valid;
-if (boundary_err == 1)
-begin
-error_dir = "S";
-error_noc = 3;
-error_x = 0;
-error_y = 1;
-end
-`endif
-`ifndef RTL_SPARC4
+`ifndef RTL_SPARC3
 boundary_err = boundary_err | `CHIP.tile_1_0_out_E_noc3_valid;
 if (boundary_err == 1)
 begin
@@ -5990,7 +2880,7 @@ end
             end
             
 boundary_err = 0;
-`ifndef RTL_SPARC3
+`ifndef RTL_SPARC2
 `ifdef RTL_SPARC0
 boundary_err = boundary_err | `CHIP.tile_1_0_out_N_noc1_valid;
 if (boundary_err == 1)
@@ -6001,17 +2891,7 @@ error_x = 0;
 error_y = 1;
 end
 `endif
-`ifdef RTL_SPARC6
-boundary_err = boundary_err | `CHIP.tile_1_0_out_S_noc1_valid;
-if (boundary_err == 1)
-begin
-error_dir = "S";
-error_noc = 1;
-error_x = 0;
-error_y = 1;
-end
-`endif
-`ifdef RTL_SPARC4
+`ifdef RTL_SPARC3
 boundary_err = boundary_err | `CHIP.tile_1_0_out_E_noc1_valid;
 if (boundary_err == 1)
 begin
@@ -6031,17 +2911,7 @@ error_x = 0;
 error_y = 1;
 end
 `endif
-`ifdef RTL_SPARC6
-boundary_err = boundary_err | `CHIP.tile_1_0_out_S_noc2_valid;
-if (boundary_err == 1)
-begin
-error_dir = "S";
-error_noc = 2;
-error_x = 0;
-error_y = 1;
-end
-`endif
-`ifdef RTL_SPARC4
+`ifdef RTL_SPARC3
 boundary_err = boundary_err | `CHIP.tile_1_0_out_E_noc2_valid;
 if (boundary_err == 1)
 begin
@@ -6061,17 +2931,7 @@ error_x = 0;
 error_y = 1;
 end
 `endif
-`ifdef RTL_SPARC6
-boundary_err = boundary_err | `CHIP.tile_1_0_out_S_noc3_valid;
-if (boundary_err == 1)
-begin
-error_dir = "S";
-error_noc = 3;
-error_x = 0;
-error_y = 1;
-end
-`endif
-`ifdef RTL_SPARC4
+`ifdef RTL_SPARC3
 boundary_err = boundary_err | `CHIP.tile_1_0_out_E_noc3_valid;
 if (boundary_err == 1)
 begin
@@ -6092,7 +2952,23 @@ end
             end
             
 `endif
-`ifdef RTL_SPARC4
+`ifdef RTL_SPARC3
+boundary_err = boundary_err | `CHIP.tile_1_1_out_S_noc1_valid;
+if (boundary_err == 1)
+begin
+error_dir = "S";
+error_noc = 1;
+error_x = 1;
+error_y = 1;
+end
+boundary_err = boundary_err | `CHIP.tile_1_1_out_E_noc1_valid;
+if (boundary_err == 1)
+begin
+error_dir = "E";
+error_noc = 1;
+error_x = 1;
+error_y = 1;
+end
 `ifndef RTL_SPARC1
 boundary_err = boundary_err | `CHIP.tile_1_1_out_N_noc1_valid;
 if (boundary_err == 1)
@@ -6103,17 +2979,7 @@ error_x = 1;
 error_y = 1;
 end
 `endif
-`ifndef RTL_SPARC7
-boundary_err = boundary_err | `CHIP.tile_1_1_out_S_noc1_valid;
-if (boundary_err == 1)
-begin
-error_dir = "S";
-error_noc = 1;
-error_x = 1;
-error_y = 1;
-end
-`endif
-`ifndef RTL_SPARC3
+`ifndef RTL_SPARC2
 boundary_err = boundary_err | `CHIP.tile_1_1_out_W_noc1_valid;
 if (boundary_err == 1)
 begin
@@ -6123,16 +2989,22 @@ error_x = 1;
 error_y = 1;
 end
 `endif
-`ifndef RTL_SPARC5
-boundary_err = boundary_err | `CHIP.tile_1_1_out_E_noc1_valid;
+boundary_err = boundary_err | `CHIP.tile_1_1_out_S_noc2_valid;
 if (boundary_err == 1)
 begin
-error_dir = "E";
-error_noc = 1;
+error_dir = "S";
+error_noc = 2;
 error_x = 1;
 error_y = 1;
 end
-`endif
+boundary_err = boundary_err | `CHIP.tile_1_1_out_E_noc2_valid;
+if (boundary_err == 1)
+begin
+error_dir = "E";
+error_noc = 2;
+error_x = 1;
+error_y = 1;
+end
 `ifndef RTL_SPARC1
 boundary_err = boundary_err | `CHIP.tile_1_1_out_N_noc2_valid;
 if (boundary_err == 1)
@@ -6143,17 +3015,7 @@ error_x = 1;
 error_y = 1;
 end
 `endif
-`ifndef RTL_SPARC7
-boundary_err = boundary_err | `CHIP.tile_1_1_out_S_noc2_valid;
-if (boundary_err == 1)
-begin
-error_dir = "S";
-error_noc = 2;
-error_x = 1;
-error_y = 1;
-end
-`endif
-`ifndef RTL_SPARC3
+`ifndef RTL_SPARC2
 boundary_err = boundary_err | `CHIP.tile_1_1_out_W_noc2_valid;
 if (boundary_err == 1)
 begin
@@ -6163,16 +3025,22 @@ error_x = 1;
 error_y = 1;
 end
 `endif
-`ifndef RTL_SPARC5
-boundary_err = boundary_err | `CHIP.tile_1_1_out_E_noc2_valid;
+boundary_err = boundary_err | `CHIP.tile_1_1_out_S_noc3_valid;
 if (boundary_err == 1)
 begin
-error_dir = "E";
-error_noc = 2;
+error_dir = "S";
+error_noc = 3;
 error_x = 1;
 error_y = 1;
 end
-`endif
+boundary_err = boundary_err | `CHIP.tile_1_1_out_E_noc3_valid;
+if (boundary_err == 1)
+begin
+error_dir = "E";
+error_noc = 3;
+error_x = 1;
+error_y = 1;
+end
 `ifndef RTL_SPARC1
 boundary_err = boundary_err | `CHIP.tile_1_1_out_N_noc3_valid;
 if (boundary_err == 1)
@@ -6183,31 +3051,11 @@ error_x = 1;
 error_y = 1;
 end
 `endif
-`ifndef RTL_SPARC7
-boundary_err = boundary_err | `CHIP.tile_1_1_out_S_noc3_valid;
-if (boundary_err == 1)
-begin
-error_dir = "S";
-error_noc = 3;
-error_x = 1;
-error_y = 1;
-end
-`endif
-`ifndef RTL_SPARC3
+`ifndef RTL_SPARC2
 boundary_err = boundary_err | `CHIP.tile_1_1_out_W_noc3_valid;
 if (boundary_err == 1)
 begin
 error_dir = "W";
-error_noc = 3;
-error_x = 1;
-error_y = 1;
-end
-`endif
-`ifndef RTL_SPARC5
-boundary_err = boundary_err | `CHIP.tile_1_1_out_E_noc3_valid;
-if (boundary_err == 1)
-begin
-error_dir = "E";
 error_noc = 3;
 error_x = 1;
 error_y = 1;
@@ -6225,7 +3073,7 @@ end
             end
             
 boundary_err = 0;
-`ifndef RTL_SPARC4
+`ifndef RTL_SPARC3
 `ifdef RTL_SPARC1
 boundary_err = boundary_err | `CHIP.tile_1_1_out_N_noc1_valid;
 if (boundary_err == 1)
@@ -6236,31 +3084,11 @@ error_x = 1;
 error_y = 1;
 end
 `endif
-`ifdef RTL_SPARC7
-boundary_err = boundary_err | `CHIP.tile_1_1_out_S_noc1_valid;
-if (boundary_err == 1)
-begin
-error_dir = "S";
-error_noc = 1;
-error_x = 1;
-error_y = 1;
-end
-`endif
-`ifdef RTL_SPARC3
+`ifdef RTL_SPARC2
 boundary_err = boundary_err | `CHIP.tile_1_1_out_W_noc1_valid;
 if (boundary_err == 1)
 begin
 error_dir = "W";
-error_noc = 1;
-error_x = 1;
-error_y = 1;
-end
-`endif
-`ifdef RTL_SPARC5
-boundary_err = boundary_err | `CHIP.tile_1_1_out_E_noc1_valid;
-if (boundary_err == 1)
-begin
-error_dir = "E";
 error_noc = 1;
 error_x = 1;
 error_y = 1;
@@ -6276,31 +3104,11 @@ error_x = 1;
 error_y = 1;
 end
 `endif
-`ifdef RTL_SPARC7
-boundary_err = boundary_err | `CHIP.tile_1_1_out_S_noc2_valid;
-if (boundary_err == 1)
-begin
-error_dir = "S";
-error_noc = 2;
-error_x = 1;
-error_y = 1;
-end
-`endif
-`ifdef RTL_SPARC3
+`ifdef RTL_SPARC2
 boundary_err = boundary_err | `CHIP.tile_1_1_out_W_noc2_valid;
 if (boundary_err == 1)
 begin
 error_dir = "W";
-error_noc = 2;
-error_x = 1;
-error_y = 1;
-end
-`endif
-`ifdef RTL_SPARC5
-boundary_err = boundary_err | `CHIP.tile_1_1_out_E_noc2_valid;
-if (boundary_err == 1)
-begin
-error_dir = "E";
 error_noc = 2;
 error_x = 1;
 error_y = 1;
@@ -6316,17 +3124,7 @@ error_x = 1;
 error_y = 1;
 end
 `endif
-`ifdef RTL_SPARC7
-boundary_err = boundary_err | `CHIP.tile_1_1_out_S_noc3_valid;
-if (boundary_err == 1)
-begin
-error_dir = "S";
-error_noc = 3;
-error_x = 1;
-error_y = 1;
-end
-`endif
-`ifdef RTL_SPARC3
+`ifdef RTL_SPARC2
 boundary_err = boundary_err | `CHIP.tile_1_1_out_W_noc3_valid;
 if (boundary_err == 1)
 begin
@@ -6334,860 +3132,6 @@ error_dir = "W";
 error_noc = 3;
 error_x = 1;
 error_y = 1;
-end
-`endif
-`ifdef RTL_SPARC5
-boundary_err = boundary_err | `CHIP.tile_1_1_out_E_noc3_valid;
-if (boundary_err == 1)
-begin
-error_dir = "E";
-error_noc = 3;
-error_x = 1;
-error_y = 1;
-end
-`endif
-
-            if (boundary_err == 1)
-            begin
-                $display("%d : Simulation -> FAIL. network_mon: packet from invalid tile_%0d_%0d_out_%0s_noc%0d", $time, error_y, error_x, error_dir, error_noc);
-                `ifndef VERILATOR
-                repeat(5)@(posedge clk);
-                `endif
-                `MONITOR_PATH.fail("network_mon: network_mon: packet from invalid tile");
-            end
-            
-`endif
-`ifdef RTL_SPARC5
-boundary_err = boundary_err | `CHIP.tile_1_2_out_E_noc1_valid;
-if (boundary_err == 1)
-begin
-error_dir = "E";
-error_noc = 1;
-error_x = 2;
-error_y = 1;
-end
-`ifndef RTL_SPARC2
-boundary_err = boundary_err | `CHIP.tile_1_2_out_N_noc1_valid;
-if (boundary_err == 1)
-begin
-error_dir = "N";
-error_noc = 1;
-error_x = 2;
-error_y = 1;
-end
-`endif
-`ifndef RTL_SPARC8
-boundary_err = boundary_err | `CHIP.tile_1_2_out_S_noc1_valid;
-if (boundary_err == 1)
-begin
-error_dir = "S";
-error_noc = 1;
-error_x = 2;
-error_y = 1;
-end
-`endif
-`ifndef RTL_SPARC4
-boundary_err = boundary_err | `CHIP.tile_1_2_out_W_noc1_valid;
-if (boundary_err == 1)
-begin
-error_dir = "W";
-error_noc = 1;
-error_x = 2;
-error_y = 1;
-end
-`endif
-boundary_err = boundary_err | `CHIP.tile_1_2_out_E_noc2_valid;
-if (boundary_err == 1)
-begin
-error_dir = "E";
-error_noc = 2;
-error_x = 2;
-error_y = 1;
-end
-`ifndef RTL_SPARC2
-boundary_err = boundary_err | `CHIP.tile_1_2_out_N_noc2_valid;
-if (boundary_err == 1)
-begin
-error_dir = "N";
-error_noc = 2;
-error_x = 2;
-error_y = 1;
-end
-`endif
-`ifndef RTL_SPARC8
-boundary_err = boundary_err | `CHIP.tile_1_2_out_S_noc2_valid;
-if (boundary_err == 1)
-begin
-error_dir = "S";
-error_noc = 2;
-error_x = 2;
-error_y = 1;
-end
-`endif
-`ifndef RTL_SPARC4
-boundary_err = boundary_err | `CHIP.tile_1_2_out_W_noc2_valid;
-if (boundary_err == 1)
-begin
-error_dir = "W";
-error_noc = 2;
-error_x = 2;
-error_y = 1;
-end
-`endif
-boundary_err = boundary_err | `CHIP.tile_1_2_out_E_noc3_valid;
-if (boundary_err == 1)
-begin
-error_dir = "E";
-error_noc = 3;
-error_x = 2;
-error_y = 1;
-end
-`ifndef RTL_SPARC2
-boundary_err = boundary_err | `CHIP.tile_1_2_out_N_noc3_valid;
-if (boundary_err == 1)
-begin
-error_dir = "N";
-error_noc = 3;
-error_x = 2;
-error_y = 1;
-end
-`endif
-`ifndef RTL_SPARC8
-boundary_err = boundary_err | `CHIP.tile_1_2_out_S_noc3_valid;
-if (boundary_err == 1)
-begin
-error_dir = "S";
-error_noc = 3;
-error_x = 2;
-error_y = 1;
-end
-`endif
-`ifndef RTL_SPARC4
-boundary_err = boundary_err | `CHIP.tile_1_2_out_W_noc3_valid;
-if (boundary_err == 1)
-begin
-error_dir = "W";
-error_noc = 3;
-error_x = 2;
-error_y = 1;
-end
-`endif
-`endif
-
-            if (boundary_err == 1)
-            begin
-                $display("%d : Simulation -> FAIL. network_mon: packet out of valid bound from tile_%0d_%0d_out_%0s_noc%0d", $time, error_y, error_x, error_dir, error_noc);
-                `ifndef VERILATOR
-                repeat(5)@(posedge clk);
-                `endif
-                `MONITOR_PATH.fail("network_mon: network_mon: packet going out of valid bound");
-            end
-            
-boundary_err = 0;
-`ifndef RTL_SPARC5
-`ifdef RTL_SPARC2
-boundary_err = boundary_err | `CHIP.tile_1_2_out_N_noc1_valid;
-if (boundary_err == 1)
-begin
-error_dir = "N";
-error_noc = 1;
-error_x = 2;
-error_y = 1;
-end
-`endif
-`ifdef RTL_SPARC8
-boundary_err = boundary_err | `CHIP.tile_1_2_out_S_noc1_valid;
-if (boundary_err == 1)
-begin
-error_dir = "S";
-error_noc = 1;
-error_x = 2;
-error_y = 1;
-end
-`endif
-`ifdef RTL_SPARC4
-boundary_err = boundary_err | `CHIP.tile_1_2_out_W_noc1_valid;
-if (boundary_err == 1)
-begin
-error_dir = "W";
-error_noc = 1;
-error_x = 2;
-error_y = 1;
-end
-`endif
-`ifdef RTL_SPARC2
-boundary_err = boundary_err | `CHIP.tile_1_2_out_N_noc2_valid;
-if (boundary_err == 1)
-begin
-error_dir = "N";
-error_noc = 2;
-error_x = 2;
-error_y = 1;
-end
-`endif
-`ifdef RTL_SPARC8
-boundary_err = boundary_err | `CHIP.tile_1_2_out_S_noc2_valid;
-if (boundary_err == 1)
-begin
-error_dir = "S";
-error_noc = 2;
-error_x = 2;
-error_y = 1;
-end
-`endif
-`ifdef RTL_SPARC4
-boundary_err = boundary_err | `CHIP.tile_1_2_out_W_noc2_valid;
-if (boundary_err == 1)
-begin
-error_dir = "W";
-error_noc = 2;
-error_x = 2;
-error_y = 1;
-end
-`endif
-`ifdef RTL_SPARC2
-boundary_err = boundary_err | `CHIP.tile_1_2_out_N_noc3_valid;
-if (boundary_err == 1)
-begin
-error_dir = "N";
-error_noc = 3;
-error_x = 2;
-error_y = 1;
-end
-`endif
-`ifdef RTL_SPARC8
-boundary_err = boundary_err | `CHIP.tile_1_2_out_S_noc3_valid;
-if (boundary_err == 1)
-begin
-error_dir = "S";
-error_noc = 3;
-error_x = 2;
-error_y = 1;
-end
-`endif
-`ifdef RTL_SPARC4
-boundary_err = boundary_err | `CHIP.tile_1_2_out_W_noc3_valid;
-if (boundary_err == 1)
-begin
-error_dir = "W";
-error_noc = 3;
-error_x = 2;
-error_y = 1;
-end
-`endif
-
-            if (boundary_err == 1)
-            begin
-                $display("%d : Simulation -> FAIL. network_mon: packet from invalid tile_%0d_%0d_out_%0s_noc%0d", $time, error_y, error_x, error_dir, error_noc);
-                `ifndef VERILATOR
-                repeat(5)@(posedge clk);
-                `endif
-                `MONITOR_PATH.fail("network_mon: network_mon: packet from invalid tile");
-            end
-            
-`endif
-`ifdef RTL_SPARC6
-boundary_err = boundary_err | `CHIP.tile_2_0_out_S_noc1_valid;
-if (boundary_err == 1)
-begin
-error_dir = "S";
-error_noc = 1;
-error_x = 0;
-error_y = 2;
-end
-boundary_err = boundary_err | `CHIP.tile_2_0_out_W_noc1_valid;
-if (boundary_err == 1)
-begin
-error_dir = "W";
-error_noc = 1;
-error_x = 0;
-error_y = 2;
-end
-`ifndef RTL_SPARC3
-boundary_err = boundary_err | `CHIP.tile_2_0_out_N_noc1_valid;
-if (boundary_err == 1)
-begin
-error_dir = "N";
-error_noc = 1;
-error_x = 0;
-error_y = 2;
-end
-`endif
-`ifndef RTL_SPARC7
-boundary_err = boundary_err | `CHIP.tile_2_0_out_E_noc1_valid;
-if (boundary_err == 1)
-begin
-error_dir = "E";
-error_noc = 1;
-error_x = 0;
-error_y = 2;
-end
-`endif
-boundary_err = boundary_err | `CHIP.tile_2_0_out_S_noc2_valid;
-if (boundary_err == 1)
-begin
-error_dir = "S";
-error_noc = 2;
-error_x = 0;
-error_y = 2;
-end
-boundary_err = boundary_err | `CHIP.tile_2_0_out_W_noc2_valid;
-if (boundary_err == 1)
-begin
-error_dir = "W";
-error_noc = 2;
-error_x = 0;
-error_y = 2;
-end
-`ifndef RTL_SPARC3
-boundary_err = boundary_err | `CHIP.tile_2_0_out_N_noc2_valid;
-if (boundary_err == 1)
-begin
-error_dir = "N";
-error_noc = 2;
-error_x = 0;
-error_y = 2;
-end
-`endif
-`ifndef RTL_SPARC7
-boundary_err = boundary_err | `CHIP.tile_2_0_out_E_noc2_valid;
-if (boundary_err == 1)
-begin
-error_dir = "E";
-error_noc = 2;
-error_x = 0;
-error_y = 2;
-end
-`endif
-boundary_err = boundary_err | `CHIP.tile_2_0_out_S_noc3_valid;
-if (boundary_err == 1)
-begin
-error_dir = "S";
-error_noc = 3;
-error_x = 0;
-error_y = 2;
-end
-boundary_err = boundary_err | `CHIP.tile_2_0_out_W_noc3_valid;
-if (boundary_err == 1)
-begin
-error_dir = "W";
-error_noc = 3;
-error_x = 0;
-error_y = 2;
-end
-`ifndef RTL_SPARC3
-boundary_err = boundary_err | `CHIP.tile_2_0_out_N_noc3_valid;
-if (boundary_err == 1)
-begin
-error_dir = "N";
-error_noc = 3;
-error_x = 0;
-error_y = 2;
-end
-`endif
-`ifndef RTL_SPARC7
-boundary_err = boundary_err | `CHIP.tile_2_0_out_E_noc3_valid;
-if (boundary_err == 1)
-begin
-error_dir = "E";
-error_noc = 3;
-error_x = 0;
-error_y = 2;
-end
-`endif
-`endif
-
-            if (boundary_err == 1)
-            begin
-                $display("%d : Simulation -> FAIL. network_mon: packet out of valid bound from tile_%0d_%0d_out_%0s_noc%0d", $time, error_y, error_x, error_dir, error_noc);
-                `ifndef VERILATOR
-                repeat(5)@(posedge clk);
-                `endif
-                `MONITOR_PATH.fail("network_mon: network_mon: packet going out of valid bound");
-            end
-            
-boundary_err = 0;
-`ifndef RTL_SPARC6
-`ifdef RTL_SPARC3
-boundary_err = boundary_err | `CHIP.tile_2_0_out_N_noc1_valid;
-if (boundary_err == 1)
-begin
-error_dir = "N";
-error_noc = 1;
-error_x = 0;
-error_y = 2;
-end
-`endif
-`ifdef RTL_SPARC7
-boundary_err = boundary_err | `CHIP.tile_2_0_out_E_noc1_valid;
-if (boundary_err == 1)
-begin
-error_dir = "E";
-error_noc = 1;
-error_x = 0;
-error_y = 2;
-end
-`endif
-`ifdef RTL_SPARC3
-boundary_err = boundary_err | `CHIP.tile_2_0_out_N_noc2_valid;
-if (boundary_err == 1)
-begin
-error_dir = "N";
-error_noc = 2;
-error_x = 0;
-error_y = 2;
-end
-`endif
-`ifdef RTL_SPARC7
-boundary_err = boundary_err | `CHIP.tile_2_0_out_E_noc2_valid;
-if (boundary_err == 1)
-begin
-error_dir = "E";
-error_noc = 2;
-error_x = 0;
-error_y = 2;
-end
-`endif
-`ifdef RTL_SPARC3
-boundary_err = boundary_err | `CHIP.tile_2_0_out_N_noc3_valid;
-if (boundary_err == 1)
-begin
-error_dir = "N";
-error_noc = 3;
-error_x = 0;
-error_y = 2;
-end
-`endif
-`ifdef RTL_SPARC7
-boundary_err = boundary_err | `CHIP.tile_2_0_out_E_noc3_valid;
-if (boundary_err == 1)
-begin
-error_dir = "E";
-error_noc = 3;
-error_x = 0;
-error_y = 2;
-end
-`endif
-
-            if (boundary_err == 1)
-            begin
-                $display("%d : Simulation -> FAIL. network_mon: packet from invalid tile_%0d_%0d_out_%0s_noc%0d", $time, error_y, error_x, error_dir, error_noc);
-                `ifndef VERILATOR
-                repeat(5)@(posedge clk);
-                `endif
-                `MONITOR_PATH.fail("network_mon: network_mon: packet from invalid tile");
-            end
-            
-`endif
-`ifdef RTL_SPARC7
-boundary_err = boundary_err | `CHIP.tile_2_1_out_S_noc1_valid;
-if (boundary_err == 1)
-begin
-error_dir = "S";
-error_noc = 1;
-error_x = 1;
-error_y = 2;
-end
-`ifndef RTL_SPARC4
-boundary_err = boundary_err | `CHIP.tile_2_1_out_N_noc1_valid;
-if (boundary_err == 1)
-begin
-error_dir = "N";
-error_noc = 1;
-error_x = 1;
-error_y = 2;
-end
-`endif
-`ifndef RTL_SPARC6
-boundary_err = boundary_err | `CHIP.tile_2_1_out_W_noc1_valid;
-if (boundary_err == 1)
-begin
-error_dir = "W";
-error_noc = 1;
-error_x = 1;
-error_y = 2;
-end
-`endif
-`ifndef RTL_SPARC8
-boundary_err = boundary_err | `CHIP.tile_2_1_out_E_noc1_valid;
-if (boundary_err == 1)
-begin
-error_dir = "E";
-error_noc = 1;
-error_x = 1;
-error_y = 2;
-end
-`endif
-boundary_err = boundary_err | `CHIP.tile_2_1_out_S_noc2_valid;
-if (boundary_err == 1)
-begin
-error_dir = "S";
-error_noc = 2;
-error_x = 1;
-error_y = 2;
-end
-`ifndef RTL_SPARC4
-boundary_err = boundary_err | `CHIP.tile_2_1_out_N_noc2_valid;
-if (boundary_err == 1)
-begin
-error_dir = "N";
-error_noc = 2;
-error_x = 1;
-error_y = 2;
-end
-`endif
-`ifndef RTL_SPARC6
-boundary_err = boundary_err | `CHIP.tile_2_1_out_W_noc2_valid;
-if (boundary_err == 1)
-begin
-error_dir = "W";
-error_noc = 2;
-error_x = 1;
-error_y = 2;
-end
-`endif
-`ifndef RTL_SPARC8
-boundary_err = boundary_err | `CHIP.tile_2_1_out_E_noc2_valid;
-if (boundary_err == 1)
-begin
-error_dir = "E";
-error_noc = 2;
-error_x = 1;
-error_y = 2;
-end
-`endif
-boundary_err = boundary_err | `CHIP.tile_2_1_out_S_noc3_valid;
-if (boundary_err == 1)
-begin
-error_dir = "S";
-error_noc = 3;
-error_x = 1;
-error_y = 2;
-end
-`ifndef RTL_SPARC4
-boundary_err = boundary_err | `CHIP.tile_2_1_out_N_noc3_valid;
-if (boundary_err == 1)
-begin
-error_dir = "N";
-error_noc = 3;
-error_x = 1;
-error_y = 2;
-end
-`endif
-`ifndef RTL_SPARC6
-boundary_err = boundary_err | `CHIP.tile_2_1_out_W_noc3_valid;
-if (boundary_err == 1)
-begin
-error_dir = "W";
-error_noc = 3;
-error_x = 1;
-error_y = 2;
-end
-`endif
-`ifndef RTL_SPARC8
-boundary_err = boundary_err | `CHIP.tile_2_1_out_E_noc3_valid;
-if (boundary_err == 1)
-begin
-error_dir = "E";
-error_noc = 3;
-error_x = 1;
-error_y = 2;
-end
-`endif
-`endif
-
-            if (boundary_err == 1)
-            begin
-                $display("%d : Simulation -> FAIL. network_mon: packet out of valid bound from tile_%0d_%0d_out_%0s_noc%0d", $time, error_y, error_x, error_dir, error_noc);
-                `ifndef VERILATOR
-                repeat(5)@(posedge clk);
-                `endif
-                `MONITOR_PATH.fail("network_mon: network_mon: packet going out of valid bound");
-            end
-            
-boundary_err = 0;
-`ifndef RTL_SPARC7
-`ifdef RTL_SPARC4
-boundary_err = boundary_err | `CHIP.tile_2_1_out_N_noc1_valid;
-if (boundary_err == 1)
-begin
-error_dir = "N";
-error_noc = 1;
-error_x = 1;
-error_y = 2;
-end
-`endif
-`ifdef RTL_SPARC6
-boundary_err = boundary_err | `CHIP.tile_2_1_out_W_noc1_valid;
-if (boundary_err == 1)
-begin
-error_dir = "W";
-error_noc = 1;
-error_x = 1;
-error_y = 2;
-end
-`endif
-`ifdef RTL_SPARC8
-boundary_err = boundary_err | `CHIP.tile_2_1_out_E_noc1_valid;
-if (boundary_err == 1)
-begin
-error_dir = "E";
-error_noc = 1;
-error_x = 1;
-error_y = 2;
-end
-`endif
-`ifdef RTL_SPARC4
-boundary_err = boundary_err | `CHIP.tile_2_1_out_N_noc2_valid;
-if (boundary_err == 1)
-begin
-error_dir = "N";
-error_noc = 2;
-error_x = 1;
-error_y = 2;
-end
-`endif
-`ifdef RTL_SPARC6
-boundary_err = boundary_err | `CHIP.tile_2_1_out_W_noc2_valid;
-if (boundary_err == 1)
-begin
-error_dir = "W";
-error_noc = 2;
-error_x = 1;
-error_y = 2;
-end
-`endif
-`ifdef RTL_SPARC8
-boundary_err = boundary_err | `CHIP.tile_2_1_out_E_noc2_valid;
-if (boundary_err == 1)
-begin
-error_dir = "E";
-error_noc = 2;
-error_x = 1;
-error_y = 2;
-end
-`endif
-`ifdef RTL_SPARC4
-boundary_err = boundary_err | `CHIP.tile_2_1_out_N_noc3_valid;
-if (boundary_err == 1)
-begin
-error_dir = "N";
-error_noc = 3;
-error_x = 1;
-error_y = 2;
-end
-`endif
-`ifdef RTL_SPARC6
-boundary_err = boundary_err | `CHIP.tile_2_1_out_W_noc3_valid;
-if (boundary_err == 1)
-begin
-error_dir = "W";
-error_noc = 3;
-error_x = 1;
-error_y = 2;
-end
-`endif
-`ifdef RTL_SPARC8
-boundary_err = boundary_err | `CHIP.tile_2_1_out_E_noc3_valid;
-if (boundary_err == 1)
-begin
-error_dir = "E";
-error_noc = 3;
-error_x = 1;
-error_y = 2;
-end
-`endif
-
-            if (boundary_err == 1)
-            begin
-                $display("%d : Simulation -> FAIL. network_mon: packet from invalid tile_%0d_%0d_out_%0s_noc%0d", $time, error_y, error_x, error_dir, error_noc);
-                `ifndef VERILATOR
-                repeat(5)@(posedge clk);
-                `endif
-                `MONITOR_PATH.fail("network_mon: network_mon: packet from invalid tile");
-            end
-            
-`endif
-`ifdef RTL_SPARC8
-boundary_err = boundary_err | `CHIP.tile_2_2_out_S_noc1_valid;
-if (boundary_err == 1)
-begin
-error_dir = "S";
-error_noc = 1;
-error_x = 2;
-error_y = 2;
-end
-boundary_err = boundary_err | `CHIP.tile_2_2_out_E_noc1_valid;
-if (boundary_err == 1)
-begin
-error_dir = "E";
-error_noc = 1;
-error_x = 2;
-error_y = 2;
-end
-`ifndef RTL_SPARC5
-boundary_err = boundary_err | `CHIP.tile_2_2_out_N_noc1_valid;
-if (boundary_err == 1)
-begin
-error_dir = "N";
-error_noc = 1;
-error_x = 2;
-error_y = 2;
-end
-`endif
-`ifndef RTL_SPARC7
-boundary_err = boundary_err | `CHIP.tile_2_2_out_W_noc1_valid;
-if (boundary_err == 1)
-begin
-error_dir = "W";
-error_noc = 1;
-error_x = 2;
-error_y = 2;
-end
-`endif
-boundary_err = boundary_err | `CHIP.tile_2_2_out_S_noc2_valid;
-if (boundary_err == 1)
-begin
-error_dir = "S";
-error_noc = 2;
-error_x = 2;
-error_y = 2;
-end
-boundary_err = boundary_err | `CHIP.tile_2_2_out_E_noc2_valid;
-if (boundary_err == 1)
-begin
-error_dir = "E";
-error_noc = 2;
-error_x = 2;
-error_y = 2;
-end
-`ifndef RTL_SPARC5
-boundary_err = boundary_err | `CHIP.tile_2_2_out_N_noc2_valid;
-if (boundary_err == 1)
-begin
-error_dir = "N";
-error_noc = 2;
-error_x = 2;
-error_y = 2;
-end
-`endif
-`ifndef RTL_SPARC7
-boundary_err = boundary_err | `CHIP.tile_2_2_out_W_noc2_valid;
-if (boundary_err == 1)
-begin
-error_dir = "W";
-error_noc = 2;
-error_x = 2;
-error_y = 2;
-end
-`endif
-boundary_err = boundary_err | `CHIP.tile_2_2_out_S_noc3_valid;
-if (boundary_err == 1)
-begin
-error_dir = "S";
-error_noc = 3;
-error_x = 2;
-error_y = 2;
-end
-boundary_err = boundary_err | `CHIP.tile_2_2_out_E_noc3_valid;
-if (boundary_err == 1)
-begin
-error_dir = "E";
-error_noc = 3;
-error_x = 2;
-error_y = 2;
-end
-`ifndef RTL_SPARC5
-boundary_err = boundary_err | `CHIP.tile_2_2_out_N_noc3_valid;
-if (boundary_err == 1)
-begin
-error_dir = "N";
-error_noc = 3;
-error_x = 2;
-error_y = 2;
-end
-`endif
-`ifndef RTL_SPARC7
-boundary_err = boundary_err | `CHIP.tile_2_2_out_W_noc3_valid;
-if (boundary_err == 1)
-begin
-error_dir = "W";
-error_noc = 3;
-error_x = 2;
-error_y = 2;
-end
-`endif
-`endif
-
-            if (boundary_err == 1)
-            begin
-                $display("%d : Simulation -> FAIL. network_mon: packet out of valid bound from tile_%0d_%0d_out_%0s_noc%0d", $time, error_y, error_x, error_dir, error_noc);
-                `ifndef VERILATOR
-                repeat(5)@(posedge clk);
-                `endif
-                `MONITOR_PATH.fail("network_mon: network_mon: packet going out of valid bound");
-            end
-            
-boundary_err = 0;
-`ifndef RTL_SPARC8
-`ifdef RTL_SPARC5
-boundary_err = boundary_err | `CHIP.tile_2_2_out_N_noc1_valid;
-if (boundary_err == 1)
-begin
-error_dir = "N";
-error_noc = 1;
-error_x = 2;
-error_y = 2;
-end
-`endif
-`ifdef RTL_SPARC7
-boundary_err = boundary_err | `CHIP.tile_2_2_out_W_noc1_valid;
-if (boundary_err == 1)
-begin
-error_dir = "W";
-error_noc = 1;
-error_x = 2;
-error_y = 2;
-end
-`endif
-`ifdef RTL_SPARC5
-boundary_err = boundary_err | `CHIP.tile_2_2_out_N_noc2_valid;
-if (boundary_err == 1)
-begin
-error_dir = "N";
-error_noc = 2;
-error_x = 2;
-error_y = 2;
-end
-`endif
-`ifdef RTL_SPARC7
-boundary_err = boundary_err | `CHIP.tile_2_2_out_W_noc2_valid;
-if (boundary_err == 1)
-begin
-error_dir = "W";
-error_noc = 2;
-error_x = 2;
-error_y = 2;
-end
-`endif
-`ifdef RTL_SPARC5
-boundary_err = boundary_err | `CHIP.tile_2_2_out_N_noc3_valid;
-if (boundary_err == 1)
-begin
-error_dir = "N";
-error_noc = 3;
-error_x = 2;
-error_y = 2;
-end
-`endif
-`ifdef RTL_SPARC7
-boundary_err = boundary_err | `CHIP.tile_2_2_out_W_noc3_valid;
-if (boundary_err == 1)
-begin
-error_dir = "W";
-error_noc = 3;
-error_x = 2;
-error_y = 2;
 end
 `endif
 

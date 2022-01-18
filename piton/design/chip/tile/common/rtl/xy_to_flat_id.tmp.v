@@ -56,13 +56,7 @@ begin
     // (x,y) = (0, 1)
     `NOC_Y_WIDTH'd1:
     begin
-        flat_id = `HOME_ID_WIDTH'd3;
-    end
-
-    // (x,y) = (0, 2)
-    `NOC_Y_WIDTH'd2:
-    begin
-        flat_id = `HOME_ID_WIDTH'd6;
+        flat_id = `HOME_ID_WIDTH'd2;
     end
      default:
      begin
@@ -84,41 +78,7 @@ begin
     // (x,y) = (1, 1)
     `NOC_Y_WIDTH'd1:
     begin
-        flat_id = `HOME_ID_WIDTH'd4;
-    end
-
-    // (x,y) = (1, 2)
-    `NOC_Y_WIDTH'd2:
-    begin
-        flat_id = `HOME_ID_WIDTH'd7;
-    end
-     default:
-     begin
-         flat_id = `HOME_ID_WIDTH'dX;
-     end
-     endcase
-end
-
-`NOC_X_WIDTH'd2:
-begin
-     case (y_coord)
-
-    // (x,y) = (2, 0)
-    `NOC_Y_WIDTH'd0:
-    begin
-        flat_id = `HOME_ID_WIDTH'd2;
-    end
-
-    // (x,y) = (2, 1)
-    `NOC_Y_WIDTH'd1:
-    begin
-        flat_id = `HOME_ID_WIDTH'd5;
-    end
-
-    // (x,y) = (2, 2)
-    `NOC_Y_WIDTH'd2:
-    begin
-        flat_id = `HOME_ID_WIDTH'd8;
+        flat_id = `HOME_ID_WIDTH'd3;
     end
      default:
      begin

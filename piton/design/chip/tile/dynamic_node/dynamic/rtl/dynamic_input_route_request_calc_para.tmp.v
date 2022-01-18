@@ -39,19 +39,17 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 `include "network_define.v"
 // /home/ruaro/nooman-openpiton/piton/verif/env/manycore/devices_ariane.xml
 
-module dynamic_input_route_request_calc_para(route_req_0, route_req_1, route_req_2, route_req_3, 
-                                        default_ready_0, default_ready_1, default_ready_2, default_ready_3, 
+module dynamic_input_route_request_calc_para(route_req_0, route_req_1, route_req_2, 
+                                        default_ready_0, default_ready_1, default_ready_2, 
                                         my_loc_x_in, my_loc_y_in, my_chip_id_in, abs_x, abs_y, abs_chip_id, final_bits, length, header_in);
 
 // begin port declarations
 output route_req_0;
 output route_req_1;
 output route_req_2;
-output route_req_3;
 output default_ready_0;
 output default_ready_1;
 output default_ready_2;
-output default_ready_3;
 
 input [`XY_WIDTH-1:0] my_loc_x_in;
 input [`XY_WIDTH-1:0] my_loc_y_in;
@@ -72,13 +70,11 @@ wire [`XY_WIDTH*3+3-1:0]              stub;
 assign off_chip = abs_chip_id != my_chip_id_in;
 assign route_req_0 = header_in & (!off_chip) & (abs_x == 8'd0);
 assign route_req_1 = header_in & (!off_chip) & (abs_x == 8'd1);
-assign route_req_2 = header_in & (!off_chip) & (abs_x == 8'd2);
-assign route_req_3 = header_in & (off_chip);
+assign route_req_2 = header_in & (off_chip);
 
 assign default_ready_0 = route_req_0;
 assign default_ready_1 = route_req_1;
 assign default_ready_2 = route_req_2;
-assign default_ready_3 = route_req_3;
 
 assign stub = {my_loc_x_in, my_loc_y_in, abs_y, final_bits};
 

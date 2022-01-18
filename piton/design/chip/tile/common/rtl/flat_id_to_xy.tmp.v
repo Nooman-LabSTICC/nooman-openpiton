@@ -59,50 +59,15 @@ end
 //(`NOC_Y_WIDTH+`NOC_X_WIDTH)'d2: 
 `HOME_ID_WIDTH'd2: 
 begin
-    x_coord = `NOC_X_WIDTH'd2;
-    y_coord = `NOC_Y_WIDTH'd0;
+    x_coord = `NOC_X_WIDTH'd0;
+    y_coord = `NOC_Y_WIDTH'd1;
 end
 
 //(`NOC_Y_WIDTH+`NOC_X_WIDTH)'d3: 
 `HOME_ID_WIDTH'd3: 
 begin
-    x_coord = `NOC_X_WIDTH'd0;
-    y_coord = `NOC_Y_WIDTH'd1;
-end
-
-//(`NOC_Y_WIDTH+`NOC_X_WIDTH)'d4: 
-`HOME_ID_WIDTH'd4: 
-begin
     x_coord = `NOC_X_WIDTH'd1;
     y_coord = `NOC_Y_WIDTH'd1;
-end
-
-//(`NOC_Y_WIDTH+`NOC_X_WIDTH)'d5: 
-`HOME_ID_WIDTH'd5: 
-begin
-    x_coord = `NOC_X_WIDTH'd2;
-    y_coord = `NOC_Y_WIDTH'd1;
-end
-
-//(`NOC_Y_WIDTH+`NOC_X_WIDTH)'d6: 
-`HOME_ID_WIDTH'd6: 
-begin
-    x_coord = `NOC_X_WIDTH'd0;
-    y_coord = `NOC_Y_WIDTH'd2;
-end
-
-//(`NOC_Y_WIDTH+`NOC_X_WIDTH)'d7: 
-`HOME_ID_WIDTH'd7: 
-begin
-    x_coord = `NOC_X_WIDTH'd1;
-    y_coord = `NOC_Y_WIDTH'd2;
-end
-
-//(`NOC_Y_WIDTH+`NOC_X_WIDTH)'d8: 
-`HOME_ID_WIDTH'd8: 
-begin
-    x_coord = `NOC_X_WIDTH'd2;
-    y_coord = `NOC_Y_WIDTH'd2;
 end
 
         default:

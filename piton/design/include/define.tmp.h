@@ -51,9 +51,9 @@
 // Tile config
 
 // /home/ruaro/nooman-openpiton/piton/verif/env/manycore/devices_ariane.xml
-`define NUM_TILES 9
-`define X_TILES 3
-`define Y_TILES 3
+`define NUM_TILES 4
+`define X_TILES 2
+`define Y_TILES 2
 
 
 // NoC interface

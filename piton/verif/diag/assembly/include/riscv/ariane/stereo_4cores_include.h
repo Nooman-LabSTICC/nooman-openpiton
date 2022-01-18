@@ -4,7 +4,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
-#include <math.h>
+//#include <math.h>
 
 
 #define min(x,y) (((x)<(y))?(x):(y))
@@ -17,7 +17,7 @@
 
 typedef unsigned char uchar;
 
-#define PREESM_LOOP_SIZE	3
+#define PREESM_LOOP_SIZE	1
 #define LOOP_SIZE		PREESM_LOOP_SIZE //Compatibility issue
 
 #define NB_CORES		4
@@ -223,7 +223,7 @@ void costConstruction (int height, int width, float truncValue,
             censusCost = hammingCost(cenL+leftPxlIdx, cenR+rightPxlIdx);
 
             // Combination method 3 -- weight addition
-            disparityError[leftPxlIdx] =  min(fabs((float)(grayL[leftPxlIdx]-grayR[rightPxlIdx])),truncValue) + censusCost/5.0;
+            //disparityError[leftPxlIdx] =  min(fabs((float)(grayL[leftPxlIdx]-grayR[rightPxlIdx])),truncValue) + censusCost/5.0;
         }
     }
 }
@@ -318,15 +318,15 @@ void computeWeights (int height , int width, int horOrVert,
             r  = rgbL[3*(max(j-vOffset,0)*width+max(i-hOffset,0))];
             g  = rgbL[3*(max(j-vOffset,0)*width+max(i-hOffset,0))+1];
             b  = rgbL[3*(max(j-vOffset,0)*width+max(i-hOffset,0))+2];
-            weightM = sqrtf((r0-r)*(r0-r)+(g0-g)*(g0-g)+(b0-b)*(b0-b))* R_gamaC;
+            //weightM = sqrtf((r0-r)*(r0-r)+(g0-g)*(g0-g)+(b0-b)*(b0-b))* R_gamaC;
 
             r  = rgbL[3*(min(j+vOffset,height-1)*width+min(i+hOffset,width-1))];
             g  = rgbL[3*(min(j+vOffset,height-1)*width+min(i+hOffset,width-1))+1];
             b  = rgbL[3*(min(j+vOffset,height-1)*width+min(i+hOffset,width-1))+2];
-            weightP = sqrtf((r0-r)*(r0-r)+(g0-g)*(g0-g)+(b0-b)*(b0-b))* R_gamaC;
+            //weightP = sqrtf((r0-r)*(r0-r)+(g0-g)*(g0-g)+(b0-b)*(b0-b))* R_gamaC;
 
-            weightM = exp(distanceCoeff-weightM);
-            weightP = exp(distanceCoeff-weightP);
+            //weightM = exp(distanceCoeff-weightM);
+            //weightP = exp(distanceCoeff-weightP);
 
             weightO = 1/(weightM+weightP+1);
             weightM = weightM*weightO;
@@ -471,7 +471,7 @@ void readPPMInit(int id,int height, int width) {
 void readPPM(int id,int height, int width, unsigned char *rgbPtr){
 
     for(int h=0; h<height; h++){
-        for(int w=0; w<height; w++){
+        for(int w=0; w<width; w++){
             *(rgbPtr++)= h+1*w+10;
             *(rgbPtr++) = h+1*w+12;
             *(rgbPtr++) = h+1*w+15;

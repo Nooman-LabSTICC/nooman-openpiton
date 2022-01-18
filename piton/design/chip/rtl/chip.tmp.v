@@ -343,22 +343,12 @@ module chip(
    wire [127:0]                                 ctap_clk_en_inter; // trin TODO: parameterize this number (63)
    wire tile0_jtag_ucb_val;
 wire [`UCB_BUS_WIDTH-1:0] tile0_jtag_ucb_data;
-wire tile3_jtag_ucb_val;
-wire [`UCB_BUS_WIDTH-1:0] tile3_jtag_ucb_data;
-wire tile6_jtag_ucb_val;
-wire [`UCB_BUS_WIDTH-1:0] tile6_jtag_ucb_data;
-wire tile1_jtag_ucb_val;
-wire [`UCB_BUS_WIDTH-1:0] tile1_jtag_ucb_data;
-wire tile4_jtag_ucb_val;
-wire [`UCB_BUS_WIDTH-1:0] tile4_jtag_ucb_data;
-wire tile7_jtag_ucb_val;
-wire [`UCB_BUS_WIDTH-1:0] tile7_jtag_ucb_data;
 wire tile2_jtag_ucb_val;
 wire [`UCB_BUS_WIDTH-1:0] tile2_jtag_ucb_data;
-wire tile5_jtag_ucb_val;
-wire [`UCB_BUS_WIDTH-1:0] tile5_jtag_ucb_data;
-wire tile8_jtag_ucb_val;
-wire [`UCB_BUS_WIDTH-1:0] tile8_jtag_ucb_data;
+wire tile1_jtag_ucb_val;
+wire [`UCB_BUS_WIDTH-1:0] tile1_jtag_ucb_data;
+wire tile3_jtag_ucb_val;
+wire [`UCB_BUS_WIDTH-1:0] tile3_jtag_ucb_data;
 
 
    // Generate tile wiring
@@ -434,42 +424,6 @@ wire tile_1_0_out_N_noc3_yummy;
 wire tile_1_0_out_S_noc3_yummy;
 wire tile_1_0_out_E_noc3_yummy;
 wire tile_1_0_out_W_noc3_yummy;
-wire [`DATA_WIDTH-1:0] tile_2_0_out_N_noc1_data;
-wire [`DATA_WIDTH-1:0] tile_2_0_out_S_noc1_data;
-wire [`DATA_WIDTH-1:0] tile_2_0_out_E_noc1_data;
-wire [`DATA_WIDTH-1:0] tile_2_0_out_W_noc1_data;
-wire tile_2_0_out_N_noc1_valid;
-wire tile_2_0_out_S_noc1_valid;
-wire tile_2_0_out_E_noc1_valid;
-wire tile_2_0_out_W_noc1_valid;
-wire tile_2_0_out_N_noc1_yummy;
-wire tile_2_0_out_S_noc1_yummy;
-wire tile_2_0_out_E_noc1_yummy;
-wire tile_2_0_out_W_noc1_yummy;
-wire [`DATA_WIDTH-1:0] tile_2_0_out_N_noc2_data;
-wire [`DATA_WIDTH-1:0] tile_2_0_out_S_noc2_data;
-wire [`DATA_WIDTH-1:0] tile_2_0_out_E_noc2_data;
-wire [`DATA_WIDTH-1:0] tile_2_0_out_W_noc2_data;
-wire tile_2_0_out_N_noc2_valid;
-wire tile_2_0_out_S_noc2_valid;
-wire tile_2_0_out_E_noc2_valid;
-wire tile_2_0_out_W_noc2_valid;
-wire tile_2_0_out_N_noc2_yummy;
-wire tile_2_0_out_S_noc2_yummy;
-wire tile_2_0_out_E_noc2_yummy;
-wire tile_2_0_out_W_noc2_yummy;
-wire [`DATA_WIDTH-1:0] tile_2_0_out_N_noc3_data;
-wire [`DATA_WIDTH-1:0] tile_2_0_out_S_noc3_data;
-wire [`DATA_WIDTH-1:0] tile_2_0_out_E_noc3_data;
-wire [`DATA_WIDTH-1:0] tile_2_0_out_W_noc3_data;
-wire tile_2_0_out_N_noc3_valid;
-wire tile_2_0_out_S_noc3_valid;
-wire tile_2_0_out_E_noc3_valid;
-wire tile_2_0_out_W_noc3_valid;
-wire tile_2_0_out_N_noc3_yummy;
-wire tile_2_0_out_S_noc3_yummy;
-wire tile_2_0_out_E_noc3_yummy;
-wire tile_2_0_out_W_noc3_yummy;
 wire [`DATA_WIDTH-1:0] tile_0_1_out_N_noc1_data;
 wire [`DATA_WIDTH-1:0] tile_0_1_out_S_noc1_data;
 wire [`DATA_WIDTH-1:0] tile_0_1_out_E_noc1_data;
@@ -542,150 +496,6 @@ wire tile_1_1_out_N_noc3_yummy;
 wire tile_1_1_out_S_noc3_yummy;
 wire tile_1_1_out_E_noc3_yummy;
 wire tile_1_1_out_W_noc3_yummy;
-wire [`DATA_WIDTH-1:0] tile_2_1_out_N_noc1_data;
-wire [`DATA_WIDTH-1:0] tile_2_1_out_S_noc1_data;
-wire [`DATA_WIDTH-1:0] tile_2_1_out_E_noc1_data;
-wire [`DATA_WIDTH-1:0] tile_2_1_out_W_noc1_data;
-wire tile_2_1_out_N_noc1_valid;
-wire tile_2_1_out_S_noc1_valid;
-wire tile_2_1_out_E_noc1_valid;
-wire tile_2_1_out_W_noc1_valid;
-wire tile_2_1_out_N_noc1_yummy;
-wire tile_2_1_out_S_noc1_yummy;
-wire tile_2_1_out_E_noc1_yummy;
-wire tile_2_1_out_W_noc1_yummy;
-wire [`DATA_WIDTH-1:0] tile_2_1_out_N_noc2_data;
-wire [`DATA_WIDTH-1:0] tile_2_1_out_S_noc2_data;
-wire [`DATA_WIDTH-1:0] tile_2_1_out_E_noc2_data;
-wire [`DATA_WIDTH-1:0] tile_2_1_out_W_noc2_data;
-wire tile_2_1_out_N_noc2_valid;
-wire tile_2_1_out_S_noc2_valid;
-wire tile_2_1_out_E_noc2_valid;
-wire tile_2_1_out_W_noc2_valid;
-wire tile_2_1_out_N_noc2_yummy;
-wire tile_2_1_out_S_noc2_yummy;
-wire tile_2_1_out_E_noc2_yummy;
-wire tile_2_1_out_W_noc2_yummy;
-wire [`DATA_WIDTH-1:0] tile_2_1_out_N_noc3_data;
-wire [`DATA_WIDTH-1:0] tile_2_1_out_S_noc3_data;
-wire [`DATA_WIDTH-1:0] tile_2_1_out_E_noc3_data;
-wire [`DATA_WIDTH-1:0] tile_2_1_out_W_noc3_data;
-wire tile_2_1_out_N_noc3_valid;
-wire tile_2_1_out_S_noc3_valid;
-wire tile_2_1_out_E_noc3_valid;
-wire tile_2_1_out_W_noc3_valid;
-wire tile_2_1_out_N_noc3_yummy;
-wire tile_2_1_out_S_noc3_yummy;
-wire tile_2_1_out_E_noc3_yummy;
-wire tile_2_1_out_W_noc3_yummy;
-wire [`DATA_WIDTH-1:0] tile_0_2_out_N_noc1_data;
-wire [`DATA_WIDTH-1:0] tile_0_2_out_S_noc1_data;
-wire [`DATA_WIDTH-1:0] tile_0_2_out_E_noc1_data;
-wire [`DATA_WIDTH-1:0] tile_0_2_out_W_noc1_data;
-wire tile_0_2_out_N_noc1_valid;
-wire tile_0_2_out_S_noc1_valid;
-wire tile_0_2_out_E_noc1_valid;
-wire tile_0_2_out_W_noc1_valid;
-wire tile_0_2_out_N_noc1_yummy;
-wire tile_0_2_out_S_noc1_yummy;
-wire tile_0_2_out_E_noc1_yummy;
-wire tile_0_2_out_W_noc1_yummy;
-wire [`DATA_WIDTH-1:0] tile_0_2_out_N_noc2_data;
-wire [`DATA_WIDTH-1:0] tile_0_2_out_S_noc2_data;
-wire [`DATA_WIDTH-1:0] tile_0_2_out_E_noc2_data;
-wire [`DATA_WIDTH-1:0] tile_0_2_out_W_noc2_data;
-wire tile_0_2_out_N_noc2_valid;
-wire tile_0_2_out_S_noc2_valid;
-wire tile_0_2_out_E_noc2_valid;
-wire tile_0_2_out_W_noc2_valid;
-wire tile_0_2_out_N_noc2_yummy;
-wire tile_0_2_out_S_noc2_yummy;
-wire tile_0_2_out_E_noc2_yummy;
-wire tile_0_2_out_W_noc2_yummy;
-wire [`DATA_WIDTH-1:0] tile_0_2_out_N_noc3_data;
-wire [`DATA_WIDTH-1:0] tile_0_2_out_S_noc3_data;
-wire [`DATA_WIDTH-1:0] tile_0_2_out_E_noc3_data;
-wire [`DATA_WIDTH-1:0] tile_0_2_out_W_noc3_data;
-wire tile_0_2_out_N_noc3_valid;
-wire tile_0_2_out_S_noc3_valid;
-wire tile_0_2_out_E_noc3_valid;
-wire tile_0_2_out_W_noc3_valid;
-wire tile_0_2_out_N_noc3_yummy;
-wire tile_0_2_out_S_noc3_yummy;
-wire tile_0_2_out_E_noc3_yummy;
-wire tile_0_2_out_W_noc3_yummy;
-wire [`DATA_WIDTH-1:0] tile_1_2_out_N_noc1_data;
-wire [`DATA_WIDTH-1:0] tile_1_2_out_S_noc1_data;
-wire [`DATA_WIDTH-1:0] tile_1_2_out_E_noc1_data;
-wire [`DATA_WIDTH-1:0] tile_1_2_out_W_noc1_data;
-wire tile_1_2_out_N_noc1_valid;
-wire tile_1_2_out_S_noc1_valid;
-wire tile_1_2_out_E_noc1_valid;
-wire tile_1_2_out_W_noc1_valid;
-wire tile_1_2_out_N_noc1_yummy;
-wire tile_1_2_out_S_noc1_yummy;
-wire tile_1_2_out_E_noc1_yummy;
-wire tile_1_2_out_W_noc1_yummy;
-wire [`DATA_WIDTH-1:0] tile_1_2_out_N_noc2_data;
-wire [`DATA_WIDTH-1:0] tile_1_2_out_S_noc2_data;
-wire [`DATA_WIDTH-1:0] tile_1_2_out_E_noc2_data;
-wire [`DATA_WIDTH-1:0] tile_1_2_out_W_noc2_data;
-wire tile_1_2_out_N_noc2_valid;
-wire tile_1_2_out_S_noc2_valid;
-wire tile_1_2_out_E_noc2_valid;
-wire tile_1_2_out_W_noc2_valid;
-wire tile_1_2_out_N_noc2_yummy;
-wire tile_1_2_out_S_noc2_yummy;
-wire tile_1_2_out_E_noc2_yummy;
-wire tile_1_2_out_W_noc2_yummy;
-wire [`DATA_WIDTH-1:0] tile_1_2_out_N_noc3_data;
-wire [`DATA_WIDTH-1:0] tile_1_2_out_S_noc3_data;
-wire [`DATA_WIDTH-1:0] tile_1_2_out_E_noc3_data;
-wire [`DATA_WIDTH-1:0] tile_1_2_out_W_noc3_data;
-wire tile_1_2_out_N_noc3_valid;
-wire tile_1_2_out_S_noc3_valid;
-wire tile_1_2_out_E_noc3_valid;
-wire tile_1_2_out_W_noc3_valid;
-wire tile_1_2_out_N_noc3_yummy;
-wire tile_1_2_out_S_noc3_yummy;
-wire tile_1_2_out_E_noc3_yummy;
-wire tile_1_2_out_W_noc3_yummy;
-wire [`DATA_WIDTH-1:0] tile_2_2_out_N_noc1_data;
-wire [`DATA_WIDTH-1:0] tile_2_2_out_S_noc1_data;
-wire [`DATA_WIDTH-1:0] tile_2_2_out_E_noc1_data;
-wire [`DATA_WIDTH-1:0] tile_2_2_out_W_noc1_data;
-wire tile_2_2_out_N_noc1_valid;
-wire tile_2_2_out_S_noc1_valid;
-wire tile_2_2_out_E_noc1_valid;
-wire tile_2_2_out_W_noc1_valid;
-wire tile_2_2_out_N_noc1_yummy;
-wire tile_2_2_out_S_noc1_yummy;
-wire tile_2_2_out_E_noc1_yummy;
-wire tile_2_2_out_W_noc1_yummy;
-wire [`DATA_WIDTH-1:0] tile_2_2_out_N_noc2_data;
-wire [`DATA_WIDTH-1:0] tile_2_2_out_S_noc2_data;
-wire [`DATA_WIDTH-1:0] tile_2_2_out_E_noc2_data;
-wire [`DATA_WIDTH-1:0] tile_2_2_out_W_noc2_data;
-wire tile_2_2_out_N_noc2_valid;
-wire tile_2_2_out_S_noc2_valid;
-wire tile_2_2_out_E_noc2_valid;
-wire tile_2_2_out_W_noc2_valid;
-wire tile_2_2_out_N_noc2_yummy;
-wire tile_2_2_out_S_noc2_yummy;
-wire tile_2_2_out_E_noc2_yummy;
-wire tile_2_2_out_W_noc2_yummy;
-wire [`DATA_WIDTH-1:0] tile_2_2_out_N_noc3_data;
-wire [`DATA_WIDTH-1:0] tile_2_2_out_S_noc3_data;
-wire [`DATA_WIDTH-1:0] tile_2_2_out_E_noc3_data;
-wire [`DATA_WIDTH-1:0] tile_2_2_out_W_noc3_data;
-wire tile_2_2_out_N_noc3_valid;
-wire tile_2_2_out_S_noc3_valid;
-wire tile_2_2_out_E_noc3_valid;
-wire tile_2_2_out_W_noc3_valid;
-wire tile_2_2_out_N_noc3_yummy;
-wire tile_2_2_out_S_noc3_yummy;
-wire tile_2_2_out_E_noc3_yummy;
-wire tile_2_2_out_W_noc3_yummy;
 wire [`DATA_WIDTH-1:0] dummy_out_N_noc1_data = `DATA_WIDTH'b0;
 wire [`DATA_WIDTH-1:0] dummy_out_S_noc1_data = `DATA_WIDTH'b0;
 wire [`DATA_WIDTH-1:0] dummy_out_E_noc1_data = `DATA_WIDTH'b0;
@@ -876,8 +686,8 @@ assign offchip_out_E_noc3_yummy = processor_offchip_noc3_yummy;
    end
 
    // Merge all JTAG outputs from tiles together
-assign tiles_jtag_ucb_val = tile0_jtag_ucb_val | tile3_jtag_ucb_val | tile6_jtag_ucb_val | tile1_jtag_ucb_val | tile4_jtag_ucb_val | tile7_jtag_ucb_val | tile2_jtag_ucb_val | tile5_jtag_ucb_val | tile8_jtag_ucb_val;
-assign tiles_jtag_ucb_data = tile0_jtag_ucb_data | tile3_jtag_ucb_data | tile6_jtag_ucb_data | tile1_jtag_ucb_data | tile4_jtag_ucb_data | tile7_jtag_ucb_data | tile2_jtag_ucb_data | tile5_jtag_ucb_data | tile8_jtag_ucb_data;
+assign tiles_jtag_ucb_val = tile0_jtag_ucb_val | tile2_jtag_ucb_val | tile1_jtag_ucb_val | tile3_jtag_ucb_val;
+assign tiles_jtag_ucb_data = tile0_jtag_ucb_data | tile2_jtag_ucb_data | tile1_jtag_ucb_data | tile3_jtag_ucb_data;
 
 
    /////////////////////////
@@ -1351,24 +1161,24 @@ tile0 (
 
 
 tile #(.CORE_ADDR(1), .TILE_TYPE(`ARIANE_RV64_TILE))
-tile3 (
+tile2 (
     .clk                (clk_muxed),
     .rst_n              (rst_n_inter_sync),
-    .clk_en             (ctap_clk_en_inter[3] && clk_en_inter),
+    .clk_en             (ctap_clk_en_inter[2] && clk_en_inter),
     .default_chipid             (14'b0),    // the first chip
     .default_coreid_x           (8'd0),
     .default_coreid_y           (8'd1),
-    .flat_tileid                (`JTAG_FLATID_WIDTH'd3),
+    .flat_tileid                (`JTAG_FLATID_WIDTH'd2),
 `ifdef PITON_ARIANE
-    .debug_req_i         ( debug_req_i[3]   ),
-    .unavailable_o       ( unavailable_o[3] ),
-    .timer_irq_i         ( timer_irq_i[3]   ),
-    .ipi_i               ( ipi_i[3]         ),
-    .irq_i               ( irq_i[3*2 +: 2]  ),
+    .debug_req_i         ( debug_req_i[2]   ),
+    .unavailable_o       ( unavailable_o[2] ),
+    .timer_irq_i         ( timer_irq_i[2]   ),
+    .ipi_i               ( ipi_i[2]         ),
+    .irq_i               ( irq_i[2*2 +: 2]  ),
 `endif
     // ucb from tiles to jtag
-    .tile_jtag_ucb_val   ( tile3_jtag_ucb_val      ),
-    .tile_jtag_ucb_data  ( tile3_jtag_ucb_data     ),
+    .tile_jtag_ucb_val   ( tile2_jtag_ucb_val      ),
+    .tile_jtag_ucb_data  ( tile2_jtag_ucb_data     ),
     // ucb from jtag to tiles
     .jtag_tiles_ucb_val  ( jtag_tiles_ucb_val      ),
     .jtag_tiles_ucb_data ( jtag_tiles_ucb_data     ),
@@ -1376,15 +1186,15 @@ tile3 (
     .dyn0_dataIn_N       ( tile_0_0_out_S_noc1_data   ),
     .dyn0_dataIn_E       ( tile_1_1_out_W_noc1_data   ),
     .dyn0_dataIn_W       ( dummy_out_E_noc1_data   ),
-    .dyn0_dataIn_S       ( tile_2_0_out_N_noc1_data   ),
+    .dyn0_dataIn_S       ( dummy_out_N_noc1_data   ),
     .dyn0_validIn_N      ( tile_0_0_out_S_noc1_valid  ),
     .dyn0_validIn_E      ( tile_1_1_out_W_noc1_valid  ),
     .dyn0_validIn_W      ( dummy_out_E_noc1_valid  ),
-    .dyn0_validIn_S      ( tile_2_0_out_N_noc1_valid  ),
+    .dyn0_validIn_S      ( dummy_out_N_noc1_valid  ),
     .dyn0_dNo_yummy      ( tile_0_0_out_S_noc1_yummy  ),
     .dyn0_dEo_yummy      ( tile_1_1_out_W_noc1_yummy  ),
     .dyn0_dWo_yummy      ( dummy_out_E_noc1_yummy  ),
-    .dyn0_dSo_yummy      ( tile_2_0_out_N_noc1_yummy  ),
+    .dyn0_dSo_yummy      ( dummy_out_N_noc1_yummy  ),
 
     .dyn0_dNo            ( tile_1_0_out_N_noc1_data  ),
     .dyn0_dEo            ( tile_1_0_out_E_noc1_data  ),
@@ -1401,15 +1211,15 @@ tile3 (
     .dyn1_dataIn_N       ( tile_0_0_out_S_noc2_data   ),
     .dyn1_dataIn_E       ( tile_1_1_out_W_noc2_data   ),
     .dyn1_dataIn_W       ( dummy_out_E_noc2_data   ),
-    .dyn1_dataIn_S       ( tile_2_0_out_N_noc2_data   ),
+    .dyn1_dataIn_S       ( dummy_out_N_noc2_data   ),
     .dyn1_validIn_N      ( tile_0_0_out_S_noc2_valid  ),
     .dyn1_validIn_E      ( tile_1_1_out_W_noc2_valid  ),
     .dyn1_validIn_W      ( dummy_out_E_noc2_valid  ),
-    .dyn1_validIn_S      ( tile_2_0_out_N_noc2_valid  ),
+    .dyn1_validIn_S      ( dummy_out_N_noc2_valid  ),
     .dyn1_dNo_yummy      ( tile_0_0_out_S_noc2_yummy  ),
     .dyn1_dEo_yummy      ( tile_1_1_out_W_noc2_yummy  ),
     .dyn1_dWo_yummy      ( dummy_out_E_noc2_yummy  ),
-    .dyn1_dSo_yummy      ( tile_2_0_out_N_noc2_yummy  ),
+    .dyn1_dSo_yummy      ( dummy_out_N_noc2_yummy  ),
 
     .dyn1_dNo            ( tile_1_0_out_N_noc2_data  ),
     .dyn1_dEo            ( tile_1_0_out_E_noc2_data  ),
@@ -1426,15 +1236,15 @@ tile3 (
     .dyn2_dataIn_N       ( tile_0_0_out_S_noc3_data   ),
     .dyn2_dataIn_E       ( tile_1_1_out_W_noc3_data   ),
     .dyn2_dataIn_W       ( dummy_out_E_noc3_data   ),
-    .dyn2_dataIn_S       ( tile_2_0_out_N_noc3_data   ),
+    .dyn2_dataIn_S       ( dummy_out_N_noc3_data   ),
     .dyn2_validIn_N      ( tile_0_0_out_S_noc3_valid  ),
     .dyn2_validIn_E      ( tile_1_1_out_W_noc3_valid  ),
     .dyn2_validIn_W      ( dummy_out_E_noc3_valid  ),
-    .dyn2_validIn_S      ( tile_2_0_out_N_noc3_valid  ),
+    .dyn2_validIn_S      ( dummy_out_N_noc3_valid  ),
     .dyn2_dNo_yummy      ( tile_0_0_out_S_noc3_yummy  ),
     .dyn2_dEo_yummy      ( tile_1_1_out_W_noc3_yummy  ),
     .dyn2_dWo_yummy      ( dummy_out_E_noc3_yummy  ),
-    .dyn2_dSo_yummy      ( tile_2_0_out_N_noc3_yummy  ),
+    .dyn2_dSo_yummy      ( dummy_out_N_noc3_yummy  ),
 
     .dyn2_dNo            ( tile_1_0_out_N_noc3_data  ),
     .dyn2_dEo            ( tile_1_0_out_E_noc3_data  ),
@@ -1448,107 +1258,6 @@ tile3 (
     .dyn2_yummyOut_E     ( tile_1_0_out_E_noc3_yummy ),
     .dyn2_yummyOut_W     ( tile_1_0_out_W_noc3_yummy ),
     .dyn2_yummyOut_S     ( tile_1_0_out_S_noc3_yummy )
-);
-
-
-tile #(.CORE_ADDR(2), .TILE_TYPE(`ARIANE_RV64_TILE))
-tile6 (
-    .clk                (clk_muxed),
-    .rst_n              (rst_n_inter_sync),
-    .clk_en             (ctap_clk_en_inter[6] && clk_en_inter),
-    .default_chipid             (14'b0),    // the first chip
-    .default_coreid_x           (8'd0),
-    .default_coreid_y           (8'd2),
-    .flat_tileid                (`JTAG_FLATID_WIDTH'd6),
-`ifdef PITON_ARIANE
-    .debug_req_i         ( debug_req_i[6]   ),
-    .unavailable_o       ( unavailable_o[6] ),
-    .timer_irq_i         ( timer_irq_i[6]   ),
-    .ipi_i               ( ipi_i[6]         ),
-    .irq_i               ( irq_i[6*2 +: 2]  ),
-`endif
-    // ucb from tiles to jtag
-    .tile_jtag_ucb_val   ( tile6_jtag_ucb_val      ),
-    .tile_jtag_ucb_data  ( tile6_jtag_ucb_data     ),
-    // ucb from jtag to tiles
-    .jtag_tiles_ucb_val  ( jtag_tiles_ucb_val      ),
-    .jtag_tiles_ucb_data ( jtag_tiles_ucb_data     ),
-
-    .dyn0_dataIn_N       ( tile_1_0_out_S_noc1_data   ),
-    .dyn0_dataIn_E       ( tile_2_1_out_W_noc1_data   ),
-    .dyn0_dataIn_W       ( dummy_out_E_noc1_data   ),
-    .dyn0_dataIn_S       ( dummy_out_N_noc1_data   ),
-    .dyn0_validIn_N      ( tile_1_0_out_S_noc1_valid  ),
-    .dyn0_validIn_E      ( tile_2_1_out_W_noc1_valid  ),
-    .dyn0_validIn_W      ( dummy_out_E_noc1_valid  ),
-    .dyn0_validIn_S      ( dummy_out_N_noc1_valid  ),
-    .dyn0_dNo_yummy      ( tile_1_0_out_S_noc1_yummy  ),
-    .dyn0_dEo_yummy      ( tile_2_1_out_W_noc1_yummy  ),
-    .dyn0_dWo_yummy      ( dummy_out_E_noc1_yummy  ),
-    .dyn0_dSo_yummy      ( dummy_out_N_noc1_yummy  ),
-
-    .dyn0_dNo            ( tile_2_0_out_N_noc1_data  ),
-    .dyn0_dEo            ( tile_2_0_out_E_noc1_data  ),
-    .dyn0_dWo            ( tile_2_0_out_W_noc1_data  ),
-    .dyn0_dSo            ( tile_2_0_out_S_noc1_data  ),
-    .dyn0_dNo_valid      ( tile_2_0_out_N_noc1_valid ),
-    .dyn0_dEo_valid      ( tile_2_0_out_E_noc1_valid ),
-    .dyn0_dWo_valid      ( tile_2_0_out_W_noc1_valid ),
-    .dyn0_dSo_valid      ( tile_2_0_out_S_noc1_valid ),
-    .dyn0_yummyOut_N     ( tile_2_0_out_N_noc1_yummy ),
-    .dyn0_yummyOut_E     ( tile_2_0_out_E_noc1_yummy ),
-    .dyn0_yummyOut_W     ( tile_2_0_out_W_noc1_yummy ),
-    .dyn0_yummyOut_S     ( tile_2_0_out_S_noc1_yummy ),
-    .dyn1_dataIn_N       ( tile_1_0_out_S_noc2_data   ),
-    .dyn1_dataIn_E       ( tile_2_1_out_W_noc2_data   ),
-    .dyn1_dataIn_W       ( dummy_out_E_noc2_data   ),
-    .dyn1_dataIn_S       ( dummy_out_N_noc2_data   ),
-    .dyn1_validIn_N      ( tile_1_0_out_S_noc2_valid  ),
-    .dyn1_validIn_E      ( tile_2_1_out_W_noc2_valid  ),
-    .dyn1_validIn_W      ( dummy_out_E_noc2_valid  ),
-    .dyn1_validIn_S      ( dummy_out_N_noc2_valid  ),
-    .dyn1_dNo_yummy      ( tile_1_0_out_S_noc2_yummy  ),
-    .dyn1_dEo_yummy      ( tile_2_1_out_W_noc2_yummy  ),
-    .dyn1_dWo_yummy      ( dummy_out_E_noc2_yummy  ),
-    .dyn1_dSo_yummy      ( dummy_out_N_noc2_yummy  ),
-
-    .dyn1_dNo            ( tile_2_0_out_N_noc2_data  ),
-    .dyn1_dEo            ( tile_2_0_out_E_noc2_data  ),
-    .dyn1_dWo            ( tile_2_0_out_W_noc2_data  ),
-    .dyn1_dSo            ( tile_2_0_out_S_noc2_data  ),
-    .dyn1_dNo_valid      ( tile_2_0_out_N_noc2_valid ),
-    .dyn1_dEo_valid      ( tile_2_0_out_E_noc2_valid ),
-    .dyn1_dWo_valid      ( tile_2_0_out_W_noc2_valid ),
-    .dyn1_dSo_valid      ( tile_2_0_out_S_noc2_valid ),
-    .dyn1_yummyOut_N     ( tile_2_0_out_N_noc2_yummy ),
-    .dyn1_yummyOut_E     ( tile_2_0_out_E_noc2_yummy ),
-    .dyn1_yummyOut_W     ( tile_2_0_out_W_noc2_yummy ),
-    .dyn1_yummyOut_S     ( tile_2_0_out_S_noc2_yummy ),
-    .dyn2_dataIn_N       ( tile_1_0_out_S_noc3_data   ),
-    .dyn2_dataIn_E       ( tile_2_1_out_W_noc3_data   ),
-    .dyn2_dataIn_W       ( dummy_out_E_noc3_data   ),
-    .dyn2_dataIn_S       ( dummy_out_N_noc3_data   ),
-    .dyn2_validIn_N      ( tile_1_0_out_S_noc3_valid  ),
-    .dyn2_validIn_E      ( tile_2_1_out_W_noc3_valid  ),
-    .dyn2_validIn_W      ( dummy_out_E_noc3_valid  ),
-    .dyn2_validIn_S      ( dummy_out_N_noc3_valid  ),
-    .dyn2_dNo_yummy      ( tile_1_0_out_S_noc3_yummy  ),
-    .dyn2_dEo_yummy      ( tile_2_1_out_W_noc3_yummy  ),
-    .dyn2_dWo_yummy      ( dummy_out_E_noc3_yummy  ),
-    .dyn2_dSo_yummy      ( dummy_out_N_noc3_yummy  ),
-
-    .dyn2_dNo            ( tile_2_0_out_N_noc3_data  ),
-    .dyn2_dEo            ( tile_2_0_out_E_noc3_data  ),
-    .dyn2_dWo            ( tile_2_0_out_W_noc3_data  ),
-    .dyn2_dSo            ( tile_2_0_out_S_noc3_data  ),
-    .dyn2_dNo_valid      ( tile_2_0_out_N_noc3_valid ),
-    .dyn2_dEo_valid      ( tile_2_0_out_E_noc3_valid ),
-    .dyn2_dWo_valid      ( tile_2_0_out_W_noc3_valid ),
-    .dyn2_dSo_valid      ( tile_2_0_out_S_noc3_valid ),
-    .dyn2_yummyOut_N     ( tile_2_0_out_N_noc3_yummy ),
-    .dyn2_yummyOut_E     ( tile_2_0_out_E_noc3_yummy ),
-    .dyn2_yummyOut_W     ( tile_2_0_out_W_noc3_yummy ),
-    .dyn2_yummyOut_S     ( tile_2_0_out_S_noc3_yummy )
 );
 
 
@@ -1576,15 +1285,15 @@ tile1 (
     .jtag_tiles_ucb_data ( jtag_tiles_ucb_data     ),
 
     .dyn0_dataIn_N       ( dummy_out_S_noc1_data   ),
-    .dyn0_dataIn_E       ( tile_0_2_out_W_noc1_data   ),
+    .dyn0_dataIn_E       ( dummy_out_W_noc1_data   ),
     .dyn0_dataIn_W       ( tile_0_0_out_E_noc1_data   ),
     .dyn0_dataIn_S       ( tile_1_1_out_N_noc1_data   ),
     .dyn0_validIn_N      ( dummy_out_S_noc1_valid  ),
-    .dyn0_validIn_E      ( tile_0_2_out_W_noc1_valid  ),
+    .dyn0_validIn_E      ( dummy_out_W_noc1_valid  ),
     .dyn0_validIn_W      ( tile_0_0_out_E_noc1_valid  ),
     .dyn0_validIn_S      ( tile_1_1_out_N_noc1_valid  ),
     .dyn0_dNo_yummy      ( dummy_out_S_noc1_yummy  ),
-    .dyn0_dEo_yummy      ( tile_0_2_out_W_noc1_yummy  ),
+    .dyn0_dEo_yummy      ( dummy_out_W_noc1_yummy  ),
     .dyn0_dWo_yummy      ( tile_0_0_out_E_noc1_yummy  ),
     .dyn0_dSo_yummy      ( tile_1_1_out_N_noc1_yummy  ),
 
@@ -1601,15 +1310,15 @@ tile1 (
     .dyn0_yummyOut_W     ( tile_0_1_out_W_noc1_yummy ),
     .dyn0_yummyOut_S     ( tile_0_1_out_S_noc1_yummy ),
     .dyn1_dataIn_N       ( dummy_out_S_noc2_data   ),
-    .dyn1_dataIn_E       ( tile_0_2_out_W_noc2_data   ),
+    .dyn1_dataIn_E       ( dummy_out_W_noc2_data   ),
     .dyn1_dataIn_W       ( tile_0_0_out_E_noc2_data   ),
     .dyn1_dataIn_S       ( tile_1_1_out_N_noc2_data   ),
     .dyn1_validIn_N      ( dummy_out_S_noc2_valid  ),
-    .dyn1_validIn_E      ( tile_0_2_out_W_noc2_valid  ),
+    .dyn1_validIn_E      ( dummy_out_W_noc2_valid  ),
     .dyn1_validIn_W      ( tile_0_0_out_E_noc2_valid  ),
     .dyn1_validIn_S      ( tile_1_1_out_N_noc2_valid  ),
     .dyn1_dNo_yummy      ( dummy_out_S_noc2_yummy  ),
-    .dyn1_dEo_yummy      ( tile_0_2_out_W_noc2_yummy  ),
+    .dyn1_dEo_yummy      ( dummy_out_W_noc2_yummy  ),
     .dyn1_dWo_yummy      ( tile_0_0_out_E_noc2_yummy  ),
     .dyn1_dSo_yummy      ( tile_1_1_out_N_noc2_yummy  ),
 
@@ -1626,15 +1335,15 @@ tile1 (
     .dyn1_yummyOut_W     ( tile_0_1_out_W_noc2_yummy ),
     .dyn1_yummyOut_S     ( tile_0_1_out_S_noc2_yummy ),
     .dyn2_dataIn_N       ( dummy_out_S_noc3_data   ),
-    .dyn2_dataIn_E       ( tile_0_2_out_W_noc3_data   ),
+    .dyn2_dataIn_E       ( dummy_out_W_noc3_data   ),
     .dyn2_dataIn_W       ( tile_0_0_out_E_noc3_data   ),
     .dyn2_dataIn_S       ( tile_1_1_out_N_noc3_data   ),
     .dyn2_validIn_N      ( dummy_out_S_noc3_valid  ),
-    .dyn2_validIn_E      ( tile_0_2_out_W_noc3_valid  ),
+    .dyn2_validIn_E      ( dummy_out_W_noc3_valid  ),
     .dyn2_validIn_W      ( tile_0_0_out_E_noc3_valid  ),
     .dyn2_validIn_S      ( tile_1_1_out_N_noc3_valid  ),
     .dyn2_dNo_yummy      ( dummy_out_S_noc3_yummy  ),
-    .dyn2_dEo_yummy      ( tile_0_2_out_W_noc3_yummy  ),
+    .dyn2_dEo_yummy      ( dummy_out_W_noc3_yummy  ),
     .dyn2_dWo_yummy      ( tile_0_0_out_E_noc3_yummy  ),
     .dyn2_dSo_yummy      ( tile_1_1_out_N_noc3_yummy  ),
 
@@ -1654,40 +1363,40 @@ tile1 (
 
 
 tile #(.CORE_ADDR(257), .TILE_TYPE(`ARIANE_RV64_TILE))
-tile4 (
+tile3 (
     .clk                (clk_muxed),
     .rst_n              (rst_n_inter_sync),
-    .clk_en             (ctap_clk_en_inter[4] && clk_en_inter),
+    .clk_en             (ctap_clk_en_inter[3] && clk_en_inter),
     .default_chipid             (14'b0),    // the first chip
     .default_coreid_x           (8'd1),
     .default_coreid_y           (8'd1),
-    .flat_tileid                (`JTAG_FLATID_WIDTH'd4),
+    .flat_tileid                (`JTAG_FLATID_WIDTH'd3),
 `ifdef PITON_ARIANE
-    .debug_req_i         ( debug_req_i[4]   ),
-    .unavailable_o       ( unavailable_o[4] ),
-    .timer_irq_i         ( timer_irq_i[4]   ),
-    .ipi_i               ( ipi_i[4]         ),
-    .irq_i               ( irq_i[4*2 +: 2]  ),
+    .debug_req_i         ( debug_req_i[3]   ),
+    .unavailable_o       ( unavailable_o[3] ),
+    .timer_irq_i         ( timer_irq_i[3]   ),
+    .ipi_i               ( ipi_i[3]         ),
+    .irq_i               ( irq_i[3*2 +: 2]  ),
 `endif
     // ucb from tiles to jtag
-    .tile_jtag_ucb_val   ( tile4_jtag_ucb_val      ),
-    .tile_jtag_ucb_data  ( tile4_jtag_ucb_data     ),
+    .tile_jtag_ucb_val   ( tile3_jtag_ucb_val      ),
+    .tile_jtag_ucb_data  ( tile3_jtag_ucb_data     ),
     // ucb from jtag to tiles
     .jtag_tiles_ucb_val  ( jtag_tiles_ucb_val      ),
     .jtag_tiles_ucb_data ( jtag_tiles_ucb_data     ),
 
     .dyn0_dataIn_N       ( tile_0_1_out_S_noc1_data   ),
-    .dyn0_dataIn_E       ( tile_1_2_out_W_noc1_data   ),
+    .dyn0_dataIn_E       ( dummy_out_W_noc1_data   ),
     .dyn0_dataIn_W       ( tile_1_0_out_E_noc1_data   ),
-    .dyn0_dataIn_S       ( tile_2_1_out_N_noc1_data   ),
+    .dyn0_dataIn_S       ( dummy_out_N_noc1_data   ),
     .dyn0_validIn_N      ( tile_0_1_out_S_noc1_valid  ),
-    .dyn0_validIn_E      ( tile_1_2_out_W_noc1_valid  ),
+    .dyn0_validIn_E      ( dummy_out_W_noc1_valid  ),
     .dyn0_validIn_W      ( tile_1_0_out_E_noc1_valid  ),
-    .dyn0_validIn_S      ( tile_2_1_out_N_noc1_valid  ),
+    .dyn0_validIn_S      ( dummy_out_N_noc1_valid  ),
     .dyn0_dNo_yummy      ( tile_0_1_out_S_noc1_yummy  ),
-    .dyn0_dEo_yummy      ( tile_1_2_out_W_noc1_yummy  ),
+    .dyn0_dEo_yummy      ( dummy_out_W_noc1_yummy  ),
     .dyn0_dWo_yummy      ( tile_1_0_out_E_noc1_yummy  ),
-    .dyn0_dSo_yummy      ( tile_2_1_out_N_noc1_yummy  ),
+    .dyn0_dSo_yummy      ( dummy_out_N_noc1_yummy  ),
 
     .dyn0_dNo            ( tile_1_1_out_N_noc1_data  ),
     .dyn0_dEo            ( tile_1_1_out_E_noc1_data  ),
@@ -1702,17 +1411,17 @@ tile4 (
     .dyn0_yummyOut_W     ( tile_1_1_out_W_noc1_yummy ),
     .dyn0_yummyOut_S     ( tile_1_1_out_S_noc1_yummy ),
     .dyn1_dataIn_N       ( tile_0_1_out_S_noc2_data   ),
-    .dyn1_dataIn_E       ( tile_1_2_out_W_noc2_data   ),
+    .dyn1_dataIn_E       ( dummy_out_W_noc2_data   ),
     .dyn1_dataIn_W       ( tile_1_0_out_E_noc2_data   ),
-    .dyn1_dataIn_S       ( tile_2_1_out_N_noc2_data   ),
+    .dyn1_dataIn_S       ( dummy_out_N_noc2_data   ),
     .dyn1_validIn_N      ( tile_0_1_out_S_noc2_valid  ),
-    .dyn1_validIn_E      ( tile_1_2_out_W_noc2_valid  ),
+    .dyn1_validIn_E      ( dummy_out_W_noc2_valid  ),
     .dyn1_validIn_W      ( tile_1_0_out_E_noc2_valid  ),
-    .dyn1_validIn_S      ( tile_2_1_out_N_noc2_valid  ),
+    .dyn1_validIn_S      ( dummy_out_N_noc2_valid  ),
     .dyn1_dNo_yummy      ( tile_0_1_out_S_noc2_yummy  ),
-    .dyn1_dEo_yummy      ( tile_1_2_out_W_noc2_yummy  ),
+    .dyn1_dEo_yummy      ( dummy_out_W_noc2_yummy  ),
     .dyn1_dWo_yummy      ( tile_1_0_out_E_noc2_yummy  ),
-    .dyn1_dSo_yummy      ( tile_2_1_out_N_noc2_yummy  ),
+    .dyn1_dSo_yummy      ( dummy_out_N_noc2_yummy  ),
 
     .dyn1_dNo            ( tile_1_1_out_N_noc2_data  ),
     .dyn1_dEo            ( tile_1_1_out_E_noc2_data  ),
@@ -1727,17 +1436,17 @@ tile4 (
     .dyn1_yummyOut_W     ( tile_1_1_out_W_noc2_yummy ),
     .dyn1_yummyOut_S     ( tile_1_1_out_S_noc2_yummy ),
     .dyn2_dataIn_N       ( tile_0_1_out_S_noc3_data   ),
-    .dyn2_dataIn_E       ( tile_1_2_out_W_noc3_data   ),
+    .dyn2_dataIn_E       ( dummy_out_W_noc3_data   ),
     .dyn2_dataIn_W       ( tile_1_0_out_E_noc3_data   ),
-    .dyn2_dataIn_S       ( tile_2_1_out_N_noc3_data   ),
+    .dyn2_dataIn_S       ( dummy_out_N_noc3_data   ),
     .dyn2_validIn_N      ( tile_0_1_out_S_noc3_valid  ),
-    .dyn2_validIn_E      ( tile_1_2_out_W_noc3_valid  ),
+    .dyn2_validIn_E      ( dummy_out_W_noc3_valid  ),
     .dyn2_validIn_W      ( tile_1_0_out_E_noc3_valid  ),
-    .dyn2_validIn_S      ( tile_2_1_out_N_noc3_valid  ),
+    .dyn2_validIn_S      ( dummy_out_N_noc3_valid  ),
     .dyn2_dNo_yummy      ( tile_0_1_out_S_noc3_yummy  ),
-    .dyn2_dEo_yummy      ( tile_1_2_out_W_noc3_yummy  ),
+    .dyn2_dEo_yummy      ( dummy_out_W_noc3_yummy  ),
     .dyn2_dWo_yummy      ( tile_1_0_out_E_noc3_yummy  ),
-    .dyn2_dSo_yummy      ( tile_2_1_out_N_noc3_yummy  ),
+    .dyn2_dSo_yummy      ( dummy_out_N_noc3_yummy  ),
 
     .dyn2_dNo            ( tile_1_1_out_N_noc3_data  ),
     .dyn2_dEo            ( tile_1_1_out_E_noc3_data  ),
@@ -1751,410 +1460,6 @@ tile4 (
     .dyn2_yummyOut_E     ( tile_1_1_out_E_noc3_yummy ),
     .dyn2_yummyOut_W     ( tile_1_1_out_W_noc3_yummy ),
     .dyn2_yummyOut_S     ( tile_1_1_out_S_noc3_yummy )
-);
-
-
-tile #(.CORE_ADDR(258), .TILE_TYPE(`ARIANE_RV64_TILE))
-tile7 (
-    .clk                (clk_muxed),
-    .rst_n              (rst_n_inter_sync),
-    .clk_en             (ctap_clk_en_inter[7] && clk_en_inter),
-    .default_chipid             (14'b0),    // the first chip
-    .default_coreid_x           (8'd1),
-    .default_coreid_y           (8'd2),
-    .flat_tileid                (`JTAG_FLATID_WIDTH'd7),
-`ifdef PITON_ARIANE
-    .debug_req_i         ( debug_req_i[7]   ),
-    .unavailable_o       ( unavailable_o[7] ),
-    .timer_irq_i         ( timer_irq_i[7]   ),
-    .ipi_i               ( ipi_i[7]         ),
-    .irq_i               ( irq_i[7*2 +: 2]  ),
-`endif
-    // ucb from tiles to jtag
-    .tile_jtag_ucb_val   ( tile7_jtag_ucb_val      ),
-    .tile_jtag_ucb_data  ( tile7_jtag_ucb_data     ),
-    // ucb from jtag to tiles
-    .jtag_tiles_ucb_val  ( jtag_tiles_ucb_val      ),
-    .jtag_tiles_ucb_data ( jtag_tiles_ucb_data     ),
-
-    .dyn0_dataIn_N       ( tile_1_1_out_S_noc1_data   ),
-    .dyn0_dataIn_E       ( tile_2_2_out_W_noc1_data   ),
-    .dyn0_dataIn_W       ( tile_2_0_out_E_noc1_data   ),
-    .dyn0_dataIn_S       ( dummy_out_N_noc1_data   ),
-    .dyn0_validIn_N      ( tile_1_1_out_S_noc1_valid  ),
-    .dyn0_validIn_E      ( tile_2_2_out_W_noc1_valid  ),
-    .dyn0_validIn_W      ( tile_2_0_out_E_noc1_valid  ),
-    .dyn0_validIn_S      ( dummy_out_N_noc1_valid  ),
-    .dyn0_dNo_yummy      ( tile_1_1_out_S_noc1_yummy  ),
-    .dyn0_dEo_yummy      ( tile_2_2_out_W_noc1_yummy  ),
-    .dyn0_dWo_yummy      ( tile_2_0_out_E_noc1_yummy  ),
-    .dyn0_dSo_yummy      ( dummy_out_N_noc1_yummy  ),
-
-    .dyn0_dNo            ( tile_2_1_out_N_noc1_data  ),
-    .dyn0_dEo            ( tile_2_1_out_E_noc1_data  ),
-    .dyn0_dWo            ( tile_2_1_out_W_noc1_data  ),
-    .dyn0_dSo            ( tile_2_1_out_S_noc1_data  ),
-    .dyn0_dNo_valid      ( tile_2_1_out_N_noc1_valid ),
-    .dyn0_dEo_valid      ( tile_2_1_out_E_noc1_valid ),
-    .dyn0_dWo_valid      ( tile_2_1_out_W_noc1_valid ),
-    .dyn0_dSo_valid      ( tile_2_1_out_S_noc1_valid ),
-    .dyn0_yummyOut_N     ( tile_2_1_out_N_noc1_yummy ),
-    .dyn0_yummyOut_E     ( tile_2_1_out_E_noc1_yummy ),
-    .dyn0_yummyOut_W     ( tile_2_1_out_W_noc1_yummy ),
-    .dyn0_yummyOut_S     ( tile_2_1_out_S_noc1_yummy ),
-    .dyn1_dataIn_N       ( tile_1_1_out_S_noc2_data   ),
-    .dyn1_dataIn_E       ( tile_2_2_out_W_noc2_data   ),
-    .dyn1_dataIn_W       ( tile_2_0_out_E_noc2_data   ),
-    .dyn1_dataIn_S       ( dummy_out_N_noc2_data   ),
-    .dyn1_validIn_N      ( tile_1_1_out_S_noc2_valid  ),
-    .dyn1_validIn_E      ( tile_2_2_out_W_noc2_valid  ),
-    .dyn1_validIn_W      ( tile_2_0_out_E_noc2_valid  ),
-    .dyn1_validIn_S      ( dummy_out_N_noc2_valid  ),
-    .dyn1_dNo_yummy      ( tile_1_1_out_S_noc2_yummy  ),
-    .dyn1_dEo_yummy      ( tile_2_2_out_W_noc2_yummy  ),
-    .dyn1_dWo_yummy      ( tile_2_0_out_E_noc2_yummy  ),
-    .dyn1_dSo_yummy      ( dummy_out_N_noc2_yummy  ),
-
-    .dyn1_dNo            ( tile_2_1_out_N_noc2_data  ),
-    .dyn1_dEo            ( tile_2_1_out_E_noc2_data  ),
-    .dyn1_dWo            ( tile_2_1_out_W_noc2_data  ),
-    .dyn1_dSo            ( tile_2_1_out_S_noc2_data  ),
-    .dyn1_dNo_valid      ( tile_2_1_out_N_noc2_valid ),
-    .dyn1_dEo_valid      ( tile_2_1_out_E_noc2_valid ),
-    .dyn1_dWo_valid      ( tile_2_1_out_W_noc2_valid ),
-    .dyn1_dSo_valid      ( tile_2_1_out_S_noc2_valid ),
-    .dyn1_yummyOut_N     ( tile_2_1_out_N_noc2_yummy ),
-    .dyn1_yummyOut_E     ( tile_2_1_out_E_noc2_yummy ),
-    .dyn1_yummyOut_W     ( tile_2_1_out_W_noc2_yummy ),
-    .dyn1_yummyOut_S     ( tile_2_1_out_S_noc2_yummy ),
-    .dyn2_dataIn_N       ( tile_1_1_out_S_noc3_data   ),
-    .dyn2_dataIn_E       ( tile_2_2_out_W_noc3_data   ),
-    .dyn2_dataIn_W       ( tile_2_0_out_E_noc3_data   ),
-    .dyn2_dataIn_S       ( dummy_out_N_noc3_data   ),
-    .dyn2_validIn_N      ( tile_1_1_out_S_noc3_valid  ),
-    .dyn2_validIn_E      ( tile_2_2_out_W_noc3_valid  ),
-    .dyn2_validIn_W      ( tile_2_0_out_E_noc3_valid  ),
-    .dyn2_validIn_S      ( dummy_out_N_noc3_valid  ),
-    .dyn2_dNo_yummy      ( tile_1_1_out_S_noc3_yummy  ),
-    .dyn2_dEo_yummy      ( tile_2_2_out_W_noc3_yummy  ),
-    .dyn2_dWo_yummy      ( tile_2_0_out_E_noc3_yummy  ),
-    .dyn2_dSo_yummy      ( dummy_out_N_noc3_yummy  ),
-
-    .dyn2_dNo            ( tile_2_1_out_N_noc3_data  ),
-    .dyn2_dEo            ( tile_2_1_out_E_noc3_data  ),
-    .dyn2_dWo            ( tile_2_1_out_W_noc3_data  ),
-    .dyn2_dSo            ( tile_2_1_out_S_noc3_data  ),
-    .dyn2_dNo_valid      ( tile_2_1_out_N_noc3_valid ),
-    .dyn2_dEo_valid      ( tile_2_1_out_E_noc3_valid ),
-    .dyn2_dWo_valid      ( tile_2_1_out_W_noc3_valid ),
-    .dyn2_dSo_valid      ( tile_2_1_out_S_noc3_valid ),
-    .dyn2_yummyOut_N     ( tile_2_1_out_N_noc3_yummy ),
-    .dyn2_yummyOut_E     ( tile_2_1_out_E_noc3_yummy ),
-    .dyn2_yummyOut_W     ( tile_2_1_out_W_noc3_yummy ),
-    .dyn2_yummyOut_S     ( tile_2_1_out_S_noc3_yummy )
-);
-
-
-tile #(.CORE_ADDR(512), .TILE_TYPE(`ARIANE_RV64_TILE))
-tile2 (
-    .clk                (clk_muxed),
-    .rst_n              (rst_n_inter_sync),
-    .clk_en             (ctap_clk_en_inter[2] && clk_en_inter),
-    .default_chipid             (14'b0),    // the first chip
-    .default_coreid_x           (8'd2),
-    .default_coreid_y           (8'd0),
-    .flat_tileid                (`JTAG_FLATID_WIDTH'd2),
-`ifdef PITON_ARIANE
-    .debug_req_i         ( debug_req_i[2]   ),
-    .unavailable_o       ( unavailable_o[2] ),
-    .timer_irq_i         ( timer_irq_i[2]   ),
-    .ipi_i               ( ipi_i[2]         ),
-    .irq_i               ( irq_i[2*2 +: 2]  ),
-`endif
-    // ucb from tiles to jtag
-    .tile_jtag_ucb_val   ( tile2_jtag_ucb_val      ),
-    .tile_jtag_ucb_data  ( tile2_jtag_ucb_data     ),
-    // ucb from jtag to tiles
-    .jtag_tiles_ucb_val  ( jtag_tiles_ucb_val      ),
-    .jtag_tiles_ucb_data ( jtag_tiles_ucb_data     ),
-
-    .dyn0_dataIn_N       ( dummy_out_S_noc1_data   ),
-    .dyn0_dataIn_E       ( dummy_out_W_noc1_data   ),
-    .dyn0_dataIn_W       ( tile_0_1_out_E_noc1_data   ),
-    .dyn0_dataIn_S       ( tile_1_2_out_N_noc1_data   ),
-    .dyn0_validIn_N      ( dummy_out_S_noc1_valid  ),
-    .dyn0_validIn_E      ( dummy_out_W_noc1_valid  ),
-    .dyn0_validIn_W      ( tile_0_1_out_E_noc1_valid  ),
-    .dyn0_validIn_S      ( tile_1_2_out_N_noc1_valid  ),
-    .dyn0_dNo_yummy      ( dummy_out_S_noc1_yummy  ),
-    .dyn0_dEo_yummy      ( dummy_out_W_noc1_yummy  ),
-    .dyn0_dWo_yummy      ( tile_0_1_out_E_noc1_yummy  ),
-    .dyn0_dSo_yummy      ( tile_1_2_out_N_noc1_yummy  ),
-
-    .dyn0_dNo            ( tile_0_2_out_N_noc1_data  ),
-    .dyn0_dEo            ( tile_0_2_out_E_noc1_data  ),
-    .dyn0_dWo            ( tile_0_2_out_W_noc1_data  ),
-    .dyn0_dSo            ( tile_0_2_out_S_noc1_data  ),
-    .dyn0_dNo_valid      ( tile_0_2_out_N_noc1_valid ),
-    .dyn0_dEo_valid      ( tile_0_2_out_E_noc1_valid ),
-    .dyn0_dWo_valid      ( tile_0_2_out_W_noc1_valid ),
-    .dyn0_dSo_valid      ( tile_0_2_out_S_noc1_valid ),
-    .dyn0_yummyOut_N     ( tile_0_2_out_N_noc1_yummy ),
-    .dyn0_yummyOut_E     ( tile_0_2_out_E_noc1_yummy ),
-    .dyn0_yummyOut_W     ( tile_0_2_out_W_noc1_yummy ),
-    .dyn0_yummyOut_S     ( tile_0_2_out_S_noc1_yummy ),
-    .dyn1_dataIn_N       ( dummy_out_S_noc2_data   ),
-    .dyn1_dataIn_E       ( dummy_out_W_noc2_data   ),
-    .dyn1_dataIn_W       ( tile_0_1_out_E_noc2_data   ),
-    .dyn1_dataIn_S       ( tile_1_2_out_N_noc2_data   ),
-    .dyn1_validIn_N      ( dummy_out_S_noc2_valid  ),
-    .dyn1_validIn_E      ( dummy_out_W_noc2_valid  ),
-    .dyn1_validIn_W      ( tile_0_1_out_E_noc2_valid  ),
-    .dyn1_validIn_S      ( tile_1_2_out_N_noc2_valid  ),
-    .dyn1_dNo_yummy      ( dummy_out_S_noc2_yummy  ),
-    .dyn1_dEo_yummy      ( dummy_out_W_noc2_yummy  ),
-    .dyn1_dWo_yummy      ( tile_0_1_out_E_noc2_yummy  ),
-    .dyn1_dSo_yummy      ( tile_1_2_out_N_noc2_yummy  ),
-
-    .dyn1_dNo            ( tile_0_2_out_N_noc2_data  ),
-    .dyn1_dEo            ( tile_0_2_out_E_noc2_data  ),
-    .dyn1_dWo            ( tile_0_2_out_W_noc2_data  ),
-    .dyn1_dSo            ( tile_0_2_out_S_noc2_data  ),
-    .dyn1_dNo_valid      ( tile_0_2_out_N_noc2_valid ),
-    .dyn1_dEo_valid      ( tile_0_2_out_E_noc2_valid ),
-    .dyn1_dWo_valid      ( tile_0_2_out_W_noc2_valid ),
-    .dyn1_dSo_valid      ( tile_0_2_out_S_noc2_valid ),
-    .dyn1_yummyOut_N     ( tile_0_2_out_N_noc2_yummy ),
-    .dyn1_yummyOut_E     ( tile_0_2_out_E_noc2_yummy ),
-    .dyn1_yummyOut_W     ( tile_0_2_out_W_noc2_yummy ),
-    .dyn1_yummyOut_S     ( tile_0_2_out_S_noc2_yummy ),
-    .dyn2_dataIn_N       ( dummy_out_S_noc3_data   ),
-    .dyn2_dataIn_E       ( dummy_out_W_noc3_data   ),
-    .dyn2_dataIn_W       ( tile_0_1_out_E_noc3_data   ),
-    .dyn2_dataIn_S       ( tile_1_2_out_N_noc3_data   ),
-    .dyn2_validIn_N      ( dummy_out_S_noc3_valid  ),
-    .dyn2_validIn_E      ( dummy_out_W_noc3_valid  ),
-    .dyn2_validIn_W      ( tile_0_1_out_E_noc3_valid  ),
-    .dyn2_validIn_S      ( tile_1_2_out_N_noc3_valid  ),
-    .dyn2_dNo_yummy      ( dummy_out_S_noc3_yummy  ),
-    .dyn2_dEo_yummy      ( dummy_out_W_noc3_yummy  ),
-    .dyn2_dWo_yummy      ( tile_0_1_out_E_noc3_yummy  ),
-    .dyn2_dSo_yummy      ( tile_1_2_out_N_noc3_yummy  ),
-
-    .dyn2_dNo            ( tile_0_2_out_N_noc3_data  ),
-    .dyn2_dEo            ( tile_0_2_out_E_noc3_data  ),
-    .dyn2_dWo            ( tile_0_2_out_W_noc3_data  ),
-    .dyn2_dSo            ( tile_0_2_out_S_noc3_data  ),
-    .dyn2_dNo_valid      ( tile_0_2_out_N_noc3_valid ),
-    .dyn2_dEo_valid      ( tile_0_2_out_E_noc3_valid ),
-    .dyn2_dWo_valid      ( tile_0_2_out_W_noc3_valid ),
-    .dyn2_dSo_valid      ( tile_0_2_out_S_noc3_valid ),
-    .dyn2_yummyOut_N     ( tile_0_2_out_N_noc3_yummy ),
-    .dyn2_yummyOut_E     ( tile_0_2_out_E_noc3_yummy ),
-    .dyn2_yummyOut_W     ( tile_0_2_out_W_noc3_yummy ),
-    .dyn2_yummyOut_S     ( tile_0_2_out_S_noc3_yummy )
-);
-
-
-tile #(.CORE_ADDR(513), .TILE_TYPE(`ARIANE_RV64_TILE))
-tile5 (
-    .clk                (clk_muxed),
-    .rst_n              (rst_n_inter_sync),
-    .clk_en             (ctap_clk_en_inter[5] && clk_en_inter),
-    .default_chipid             (14'b0),    // the first chip
-    .default_coreid_x           (8'd2),
-    .default_coreid_y           (8'd1),
-    .flat_tileid                (`JTAG_FLATID_WIDTH'd5),
-`ifdef PITON_ARIANE
-    .debug_req_i         ( debug_req_i[5]   ),
-    .unavailable_o       ( unavailable_o[5] ),
-    .timer_irq_i         ( timer_irq_i[5]   ),
-    .ipi_i               ( ipi_i[5]         ),
-    .irq_i               ( irq_i[5*2 +: 2]  ),
-`endif
-    // ucb from tiles to jtag
-    .tile_jtag_ucb_val   ( tile5_jtag_ucb_val      ),
-    .tile_jtag_ucb_data  ( tile5_jtag_ucb_data     ),
-    // ucb from jtag to tiles
-    .jtag_tiles_ucb_val  ( jtag_tiles_ucb_val      ),
-    .jtag_tiles_ucb_data ( jtag_tiles_ucb_data     ),
-
-    .dyn0_dataIn_N       ( tile_0_2_out_S_noc1_data   ),
-    .dyn0_dataIn_E       ( dummy_out_W_noc1_data   ),
-    .dyn0_dataIn_W       ( tile_1_1_out_E_noc1_data   ),
-    .dyn0_dataIn_S       ( tile_2_2_out_N_noc1_data   ),
-    .dyn0_validIn_N      ( tile_0_2_out_S_noc1_valid  ),
-    .dyn0_validIn_E      ( dummy_out_W_noc1_valid  ),
-    .dyn0_validIn_W      ( tile_1_1_out_E_noc1_valid  ),
-    .dyn0_validIn_S      ( tile_2_2_out_N_noc1_valid  ),
-    .dyn0_dNo_yummy      ( tile_0_2_out_S_noc1_yummy  ),
-    .dyn0_dEo_yummy      ( dummy_out_W_noc1_yummy  ),
-    .dyn0_dWo_yummy      ( tile_1_1_out_E_noc1_yummy  ),
-    .dyn0_dSo_yummy      ( tile_2_2_out_N_noc1_yummy  ),
-
-    .dyn0_dNo            ( tile_1_2_out_N_noc1_data  ),
-    .dyn0_dEo            ( tile_1_2_out_E_noc1_data  ),
-    .dyn0_dWo            ( tile_1_2_out_W_noc1_data  ),
-    .dyn0_dSo            ( tile_1_2_out_S_noc1_data  ),
-    .dyn0_dNo_valid      ( tile_1_2_out_N_noc1_valid ),
-    .dyn0_dEo_valid      ( tile_1_2_out_E_noc1_valid ),
-    .dyn0_dWo_valid      ( tile_1_2_out_W_noc1_valid ),
-    .dyn0_dSo_valid      ( tile_1_2_out_S_noc1_valid ),
-    .dyn0_yummyOut_N     ( tile_1_2_out_N_noc1_yummy ),
-    .dyn0_yummyOut_E     ( tile_1_2_out_E_noc1_yummy ),
-    .dyn0_yummyOut_W     ( tile_1_2_out_W_noc1_yummy ),
-    .dyn0_yummyOut_S     ( tile_1_2_out_S_noc1_yummy ),
-    .dyn1_dataIn_N       ( tile_0_2_out_S_noc2_data   ),
-    .dyn1_dataIn_E       ( dummy_out_W_noc2_data   ),
-    .dyn1_dataIn_W       ( tile_1_1_out_E_noc2_data   ),
-    .dyn1_dataIn_S       ( tile_2_2_out_N_noc2_data   ),
-    .dyn1_validIn_N      ( tile_0_2_out_S_noc2_valid  ),
-    .dyn1_validIn_E      ( dummy_out_W_noc2_valid  ),
-    .dyn1_validIn_W      ( tile_1_1_out_E_noc2_valid  ),
-    .dyn1_validIn_S      ( tile_2_2_out_N_noc2_valid  ),
-    .dyn1_dNo_yummy      ( tile_0_2_out_S_noc2_yummy  ),
-    .dyn1_dEo_yummy      ( dummy_out_W_noc2_yummy  ),
-    .dyn1_dWo_yummy      ( tile_1_1_out_E_noc2_yummy  ),
-    .dyn1_dSo_yummy      ( tile_2_2_out_N_noc2_yummy  ),
-
-    .dyn1_dNo            ( tile_1_2_out_N_noc2_data  ),
-    .dyn1_dEo            ( tile_1_2_out_E_noc2_data  ),
-    .dyn1_dWo            ( tile_1_2_out_W_noc2_data  ),
-    .dyn1_dSo            ( tile_1_2_out_S_noc2_data  ),
-    .dyn1_dNo_valid      ( tile_1_2_out_N_noc2_valid ),
-    .dyn1_dEo_valid      ( tile_1_2_out_E_noc2_valid ),
-    .dyn1_dWo_valid      ( tile_1_2_out_W_noc2_valid ),
-    .dyn1_dSo_valid      ( tile_1_2_out_S_noc2_valid ),
-    .dyn1_yummyOut_N     ( tile_1_2_out_N_noc2_yummy ),
-    .dyn1_yummyOut_E     ( tile_1_2_out_E_noc2_yummy ),
-    .dyn1_yummyOut_W     ( tile_1_2_out_W_noc2_yummy ),
-    .dyn1_yummyOut_S     ( tile_1_2_out_S_noc2_yummy ),
-    .dyn2_dataIn_N       ( tile_0_2_out_S_noc3_data   ),
-    .dyn2_dataIn_E       ( dummy_out_W_noc3_data   ),
-    .dyn2_dataIn_W       ( tile_1_1_out_E_noc3_data   ),
-    .dyn2_dataIn_S       ( tile_2_2_out_N_noc3_data   ),
-    .dyn2_validIn_N      ( tile_0_2_out_S_noc3_valid  ),
-    .dyn2_validIn_E      ( dummy_out_W_noc3_valid  ),
-    .dyn2_validIn_W      ( tile_1_1_out_E_noc3_valid  ),
-    .dyn2_validIn_S      ( tile_2_2_out_N_noc3_valid  ),
-    .dyn2_dNo_yummy      ( tile_0_2_out_S_noc3_yummy  ),
-    .dyn2_dEo_yummy      ( dummy_out_W_noc3_yummy  ),
-    .dyn2_dWo_yummy      ( tile_1_1_out_E_noc3_yummy  ),
-    .dyn2_dSo_yummy      ( tile_2_2_out_N_noc3_yummy  ),
-
-    .dyn2_dNo            ( tile_1_2_out_N_noc3_data  ),
-    .dyn2_dEo            ( tile_1_2_out_E_noc3_data  ),
-    .dyn2_dWo            ( tile_1_2_out_W_noc3_data  ),
-    .dyn2_dSo            ( tile_1_2_out_S_noc3_data  ),
-    .dyn2_dNo_valid      ( tile_1_2_out_N_noc3_valid ),
-    .dyn2_dEo_valid      ( tile_1_2_out_E_noc3_valid ),
-    .dyn2_dWo_valid      ( tile_1_2_out_W_noc3_valid ),
-    .dyn2_dSo_valid      ( tile_1_2_out_S_noc3_valid ),
-    .dyn2_yummyOut_N     ( tile_1_2_out_N_noc3_yummy ),
-    .dyn2_yummyOut_E     ( tile_1_2_out_E_noc3_yummy ),
-    .dyn2_yummyOut_W     ( tile_1_2_out_W_noc3_yummy ),
-    .dyn2_yummyOut_S     ( tile_1_2_out_S_noc3_yummy )
-);
-
-
-tile #(.CORE_ADDR(514), .TILE_TYPE(`ARIANE_RV64_TILE))
-tile8 (
-    .clk                (clk_muxed),
-    .rst_n              (rst_n_inter_sync),
-    .clk_en             (ctap_clk_en_inter[8] && clk_en_inter),
-    .default_chipid             (14'b0),    // the first chip
-    .default_coreid_x           (8'd2),
-    .default_coreid_y           (8'd2),
-    .flat_tileid                (`JTAG_FLATID_WIDTH'd8),
-`ifdef PITON_ARIANE
-    .debug_req_i         ( debug_req_i[8]   ),
-    .unavailable_o       ( unavailable_o[8] ),
-    .timer_irq_i         ( timer_irq_i[8]   ),
-    .ipi_i               ( ipi_i[8]         ),
-    .irq_i               ( irq_i[8*2 +: 2]  ),
-`endif
-    // ucb from tiles to jtag
-    .tile_jtag_ucb_val   ( tile8_jtag_ucb_val      ),
-    .tile_jtag_ucb_data  ( tile8_jtag_ucb_data     ),
-    // ucb from jtag to tiles
-    .jtag_tiles_ucb_val  ( jtag_tiles_ucb_val      ),
-    .jtag_tiles_ucb_data ( jtag_tiles_ucb_data     ),
-
-    .dyn0_dataIn_N       ( tile_1_2_out_S_noc1_data   ),
-    .dyn0_dataIn_E       ( dummy_out_W_noc1_data   ),
-    .dyn0_dataIn_W       ( tile_2_1_out_E_noc1_data   ),
-    .dyn0_dataIn_S       ( dummy_out_N_noc1_data   ),
-    .dyn0_validIn_N      ( tile_1_2_out_S_noc1_valid  ),
-    .dyn0_validIn_E      ( dummy_out_W_noc1_valid  ),
-    .dyn0_validIn_W      ( tile_2_1_out_E_noc1_valid  ),
-    .dyn0_validIn_S      ( dummy_out_N_noc1_valid  ),
-    .dyn0_dNo_yummy      ( tile_1_2_out_S_noc1_yummy  ),
-    .dyn0_dEo_yummy      ( dummy_out_W_noc1_yummy  ),
-    .dyn0_dWo_yummy      ( tile_2_1_out_E_noc1_yummy  ),
-    .dyn0_dSo_yummy      ( dummy_out_N_noc1_yummy  ),
-
-    .dyn0_dNo            ( tile_2_2_out_N_noc1_data  ),
-    .dyn0_dEo            ( tile_2_2_out_E_noc1_data  ),
-    .dyn0_dWo            ( tile_2_2_out_W_noc1_data  ),
-    .dyn0_dSo            ( tile_2_2_out_S_noc1_data  ),
-    .dyn0_dNo_valid      ( tile_2_2_out_N_noc1_valid ),
-    .dyn0_dEo_valid      ( tile_2_2_out_E_noc1_valid ),
-    .dyn0_dWo_valid      ( tile_2_2_out_W_noc1_valid ),
-    .dyn0_dSo_valid      ( tile_2_2_out_S_noc1_valid ),
-    .dyn0_yummyOut_N     ( tile_2_2_out_N_noc1_yummy ),
-    .dyn0_yummyOut_E     ( tile_2_2_out_E_noc1_yummy ),
-    .dyn0_yummyOut_W     ( tile_2_2_out_W_noc1_yummy ),
-    .dyn0_yummyOut_S     ( tile_2_2_out_S_noc1_yummy ),
-    .dyn1_dataIn_N       ( tile_1_2_out_S_noc2_data   ),
-    .dyn1_dataIn_E       ( dummy_out_W_noc2_data   ),
-    .dyn1_dataIn_W       ( tile_2_1_out_E_noc2_data   ),
-    .dyn1_dataIn_S       ( dummy_out_N_noc2_data   ),
-    .dyn1_validIn_N      ( tile_1_2_out_S_noc2_valid  ),
-    .dyn1_validIn_E      ( dummy_out_W_noc2_valid  ),
-    .dyn1_validIn_W      ( tile_2_1_out_E_noc2_valid  ),
-    .dyn1_validIn_S      ( dummy_out_N_noc2_valid  ),
-    .dyn1_dNo_yummy      ( tile_1_2_out_S_noc2_yummy  ),
-    .dyn1_dEo_yummy      ( dummy_out_W_noc2_yummy  ),
-    .dyn1_dWo_yummy      ( tile_2_1_out_E_noc2_yummy  ),
-    .dyn1_dSo_yummy      ( dummy_out_N_noc2_yummy  ),
-
-    .dyn1_dNo            ( tile_2_2_out_N_noc2_data  ),
-    .dyn1_dEo            ( tile_2_2_out_E_noc2_data  ),
-    .dyn1_dWo            ( tile_2_2_out_W_noc2_data  ),
-    .dyn1_dSo            ( tile_2_2_out_S_noc2_data  ),
-    .dyn1_dNo_valid      ( tile_2_2_out_N_noc2_valid ),
-    .dyn1_dEo_valid      ( tile_2_2_out_E_noc2_valid ),
-    .dyn1_dWo_valid      ( tile_2_2_out_W_noc2_valid ),
-    .dyn1_dSo_valid      ( tile_2_2_out_S_noc2_valid ),
-    .dyn1_yummyOut_N     ( tile_2_2_out_N_noc2_yummy ),
-    .dyn1_yummyOut_E     ( tile_2_2_out_E_noc2_yummy ),
-    .dyn1_yummyOut_W     ( tile_2_2_out_W_noc2_yummy ),
-    .dyn1_yummyOut_S     ( tile_2_2_out_S_noc2_yummy ),
-    .dyn2_dataIn_N       ( tile_1_2_out_S_noc3_data   ),
-    .dyn2_dataIn_E       ( dummy_out_W_noc3_data   ),
-    .dyn2_dataIn_W       ( tile_2_1_out_E_noc3_data   ),
-    .dyn2_dataIn_S       ( dummy_out_N_noc3_data   ),
-    .dyn2_validIn_N      ( tile_1_2_out_S_noc3_valid  ),
-    .dyn2_validIn_E      ( dummy_out_W_noc3_valid  ),
-    .dyn2_validIn_W      ( tile_2_1_out_E_noc3_valid  ),
-    .dyn2_validIn_S      ( dummy_out_N_noc3_valid  ),
-    .dyn2_dNo_yummy      ( tile_1_2_out_S_noc3_yummy  ),
-    .dyn2_dEo_yummy      ( dummy_out_W_noc3_yummy  ),
-    .dyn2_dWo_yummy      ( tile_2_1_out_E_noc3_yummy  ),
-    .dyn2_dSo_yummy      ( dummy_out_N_noc3_yummy  ),
-
-    .dyn2_dNo            ( tile_2_2_out_N_noc3_data  ),
-    .dyn2_dEo            ( tile_2_2_out_E_noc3_data  ),
-    .dyn2_dWo            ( tile_2_2_out_W_noc3_data  ),
-    .dyn2_dSo            ( tile_2_2_out_S_noc3_data  ),
-    .dyn2_dNo_valid      ( tile_2_2_out_N_noc3_valid ),
-    .dyn2_dEo_valid      ( tile_2_2_out_E_noc3_valid ),
-    .dyn2_dWo_valid      ( tile_2_2_out_W_noc3_valid ),
-    .dyn2_dSo_valid      ( tile_2_2_out_S_noc3_valid ),
-    .dyn2_yummyOut_N     ( tile_2_2_out_N_noc3_yummy ),
-    .dyn2_yummyOut_E     ( tile_2_2_out_E_noc3_yummy ),
-    .dyn2_yummyOut_W     ( tile_2_2_out_W_noc3_yummy ),
-    .dyn2_yummyOut_S     ( tile_2_2_out_S_noc3_yummy )
 );
 
 

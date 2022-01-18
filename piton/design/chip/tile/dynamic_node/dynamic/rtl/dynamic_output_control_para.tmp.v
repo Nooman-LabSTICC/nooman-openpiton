@@ -39,16 +39,15 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 `include "network_define.v"
 // /home/ruaro/nooman-openpiton/piton/verif/env/manycore/devices_ariane.xml
 
-module dynamic_output_control_para(thanks_0, thanks_1, thanks_2, thanks_3, 
+module dynamic_output_control_para(thanks_0, thanks_1, thanks_2, 
                               valid_out, current_route, ec_wants_to_send_but_cannot, clk, reset, 
-                              route_req_0_in, route_req_1_in, route_req_2_in, route_req_3_in, 
-                              tail_0_in, tail_1_in, tail_2_in, tail_3_in, 
+                              route_req_0_in, route_req_1_in, route_req_2_in, 
+                              tail_0_in, tail_1_in, tail_2_in, 
                               valid_out_temp, default_ready, space_avail);
 // begin port declarations
 output thanks_0;
 output thanks_1;
 output thanks_2;
-output thanks_3;
 
 output valid_out;
 
@@ -61,12 +60,10 @@ input reset;
 input route_req_0_in;
 input route_req_1_in;
 input route_req_2_in;
-input route_req_3_in;
 
 input tail_0_in;
 input tail_1_in;
 input tail_2_in;
-input tail_3_in;
 
 input valid_out_temp;
 
@@ -79,7 +76,6 @@ input space_avail;
 `define ROUTE_0 2'b00
 `define ROUTE_1 2'b01
 `define ROUTE_2 2'b10
-`define ROUTE_3 2'b11
 
 //This is the state
 reg [1:0]current_route_f;
@@ -104,14 +100,12 @@ reg tail_current_route;
 reg route_req_0_mask;
 reg route_req_1_mask;
 reg route_req_2_mask;
-reg route_req_3_mask;
 
 
 //more wire regs for the thanks lines
 reg thanks_0;
 reg thanks_1;
 reg thanks_2;
-reg thanks_3;
 
 reg    ec_wants_to_send_but_cannot;
 
@@ -130,10 +124,10 @@ assign current_route_temp = (new_route_needed) ? new_route : current_route_f;
 assign current_route = current_route_f;
 //this is everything except the currentl planned route's request
 
-assign route_req_all_or_with_planned = (route_req_0_in & route_req_0_mask) | (route_req_1_in & route_req_1_mask) | (route_req_2_in & route_req_2_mask) | (route_req_3_in & route_req_3_mask);
+assign route_req_all_or_with_planned = (route_req_0_in & route_req_0_mask) | (route_req_1_in & route_req_1_mask) | (route_req_2_in & route_req_2_mask);
 //calculates whether the nib that we are going to has space
 
-assign route_req_all_but_default = (route_req_1_in) | (route_req_2_in) | (route_req_3_in);
+assign route_req_all_but_default = (route_req_1_in) | (route_req_2_in);
 
 assign valid_out = valid_out_internal;
 
@@ -143,7 +137,7 @@ assign valid_out = valid_out_internal;
 
 //a mux for current_route_f's tail bit
 
-always @ (current_route_f or tail_0_in or tail_1_in or tail_2_in or tail_3_in)
+always @ (current_route_f or tail_0_in or tail_1_in or tail_2_in)
 begin
 	case(current_route_f) //synopsys parallel_case
 	
@@ -158,10 +152,6 @@ begin
 	`ROUTE_2:
 	begin
 		tail_current_route <= tail_2_in;
-	end
-	`ROUTE_3:
-	begin
-		tail_current_route <= tail_3_in;
 	end
 
 	default:
@@ -195,28 +185,18 @@ begin
 		thanks_0 <= valid_out_internal;
 		thanks_1 <= 1'b0;
 		thanks_2 <= 1'b0;
-		thanks_3 <= 1'b0;
 	end
 	`ROUTE_1:
 	begin
 		thanks_0 <= 1'b0;
 		thanks_1 <= valid_out_internal;
 		thanks_2 <= 1'b0;
-		thanks_3 <= 1'b0;
 	end
 	`ROUTE_2:
 	begin
 		thanks_0 <= 1'b0;
 		thanks_1 <= 1'b0;
 		thanks_2 <= valid_out_internal;
-		thanks_3 <= 1'b0;
-	end
-	`ROUTE_3:
-	begin
-		thanks_0 <= 1'b0;
-		thanks_1 <= 1'b0;
-		thanks_2 <= 1'b0;
-		thanks_3 <= valid_out_internal;
 	end
 
 	default:
@@ -225,7 +205,6 @@ begin
 		thanks_0 <= 1'bx;
 		thanks_1 <= 1'bx;
 		thanks_2 <= 1'bx;
-		thanks_3 <= 1'bx;
 
 	/*
 	//original
@@ -278,7 +257,7 @@ end
 //end the rotating priority encoder
 
 //this is the rotating priority encoder
-always @(current_route_f or route_req_0_in or route_req_1_in or route_req_2_in or route_req_3_in)
+always @(current_route_f or route_req_0_in or route_req_1_in or route_req_2_in)
 begin
 	case(current_route_f)
 	/*
@@ -291,19 +270,15 @@ begin
 	
 	`ROUTE_0:
 	begin
-		new_route <= (route_req_1_in)?`ROUTE_1:((route_req_2_in)?`ROUTE_2:((route_req_3_in)?`ROUTE_3:`ROUTE_0));
+		new_route <= (route_req_1_in)?`ROUTE_1:((route_req_2_in)?`ROUTE_2:`ROUTE_0);
 	end
 	`ROUTE_1:
 	begin
-		new_route <= (route_req_2_in)?`ROUTE_2:((route_req_3_in)?`ROUTE_3:((route_req_0_in)?`ROUTE_0:`ROUTE_0));
+		new_route <= (route_req_2_in)?`ROUTE_2:((route_req_0_in)?`ROUTE_0:`ROUTE_0);
 	end
 	`ROUTE_2:
 	begin
-		new_route <= (route_req_3_in)?`ROUTE_3:((route_req_0_in)?`ROUTE_0:((route_req_1_in)?`ROUTE_1:`ROUTE_0));
-	end
-	`ROUTE_3:
-	begin
-		new_route <= (route_req_0_in)?`ROUTE_0:((route_req_1_in)?`ROUTE_1:((route_req_2_in)?`ROUTE_2:`ROUTE_0));
+		new_route <= (route_req_0_in)?`ROUTE_0:((route_req_1_in)?`ROUTE_1:`ROUTE_0);
 	end
 
 	default:
@@ -326,35 +301,24 @@ begin
 				route_req_0_mask <= 1'b0;
 				route_req_1_mask <= 1'b1;
 				route_req_2_mask <= 1'b1;
-				route_req_3_mask <= 1'b1;
 			end
 		`ROUTE_1:
 			begin
 				route_req_0_mask <= 1'b1;
 				route_req_1_mask <= 1'b0;
 				route_req_2_mask <= 1'b1;
-				route_req_3_mask <= 1'b1;
 			end
 		`ROUTE_2:
 			begin
 				route_req_0_mask <= 1'b1;
 				route_req_1_mask <= 1'b1;
 				route_req_2_mask <= 1'b0;
-				route_req_3_mask <= 1'b1;
-			end
-		`ROUTE_3:
-			begin
-				route_req_0_mask <= 1'b1;
-				route_req_1_mask <= 1'b1;
-				route_req_2_mask <= 1'b1;
-				route_req_3_mask <= 1'b0;
 			end
 		default:
 			begin
 				route_req_0_mask <= 1'b1;
 				route_req_1_mask <= 1'b1;
 				route_req_2_mask <= 1'b1;
-				route_req_3_mask <= 1'b1;
 			end
 
 		/*
@@ -384,7 +348,6 @@ begin
 		route_req_0_mask <= 1'b1;
 		route_req_1_mask <= 1'b1;
 		route_req_2_mask <= 1'b1;
-		route_req_3_mask <= 1'b1;
 
 	/*
 	//original

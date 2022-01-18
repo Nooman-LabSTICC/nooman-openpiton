@@ -125,7 +125,7 @@ def main():
 
                     new_lines.append(line)
                     
-            #Wrintes to the file
+            #Writes to the file
             functions_lines = ""
             for line in new_lines:
                 functions_lines = functions_lines + line

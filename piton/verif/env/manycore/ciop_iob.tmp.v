@@ -49,26 +49,6 @@ module ciop_fake_iob(
    input                spc3_inst_done,
    input [48:0]         pc_w3
 
-,
-   input                spc4_inst_done,
-   input [48:0]         pc_w4
-
-,
-   input                spc5_inst_done,
-   input [48:0]         pc_w5
-
-,
-   input                spc6_inst_done,
-   input [48:0]         pc_w6
-
-,
-   input                spc7_inst_done,
-   input [48:0]         pc_w7
-
-,
-   input                spc8_inst_done,
-   input [48:0]         pc_w8
-
 
 
 );
@@ -206,44 +186,14 @@ end
 
 32'd2:
 begin
-    dest_x = `NOC_X_WIDTH'd2;
-    dest_y = `NOC_Y_WIDTH'd0;
+    dest_x = `NOC_X_WIDTH'd0;
+    dest_y = `NOC_Y_WIDTH'd1;
 end
 
 32'd3:
 begin
-    dest_x = `NOC_X_WIDTH'd0;
-    dest_y = `NOC_Y_WIDTH'd1;
-end
-
-32'd4:
-begin
     dest_x = `NOC_X_WIDTH'd1;
     dest_y = `NOC_Y_WIDTH'd1;
-end
-
-32'd5:
-begin
-    dest_x = `NOC_X_WIDTH'd2;
-    dest_y = `NOC_Y_WIDTH'd1;
-end
-
-32'd6:
-begin
-    dest_x = `NOC_X_WIDTH'd0;
-    dest_y = `NOC_Y_WIDTH'd2;
-end
-
-32'd7:
-begin
-    dest_x = `NOC_X_WIDTH'd1;
-    dest_y = `NOC_Y_WIDTH'd2;
-end
-
-32'd8:
-begin
-    dest_x = `NOC_X_WIDTH'd2;
-    dest_y = `NOC_Y_WIDTH'd2;
 end
 
     default:
@@ -271,26 +221,6 @@ wire [48:0]                      pc_w2_buf           = pc_w2;
 
 wire                             spc3_inst_done_buf  = spc3_inst_done;
 wire [48:0]                      pc_w3_buf           = pc_w3;
-
-
-wire                             spc4_inst_done_buf  = spc4_inst_done;
-wire [48:0]                      pc_w4_buf           = pc_w4;
-
-
-wire                             spc5_inst_done_buf  = spc5_inst_done;
-wire [48:0]                      pc_w5_buf           = pc_w5;
-
-
-wire                             spc6_inst_done_buf  = spc6_inst_done;
-wire [48:0]                      pc_w6_buf           = pc_w6;
-
-
-wire                             spc7_inst_done_buf  = spc7_inst_done;
-wire [48:0]                      pc_w7_buf           = pc_w7;
-
-
-wire                             spc8_inst_done_buf  = spc8_inst_done;
-wire [48:0]                      pc_w8_buf           = pc_w8;
 
 
 
@@ -330,26 +260,6 @@ begin
             //pc event
             spc3_inst_done_buf,
             pc_w3_buf
-,
-            //pc event
-            spc4_inst_done_buf,
-            pc_w4_buf
-,
-            //pc event
-            spc5_inst_done_buf,
-            pc_w5_buf
-,
-            //pc event
-            spc6_inst_done_buf,
-            pc_w6_buf
-,
-            //pc event
-            spc7_inst_done_buf,
-            pc_w7_buf
-,
-            //pc event
-            spc8_inst_done_buf,
-            pc_w8_buf
 
 
         );
@@ -369,26 +279,6 @@ begin
 
         if (spc3_inst_done_buf) begin
             report_pc({{16{pc_w3_buf[39]}}, pc_w3_buf});
-        end
-
-        if (spc4_inst_done_buf) begin
-            report_pc({{16{pc_w4_buf[39]}}, pc_w4_buf});
-        end
-
-        if (spc5_inst_done_buf) begin
-            report_pc({{16{pc_w5_buf[39]}}, pc_w5_buf});
-        end
-
-        if (spc6_inst_done_buf) begin
-            report_pc({{16{pc_w6_buf[39]}}, pc_w6_buf});
-        end
-
-        if (spc7_inst_done_buf) begin
-            report_pc({{16{pc_w7_buf[39]}}, pc_w7_buf});
-        end
-
-        if (spc8_inst_done_buf) begin
-            report_pc({{16{pc_w8_buf[39]}}, pc_w8_buf});
         end
 
 

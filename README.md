@@ -1,4 +1,4 @@
-**Author**: Marcelo Ruaro
+**Author**: Marcelo Ruaro, Kevin Martin
 # Credits
 This many-core project is based on OpenPiton, an open-source many-core platform developed by Princeton University. We use OpenPiton as starting point to do our modifications. Please don't forget to cite OpenPiton properly if you use the many-core herein provided.
 

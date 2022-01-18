@@ -43,12 +43,12 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 `include "network_define.v"
 module dynamic_input_control_para(thanks_all_temp_out,
-                             route_req_0_out, route_req_1_out, route_req_2_out, route_req_3_out, 
-                             default_ready_0, default_ready_1, default_ready_2, default_ready_3, 
+                             route_req_0_out, route_req_1_out, route_req_2_out, 
+                             default_ready_0, default_ready_1, default_ready_2, 
                              tail_out, clk, reset,
                              my_loc_x_in, my_loc_y_in, my_chip_id_in,
                              abs_x, abs_y, abs_chip_id, final_bits, valid_in,
-                             thanks_0, thanks_1, thanks_2, thanks_3, 
+                             thanks_0, thanks_1, thanks_2, 
                              length);
 
 // begin port declarations
@@ -57,11 +57,9 @@ output thanks_all_temp_out;
 output route_req_0_out;
 output route_req_1_out;
 output route_req_2_out;
-output route_req_3_out;
 output default_ready_0;
 output default_ready_1;
 output default_ready_2;
-output default_ready_3;
 
 output tail_out;
 
@@ -79,7 +77,6 @@ input valid_in;
 input thanks_0;
 input thanks_1;
 input thanks_2;
-input thanks_3;
 
 input [`PAYLOAD_LEN-1:0] length;
 
@@ -114,7 +111,7 @@ reg header_temp;
 
 //assigns
 
-assign thanks_all_temp = thanks_0 | thanks_1 | thanks_2 | thanks_3;
+assign thanks_all_temp = thanks_0 | thanks_1 | thanks_2;
 assign header = valid_in & header_temp;
 assign count_zero_temp = count_temp == 0;
 assign count_one_temp = count_temp == 1;
@@ -132,12 +129,10 @@ assign tail_last_temp = tail;
 dynamic_input_route_request_calc_para tail_calc(.route_req_0(route_req_0_out),
                                            .route_req_1(route_req_1_out),
                                            .route_req_2(route_req_2_out),
-                                           .route_req_3(route_req_3_out),
 
                                            .default_ready_0(default_ready_0),
                                            .default_ready_1(default_ready_1),
                                            .default_ready_2(default_ready_2),
-                                           .default_ready_3(default_ready_3),
 
                                            .my_loc_x_in(my_loc_x_in),
                                            .my_loc_y_in(my_loc_y_in),
